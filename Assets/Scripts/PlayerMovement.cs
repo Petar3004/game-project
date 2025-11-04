@@ -30,6 +30,11 @@ public class PlayerMovement : MonoBehaviour
 
         HandleState();
         HandleHorizontalMovement(xInput);
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            TimeManager.instance.ActivateSlowTime();
+        }
     }
 
     private void HandleState()
@@ -69,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
                 break;
         }
     }
-
+    
     bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheckCollider.position, groundCheckRadius, groundLayer);
@@ -81,8 +86,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     int IsOnWall()
-    {
-        if (Physics2D.OverlapCircle(wallCheckColliderLeft.position, wallCheckRadius, wallLayer))
+    { if (Physics2D.OverlapCircle(wallCheckColliderLeft.position, wallCheckRadius, wallLayer))
         {
             return -1;
         }
@@ -92,11 +96,11 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            return 2;
+            return 2; 
         }
     }
 
-
+    
 
 
     void HandleHorizontalMovement(float xInput)
@@ -106,6 +110,7 @@ public class PlayerMovement : MonoBehaviour
         {
             xInput = 0;
         }
+        Debug.Log("Wall " + IsOnWall() + "Input" + xInput);
         rb.linearVelocity = new Vector2(xInput * speed, rb.linearVelocityY);
     }
 
@@ -113,7 +118,7 @@ public class PlayerMovement : MonoBehaviour
     {
         standingSprite.enabled = !crouched;
     }
-
+    
     void UpdateCollider(bool crouched)
     {
         standingCollider.enabled = !crouched;

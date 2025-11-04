@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     private GameObject player;
 
     // Reference to the time manager
-    // private TimeManager_Alexis timeManager;
+    private TimeManager_Alexis timeManager;
 
     void Awake()
     {
@@ -30,23 +30,23 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         // Find the player and timer once the level starts
-        // player = GameObject.FindGameObjectWithTag("Player");
-        // timeManager = FindObjectOfType<TimeManager_Alexis>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        timeManager = FindObjectOfType<TimeManager_Alexis>();
     }
 
     // Called when the player dies or the timer hits 0
-    // public void RestartGame()
-    // {
-    //     Debug.Log("Restarting game...");
+public void RestartGame()
+{
+    Debug.Log("Restarting game...");
 
-    //     // Send the player back to Room 1
-    //     RoomTransitionManager roomManager = FindObjectOfType<RoomTransitionManager>();
-    //     if (roomManager != null)
-    //         roomManager.ResetToRoomOne();
+    // Send the player back to Room 1
+    RoomTransitionManager roomManager = FindObjectOfType<RoomTransitionManager>();
+    if (roomManager != null)
+        roomManager.ResetToRoomOne();
 
-    //     // Reset the 60 second timer
-    //     if (timeManager != null)
-    //         timeManager.ResetTimer();
-    // }
+    // Reset the 60 second timer
+    if (timeManager != null)
+        timeManager.ResetTimer();
+}
 
 }
