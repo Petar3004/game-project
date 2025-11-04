@@ -100,3 +100,4 @@ InitTestScene*.unity*
 
 # Unity version control
 .plastic*
+ignore.conf
