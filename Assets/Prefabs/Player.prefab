@@ -72,9 +72,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6268845881846833338}
   - component: {fileID: 1351217804084703848}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Crouching Collider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,7 +150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2354170761262080538}
   - component: {fileID: 2050165648894658985}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Standing Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,9 +271,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1828896654373554861}
   - component: {fileID: 5248742689268583572}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Standing Collider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -349,7 +349,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6429111790807801811}
   - component: {fileID: 7321458290951813592}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Crouching Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -440,9 +440,9 @@ GameObject:
   - component: {fileID: 3277553711405718484}
   - component: {fileID: 3470590319243197343}
   - component: {fileID: 3421437858715425498}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
