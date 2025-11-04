@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -20,23 +21,29 @@ public class SceneController : MonoBehaviour
 
     public void GoToNextRoom()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 2)
+        int roomIndex = SceneManager.GetActiveScene().buildIndex;
+        if (roomIndex == 2)
         {
             Debug.Log("You finished the prototype!");
         }
         else
         {
-            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+            StartCoroutine(LoadRoomAndMovePlayer(roomIndex + 1, DoorType.ENTRANCE));
         }
     }
 
     public void GoToPreviousRoom()
     {
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex - 1);
+        int roomIndex = SceneManager.GetActiveScene().buildIndex;
+        StartCoroutine(LoadRoomAndMovePlayer(roomIndex - 1, DoorType.EXIT));
     }
 
-    public void LoadScene(string sceneName)
+    private IEnumerator LoadRoomAndMovePlayer(int roomIndex, DoorType door)
     {
-        SceneManager.LoadSceneAsync(sceneName);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(roomIndex);
+        while (!asyncLoad.isDone)
+            yield return null;
+
+        GameManager.instance.MovePlayerToSpawnPoint(roomIndex, door);
     }
 }

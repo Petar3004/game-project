@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257e6cc7f9544fa4796821c1d8487df2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  playerSpawnPoint: {fileID: 0}
+  player: {fileID: 3470590319243197343, guid: 6de5f8e134120274eafc5550f2c93768, type: 3}
 --- !u!114 &9152560200627226104
 MonoBehaviour:
   m_ObjectHideFlags: 0

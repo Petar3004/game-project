@@ -1,24 +1,24 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
-
-    // Where the player respawns after death
-    [Header("Player Respawn Settings")]
-    public Transform playerSpawnPoint;   // Drag the Room1 start here
-    private GameObject player;
-
-    // Reference to the time manager
-    // private TimeManager_Alexis timeManager;
+    public static GameManager instance;
+    private Rigidbody2D player;
+    private Dictionary<int, Vector3[]> spawnPoints = new Dictionary<int, Vector3[]> // two spawn points for each room
+    {
+        { 0, new Vector3[] { new Vector3(-8f, -3.2f, 0), new Vector3(8f, -3.2f, 0) } },
+        { 1, new Vector3[] { new Vector3(-8f, -3.2f, 0), new Vector3(8f, -3.2f, 5) } },
+        { 2, new Vector3[] { new Vector3(-8f, -3.2f, 0), new Vector3(8f, -3.2f, 10) } }
+    };
 
     void Awake()
     {
         // Singleton pattern – only one GameManager should exist
-        if (Instance == null)
+        if (instance == null)
         {
-            Instance = this;
+            instance = this;
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -27,26 +27,50 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void Start()
+    public void MovePlayerToSpawnPoint(int roomIndex, DoorType door)
     {
-        // Find the player and timer once the level starts
-        // player = GameObject.FindGameObjectWithTag("Player");
-        // timeManager = FindObjectOfType<TimeManager_Alexis>();
+        player = GameObject.FindGameObjectWithTag("PlayerObject").GetComponent<Rigidbody2D>();
+        switch (door)
+        {
+            case DoorType.ENTRANCE:
+                player.transform.position = spawnPoints[roomIndex][0];
+                break;
+            case DoorType.EXIT:
+                player.transform.position = spawnPoints[roomIndex][1];
+                break;
+        }
+        // Reset the velocity so the player doesn't carry any momentum
+        player.linearVelocity = Vector2.zero;
+    }
+
+    // Called by GameManager when the player dies
+    public void Respawn()
+    {
+        MovePlayerToSpawnPoint(0, DoorType.ENTRANCE);
+    }
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        RestartGame();
     }
 
     // Called when the player dies or the timer hits 0
-    // public void RestartGame()
-    // {
-    //     Debug.Log("Restarting game...");
-
-    //     // Send the player back to Room 1
-    //     RoomTransitionManager roomManager = FindObjectOfType<RoomTransitionManager>();
-    //     if (roomManager != null)
-    //         roomManager.ResetToRoomOne();
-
-    //     // Reset the 60 second timer
-    //     if (timeManager != null)
-    //         timeManager.ResetTimer();
-    // }
+    public void RestartGame()
+    {
+        Respawn();
+        // Reset the 60 second timer
+        // if (timeManager != null)
+        //     timeManager.ResetTimer();
+    }
 
 }
