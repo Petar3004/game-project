@@ -30,11 +30,6 @@ public class PlayerMovement : MonoBehaviour
 
         HandleState();
         HandleHorizontalMovement(xInput);
-
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            TimeManager.instance.ActivateSlowTime();
-        }
     }
 
     private void HandleState()
