@@ -1,3 +1,0 @@
-repository "Game Contest/Game Contest@18968335493200@cloud"
-  path "/"
-    smartbranch "/main/Alex"
