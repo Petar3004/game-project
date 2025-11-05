@@ -16,12 +16,16 @@ public class SlowTimeManager : MonoBehaviour
 
     private void Awake()
     {
-        if(instance != null && instance == this)
+        // Singleton pattern – only one SlowTimeManager should exist
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
         {
             Destroy(gameObject);
-            return;
         }
-        instance = this;
     }
 
     public bool IsSlowed()
