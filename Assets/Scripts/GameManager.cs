@@ -43,12 +43,6 @@ public class GameManager : MonoBehaviour
         player.linearVelocity = Vector2.zero;
     }
 
-    // Called by GameManager when the player dies
-    public void Respawn()
-    {
-        MovePlayerToSpawnPoint(0, DoorType.ENTRANCE);
-    }
-
     void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -68,9 +62,10 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         Respawn();
-        // Reset the 60 second timer
-        // if (timeManager != null)
-        //     timeManager.ResetTimer();
     }
 
+    public void Respawn()
+    {
+        SceneController.instance.GoToRoom(0, DoorType.ENTRANCE);
+    }
 }

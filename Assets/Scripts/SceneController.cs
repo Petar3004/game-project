@@ -21,21 +21,26 @@ public class SceneController : MonoBehaviour
 
     public void GoToNextRoom()
     {
-        int roomIndex = SceneManager.GetActiveScene().buildIndex;
-        if (roomIndex == 2)
+        int currentRoomIndex = SceneManager.GetActiveScene().buildIndex;
+        if (currentRoomIndex == 2)
         {
             Debug.Log("You finished the prototype!");
         }
         else
         {
-            StartCoroutine(LoadRoomAndMovePlayer(roomIndex + 1, DoorType.ENTRANCE));
+            StartCoroutine(LoadRoomAndMovePlayer(currentRoomIndex + 1, DoorType.ENTRANCE));
         }
     }
 
     public void GoToPreviousRoom()
     {
-        int roomIndex = SceneManager.GetActiveScene().buildIndex;
-        StartCoroutine(LoadRoomAndMovePlayer(roomIndex - 1, DoorType.EXIT));
+        int currentRoomIndex = SceneManager.GetActiveScene().buildIndex;
+        StartCoroutine(LoadRoomAndMovePlayer(currentRoomIndex - 1, DoorType.EXIT));
+    }
+
+    public void GoToRoom(int roomIndex, DoorType door)
+    {
+        StartCoroutine(LoadRoomAndMovePlayer(roomIndex, door));
     }
 
     private IEnumerator LoadRoomAndMovePlayer(int roomIndex, DoorType door)

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7892610927850365554}
   - component: {fileID: 7396049550138341899}
   - component: {fileID: -3723930229538701063}
+  - component: {fileID: 3724201412816823113}
   m_Layer: 0
   m_Name: Moving Gear
   m_TagString: Untagged
@@ -156,3 +157,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3724201412816823113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7115459544288943863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e809cb5bc19923e43b8ad4a2cd722e67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GearDamage
+  playerHealth: {fileID: 2677999297754292399, guid: 6de5f8e134120274eafc5550f2c93768, type: 3}
+  damage: 1

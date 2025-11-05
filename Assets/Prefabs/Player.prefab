@@ -440,6 +440,7 @@ GameObject:
   - component: {fileID: 3277553711405718484}
   - component: {fileID: 3470590319243197343}
   - component: {fileID: 3421437858715425498}
+  - component: {fileID: 2677999297754292399}
   m_Layer: 6
   m_Name: Player
   m_TagString: PlayerObject
@@ -525,6 +526,20 @@ MonoBehaviour:
   rb: {fileID: 3470590319243197343}
   standingCollider: {fileID: 5248742689268583572}
   standingSprite: {fileID: 2050165648894658985}
+--- !u!114 &2677999297754292399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6789828063486030330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e10a16eb38529448abb7df185902a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  health: 0
+  maxHealth: 1
 --- !u!1 &7538662683424903399
 GameObject:
   m_ObjectHideFlags: 0
