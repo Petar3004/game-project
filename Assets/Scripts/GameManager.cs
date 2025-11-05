@@ -6,8 +6,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     private GameObject player;
-    private bool isRestarting = false;
-    private Dictionary<int, Vector3[]> spawnPoints = new Dictionary<int, Vector3[]> // two spawn points for each room
+    private bool isRestarting = false;  // prevents infinite loops
+    // Map of rooms and their (2) corresponding spawn points
+    private Dictionary<int, Vector3[]> spawnPoints = new Dictionary<int, Vector3[]>
     {
         { 0, new Vector3[] { new Vector3(-8f, -3.2f, 0), new Vector3(8f, -3.2f, 0) } },
         { 1, new Vector3[] { new Vector3(-8f, -3.2f, 0), new Vector3(8f, -3.2f, 5) } },
@@ -40,17 +41,21 @@ public class GameManager : MonoBehaviour
                 player.transform.position = spawnPoints[roomIndex][1];
                 break;
         }
-        // Reset the velocity so the player doesn't carry any momentum
+        // Reset velocity after player is moved
         player.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
     }
 
+    // Called when an object is enabled
     void OnEnable()
     {
+        // Call OnSceneLoaded each time a new scene loads
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
+    // Called when an object is disabled
     void OnDisable()
     {
+        // Stop calling each time
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
@@ -67,11 +72,6 @@ public class GameManager : MonoBehaviour
             return;
         }
         isRestarting = true;
-        Respawn();
-    }
-
-    public void Respawn()
-    {
         SceneController.instance.GoToRoom(0, DoorType.ENTRANCE);
     }
 }

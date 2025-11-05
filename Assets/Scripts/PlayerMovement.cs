@@ -96,9 +96,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
-
-
     void HandleHorizontalMovement(float xInput)
     {
         float speed = (state == MovementState.CROUCHING) ? crouchSpeed : moveSpeed;

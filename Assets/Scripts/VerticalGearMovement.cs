@@ -1,29 +1,29 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 
 
-public class HorizontalGearMovement : GearMovement
+public class VerticalGearMovement : GearMovement
 {
     protected override void InitializeBounds()
     {
         if (movingPositive)
         {
-            minBound = startPosition.x;
-            maxBound = startPosition.x + distance;
+            minBound = startPosition.y;
+            maxBound = startPosition.y + distance;
         }
         else
         {
-            minBound = startPosition.x - distance;
-            maxBound = startPosition.x;
+            minBound = startPosition.y - distance;
+            maxBound = startPosition.y;
         }
     }
 
     protected override void Move()
     {
         Vector3 pos = transform.position;
-        float targetX = movingPositive ? maxBound : minBound;
+        float targetY = movingPositive ? maxBound : minBound;
         float currentSpeed = speed;
 
         if (SlowTimeManager.instance != null && SlowTimeManager.instance.IsSlowed())
@@ -31,11 +31,11 @@ public class HorizontalGearMovement : GearMovement
             currentSpeed *= SlowTimeManager.instance.slowFactor;
         }
 
-        float newX = Mathf.MoveTowards(pos.x, targetX, currentSpeed * Time.deltaTime);
-        pos.x = newX;
+        float newY = Mathf.MoveTowards(pos.y, targetY, currentSpeed * Time.deltaTime);
+        pos.y = newY;
         transform.position = pos;
 
-        if (newX == targetX)
+        if (newY == targetY)
         {
             movingPositive = !movingPositive;
         }
