@@ -22,7 +22,9 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce = 8f;
     public Rigidbody2D rb;
     public Collider2D standingCollider;
+    public Collider2D crouchingCollider;
     public SpriteRenderer standingSprite;
+    public SpriteRenderer crouchingSprite;
 
     void Update()
     {
@@ -30,6 +32,11 @@ public class PlayerMovement : MonoBehaviour
 
         HandleState();
         HandleHorizontalMovement(xInput);
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            TimeManager.instance.ActivateSlowTime();
+        }
     }
 
     private void HandleState()
@@ -114,6 +121,7 @@ public class PlayerMovement : MonoBehaviour
     void UpdateCollider(bool crouched)
     {
         standingCollider.enabled = !crouched;
+        crouchingCollider.enabled = crouched;
     }
 }
 

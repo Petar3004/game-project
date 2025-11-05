@@ -26,9 +26,9 @@ public class VerticalGearMovement : GearMovement
         float targetY = movingPositive ? maxBound : minBound;
         float currentSpeed = speed;
 
-        if (SlowTimeManager.instance != null && SlowTimeManager.instance.IsSlowed())
+        if (TimeManager.instance != null && TimeManager.instance.isSlowed)
         {
-            currentSpeed *= SlowTimeManager.instance.slowFactor;
+            currentSpeed *= TimeManager.instance.slowTimeFactor;
         }
 
         float newY = Mathf.MoveTowards(pos.y, targetY, currentSpeed * Time.deltaTime);

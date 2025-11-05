@@ -19,36 +19,29 @@ public class SceneController : MonoBehaviour
         }
     }
 
-    public void GoToNextRoom()
+    public void GoToNextLevel()
     {
-        int currentRoomIndex = SceneManager.GetActiveScene().buildIndex;
-        if (currentRoomIndex == 2)
-        {
-            Debug.Log("You finished the prototype!");
-        }
-        else
-        {
-            StartCoroutine(LoadRoomAndMovePlayer(currentRoomIndex + 1, DoorType.ENTRANCE));
-        }
+        int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
+        StartCoroutine(LoadLevelAndMovePlayer(currentLevelIndex + 1));
     }
 
-    public void GoToPreviousRoom()
+    public void GoToPreviousLevel()
     {
-        int currentRoomIndex = SceneManager.GetActiveScene().buildIndex;
-        StartCoroutine(LoadRoomAndMovePlayer(currentRoomIndex - 1, DoorType.EXIT));
+        int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
+        StartCoroutine(LoadLevelAndMovePlayer(currentLevelIndex - 1));
     }
 
-    public void GoToRoom(int roomIndex, DoorType door)
+    public void GoToLevel(int levelIndex)
     {
-        StartCoroutine(LoadRoomAndMovePlayer(roomIndex, door));
+        StartCoroutine(LoadLevelAndMovePlayer(levelIndex));
     }
 
-    private IEnumerator LoadRoomAndMovePlayer(int roomIndex, DoorType door)
+    private IEnumerator LoadLevelAndMovePlayer(int levelIndex)
     {
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(roomIndex);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(levelIndex);
         while (!asyncLoad.isDone)
             yield return null;
 
-        GameManager.instance.MovePlayerToSpawnPoint(roomIndex, door);
+        GameManager.instance.MovePlayerToLevel(levelIndex);
     }
 }

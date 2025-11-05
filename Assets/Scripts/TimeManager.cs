@@ -11,30 +11,26 @@ public class TimeManager : MonoBehaviour
     public static TimeManager instance;
 
     [Header("Timer settings")]
-    public float totalTime = 60f;
+    public float maxTime = 60f;
+    public float timeLeft;
     public Text timerText;
     public Slider timerSlider;
 
     [Header("Slow Time Settings")]
-    public float slowTimeFactor = 0.3f;
-    public float slowDuration = 5f;
-    public float slowPenalty = 10f;
-
-    private float normalTimeScale = 1f;
-    private bool isSlowing = false;
+    public float slowTimeDuration = 5f;
+    public float slowTimePenalty = 10f;
+    public float slowTimeFactor = 0.5f;
+    public bool isSlowed = false;
 
     void Awake()
     {
-        // Singleton pattern – only one TimeManager should exist
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
+        if (instance != null && instance != this)
         {
             Destroy(gameObject);
+            return;
         }
+        instance = this;
+        DontDestroyOnLoad(gameObject);
 
         if (timerText == null || timerSlider == null)
         {
@@ -47,56 +43,61 @@ public class TimeManager : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        timeLeft = maxTime;
+    }
+
     void Update()
     {
-        if (totalTime > 0)
+        if (timeLeft > 0)
         {
-            totalTime -= Time.deltaTime;
+            timeLeft -= Time.deltaTime;
             UpdateTimerUI();
 
-            if (totalTime <= 0)
+            if (timeLeft <= 0)
             {
-                totalTime = 0;
-                Time.timeScale = 1f;
+                timeLeft = 0;
                 Debug.Log("Time's Up!");
-                // we now have to implement game over logic here.
+                GameManager.instance.RestartLevel();
             }
         }
     }
 
     public void ActivateSlowTime()
     {
-        if (!isSlowing && totalTime > slowPenalty)
+        if (!isSlowed && timeLeft > slowTimePenalty)
         {
-            StartCoroutine(SlowTimeRoutine());
+            StartCoroutine(StartSlowTime());
         }
     }
 
-    private IEnumerator SlowTimeRoutine()
+    private IEnumerator StartSlowTime()
     {
-        isSlowing = true;
-        totalTime -= slowPenalty;
+        isSlowed = true;
+        timeLeft -= slowTimePenalty;
         UpdateTimerUI();
 
-        Time.timeScale = slowTimeFactor;
-        yield return new WaitForSecondsRealtime(slowDuration);
+        yield return new WaitForSecondsRealtime(slowTimeDuration);
 
-        Time.timeScale = normalTimeScale;
-        isSlowing = false;
+        isSlowed = false;
     }
 
     public void UpdateTimerUI()
     {
         if (timerText != null)
         {
-            timerText.text = "Time: " + Mathf.CeilToInt(totalTime).ToString();
+            timerText.text = "Time: " + Mathf.CeilToInt(timeLeft).ToString();
         }
 
         if (timerSlider != null)
         {
-            timerSlider.value = totalTime;
+            timerSlider.value = timeLeft;
         }
     }
 
-
+    public void ResetTimer()
+    {
+        timeLeft = maxTime;
+    }
 }

@@ -26,9 +26,9 @@ public class HorizontalGearMovement : GearMovement
         float targetX = movingPositive ? maxBound : minBound;
         float currentSpeed = speed;
 
-        if (SlowTimeManager.instance != null && SlowTimeManager.instance.IsSlowed())
+        if (TimeManager.instance != null && TimeManager.instance.isSlowed)
         {
-            currentSpeed *= SlowTimeManager.instance.slowFactor;
+            currentSpeed *= TimeManager.instance.slowTimeFactor;
         }
 
         float newX = Mathf.MoveTowards(pos.x, targetX, currentSpeed * Time.deltaTime);
