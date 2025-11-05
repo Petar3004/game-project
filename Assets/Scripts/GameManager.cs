@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    private Rigidbody2D player;
+    private GameObject player;
+    private bool isRestarting = false;
     private Dictionary<int, Vector3[]> spawnPoints = new Dictionary<int, Vector3[]> // two spawn points for each room
     {
         { 0, new Vector3[] { new Vector3(-8f, -3.2f, 0), new Vector3(8f, -3.2f, 0) } },
@@ -29,7 +30,7 @@ public class GameManager : MonoBehaviour
 
     public void MovePlayerToSpawnPoint(int roomIndex, DoorType door)
     {
-        player = GameObject.FindGameObjectWithTag("PlayerObject").GetComponent<Rigidbody2D>();
+        player = GameObject.FindGameObjectWithTag("PlayerObject");
         switch (door)
         {
             case DoorType.ENTRANCE:
@@ -40,7 +41,7 @@ public class GameManager : MonoBehaviour
                 break;
         }
         // Reset the velocity so the player doesn't carry any momentum
-        player.linearVelocity = Vector2.zero;
+        player.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
     }
 
     void OnEnable()
@@ -55,12 +56,17 @@ public class GameManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        RestartGame();
+        isRestarting = false;
     }
 
     // Called when the player dies or the timer hits 0
     public void RestartGame()
     {
+        if (isRestarting)
+        {
+            return;
+        }
+        isRestarting = true;
         Respawn();
     }
 
