@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GearDamage : MonoBehaviour
+public class EnemyDamage : MonoBehaviour
 {
     public int damage = 1;
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4893346948204541453}
   - component: {fileID: 1623276952709704254}
   m_Layer: 8
-  m_Name: Barriers
+  m_Name: Barrier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,10 +69,10 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -5.6987867, y: -0.89584327}
+  - {x: -5.7543097, y: -4.2827663}
   - {x: -5.7054143, y: 5.7054157}
   - {x: 12.097999, y: 5.7043824}
-  - {x: 12.08268, y: -0.7561393}
+  - {x: 12.054918, y: -4.2541094}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
