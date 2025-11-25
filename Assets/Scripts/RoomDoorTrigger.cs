@@ -5,21 +5,23 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public enum DoorType
+public enum RoomDoorType
 {
-    ROOM,
-    LEVEL
+    HORIZONTAL,
+    VERTICAL
 }
 
 public enum Move
 {
     LEFT,
-    RIGHT
+    RIGHT,
+    UP,
+    DOWN
 }
 
-public class DoorTrigger : MonoBehaviour
+public class RoomDoorTrigger : MonoBehaviour
 {
-    public DoorType doorType;
+    public RoomDoorType doorType;
     public GameObject door;
     private Move move;
 
@@ -30,7 +32,7 @@ public class DoorTrigger : MonoBehaviour
         {
             switch (doorType)
             {
-                case DoorType.ROOM:
+                case RoomDoorType.VERTICAL:
                     if (player.transform.position.x < door.transform.position.x)
                     {
                         move = Move.RIGHT;
@@ -42,14 +44,16 @@ public class DoorTrigger : MonoBehaviour
                         CameraController.instance.MoveCameraToPreviousRoom();
                     }
                     break;
-                case DoorType.LEVEL:
-                    if (player.transform.position.x < door.transform.position.x)
+                case RoomDoorType.HORIZONTAL:
+                    if (player.transform.position.y < door.transform.position.y)
                     {
-                        SceneController.instance.GoToNextLevel();
+                        move = Move.UP;
+                        CameraController.instance.MoveCameraToNextRoom();
                     }
                     else
                     {
-                        SceneController.instance.GoToPreviousLevel();
+                        move = Move.DOWN;
+                        CameraController.instance.MoveCameraToPreviousRoom();
                     }
                     break;
             }
@@ -60,14 +64,24 @@ public class DoorTrigger : MonoBehaviour
     {
         if (player.CompareTag("Player"))
         {
-            if (doorType == DoorType.ROOM && move == Move.RIGHT && player.transform.position.x < door.transform.position.x)
+            if ((move == Move.RIGHT && player.transform.position.x < door.transform.position.x) || (move == Move.UP && player.transform.position.y < door.transform.position.y))
             {
                 CameraController.instance.MoveCameraToPreviousRoom();
             }
-            else if (doorType == DoorType.ROOM && move == Move.LEFT && player.transform.position.x > door.transform.position.x)
+            else if ((move == Move.LEFT && player.transform.position.x > door.transform.position.x) || (move == Move.DOWN && player.transform.position.y > door.transform.position.y))
             {
                 CameraController.instance.MoveCameraToNextRoom();
             }
         }
+
+        if ((move == Move.RIGHT && player.transform.position.x > door.transform.position.x) || (move == Move.UP && player.transform.position.y > door.transform.position.y))
+        {
+            LockDoor();
+        }
+    }
+
+    private void LockDoor()
+    {
+        door.GetComponent<BoxCollider2D>().isTrigger = false;
     }
 }
