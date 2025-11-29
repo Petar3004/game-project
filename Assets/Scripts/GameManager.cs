@@ -1,5 +1,6 @@
+using System;
 using System.Collections.Generic;
-using System.Data;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,7 +15,14 @@ public class GameManager : MonoBehaviour
     private Dictionary<int, Vector3[]> spawnPoints = new Dictionary<int, Vector3[]>
     {
         { 0, new Vector3[] { new Vector3(-26f, -3.2f, 0f), Vector3.zero, Vector3.zero } },
-        { 1, new Vector3[] { new Vector3(-11.5f, -4.1f, 0f), Vector3.zero, Vector3.zero } }
+        { 1, new Vector3[] { new Vector3(-11.5f, -4.1f, 0f), Vector3.zero, Vector3.zero } },
+        { 2, new Vector3[] { Vector3.zero, Vector3.zero, Vector3.zero } },
+        { 3, new Vector3[] { new Vector3(-7.8f, -3.75f, 0), Vector3.zero, Vector3.zero } },
+        { 4, new Vector3[] { Vector3.zero, Vector3.zero, Vector3.zero } },
+        { 5, new Vector3[] { Vector3.zero, Vector3.zero, Vector3.zero } },
+        { 6, new Vector3[] { Vector3.zero, Vector3.zero, Vector3.zero } },
+        { 7, new Vector3[] { Vector3.zero, Vector3.zero, Vector3.zero } },
+        { 8, new Vector3[] { Vector3.zero, Vector3.zero, Vector3.zero } }
     };
 
     void Awake()
@@ -34,7 +42,8 @@ public class GameManager : MonoBehaviour
     public void MovePlayerToRoom(int roomIndex)
     {
         player = GameObject.FindGameObjectWithTag("PlayerObject");
-        player.transform.position = spawnPoints[SceneManager.GetActiveScene().buildIndex][0];
+        int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
+        player.transform.position = spawnPoints[currentLevelIndex][roomIndex];
         // Reset velocity after player is moved
         player.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
     }
@@ -71,16 +80,12 @@ public class GameManager : MonoBehaviour
         //     return;
         // }
         // isRestarting = true;
-        MovePlayerToRoom(0);
-        PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
-        playerHealth.ResetHealth();
-        CameraController.instance.MoveCameraToRoom(0);
-        UnlockDoors();
-        TimeManager.instance.ResetTimer();
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
 
-    public void UnlockDoors()
+    private void UnlockDoors()
     {
         foreach (GameObject door in doors)
         {

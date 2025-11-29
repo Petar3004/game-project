@@ -5,10 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class CameraController : MonoBehaviour
 {
-    public Rigidbody2D rb;
     private Dictionary<int, Vector3[]> cameraPositions;
-    public int currentRoomIndex = 0;
-    public int numberOfRooms;
+
+    public int roomIndex = 0;
     public static CameraController instance;
 
     private void Awake()
@@ -28,29 +27,34 @@ public class CameraController : MonoBehaviour
             cameraPositions = new Dictionary<int, Vector3[]>
             {
                 { 0, new Vector3[] { new Vector3(-17.86f, 0, -10f), new Vector3(0, 0, -10f), new Vector3(17.77f, 0, -10f) } },
-                { 1, new Vector3[] { new Vector3(-17.86f, 0, -10f), new Vector3(-17.86f, 10, -10f), new Vector3(-17.86f, 20, -10f) } }
+                { 1, new Vector3[] { new Vector3(-17.86f, 0, -10f), new Vector3(-17.86f, 10, -10f), new Vector3(-17.86f, 20, -10f) } },
+                { 2, null},
+                { 3, new Vector3[] { new Vector3(0, 0, -10f), Vector3.zero, Vector3.zero } },
+                { 4, null},
+                { 5, null}
             };
         }
+
     }
 
     public void MoveCameraToNextRoom()
     {
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
-        currentRoomIndex += 1;
-        Camera.main.transform.position = cameraPositions[currentLevelIndex][currentRoomIndex];
+        roomIndex += 1;
+        Camera.main.transform.position = cameraPositions[currentLevelIndex][roomIndex];
     }
 
     public void MoveCameraToPreviousRoom()
     {
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
-        currentRoomIndex -= 1;
-        Camera.main.transform.position = cameraPositions[currentLevelIndex][currentRoomIndex];
+        roomIndex -= 1;
+        Camera.main.transform.position = cameraPositions[currentLevelIndex][roomIndex];
     }
 
-    public void MoveCameraToRoom(int roomIndex)
+    public void MoveCameraToRoom(int targetRoomIndex)
     {
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
-        currentRoomIndex = roomIndex;
+        roomIndex = targetRoomIndex;
         Camera.main.transform.position = cameraPositions[currentLevelIndex][roomIndex];
     }
 }
