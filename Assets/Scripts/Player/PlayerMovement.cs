@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform wallCheckColliderLeft;
     public Transform wallCheckColliderRight;
     public LayerMask groundLayer;
+    public LayerMask slowGroundLayer;
     public LayerMask wallLayer;
     static MovementState state = MovementState.STANDING;
     public float moveSpeed = 5f;
@@ -82,6 +83,11 @@ public class PlayerMovement : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheckCollider.position, groundCheckRadius, groundLayer);
     }
 
+    bool isSlowed()
+    {
+        return Physics2D.OverlapCircle(groundCheckCollider.position, groundCheckRadius, slowGroundLayer);
+    }
+
     bool IsStuck()
     {
         return Physics2D.OverlapCircle(ceilingCheckCollider.position, ceilingCheckRadius, groundLayer);
@@ -105,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleHorizontalMovement(float xInput)
     {
-        float speed = (state == MovementState.CROUCHING) ? crouchSpeed : moveSpeed;
+        float speed = (state == MovementState.CROUCHING || isSlowed()) ? crouchSpeed : moveSpeed;
         if (Mathf.Sign(xInput) == IsOnWall())
         {
             xInput = 0;

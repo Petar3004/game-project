@@ -517,6 +517,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 128
+  slowGroundLayer:
+    serializedVersion: 2
+    m_Bits: 512
   wallLayer:
     serializedVersion: 2
     m_Bits: 256

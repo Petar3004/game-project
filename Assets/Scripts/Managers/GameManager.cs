@@ -81,15 +81,9 @@ public class GameManager : MonoBehaviour
         // }
         // isRestarting = true;
 
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
-
-    private void UnlockDoors()
-    {
-        foreach (GameObject door in doors)
-        {
-            door.GetComponent<BoxCollider2D>().isTrigger = true;
-        }
+        TimeManager.instance.ResetTimer();
+        CameraController.instance.roomIndex = 0;
     }
 }

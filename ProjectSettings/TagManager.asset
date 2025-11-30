@@ -18,7 +18,7 @@ TagManager:
   - Player
   - Ground
   - Wall
-  - 
+  - SlowGround
   - 
   - 
   - 
@@ -47,6 +47,9 @@ TagManager:
     locked: 0
   - name: Front
     uniqueID: 601480917
+    locked: 0
+  - name: Front front
+    uniqueID: 1947147559
     locked: 0
   m_RenderingLayers:
   - Default

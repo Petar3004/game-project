@@ -84,4 +84,18 @@ public class RoomDoorTrigger : MonoBehaviour
     {
         door.GetComponent<BoxCollider2D>().isTrigger = false;
     }
+
+    private void OnValidate()
+    {
+        switch (doorType)
+        {
+            case RoomDoorType.VERTICAL:
+                transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+                break;
+
+            case RoomDoorType.HORIZONTAL:
+                transform.localRotation = Quaternion.Euler(0f, 0f, 90f);
+                break;
+        }
+    }
 }
