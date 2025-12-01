@@ -14,8 +14,8 @@ public class GameManager : MonoBehaviour
     // Map of levels and their spawn points
     private Dictionary<int, Vector3[]> spawnPoints = new Dictionary<int, Vector3[]>
     {
-        { 0, new Vector3[] { new Vector3(-26f, -3.2f, 0f), Vector3.zero, Vector3.zero } },
-        { 1, new Vector3[] { new Vector3(-11.5f, -4.1f, 0f), Vector3.zero, Vector3.zero } },
+        { 0, new Vector3[] { new Vector3(-26f, -3.2f, 0f), new Vector3(-7.76f, -3.2f, 0f), new Vector3(10f, -3.2f, 0f) } },
+        { 1, new Vector3[] { new Vector3(-11.5f, -4.1f, 0f), new Vector3(-24.68f, 5.78f, 0), new Vector3(-11.53f, 15.84f, 0) } },
         { 2, new Vector3[] { Vector3.zero, Vector3.zero, Vector3.zero } },
         { 3, new Vector3[] { new Vector3(-7.8f, -3.75f, 0), Vector3.zero, Vector3.zero } },
         { 4, new Vector3[] { new Vector3(-20f, -3f, 0f), Vector3.zero, Vector3.zero } },
@@ -85,5 +85,24 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         TimeManager.instance.ResetTimer();
         CameraController.instance.roomIndex = 0;
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            CameraController.instance.MoveCameraToRoom(0);
+            MovePlayerToRoom(0);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            CameraController.instance.MoveCameraToRoom(1);
+            MovePlayerToRoom(1);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            CameraController.instance.MoveCameraToRoom(2);
+            MovePlayerToRoom(2);
+        }
     }
 }

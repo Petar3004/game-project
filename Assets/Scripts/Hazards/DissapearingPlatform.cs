@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DissapearingPlatform : MonoBehaviour
 {
+    public float secondsToFadeAlpha = 0.01f;
+    public int secondsToRegenerate = 3;
     public GameObject platform;
 
     void OnCollisionEnter2D(Collision2D other)
@@ -25,12 +27,12 @@ public class DissapearingPlatform : MonoBehaviour
             color.a = 1f - (i / 100f);
             sprite.color = color;
 
-            yield return new WaitForSecondsRealtime(0.01f);
+            yield return new WaitForSecondsRealtime(secondsToFadeAlpha);
         }
 
         col.enabled = false;
 
-        yield return new WaitForSecondsRealtime(3);
+        yield return new WaitForSecondsRealtime(secondsToRegenerate);
 
         color.a = 1;
         sprite.color = color;

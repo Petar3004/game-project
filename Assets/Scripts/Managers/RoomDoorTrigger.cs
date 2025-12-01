@@ -73,16 +73,6 @@ public class RoomDoorTrigger : MonoBehaviour
                 CameraController.instance.MoveCameraToNextRoom();
             }
         }
-
-        if ((move == Move.RIGHT && player.transform.position.x > door.transform.position.x) || (move == Move.UP && player.transform.position.y > door.transform.position.y))
-        {
-            LockDoor();
-        }
-    }
-
-    private void LockDoor()
-    {
-        door.GetComponent<BoxCollider2D>().isTrigger = false;
     }
 
     private void OnValidate()
