@@ -1,28 +1,8 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-
-public enum RoomDoorType
-{
-    HORIZONTAL,
-    VERTICAL
-}
-
-public enum Move
-{
-    LEFT,
-    RIGHT,
-    UP,
-    DOWN
-}
 
 public class RoomDoorTrigger : MonoBehaviour
 {
-    public RoomDoorType doorType;
-    public GameObject door;
+    public RoomDoorOrientation door;
     private Move move;
 
     // Change room and move player depending on the door
@@ -30,10 +10,10 @@ public class RoomDoorTrigger : MonoBehaviour
     {
         if (player.CompareTag("Player"))
         {
-            switch (doorType)
+            switch (door.doorType)
             {
                 case RoomDoorType.VERTICAL:
-                    if (player.transform.position.x < door.transform.position.x)
+                    if (player.transform.position.x < transform.position.x)
                     {
                         move = Move.RIGHT;
                         CameraController.instance.MoveCameraToNextRoom();
@@ -45,7 +25,7 @@ public class RoomDoorTrigger : MonoBehaviour
                     }
                     break;
                 case RoomDoorType.HORIZONTAL:
-                    if (player.transform.position.y < door.transform.position.y)
+                    if (player.transform.position.y < transform.position.y)
                     {
                         move = Move.UP;
                         CameraController.instance.MoveCameraToNextRoom();
@@ -64,28 +44,14 @@ public class RoomDoorTrigger : MonoBehaviour
     {
         if (player.CompareTag("Player"))
         {
-            if ((move == Move.RIGHT && player.transform.position.x < door.transform.position.x) || (move == Move.UP && player.transform.position.y < door.transform.position.y))
+            if ((move == Move.RIGHT && player.transform.position.x < transform.position.x) || (move == Move.UP && player.transform.position.y < transform.position.y))
             {
                 CameraController.instance.MoveCameraToPreviousRoom();
             }
-            else if ((move == Move.LEFT && player.transform.position.x > door.transform.position.x) || (move == Move.DOWN && player.transform.position.y > door.transform.position.y))
+            else if ((move == Move.LEFT && player.transform.position.x > transform.position.x) || (move == Move.DOWN && player.transform.position.y > transform.position.y))
             {
                 CameraController.instance.MoveCameraToNextRoom();
             }
-        }
-    }
-
-    private void OnValidate()
-    {
-        switch (doorType)
-        {
-            case RoomDoorType.VERTICAL:
-                transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
-                break;
-
-            case RoomDoorType.HORIZONTAL:
-                transform.localRotation = Quaternion.Euler(0f, 0f, 90f);
-                break;
         }
     }
 }

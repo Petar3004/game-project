@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class GearMovement : MonoBehaviour
@@ -6,8 +7,10 @@ public class GearMovement : MonoBehaviour
     public float distance = 3f;
     [Range(0f, 360f)]
     public float angle = 0;
+    public float pauseTimeSeconds = 0;
     private Vector3 startPosition;
-    private bool movingPositive;
+    private bool currentDirection;
+    private bool lastDirection;
     private float minBoundX;
     private float minBoundY;
     private float maxBoundX;
@@ -17,12 +20,8 @@ public class GearMovement : MonoBehaviour
     {
         startPosition = transform.position;
         InitializeBounds();
+        StartCoroutine(Move());
     }
-    void Update()
-    {
-        Move();
-    }
-
     void InitializeBounds()
     {
         angle = angle * Mathf.Deg2Rad;
@@ -32,11 +31,25 @@ public class GearMovement : MonoBehaviour
         maxBoundY = startPosition.y + Mathf.Cos(angle) * distance;
     }
 
-    void Move()
+    private IEnumerator Move()
+    {
+        while (true)
+        {
+            if (lastDirection != currentDirection)
+            {
+                yield return new WaitForSecondsRealtime(pauseTimeSeconds);
+                lastDirection = currentDirection;
+            }
+            MoveInOneDirection();
+            yield return null;
+        }
+    }
+
+    private void MoveInOneDirection()
     {
         Vector3 pos = transform.position;
-        float targetX = movingPositive ? maxBoundX : minBoundX;
-        float targetY = movingPositive ? maxBoundY : minBoundY;
+        float targetX = currentDirection ? maxBoundX : minBoundX;
+        float targetY = currentDirection ? maxBoundY : minBoundY;
         float currentSpeed = speed;
 
         if (TimeManager.instance != null && TimeManager.instance.isSlowed)
@@ -52,7 +65,7 @@ public class GearMovement : MonoBehaviour
 
         if (newX == targetX && newY == targetY)
         {
-            movingPositive = !movingPositive;
+            currentDirection = !currentDirection;
         }
     }
 }

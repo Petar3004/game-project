@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2423894582505113392}
   - component: {fileID: 2093193992983097273}
-  m_Layer: 0
+  - component: {fileID: 1837076660843935136}
+  m_Layer: 8
   m_Name: Room Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,6 +93,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1837076660843935136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3449535729805226489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8b4c6dc57af7794dbad1565131b7ab4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoomDoorTrigger
+  doorType: 1
 --- !u!1 &3503884749908506426
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,8 +116,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3097901627211169864}
   - component: {fileID: 2345725351389650802}
-  - component: {fileID: 8890749821561110169}
-  m_Layer: 0
+  - component: {fileID: 1412242222339221391}
+  m_Layer: 8
   m_Name: Camera Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +185,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5370079, y: 1}
   m_EdgeRadius: 0
---- !u!114 &8890749821561110169
+--- !u!114 &1412242222339221391
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,11 +194,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3503884749908506426}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8b4c6dc57af7794dbad1565131b7ab4, type: 3}
+  m_Script: {fileID: 11500000, guid: f0a86f95bd6d45c4dbdcd3b532c1768c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RoomTransitionManager
-  doorType: 1
-  door: {fileID: 3449535729805226489}
+  m_EditorClassIdentifier: Assembly-CSharp::RoomDoor
+  door: {fileID: 1837076660843935136}
 --- !u!1 &4985893337812162661
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,7 +209,7 @@ GameObject:
   - component: {fileID: 6720717833065115750}
   - component: {fileID: 3047052072324828273}
   - component: {fileID: 289621471843943818}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

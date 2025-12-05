@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform wallCheckColliderLeft;
     public Transform wallCheckColliderRight;
     public LayerMask groundLayer;
+    public LayerMask springLayer;
     public LayerMask slowGroundLayer;
     public LayerMask wallLayer;
     static MovementState state = MovementState.STANDING;
@@ -55,6 +56,11 @@ public class PlayerMovement : MonoBehaviour
                     rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                     state = MovementState.JUMPING;
                 }
+                else if (jumpPressed && IsOnSpring())
+                {
+                    rb.AddForce(1.5f * jumpForce * Vector2.up, ForceMode2D.Impulse);
+                    state = MovementState.JUMPING;
+                }
                 else if (crouchHeld && IsGrounded())
                 {
                     state = MovementState.CROUCHING;
@@ -70,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
                 break;
             case MovementState.JUMPING:
                 UpdateSprite(false);
-                if (IsGrounded())
+                if (IsGrounded() || IsOnSpring())
                 {
                     state = MovementState.STANDING;
                 }
@@ -78,12 +84,17 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    bool IsOnSpring()
+    {
+        return Physics2D.OverlapCircle(groundCheckCollider.position, groundCheckRadius, springLayer);
+    }
+
     bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheckCollider.position, groundCheckRadius, groundLayer);
     }
 
-    bool isSlowed()
+    bool IsSlowed()
     {
         return Physics2D.OverlapCircle(groundCheckCollider.position, groundCheckRadius, slowGroundLayer);
     }
@@ -95,11 +106,15 @@ public class PlayerMovement : MonoBehaviour
 
     int IsOnWall()
     {
-        if (Physics2D.OverlapCircle(wallCheckColliderLeft.position, wallCheckRadius, wallLayer))
+        if ((Physics2D.OverlapCircle(wallCheckColliderLeft.position, wallCheckRadius, wallLayer)
+        || Physics2D.OverlapCircle(wallCheckColliderLeft.position, wallCheckRadius, groundLayer))
+        && !IsGrounded())
         {
             return -1;
         }
-        else if (Physics2D.OverlapCircle(wallCheckColliderRight.position, wallCheckRadius, wallLayer))
+        else if ((Physics2D.OverlapCircle(wallCheckColliderRight.position, wallCheckRadius, wallLayer)
+        || Physics2D.OverlapCircle(wallCheckColliderRight.position, wallCheckRadius, groundLayer))
+        && !IsGrounded())
         {
             return 1;
         }
@@ -111,7 +126,7 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleHorizontalMovement(float xInput)
     {
-        float speed = (state == MovementState.CROUCHING || isSlowed()) ? crouchSpeed : moveSpeed;
+        float speed = (state == MovementState.CROUCHING || IsSlowed()) ? crouchSpeed : moveSpeed;
         if (Mathf.Sign(xInput) == IsOnWall())
         {
             xInput = 0;

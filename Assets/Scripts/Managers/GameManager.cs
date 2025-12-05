@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public List<GameObject> doors;
     public static GameManager instance;
     private GameObject player;
     // private bool isRestarting = false;  // prevents infinite loops

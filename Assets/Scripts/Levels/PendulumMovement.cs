@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class PendulumMovement : MonoBehaviour
 {
-    public float amplitude = 3f;
-    public float height = 2f;
-    public float speed = 2f;
+    public float amplitude = 6f;
+    public float height = 0.3f;
+    public float speed = 0.7f;
 
     private Vector3 startPos;
 

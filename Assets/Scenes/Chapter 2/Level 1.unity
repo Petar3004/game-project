@@ -1610,6 +1610,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 460727883}
     m_Modifications:
+    - target: {fileID: 1837076660843935136, guid: a4c1551b7a27aad45b5183b6d6ce611b, type: 3}
+      propertyPath: doorType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2093193992983097273, guid: a4c1551b7a27aad45b5183b6d6ce611b, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -2088,6 +2092,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraController
   roomIndex: 0
+  player: {fileID: 0}
 --- !u!114 &1315413339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2132,7 +2137,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257e6cc7f9544fa4796821c1d8487df2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  doors: []
 --- !u!4 &1315413342
 Transform:
   m_ObjectHideFlags: 0
