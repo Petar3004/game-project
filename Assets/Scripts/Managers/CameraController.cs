@@ -18,15 +18,15 @@ public class CameraController : MonoBehaviour
 
     public int roomIndex = 0;
     public static CameraController instance;
-    public Dictionary<int, (int, int)> longVerticalRooms = new Dictionary<int, (int, int)>
+    // (level, room), height
+    private Dictionary<(int, int), int> longVerticalRooms = new Dictionary<(int, int), int>
     {
-        { 1, (2, 2) }
+        { (1, 2), 4 }
     };
-    public Dictionary<int, (int, int)> longHorizontalRooms = new Dictionary<int, (int, int)>
+    // (level, room), width
+    private Dictionary<(int, int), int> longHorizontalRooms = new Dictionary<(int, int), int>
     {
     };
-    public GameObject player;
-
     private void Awake()
     {
         if (instance == null)
@@ -61,28 +61,25 @@ public class CameraController : MonoBehaviour
         Camera.main.transform.position = cameraPositions[currentLevelIndex][roomIndex];
     }
 
-    void LateUpdate()
-    {
-
-    }
-
-    private void trackPlayer()
+    public void TrackPlayer(GameObject player)
     {
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
-        if (longVerticalRooms[currentLevelIndex].Item1 == roomIndex)
+        if (longVerticalRooms.ContainsKey((currentLevelIndex, roomIndex)))
         {
             float bottomBorder = cameraPositions[currentLevelIndex][roomIndex].y;
-            float topBorder = cameraPositions[currentLevelIndex][roomIndex].y + longVerticalRooms[currentLevelIndex].Item2 * 5;
+            float offset = Mathf.Pow(2, longVerticalRooms[(currentLevelIndex, roomIndex)] - 1) * 5;
+            float topBorder = bottomBorder + offset;
             float playerY = player.transform.position.y;
             if (playerY > bottomBorder && playerY < topBorder)
             {
                 Camera.main.transform.position = new Vector3(Camera.main.transform.position.x, playerY, Camera.main.transform.position.z);
             }
         }
-        if (longHorizontalRooms[currentLevelIndex].Item1 == roomIndex)
+        if (longHorizontalRooms.ContainsKey((currentLevelIndex, roomIndex)))
         {
             float leftBorder = cameraPositions[currentLevelIndex][roomIndex].x;
-            float rightBorder = cameraPositions[currentLevelIndex][roomIndex].x + longHorizontalRooms[currentLevelIndex].Item2 * 8.89f;
+            float offset = Mathf.Pow(2, longVerticalRooms[(currentLevelIndex, roomIndex)] - 1) * 8.89f;
+            float rightBorder = leftBorder + offset;
             float playerX = player.transform.position.x;
             if (playerX > leftBorder && playerX < rightBorder)
             {

@@ -4,14 +4,11 @@ using UnityEngine;
 
 public class FallingSpike : MonoBehaviour
 {
-    public GameObject spike;
-    public GameObject player;
-
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            spike.GetComponent<Rigidbody2D>().gravityScale = 1;
+            gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
             StartCoroutine(DestroySpike());
         }
     }
@@ -20,6 +17,6 @@ public class FallingSpike : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(3);
 
-        Destroy(spike);
+        Destroy(gameObject);
     }
 }

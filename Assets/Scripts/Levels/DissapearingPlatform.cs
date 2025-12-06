@@ -6,7 +6,14 @@ public class DissapearingPlatform : MonoBehaviour
 {
     public float secondsToFadeAlpha = 0.01f;
     public int secondsToRegenerate = 3;
-    public GameObject platform;
+    private SpriteRenderer sprite;
+    private Collider2D col;
+
+    void Start()
+    {
+        sprite = gameObject.GetComponent<SpriteRenderer>();
+        col = gameObject.GetComponent<EdgeCollider2D>();
+    }
 
     void OnCollisionEnter2D(Collision2D other)
     {
@@ -18,8 +25,6 @@ public class DissapearingPlatform : MonoBehaviour
 
     private IEnumerator FadeAndDisappear()
     {
-        SpriteRenderer sprite = platform.GetComponent<SpriteRenderer>();
-        Collider2D col = platform.GetComponent<EdgeCollider2D>();
         Color color = sprite.color;
 
         for (int i = 0; i <= 100; i++)

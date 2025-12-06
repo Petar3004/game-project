@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class HorizontalSpike : MonoBehaviour
 {
-    public GameObject spike;
     public float velX;
     public float velY = 0f;
-    Rigidbody2D rb;
+    Rigidbody2D spikerRb;
     public bool leftToRight;
     private bool playerInRange = false;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        spikerRb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
@@ -28,9 +27,9 @@ public class HorizontalSpike : MonoBehaviour
             {
                 velX = -5f;
             }
-            rb.linearVelocity = new Vector2(velX, velY);
+            spikerRb.linearVelocity = new Vector2(velX, velY);
         }
-        
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -46,6 +45,6 @@ public class HorizontalSpike : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(6);
 
-        Destroy(spike);
+        Destroy(gameObject);
     }
 }

@@ -88,6 +88,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        CameraController.instance.TrackPlayer(player);
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             CameraController.instance.MoveCameraToRoom(0);

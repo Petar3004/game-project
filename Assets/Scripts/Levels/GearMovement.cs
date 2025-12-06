@@ -11,10 +11,9 @@ public class GearMovement : MonoBehaviour
     private Vector3 startPosition;
     private bool currentDirection;
     private bool lastDirection;
-    private float minBoundX;
-    private float minBoundY;
-    private float maxBoundX;
-    private float maxBoundY;
+    private Vector3 pointA;
+    private Vector3 pointB;
+
 
     void Start()
     {
@@ -24,12 +23,15 @@ public class GearMovement : MonoBehaviour
     }
     void InitializeBounds()
     {
-        angle = angle * Mathf.Deg2Rad;
-        minBoundX = startPosition.x;
-        minBoundY = startPosition.y;
-        maxBoundX = startPosition.x + Mathf.Sin(angle) * distance;
-        maxBoundY = startPosition.y + Mathf.Cos(angle) * distance;
+        float angleRad = angle * Mathf.Deg2Rad;
+
+        pointA = startPosition;
+        pointB = startPosition + new Vector3(
+            Mathf.Cos(angleRad) * distance,
+            Mathf.Sin(angleRad) * distance
+        );
     }
+
 
     private IEnumerator Move()
     {
@@ -48,24 +50,18 @@ public class GearMovement : MonoBehaviour
     private void MoveInOneDirection()
     {
         Vector3 pos = transform.position;
-        float targetX = currentDirection ? maxBoundX : minBoundX;
-        float targetY = currentDirection ? maxBoundY : minBoundY;
+        Vector3 target = currentDirection ? pointB : pointA;
+
         float currentSpeed = speed;
-
         if (TimeManager.instance != null && TimeManager.instance.isSlowed)
-        {
             currentSpeed *= TimeManager.instance.slowTimeFactor;
-        }
 
-        float newX = Mathf.MoveTowards(pos.x, targetX, currentSpeed * Time.deltaTime);
-        float newY = Mathf.MoveTowards(pos.y, targetY, currentSpeed * Time.deltaTime);
-        pos.x = newX;
-        pos.y = newY;
-        transform.position = pos;
+        transform.position = Vector3.MoveTowards(pos, target, currentSpeed * Time.deltaTime);
 
-        if (newX == targetX && newY == targetY)
+        if (transform.position == target)
         {
             currentDirection = !currentDirection;
         }
     }
+
 }

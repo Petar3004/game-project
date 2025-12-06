@@ -7,9 +7,9 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    const float groundCheckRadius = 0.2f;
-    const float ceilingCheckRadius = 0.2f;
-    const float wallCheckRadius = 0.05f;
+    private Vector2 groundCheckSize;
+    private Vector2 ceilingCheckSize;
+    private Vector2 wallCheckSize;
     public Transform groundCheckCollider;
     public Transform ceilingCheckCollider;
     public Transform wallCheckColliderLeft;
@@ -22,11 +22,20 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
     public float crouchSpeed = 3f;
     public float jumpForce = 8f;
-    public Rigidbody2D rb;
+    public float springMultiplier = 1.5f;
+    private Rigidbody2D playerRb;
     public Collider2D standingCollider;
     public Collider2D crouchingCollider;
     public SpriteRenderer standingSprite;
     public SpriteRenderer crouchingSprite;
+
+    void Start()
+    {
+        playerRb = GetComponent<Rigidbody2D>();
+        groundCheckSize = new Vector2(0.9f * standingCollider.bounds.size.x, 0.2f);
+        ceilingCheckSize = new Vector2(0.9f * standingCollider.bounds.size.x, 0.2f);
+        wallCheckSize = new Vector2(0.05f, 0.9f * standingCollider.bounds.size.y);
+    }
 
     void Update()
     {
@@ -53,12 +62,12 @@ public class PlayerMovement : MonoBehaviour
                 UpdateCollider(false);
                 if (jumpPressed && IsGrounded())
                 {
-                    rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                    playerRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                     state = MovementState.JUMPING;
                 }
                 else if (jumpPressed && IsOnSpring())
                 {
-                    rb.AddForce(1.5f * jumpForce * Vector2.up, ForceMode2D.Impulse);
+                    playerRb.AddForce(springMultiplier * jumpForce * Vector2.up, ForceMode2D.Impulse);
                     state = MovementState.JUMPING;
                 }
                 else if (crouchHeld && IsGrounded())
@@ -86,34 +95,34 @@ public class PlayerMovement : MonoBehaviour
 
     bool IsOnSpring()
     {
-        return Physics2D.OverlapCircle(groundCheckCollider.position, groundCheckRadius, springLayer);
+        return Physics2D.OverlapBox(groundCheckCollider.position, groundCheckSize, 0, springLayer);
     }
 
     bool IsGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheckCollider.position, groundCheckRadius, groundLayer);
+        return Physics2D.OverlapBox(groundCheckCollider.position, groundCheckSize, 0, groundLayer);
     }
 
     bool IsSlowed()
     {
-        return Physics2D.OverlapCircle(groundCheckCollider.position, groundCheckRadius, slowGroundLayer);
+        return Physics2D.OverlapBox(groundCheckCollider.position, groundCheckSize, 0, slowGroundLayer);
     }
 
     bool IsStuck()
     {
-        return Physics2D.OverlapCircle(ceilingCheckCollider.position, ceilingCheckRadius, groundLayer);
+        return Physics2D.OverlapBox(ceilingCheckCollider.position, ceilingCheckSize, 0, groundLayer);
     }
 
     int IsOnWall()
     {
-        if ((Physics2D.OverlapCircle(wallCheckColliderLeft.position, wallCheckRadius, wallLayer)
-        || Physics2D.OverlapCircle(wallCheckColliderLeft.position, wallCheckRadius, groundLayer))
+        if ((Physics2D.OverlapBox(wallCheckColliderLeft.position, wallCheckSize, 0, wallLayer)
+        || Physics2D.OverlapBox(wallCheckColliderLeft.position, wallCheckSize, 0, groundLayer))
         && !IsGrounded())
         {
             return -1;
         }
-        else if ((Physics2D.OverlapCircle(wallCheckColliderRight.position, wallCheckRadius, wallLayer)
-        || Physics2D.OverlapCircle(wallCheckColliderRight.position, wallCheckRadius, groundLayer))
+        else if ((Physics2D.OverlapBox(wallCheckColliderRight.position, wallCheckSize, 0, wallLayer)
+        || Physics2D.OverlapBox(wallCheckColliderRight.position, wallCheckSize, 0, groundLayer))
         && !IsGrounded())
         {
             return 1;
@@ -131,7 +140,7 @@ public class PlayerMovement : MonoBehaviour
         {
             xInput = 0;
         }
-        rb.linearVelocity = new Vector2(xInput * speed, rb.linearVelocityY);
+        playerRb.linearVelocity = new Vector2(xInput * speed, playerRb.linearVelocityY);
     }
 
     void UpdateSprite(bool crouched)
@@ -152,4 +161,6 @@ enum MovementState
     CROUCHING,
     JUMPING
 }
+
+
 

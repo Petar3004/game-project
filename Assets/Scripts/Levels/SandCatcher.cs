@@ -12,7 +12,6 @@ public class SandCatcher : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-       
         Vector3 hitPos = other.transform.position;
         grid.AddSandAt(hitPos);
     }
