@@ -61,14 +61,14 @@ public class PlayerMovement : MonoBehaviour
             case MovementState.STANDING:
                 UpdateSprite(false);
                 UpdateCollider(false);
-                if (jumpPressed && IsGrounded())
+                if (jumpPressed && (IsGrounded() || isLocked))
                 {
-                    playerRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                    playerRb.linearVelocityY = jumpForce;
                     state = MovementState.JUMPING;
                 }
                 else if (jumpPressed && IsOnSpring())
                 {
-                    playerRb.AddForce(springMultiplier * jumpForce * Vector2.up, ForceMode2D.Impulse);
+                    playerRb.linearVelocityY = jumpForce * springMultiplier;
                     state = MovementState.JUMPING;
                 }
                 else if (crouchHeld && IsGrounded())
@@ -137,7 +137,7 @@ public class PlayerMovement : MonoBehaviour
     void HandleHorizontalMovement(float xInput)
     {
         float speed = (state == MovementState.CROUCHING || IsSlowed()) ? crouchSpeed : moveSpeed;
-        if (Mathf.Sign(xInput) == IsOnWall())
+        if (Mathf.Sign(xInput) == IsOnWall() || isLocked)
         {
             xInput = 0;
         }
@@ -155,22 +155,15 @@ public class PlayerMovement : MonoBehaviour
         crouchingCollider.enabled = crouched;
     }
 
-    public void LockPlayer(bool locked)
+    public void PositionLock(bool locked)
     {
         isLocked = locked;
 
         if (locked)
         {
-            playerRb.linearVelocity = Vector2.zero;
-            playerRb.constraints = RigidbodyConstraints2D.FreezeAll;
-
             state = MovementState.STANDING;
             UpdateSprite(false);
             UpdateCollider(false);
-        }
-        else
-        {
-            playerRb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
     }
 }

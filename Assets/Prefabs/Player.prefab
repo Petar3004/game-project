@@ -216,8 +216,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 601480917
-  m_SortingLayer: 1
+  m_SortingLayerID: 1947147559
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -415,8 +415,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 601480917
-  m_SortingLayer: 1
+  m_SortingLayerID: 1947147559
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -526,14 +526,16 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 256
+  state: 0
   moveSpeed: 9
   crouchSpeed: 4.5
   jumpForce: 30
-  rb: {fileID: 3470590319243197343}
+  springMultiplier: 1.5
   standingCollider: {fileID: 5248742689268583572}
   crouchingCollider: {fileID: 1351217804084703848}
   standingSprite: {fileID: 2050165648894658985}
   crouchingSprite: {fileID: 0}
+  isLocked: 0
 --- !u!114 &1291358939746498937
 MonoBehaviour:
   m_ObjectHideFlags: 0
