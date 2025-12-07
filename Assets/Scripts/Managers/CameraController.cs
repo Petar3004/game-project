@@ -43,14 +43,14 @@ public class CameraController : MonoBehaviour
     public void MoveCameraToNextRoom()
     {
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
-        roomIndex += 1;
+        roomIndex++;
         Camera.main.transform.position = cameraPositions[currentLevelIndex][roomIndex];
     }
 
     public void MoveCameraToPreviousRoom()
     {
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
-        roomIndex -= 1;
+        roomIndex--;
         Camera.main.transform.position = cameraPositions[currentLevelIndex][roomIndex];
     }
 

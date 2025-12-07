@@ -9,14 +9,14 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     private GameObject player;
-    // private bool isRestarting = false;  // prevents infinite loops
+    public PendulumMovement pendulum;
 
     // Map of levels and their spawn points
     private Dictionary<int, Vector3[]> spawnPoints = new Dictionary<int, Vector3[]>
     {
         { 0, new Vector3[] { new Vector3(-26f, -3.2f, 0f), new Vector3(-7.76f, -3.2f, 0f), new Vector3(10f, -3.2f, 0f) } },
         { 1, new Vector3[] { new Vector3(-11.5f, -4.1f, 0f), new Vector3(-24.68f, 5.78f, 0), new Vector3(-11.53f, 15.84f, 0) } },
-        { 2, new Vector3[] { Vector3.zero, Vector3.zero, Vector3.zero } },
+        { 2, new Vector3[] { new Vector3(0.12f, -3.7f, 0) } },
         { 3, new Vector3[] { new Vector3(-7.8f, -3.75f, 0), Vector3.zero, Vector3.zero } },
         { 4, new Vector3[] { new Vector3(-20f, -3f, 0f), Vector3.zero, Vector3.zero } },
         { 5, new Vector3[] { Vector3.zero, Vector3.zero, Vector3.zero } },
@@ -41,10 +41,6 @@ public class GameManager : MonoBehaviour
 
     public void MovePlayerToRoom(int roomIndex)
     {
-        if (player == null)
-        {
-            player = GameObject.FindGameObjectWithTag("PlayerObject");
-        }
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
         player.transform.position = spawnPoints[currentLevelIndex][roomIndex];
         // Reset velocity after player is moved
@@ -69,35 +65,9 @@ public class GameManager : MonoBehaviour
         MovePlayerToLevel(currentLevelIndex - 1);
     }
 
-    // // Called when an object is enabled
-    // void OnEnable()
-    // {
-    //     // Call OnSceneLoaded each time a new scene loads
-    //     SceneManager.sceneLoaded += OnSceneLoaded;
-    // }
-
-    // // Called when an object is disabled
-    // void OnDisable()
-    // {
-    //     // Stop calling each time
-    //     SceneManager.sceneLoaded -= OnSceneLoaded;
-    // }
-
-    // private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    // {
-    //     isRestarting = false;
-    // }
-
     // Called when the player dies or the timer hits 0
     public void RestartLevel()
     {
-        // if (isRestarting)
-        // {
-        //     return;
-        // }
-        // isRestarting = true;
-
-
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         TimeManager.instance.ResetTimer();
         CameraController.instance.roomIndex = 0;
@@ -105,10 +75,12 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (player != null)
+        if (player == null)
         {
-            CameraController.instance.TrackPlayer(player);
+            player = GameObject.FindGameObjectWithTag("PlayerObject");
         }
+
+        CameraController.instance.TrackPlayer(player);
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
@@ -124,6 +96,10 @@ public class GameManager : MonoBehaviour
         {
             CameraController.instance.MoveCameraToRoom(2);
             MovePlayerToRoom(2);
+        }
+        else if (Input.GetKeyDown(KeyCode.R))
+        {
+            RestartLevel();
         }
     }
 }

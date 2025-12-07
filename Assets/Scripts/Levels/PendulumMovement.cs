@@ -7,6 +7,7 @@ public class PendulumMovement : MonoBehaviour
     public float speed = 0.7f;
 
     private Vector3 startPos;
+    private float localTime = 0f;
 
     void Start()
     {
@@ -15,8 +16,18 @@ public class PendulumMovement : MonoBehaviour
 
     void Update()
     {
-        float x = Mathf.Sin(Time.time * speed) * amplitude;
+        float currentSpeed = speed;
+
+        if (TimeManager.instance != null && TimeManager.instance.isSlowed)
+        {
+            currentSpeed *= TimeManager.instance.slowTimeFactor;
+        }
+
+        localTime += Time.deltaTime * currentSpeed;
+
+        float x = Mathf.Sin(localTime) * amplitude;
         float y = Mathf.Pow(x / amplitude, 2) * height + startPos.y;
+
         transform.position = startPos + new Vector3(x, y, 0);
     }
 }
