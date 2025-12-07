@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask springLayer;
     public LayerMask slowGroundLayer;
     public LayerMask wallLayer;
-    static MovementState state = MovementState.STANDING;
+    public MovementState state = MovementState.STANDING;
     public float moveSpeed = 5f;
     public float crouchSpeed = 3f;
     public float jumpForce = 8f;
@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     public Collider2D crouchingCollider;
     public SpriteRenderer standingSprite;
     public SpriteRenderer crouchingSprite;
+    public bool isLocked = false;
 
     void Start()
     {
@@ -153,9 +154,28 @@ public class PlayerMovement : MonoBehaviour
         standingCollider.enabled = !crouched;
         crouchingCollider.enabled = crouched;
     }
+
+    public void LockPlayer(bool locked)
+    {
+        isLocked = locked;
+
+        if (locked)
+        {
+            playerRb.linearVelocity = Vector2.zero;
+            playerRb.constraints = RigidbodyConstraints2D.FreezeAll;
+
+            state = MovementState.STANDING;
+            UpdateSprite(false);
+            UpdateCollider(false);
+        }
+        else
+        {
+            playerRb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        }
+    }
 }
 
-enum MovementState
+public enum MovementState
 {
     STANDING,
     CROUCHING,

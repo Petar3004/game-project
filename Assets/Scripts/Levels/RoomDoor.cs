@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class RoomDoorTrigger : MonoBehaviour
+public class RoomDoor : MonoBehaviour
 {
     public RoomDoorOrientation door;
     private Move move;

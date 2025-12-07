@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -40,7 +41,10 @@ public class GameManager : MonoBehaviour
 
     public void MovePlayerToRoom(int roomIndex)
     {
-        player = GameObject.FindGameObjectWithTag("PlayerObject");
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("PlayerObject");
+        }
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
         player.transform.position = spawnPoints[currentLevelIndex][roomIndex];
         // Reset velocity after player is moved
@@ -49,7 +53,20 @@ public class GameManager : MonoBehaviour
 
     public void MovePlayerToLevel(int levelIndex)
     {
-        // TODO
+        SceneManager.LoadScene(levelIndex);
+        MovePlayerToRoom(0);
+    }
+
+    public void MovePlayerToNextLevel()
+    {
+        int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
+        MovePlayerToLevel(currentLevelIndex + 1);
+    }
+
+    public void MovePlayerToPreviousLevel()
+    {
+        int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
+        MovePlayerToLevel(currentLevelIndex - 1);
     }
 
     // // Called when an object is enabled
@@ -88,7 +105,11 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        CameraController.instance.TrackPlayer(player);
+        if (player != null)
+        {
+            CameraController.instance.TrackPlayer(player);
+        }
+
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             CameraController.instance.MoveCameraToRoom(0);
