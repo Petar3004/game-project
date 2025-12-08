@@ -684,6 +684,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wood Ground (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7889437104908448191, guid: 554c4e375dc019d43a5a617b327c88e7, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7889437104908448191, guid: 554c4e375dc019d43a5a617b327c88e7, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 601480917
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
