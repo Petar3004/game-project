@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     private GameObject player;
-    public PendulumMovement pendulum;
 
     // Map of levels and their spawn points
     private Dictionary<int, Vector3[]> spawnPoints = new Dictionary<int, Vector3[]>
