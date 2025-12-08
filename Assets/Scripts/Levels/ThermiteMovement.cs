@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Runtime.CompilerServices;
+using NUnit.Framework.Constraints;
 using UnityEngine;
 
 public enum MovementType
@@ -9,16 +10,37 @@ public enum MovementType
     FLYING
 }
 
+public enum ThermiteType
+{
+    ENEMY,
+    COLLECTABLE
+}
+
 public class ThermiteMovement : MonoBehaviour
 {
     public MovementType movementType;
+    public ThermiteType thermiteType;
     public Rigidbody2D thermiteRb;
-    public GameObject player;
     private Coroutine jumpRoutine;
     public Transform groundCheckCollider;
-    public float groundCheckRadius = 0.2f;
+    private float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
-    private int flyDirection = 1;
+    private int flyDirection;
+    public float flyDistance = 10;
+    public Clock clock;
+    private Vector3 flyStartPos;
+    private Vector3 flyEndPos;
+    private float flySpeed = -1;
+
+    void Start()
+    {
+        if (movementType == MovementType.FLYING)
+        {
+            flyStartPos = transform.position;
+            flyEndPos = new Vector3(flyStartPos.x + flyDistance, flyStartPos.y, flyStartPos.z);
+            flySpeed = Random.Range(3f, 8f);
+        }
+    }
 
     void Update()
     {
@@ -44,47 +66,87 @@ public class ThermiteMovement : MonoBehaviour
         {
             yield return new WaitUntil(IsGrounded);
             float waitTime = Random.Range(0.5f, 2f);
-            yield return new WaitForSeconds(waitTime);
+            yield return new WaitForSecondsRealtime(waitTime);
             JumpOnce();
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSecondsRealtime(0.1f);
         }
     }
 
     void JumpOnce()
     {
-        int signPicker = Random.Range(0, 2);
-        float direction = (signPicker == 0) ? -1.0f : 1.0f;
+        int direction = PickRandomDirection();
         float yMult = 1f;
         if (transform.position.y > 7)
         {
             yMult = 0.5f;
         }
-        Vector2 jump = new Vector2(2.6f * direction, 10f * yMult);
-        thermiteRb.linearVelocity = jump;
+        if (IsGrounded() && transform.position.x < -7.5f)
+        {
+            direction = 1;
+        }
+        else if (IsGrounded() && transform.position.y > 7.5f)
+        {
+            direction = -1;
+        }
+
+        thermiteRb.linearVelocity = new Vector2(2.6f * direction, 10f * yMult);
     }
 
-    void MoveFlying()
+    private int PickRandomDirection()
+    {
+        int signPicker = Random.Range(0, 2);
+        return signPicker == 0 ? -1 : 1;
+    }
+
+    private void MoveFlying()
     {
         thermiteRb.gravityScale = 0;
 
-        if (transform.position.x < -7.5f || transform.position.x > 7.5f)
+        Vector3 pos = transform.position;
+        Vector3 target = flyDirection == 1 ? flyStartPos : flyEndPos;
+
+        float currentSpeed = flySpeed;
+        if (thermiteType == ThermiteType.ENEMY && TimeManager.instance != null && TimeManager.instance.isSlowed)
         {
-            flyDirection = -flyDirection;
+            currentSpeed = flySpeed * TimeManager.instance.slowTimeFactor;
         }
-        thermiteRb.linearVelocity = new Vector2(5f * flyDirection, 0f);
+
+        transform.position = Vector3.MoveTowards(pos, target, currentSpeed * Time.deltaTime);
+
+        if (transform.position == target)
+        {
+            flyDirection = flyDirection == 1 ? -1 : 1;
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("PlayerObject"))
+        if (collision.gameObject.CompareTag("PlayerObject") && thermiteType == ThermiteType.COLLECTABLE)
         {
+            clock.GetRiddlePiece();
             Destroy(gameObject);
-            // TODO: give player riddle fragment
         }
     }
 
     bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheckCollider.position, groundCheckRadius, groundLayer);
+    }
+
+    private void OnValidate()
+    {
+        SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+        EnemyDamage enemyDamage = GetComponent<EnemyDamage>();
+
+        if (thermiteType == ThermiteType.COLLECTABLE)
+        {
+            sprite.color = Color.yellow;
+            enemyDamage.damage = 0;
+        }
+        else
+        {
+            sprite.color = Color.red;
+            enemyDamage.damage = 1;
+        }
     }
 }

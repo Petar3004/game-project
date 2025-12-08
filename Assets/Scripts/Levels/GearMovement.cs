@@ -21,6 +21,7 @@ public class GearMovement : MonoBehaviour
         InitializeBounds();
         StartCoroutine(Move());
     }
+
     void InitializeBounds()
     {
         float angleRad = angle * Mathf.Deg2Rad;

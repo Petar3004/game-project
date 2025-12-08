@@ -16,6 +16,9 @@ public class ClockControlGear : MonoBehaviour
     public int clockFaceDivisions;
     private bool isRotating;
     public GameObject clockface;
+    private bool playerLocked = false;
+    public int handOrientation = 0;
+    private float timeLocked = 0f;
 
     void Start()
     {
@@ -24,20 +27,33 @@ public class ClockControlGear : MonoBehaviour
 
     void Update()
     {
-        if (Physics2D.OverlapBox(playerCheckCollider.position, playerCheckSize, 0, playerLayer) && playerMovement.state == MovementState.STANDING)
+        bool playerInPosition = Physics2D.OverlapBox(playerCheckCollider.position, playerCheckSize, 0, playerLayer) && playerMovement.state == MovementState.STANDING;
+        if (playerInPosition)
         {
-            playerMovement.PositionLock(true);
-            float xInput = Input.GetAxis("Horizontal");
-            SpinGear(xInput);
+            if (!playerLocked)
+            {
+                playerMovement.PositionLock(true);
+                playerLocked = true;
+                timeLocked = Time.time;
+            }
+            if (Time.time - timeLocked >= 0.5f)
+            {
+                SpinGear();
+            }
         }
         else
         {
-            playerMovement.PositionLock(false);
+            if (playerLocked)
+            {
+                playerMovement.PositionLock(false);
+                playerLocked = false;
+            }
         }
     }
 
-    private void SpinGear(float xInput)
+    private void SpinGear()
     {
+        float xInput = Input.GetAxis("Horizontal");
         gearOrientation += xInput;
         transform.rotation = Quaternion.Euler(0, 0, gearOrientation);
         if (xInput != 0 && !isRotating)
@@ -73,6 +89,9 @@ public class ClockControlGear : MonoBehaviour
 
         float correction = stepAngle - rotatedSoFar;
         clockHand.transform.RotateAround(clockface.transform.position, Vector3.forward, correction);
+
+        handOrientation = (int)(handOrientation + stepAngle) % 360;
+        if (handOrientation < 0) handOrientation += 360;
 
         isRotating = false;
     }
