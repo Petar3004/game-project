@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     private GameObject player;
+    public int currentLevel;
 
     // Map of levels and their spawn points
     private Dictionary<int, Vector3[]> spawnPoints = new Dictionary<int, Vector3[]>
@@ -56,12 +57,16 @@ public class GameManager : MonoBehaviour
     {
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
         MovePlayerToLevel(currentLevelIndex + 1);
+
+        SaveProgress();
     }
 
     public void MovePlayerToPreviousLevel()
     {
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
         MovePlayerToLevel(currentLevelIndex - 1);
+
+        SaveProgress();
     }
 
     // Called when the player dies or the timer hits 0
@@ -70,6 +75,13 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         TimeManager.instance.ResetTimer();
         CameraController.instance.roomIndex = 0;
+
+        SaveProgress();
+    }
+
+    public void SaveProgress()
+    {
+        // TODO save level in storage
     }
 
     void Update()
@@ -81,24 +93,38 @@ public class GameManager : MonoBehaviour
 
         CameraController.instance.TrackPlayer(player);
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (!PauseManager.instance.isPaused)
         {
-            CameraController.instance.MoveCameraToRoom(0);
-            MovePlayerToRoom(0);
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                CameraController.instance.MoveCameraToRoom(0);
+                MovePlayerToRoom(0);
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                CameraController.instance.MoveCameraToRoom(1);
+                MovePlayerToRoom(1);
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                CameraController.instance.MoveCameraToRoom(2);
+                MovePlayerToRoom(2);
+            }
+            else if (Input.GetKeyDown(KeyCode.R))
+            {
+                RestartLevel();
+            }
+            else if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                PauseManager.instance.Pause();
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        else
         {
-            CameraController.instance.MoveCameraToRoom(1);
-            MovePlayerToRoom(1);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            CameraController.instance.MoveCameraToRoom(2);
-            MovePlayerToRoom(2);
-        }
-        else if (Input.GetKeyDown(KeyCode.R))
-        {
-            RestartLevel();
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                PauseManager.instance.Resume();
+            }
         }
     }
 }

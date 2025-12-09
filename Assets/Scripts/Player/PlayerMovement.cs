@@ -40,7 +40,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        float xInput = Input.GetAxis("Horizontal");
+        float xInput = 0;
+        if (!PauseManager.instance.isPaused)
+        {
+            xInput = Input.GetAxis("Horizontal");
+        }
 
         HandleState();
         HandleHorizontalMovement(xInput);
@@ -53,8 +57,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleState()
     {
-        bool jumpPressed = Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow);
-        bool crouchHeld = Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow);
+        bool jumpPressed = false;
+        bool crouchHeld = false;
+
+        if (!PauseManager.instance.isPaused)
+        {
+            jumpPressed = Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow);
+            crouchHeld = Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow);
+        }
 
         switch (state)
         {

@@ -53,7 +53,11 @@ public class ClockControlGear : MonoBehaviour
 
     private void SpinGear()
     {
-        float xInput = Input.GetAxis("Horizontal");
+        float xInput = 0;
+        if (!PauseManager.instance.isPaused)
+        {
+            xInput = Input.GetAxis("Horizontal");
+        }
         gearOrientation += xInput;
         transform.rotation = Quaternion.Euler(0, 0, gearOrientation);
         if (xInput != 0 && !isRotating)

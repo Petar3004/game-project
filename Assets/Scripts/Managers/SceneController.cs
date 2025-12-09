@@ -42,6 +42,11 @@ public class SceneController : MonoBehaviour
         while (!asyncLoad.isDone)
             yield return null;
 
-        GameManager.instance.MovePlayerToLevel(levelIndex);
+        GameManager.instance.RestartLevel();
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
