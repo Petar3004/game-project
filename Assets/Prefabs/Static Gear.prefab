@@ -81,8 +81,8 @@ SpriteRenderer:
   m_SortingLayerID: 601480917
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.9254902, g: 0.5781982, b: 0.2470588, a: 1}
+  m_Sprite: {fileID: 21300000, guid: e078a1d6c9c174a58a6291b7c6bfbd9c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -141,5 +141,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e809cb5bc19923e43b8ad4a2cd722e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GearDamage
-  playerHealth: {fileID: 4712671496652773476, guid: 6de5f8e134120274eafc5550f2c93768, type: 3}
   damage: 1
