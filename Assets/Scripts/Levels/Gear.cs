@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class GearMovement : MonoBehaviour
+public class Gear : MonoBehaviour
 {
     public float speed = 2f;
     public float distance = 3f;

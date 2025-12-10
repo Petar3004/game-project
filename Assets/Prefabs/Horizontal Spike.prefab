@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 4256906535951826614}
   - component: {fileID: 2582380015289039543}
   - component: {fileID: 4135840053015096009}
+  - component: {fileID: 7549093026625340650}
   - component: {fileID: 553297604693158973}
   - component: {fileID: 8979118711498660829}
   - component: {fileID: 6926118292044494169}
-  - component: {fileID: 7549093026625340650}
   m_Layer: 0
   m_Name: Horizontal Spike
   m_TagString: Untagged
@@ -108,6 +108,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDamage
   damage: 1
+--- !u!114 &7549093026625340650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729618991020324755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dc3f8d448f763043ae0edc0bcab375f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HorizontalSpike
+  velX: 5
+  velY: 0
+  leftToRight: 1
 --- !u!61 &553297604693158973
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -227,19 +242,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7549093026625340650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1729618991020324755}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dc3f8d448f763043ae0edc0bcab375f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HorizontalSpike
-  spike: {fileID: 1729618991020324755}
-  velX: 5
-  velY: 0
-  leftToRight: 1

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DissapearingPlatform : MonoBehaviour
 {
-    public float secondsToFadeAlpha = 0.01f;
+    public float secondsToFadeOpacityBy1 = 0.01f;
     public int secondsToRegenerate = 3;
     private SpriteRenderer sprite;
     private Collider2D col;
@@ -32,7 +32,7 @@ public class DissapearingPlatform : MonoBehaviour
             color.a = 1f - (i / 100f);
             sprite.color = color;
 
-            yield return new WaitForSecondsRealtime(secondsToFadeAlpha);
+            yield return new WaitForSecondsRealtime(secondsToFadeOpacityBy1);
         }
 
         col.enabled = false;

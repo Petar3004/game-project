@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 514042001023971582}
   - component: {fileID: 7892610927850365554}
-  - component: {fileID: 7396049550138341899}
   - component: {fileID: 5278336024010676566}
+  - component: {fileID: 7396049550138341899}
   m_Layer: 0
   m_Name: Static Gear
   m_TagString: Untagged
@@ -92,6 +92,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5278336024010676566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7115459544288943863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e809cb5bc19923e43b8ad4a2cd722e67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GearDamage
+  damage: 1
 --- !u!70 &7396049550138341899
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -129,17 +142,3 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 1}
   m_Direction: 0
---- !u!114 &5278336024010676566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7115459544288943863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e809cb5bc19923e43b8ad4a2cd722e67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GearDamage
-  playerHealth: {fileID: 4712671496652773476, guid: 6de5f8e134120274eafc5550f2c93768, type: 3}
-  damage: 1

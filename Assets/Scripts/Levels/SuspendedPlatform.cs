@@ -2,7 +2,7 @@ using System.Numerics;
 using UnityEditor.Callbacks;
 using UnityEngine;
 
-public class SuspendedPlatformMovement : MonoBehaviour
+public class SuspendedPlatform : MonoBehaviour
 {
     public float yOffset = 5f;
     public float speed = 2f;

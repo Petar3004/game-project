@@ -16,21 +16,27 @@ public enum ThermiteType
     COLLECTABLE
 }
 
-public class ThermiteMovement : MonoBehaviour
+public class Thermite : MonoBehaviour
 {
     public MovementType movementType;
     public ThermiteType thermiteType;
     public Rigidbody2D thermiteRb;
-    private Coroutine jumpRoutine;
+
+    [Header("Jump")]
     public Transform groundCheckCollider;
-    private float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
-    private int flyDirection;
+    private float groundCheckRadius = 0.2f;
+    private Coroutine jumpRoutine;
+
+    [Header("Fly")]
     public float flyDistance = 10;
-    public Clock clock;
+    public float flySpeed = -1;
+    private int flyDirection;
     private Vector3 flyStartPos;
     private Vector3 flyEndPos;
-    private float flySpeed = -1;
+
+    [Header("Collectable")]
+    public ClockPuzzle clock;
 
     void Start()
     {
@@ -38,7 +44,10 @@ public class ThermiteMovement : MonoBehaviour
         {
             flyStartPos = transform.position;
             flyEndPos = new Vector3(flyStartPos.x + flyDistance, flyStartPos.y, flyStartPos.z);
-            flySpeed = Random.Range(3f, 8f);
+            if (flySpeed == -1)
+            {
+                flySpeed = Random.Range(3f, 8f);
+            }
         }
     }
 
@@ -92,12 +101,6 @@ public class ThermiteMovement : MonoBehaviour
         thermiteRb.linearVelocity = new Vector2(2.6f * direction, 10f * yMult);
     }
 
-    private int PickRandomDirection()
-    {
-        int signPicker = Random.Range(0, 2);
-        return signPicker == 0 ? -1 : 1;
-    }
-
     private void MoveFlying()
     {
         thermiteRb.gravityScale = 0;
@@ -148,5 +151,11 @@ public class ThermiteMovement : MonoBehaviour
             sprite.color = Color.red;
             enemyDamage.damage = 1;
         }
+    }
+
+    private int PickRandomDirection()
+    {
+        int signPicker = Random.Range(0, 2);
+        return signPicker == 0 ? -1 : 1;
     }
 }

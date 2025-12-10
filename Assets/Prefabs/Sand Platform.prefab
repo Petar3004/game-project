@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8977952293376378410}
   - component: {fileID: 3428809802625060597}
-  - component: {fileID: 8339574993485310990}
   - component: {fileID: 817497916212530750}
+  - component: {fileID: 8339574993485310990}
   m_Layer: 7
   m_Name: Sand Platform
   m_TagString: Ground
@@ -92,6 +92,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &817497916212530750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7745538859437310588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afde8ad50105d37428c42bcb11279754, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DissapearingPlatform
+  secondsToFadeAlpha: 0.01
+  secondsToRegenerate: 3
 --- !u!68 &8339574993485310990
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -141,16 +155,3 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &817497916212530750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7745538859437310588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afde8ad50105d37428c42bcb11279754, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DissapearingPlatform
-  platform: {fileID: 7745538859437310588}

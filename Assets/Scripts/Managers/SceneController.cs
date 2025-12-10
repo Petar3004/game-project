@@ -43,6 +43,7 @@ public class SceneController : MonoBehaviour
             yield return null;
 
         GameManager.instance.RestartLevel();
+        AbilityManager.instance.UpdateAbility();
     }
 
     public void GoToMainMenu()

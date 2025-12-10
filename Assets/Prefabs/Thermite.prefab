@@ -42,9 +42,9 @@ GameObject:
   - component: {fileID: 1530520131673612775}
   - component: {fileID: 4730660404777124451}
   - component: {fileID: 973684618886353678}
+  - component: {fileID: 3432447949992160061}
   - component: {fileID: 8312922936595629903}
   - component: {fileID: 7828850898282297104}
-  - component: {fileID: 3432447949992160061}
   m_Layer: 0
   m_Name: Thermite
   m_TagString: Untagged
@@ -146,7 +146,21 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1152
   flyDistance: 16
+  flySpeed: -1
   clock: {fileID: 0}
+--- !u!114 &3432447949992160061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4700677131323400138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e809cb5bc19923e43b8ad4a2cd722e67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyDamage
+  damage: 0
 --- !u!50 &8312922936595629903
 Rigidbody2D:
   serializedVersion: 5
@@ -211,16 +225,3 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1.0000002, y: 2.0000002}
   m_Direction: 0
---- !u!114 &3432447949992160061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4700677131323400138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e809cb5bc19923e43b8ad4a2cd722e67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyDamage
-  damage: 0

@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     public Collider2D crouchingCollider;
     public SpriteRenderer standingSprite;
     public SpriteRenderer crouchingSprite;
-    public bool isLocked = false;
+    private bool isLocked = false;
 
     void Start()
     {

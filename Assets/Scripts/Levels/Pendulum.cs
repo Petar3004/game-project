@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PendulumMovement : MonoBehaviour
+public class Pendulum : MonoBehaviour
 {
     public float amplitude = 6f;
     public float height = 0.3f;

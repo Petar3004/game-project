@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int currentHealth;
+    private int currentHealth;
     public int maxHealth = 1;
 
     void Start()
