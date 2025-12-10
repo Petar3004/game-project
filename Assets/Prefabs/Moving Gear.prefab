@@ -183,7 +183,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb953c89c41ef9f4095f7715109aefe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GearMovement
-  speed: 2
+  isStatic: 0
+  spinSpeed: 0.2
+  moveSpeed: 2
   distance: 3
   angle: 0
   pauseTimeSeconds: 0

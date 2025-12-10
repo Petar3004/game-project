@@ -65,7 +65,6 @@ public class ClockControlGear : MonoBehaviour
             int clockwise = xInput > 0 ? -1 : 1;
             StartCoroutine(StepClockHand(clockwise));
         }
-
     }
 
     private IEnumerator StepClockHand(int clockwise)

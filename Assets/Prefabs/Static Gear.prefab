@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7892610927850365554}
   - component: {fileID: 7396049550138341899}
   - component: {fileID: 5278336024010676566}
+  - component: {fileID: 7335680281359560699}
   m_Layer: 0
   m_Name: Static Gear
   m_TagString: Untagged
@@ -142,3 +143,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GearDamage
   damage: 1
+--- !u!114 &7335680281359560699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7115459544288943863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb953c89c41ef9f4095f7715109aefe0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Gear
+  isStatic: 1
+  spinSpeed: 0.2
+  moveSpeed: 2
+  distance: 3
+  angle: 0
+  pauseTimeSeconds: 0

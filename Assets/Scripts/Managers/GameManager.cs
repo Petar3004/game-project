@@ -14,15 +14,15 @@ public class GameManager : MonoBehaviour
     // Map of levels and their spawn points
     private Dictionary<int, Vector3[]> spawnPoints = new Dictionary<int, Vector3[]>
     {
-        { 0, new Vector3[] { new Vector3(-26f, -3.2f, 0f), new Vector3(-7.76f, -3.2f, 0f), new Vector3(10f, -3.2f, 0f) } },
-        { 1, new Vector3[] { new Vector3(-11.5f, -4.1f, 0f), new Vector3(-24.68f, 5.78f, 0), new Vector3(-11.53f, 15.84f, 0) } },
-        { 2, new Vector3[] { new Vector3(0.12f, -3.7f, 0) } },
-        { 3, new Vector3[] { new Vector3(-7.8f, -3.75f, 0), Vector3.zero, Vector3.zero } },
-        { 4, new Vector3[] { new Vector3(-20f, -3f, 0f), Vector3.zero, Vector3.zero } },
-        { 5, new Vector3[] { Vector3.zero, Vector3.zero, Vector3.zero } },
+        { 1, new Vector3[] { new Vector3(-26f, -3.2f, 0f), new Vector3(-7.76f, -3.2f, 0f), new Vector3(27.83f, -3.2f, 0f) } },
+        { 2, new Vector3[] { new Vector3(-11.5f, -4.1f, 0f), new Vector3(-24.68f, 5.78f, 0), new Vector3(-11.53f, 15.84f, 0) } },
+        { 3, new Vector3[] { new Vector3(0.12f, -3.7f, 0) } },
+        { 4, new Vector3[] { new Vector3(-7.8f, -3.75f, 0), Vector3.zero, Vector3.zero } },
+        { 5, new Vector3[] { new Vector3(-20f, -3f, 0f), Vector3.zero, Vector3.zero } },
         { 6, new Vector3[] { Vector3.zero, Vector3.zero, Vector3.zero } },
         { 7, new Vector3[] { Vector3.zero, Vector3.zero, Vector3.zero } },
-        { 8, new Vector3[] { Vector3.zero, Vector3.zero, Vector3.zero } }
+        { 8, new Vector3[] { Vector3.zero, Vector3.zero, Vector3.zero } },
+        { 9, new Vector3[] { Vector3.zero, Vector3.zero, Vector3.zero } }
     };
 
     void Awake()
@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
 
     public void MovePlayerToLevel(int levelIndex)
     {
-        SceneManager.LoadScene(levelIndex);
+        SceneController.instance.GoToLevel(levelIndex);
         MovePlayerToRoom(0);
     }
 

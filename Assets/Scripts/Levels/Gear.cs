@@ -3,7 +3,10 @@ using UnityEngine;
 
 public class Gear : MonoBehaviour
 {
-    public float speed = 2f;
+    public bool isStatic = true;
+    public float spinSpeed = 1f;
+    [Header("Move")]
+    public float moveSpeed = 2f;
     public float distance = 3f;
     [Range(0f, 360f)]
     public float angle = 0;
@@ -18,8 +21,16 @@ public class Gear : MonoBehaviour
     void Start()
     {
         startPosition = transform.position;
-        InitializeBounds();
-        StartCoroutine(Move());
+        if (!isStatic)
+        {
+            InitializeBounds();
+            StartCoroutine(Move());
+        }
+    }
+
+    void Update()
+    {
+        Spin();
     }
 
     void InitializeBounds()
@@ -53,7 +64,7 @@ public class Gear : MonoBehaviour
         Vector3 pos = transform.position;
         Vector3 target = currentDirection ? pointB : pointA;
 
-        float currentSpeed = speed;
+        float currentSpeed = moveSpeed;
         if (TimeManager.instance != null && TimeManager.instance.isSlowed)
             currentSpeed *= TimeManager.instance.slowTimeFactor;
 
@@ -65,4 +76,8 @@ public class Gear : MonoBehaviour
         }
     }
 
+    private void Spin()
+    {
+        transform.Rotate(0, 0, spinSpeed);
+    }
 }
