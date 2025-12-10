@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 514042001023971582}
   - component: {fileID: 7892610927850365554}
-  - component: {fileID: 3724201412816823113}
-  - component: {fileID: 8335843310613651075}
   - component: {fileID: 7396049550138341899}
   - component: {fileID: -3723930229538701063}
+  - component: {fileID: 3724201412816823113}
+  - component: {fileID: 8335843310613651075}
   m_Layer: 0
   m_Name: Moving Gear
   m_TagString: Untagged
@@ -83,8 +83,8 @@ SpriteRenderer:
   m_SortingLayerID: 601480917
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.9716981, g: 0.15438676, b: 0.09625311, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 3c9dcddc163ca48938ff556ae23e83f0, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -94,35 +94,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3724201412816823113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7115459544288943863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e809cb5bc19923e43b8ad4a2cd722e67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GearDamage
-  damage: 1
---- !u!114 &8335843310613651075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7115459544288943863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb953c89c41ef9f4095f7715109aefe0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GearMovement
-  speed: 2
-  distance: 3
-  angle: 0
-  pauseTimeSeconds: 0
 --- !u!70 &7396049550138341899
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -187,3 +158,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &3724201412816823113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7115459544288943863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e809cb5bc19923e43b8ad4a2cd722e67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GearDamage
+  damage: 1
+--- !u!114 &8335843310613651075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7115459544288943863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb953c89c41ef9f4095f7715109aefe0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GearMovement
+  speed: 2
+  distance: 3
+  angle: 0
+  pauseTimeSeconds: 0
