@@ -30,7 +30,7 @@ public class Gear : MonoBehaviour
 
     void Update()
     {
-        Spin();
+        transform.Rotate(0, 0, spinSpeed * Time.deltaTime);
     }
 
     void InitializeBounds()
@@ -74,10 +74,5 @@ public class Gear : MonoBehaviour
         {
             currentDirection = !currentDirection;
         }
-    }
-
-    private void Spin()
-    {
-        transform.Rotate(0, 0, spinSpeed);
     }
 }

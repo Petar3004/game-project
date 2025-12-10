@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Gear
   isStatic: 1
-  spinSpeed: 0.2
+  spinSpeed: 75
   moveSpeed: 2
   distance: 3
   angle: 0
