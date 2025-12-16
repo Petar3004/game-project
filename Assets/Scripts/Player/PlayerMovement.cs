@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         float xInput = 0;
-        if (!PauseManager.instance.isPaused)
+        if (!ManagersRoot.instance.pauseManager.isPaused)
         {
             xInput = Input.GetAxis("Horizontal");
         }
@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            TimeManager.instance.ActivateSlowTime();
+            ManagersRoot.instance.timeManager.ActivateSlowTime();
         }
     }
 
@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
         bool jumpPressed = false;
         bool crouchHeld = false;
 
-        if (!PauseManager.instance.isPaused)
+        if (!ManagersRoot.instance.pauseManager.isPaused)
         {
             jumpPressed = Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow);
             crouchHeld = Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow);
@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
             case MovementState.STANDING:
                 UpdateSprite(false);
                 UpdateCollider(false);
-                if (jumpPressed && (IsGrounded() || isLocked))
+                if (jumpPressed && IsGrounded() && !IsSlowed())
                 {
                     playerRb.linearVelocityY = jumpForce;
                     state = MovementState.JUMPING;
@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
                     playerRb.linearVelocityY = jumpForce * springMultiplier;
                     state = MovementState.JUMPING;
                 }
-                else if (crouchHeld && IsGrounded())
+                else if (crouchHeld && (IsGrounded() || IsSlowed()))
                 {
                     state = MovementState.CROUCHING;
                 }

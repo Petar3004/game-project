@@ -56,7 +56,9 @@ public class ChaptersMenu : MonoBehaviour
 
     public void PlayLevel()
     {
-        SceneController.instance.GoToLevel(chapterToLevel[currentChapter][currentLevel - 1]);
+        ManagersRoot.instance.sceneController.GoToLevel(chapterToLevel[currentChapter][currentLevel - 1]);
+        ManagersRoot.instance.gameManager.gameStarted = true;
+        UIRoot.instance.gameObject.SetActive(true);
     }
 
     public void Back()

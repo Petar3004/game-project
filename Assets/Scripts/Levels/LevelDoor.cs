@@ -6,7 +6,7 @@ public class LevelDoor : MonoBehaviour
     {
         if (player.CompareTag("Player"))
         {
-            GameManager.instance.MovePlayerToNextLevel();
+            ManagersRoot.instance.gameManager.MovePlayerToNextLevel();
         }
     }
 }

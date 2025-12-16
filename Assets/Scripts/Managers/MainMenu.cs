@@ -15,12 +15,14 @@ public class MainMenu : MonoBehaviour
     {
         if (savedLevel != -1)
         {
-            SceneManager.LoadScene(savedLevel);
+            ManagersRoot.instance.sceneController.GoToLevel(savedLevel);
         }
         else
         {
-            SceneManager.LoadScene(1);
+            ManagersRoot.instance.sceneController.GoToLevel(1);
         }
+        ManagersRoot.instance.gameManager.gameStarted = true;
+        UIRoot.instance.gameObject.SetActive(true);
     }
 
     public void Chapters()

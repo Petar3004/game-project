@@ -15,7 +15,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= amount;
         if (currentHealth <= 0)
         {
-            GameManager.instance.RestartLevel();
+            ManagersRoot.instance.gameManager.RestartLevel();
         }
     }
 

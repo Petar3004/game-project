@@ -4,21 +4,7 @@ using UnityEngine.SceneManagement;
 public class PauseManager : MonoBehaviour
 {
     private GameObject pauseMenu;
-    public static PauseManager instance;
     public bool isPaused = false;
-
-    void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
 
     void Start()
     {
@@ -45,7 +31,9 @@ public class PauseManager : MonoBehaviour
         isPaused = false;
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
-        SceneController.instance.GoToMainMenu();
+        ManagersRoot.instance.gameManager.gameStarted = false;
+        UIRoot.instance.gameObject.SetActive(false);
+        ManagersRoot.instance.sceneController.GoToMainMenu();
     }
 
     public void Quit()

@@ -16,24 +16,24 @@ public class RoomDoor : MonoBehaviour
                     if (player.transform.position.x < transform.position.x)
                     {
                         move = Move.RIGHT;
-                        CameraController.instance.MoveCameraToNextRoom();
+                        ManagersRoot.instance.cameraController.MoveCameraToNextRoom();
                     }
                     else
                     {
                         move = Move.LEFT;
-                        CameraController.instance.MoveCameraToPreviousRoom();
+                        ManagersRoot.instance.cameraController.MoveCameraToPreviousRoom();
                     }
                     break;
                 case RoomDoorType.HORIZONTAL:
                     if (player.transform.position.y < transform.position.y)
                     {
                         move = Move.UP;
-                        CameraController.instance.MoveCameraToNextRoom();
+                        ManagersRoot.instance.cameraController.MoveCameraToNextRoom();
                     }
                     else
                     {
                         move = Move.DOWN;
-                        CameraController.instance.MoveCameraToPreviousRoom();
+                        ManagersRoot.instance.cameraController.MoveCameraToPreviousRoom();
                     }
                     break;
             }
@@ -46,11 +46,11 @@ public class RoomDoor : MonoBehaviour
         {
             if ((move == Move.RIGHT && player.transform.position.x < transform.position.x) || (move == Move.UP && player.transform.position.y < transform.position.y))
             {
-                CameraController.instance.MoveCameraToPreviousRoom();
+                ManagersRoot.instance.cameraController.MoveCameraToPreviousRoom();
             }
             else if ((move == Move.LEFT && player.transform.position.x > transform.position.x) || (move == Move.DOWN && player.transform.position.y > transform.position.y))
             {
-                CameraController.instance.MoveCameraToNextRoom();
+                ManagersRoot.instance.cameraController.MoveCameraToNextRoom();
             }
         }
     }

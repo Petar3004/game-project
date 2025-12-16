@@ -35,7 +35,7 @@ public class ClockPuzzle : MonoBehaviour
     {
         if (AnswerIsCorrect())
         {
-            SceneController.instance.GoToMainMenu();
+            ManagersRoot.instance.sceneController.GoToMainMenu();
         }
     }
 

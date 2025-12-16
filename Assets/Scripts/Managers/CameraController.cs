@@ -17,7 +17,6 @@ public class CameraController : MonoBehaviour
     };
 
     public int roomIndex = 0;
-    public static CameraController instance;
     // (level, room), height
     private Dictionary<(int, int), int> longVerticalRooms = new Dictionary<(int, int), int>
     {
@@ -29,19 +28,6 @@ public class CameraController : MonoBehaviour
     {
         { (1, 1), 2 }
     };
-
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
 
     public void MoveCameraToNextRoom()
     {

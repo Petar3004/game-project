@@ -1,14 +1,27 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIRoot : MonoBehaviour
 {
     public static UIRoot instance;
+
+    [Header("Timer")]
+    public TMP_Text timerText;
+    public Slider timerSlider;
+
+    [Header("Ability")]
+    public TMP_Text abilityText;
+    public Image abilityImage;
+    private Coroutine chargeCoroutine;
 
     void Awake()
     {
@@ -21,6 +34,99 @@ public class UIRoot : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    static void AutoLoad()
+    {
+        if (instance != null) return;
+
+        UIRoot prefab =
+            Resources.Load<UIRoot>("UI");
+
+        if (prefab == null)
+        {
+            Debug.LogError("UI prefab not found in Resources!");
+            return;
+        }
+
+        Instantiate(prefab);
+    }
+
+    void Start()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
+    // Pause Menu
+    public void OnResumeClicked()
+    {
+        ManagersRoot.instance.pauseManager.Resume();
+    }
+
+    public void OnMainMenuClicked()
+    {
+        ManagersRoot.instance.pauseManager.MainMenu();
+    }
+
+    public void OnQuitClicked()
+    {
+        ManagersRoot.instance.pauseManager.Quit();
+    }
+
+    // Timer
+    public void UpdateTimerUI(float timeLeft)
+    {
+        if (timerText != null)
+        {
+            timerText.text = "Time: " + Mathf.CeilToInt(timeLeft).ToString();
+        }
+
+        if (timerSlider != null)
+        {
+            timerSlider.value = timeLeft;
+        }
+    }
+
+    // Ability
+    public void UpdateAbiliyUI(float slowTimeDuration, AbilityType ability)
+    {
+        if (ManagersRoot.instance.timeManager.isSlowed)
+        {
+            if (chargeCoroutine == null)
+            {
+                chargeCoroutine = StartCoroutine(ChargeAbilityUI(slowTimeDuration));
+            }
+        }
+
+        switch (ability)
+        {
+            case AbilityType.TIME_SLOW:
+                abilityText.text = "Time Magnet";
+                break;
+            case AbilityType.SAND_SPEED:
+                abilityText.text = "Quick Boots";
+                break;
+        }
+    }
+
+    private IEnumerator ChargeAbilityUI(float slowTimeDuration)
+    {
+        abilityImage.fillAmount = 0f;
+        float elapsed = 0f;
+
+        while (elapsed < slowTimeDuration)
+        {
+            elapsed += Time.deltaTime;
+            abilityImage.fillAmount = elapsed / slowTimeDuration;
+            yield return null;
+        }
+
+        abilityImage.fillAmount = 1f;
+        chargeCoroutine = null;
     }
 }
 

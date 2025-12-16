@@ -54,7 +54,7 @@ public class ClockControlGear : MonoBehaviour
     private void SpinGear()
     {
         float xInput = 0;
-        if (!PauseManager.instance.isPaused)
+        if (!ManagersRoot.instance.pauseManager.isPaused)
         {
             xInput = Input.GetAxis("Horizontal");
         }

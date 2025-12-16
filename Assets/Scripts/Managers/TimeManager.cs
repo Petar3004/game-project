@@ -8,8 +8,6 @@ using UnityEngine.UI;
 
 public class TimeManager : MonoBehaviour
 {
-    public static TimeManager instance;
-
     [Header("Timer settings")]
     public float maxTime = 60f;
     public float timeLeft;
@@ -22,27 +20,6 @@ public class TimeManager : MonoBehaviour
     public float slowTimeFactor = 0.5f;
     public bool isSlowed = false;
 
-    void Awake()
-    {
-        if (instance != null && instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        instance = this;
-        DontDestroyOnLoad(gameObject);
-
-        if (timerText == null || timerSlider == null)
-        {
-            Canvas canvas = FindFirstObjectByType<Canvas>();
-            if (canvas != null)
-            {
-                timerText = canvas.GetComponentInChildren<Text>();
-                timerSlider = canvas.GetComponentInChildren<Slider>();
-            }
-        }
-    }
-
     void Start()
     {
         timeLeft = maxTime;
@@ -53,13 +30,13 @@ public class TimeManager : MonoBehaviour
         if (timeLeft > 0)
         {
             timeLeft -= Time.deltaTime;
-            UpdateTimerUI();
+            UIRoot.instance.UpdateTimerUI(timeLeft);
 
             if (timeLeft <= 0)
             {
                 timeLeft = 0;
                 Debug.Log("Time's Up!");
-                GameManager.instance.RestartLevel();
+                ManagersRoot.instance.gameManager.RestartLevel();
             }
         }
     }
@@ -76,24 +53,11 @@ public class TimeManager : MonoBehaviour
     {
         isSlowed = true;
         timeLeft -= slowTimePenalty;
-        UpdateTimerUI();
+        UIRoot.instance.UpdateTimerUI(timeLeft);
 
         yield return new WaitForSecondsRealtime(slowTimeDuration);
 
         isSlowed = false;
-    }
-
-    public void UpdateTimerUI()
-    {
-        if (timerText != null)
-        {
-            timerText.text = "Time: " + Mathf.CeilToInt(timeLeft).ToString();
-        }
-
-        if (timerSlider != null)
-        {
-            timerSlider.value = timeLeft;
-        }
     }
 
     public void ResetTimer()

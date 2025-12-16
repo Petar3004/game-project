@@ -65,8 +65,8 @@ public class Gear : MonoBehaviour
         Vector3 target = currentDirection ? pointB : pointA;
 
         float currentSpeed = moveSpeed;
-        if (TimeManager.instance != null && TimeManager.instance.isSlowed)
-            currentSpeed *= TimeManager.instance.slowTimeFactor;
+        if (ManagersRoot.instance.timeManager.isSlowed)
+            currentSpeed *= ManagersRoot.instance.timeManager.slowTimeFactor;
 
         transform.position = Vector3.MoveTowards(pos, target, currentSpeed * Time.deltaTime);
 

@@ -7,9 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
     private GameObject player;
-    public int currentLevel;
+    public bool gameStarted = false;
 
     // Map of levels and their spawn points
     private Dictionary<int, Vector3[]> spawnPoints = new Dictionary<int, Vector3[]>
@@ -25,20 +24,6 @@ public class GameManager : MonoBehaviour
         { 9, new Vector3[] { Vector3.zero, Vector3.zero, Vector3.zero } }
     };
 
-    void Awake()
-    {
-        // Singleton pattern – only one GameManager should exist
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-
     public void MovePlayerToRoom(int roomIndex)
     {
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
@@ -49,7 +34,7 @@ public class GameManager : MonoBehaviour
 
     public void MovePlayerToLevel(int levelIndex)
     {
-        SceneController.instance.GoToLevel(levelIndex);
+        ManagersRoot.instance.sceneController.GoToLevel(levelIndex);
         MovePlayerToRoom(0);
     }
 
@@ -73,8 +58,8 @@ public class GameManager : MonoBehaviour
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        TimeManager.instance.ResetTimer();
-        CameraController.instance.roomIndex = 0;
+        ManagersRoot.instance.timeManager.ResetTimer();
+        ManagersRoot.instance.cameraController.roomIndex = 0;
 
         SaveProgress();
     }
@@ -84,6 +69,14 @@ public class GameManager : MonoBehaviour
         // TODO save level in storage
     }
 
+    void Awake()
+    {
+        if (SceneManager.GetActiveScene().buildIndex != 0)
+        {
+            gameStarted = true;
+        }
+    }
+
     void Update()
     {
         if (player == null)
@@ -91,23 +84,23 @@ public class GameManager : MonoBehaviour
             player = GameObject.FindGameObjectWithTag("PlayerObject");
         }
 
-        CameraController.instance.TrackPlayer(player);
+        ManagersRoot.instance.cameraController.TrackPlayer(player);
 
-        if (!PauseManager.instance.isPaused)
+        if (gameStarted && !ManagersRoot.instance.pauseManager.isPaused)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
-                CameraController.instance.MoveCameraToRoom(0);
+                ManagersRoot.instance.cameraController.MoveCameraToRoom(0);
                 MovePlayerToRoom(0);
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2))
             {
-                CameraController.instance.MoveCameraToRoom(1);
+                ManagersRoot.instance.cameraController.MoveCameraToRoom(1);
                 MovePlayerToRoom(1);
             }
             else if (Input.GetKeyDown(KeyCode.Alpha3))
             {
-                CameraController.instance.MoveCameraToRoom(2);
+                ManagersRoot.instance.cameraController.MoveCameraToRoom(2);
                 MovePlayerToRoom(2);
             }
             else if (Input.GetKeyDown(KeyCode.R))
@@ -116,14 +109,14 @@ public class GameManager : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.Escape))
             {
-                PauseManager.instance.Pause();
+                ManagersRoot.instance.pauseManager.Pause();
             }
         }
         else
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                PauseManager.instance.Resume();
+                ManagersRoot.instance.pauseManager.Resume();
             }
         }
     }

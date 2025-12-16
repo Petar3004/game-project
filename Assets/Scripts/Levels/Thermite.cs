@@ -109,9 +109,9 @@ public class Thermite : MonoBehaviour
         Vector3 target = flyDirection == 1 ? flyStartPos : flyEndPos;
 
         float currentSpeed = flySpeed;
-        if (thermiteType == ThermiteType.ENEMY && TimeManager.instance != null && TimeManager.instance.isSlowed)
+        if (thermiteType == ThermiteType.ENEMY && ManagersRoot.instance.timeManager.isSlowed)
         {
-            currentSpeed = flySpeed * TimeManager.instance.slowTimeFactor;
+            currentSpeed = flySpeed * ManagersRoot.instance.timeManager.slowTimeFactor;
         }
 
         transform.position = Vector3.MoveTowards(pos, target, currentSpeed * Time.deltaTime);

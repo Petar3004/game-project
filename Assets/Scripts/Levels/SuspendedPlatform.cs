@@ -22,9 +22,9 @@ public class SuspendedPlatform : MonoBehaviour
     {
         float currentSpeed = speed;
 
-        if (TimeManager.instance != null && TimeManager.instance.isSlowed)
+        if (ManagersRoot.instance.timeManager.isSlowed)
         {
-            currentSpeed *= TimeManager.instance.slowTimeFactor;
+            currentSpeed *= ManagersRoot.instance.timeManager.slowTimeFactor;
         }
 
         float target = isActive ? targetY : initY;

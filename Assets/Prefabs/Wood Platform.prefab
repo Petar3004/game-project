@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3882838617291406853}
   - component: {fileID: 1524376167985122310}
   m_Layer: 7
-  m_Name: Platform (7)
+  m_Name: Wood Platform
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
