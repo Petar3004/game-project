@@ -16,38 +16,38 @@ public class CameraController : MonoBehaviour
         { 6, null}
     };
 
-    public int roomIndex = 0;
+    public int roomIndex = 1;
     // (level, room), height
     private Dictionary<(int, int), int> longVerticalRooms = new Dictionary<(int, int), int>
     {
-        { (2, 2), 4 },
-        { (3, 0), 2 }
+        { (2, 3), 4 },
+        { (3, 1), 2 }
     };
     // (level, room), width
     private Dictionary<(int, int), int> longHorizontalRooms = new Dictionary<(int, int), int>
     {
-        { (1, 1), 2 }
+        { (1, 2), 2 }
     };
 
     public void MoveCameraToNextRoom()
     {
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
         roomIndex++;
-        Camera.main.transform.position = cameraPositions[currentLevelIndex][roomIndex];
+        Camera.main.transform.position = cameraPositions[currentLevelIndex][roomIndex - 1];
     }
 
     public void MoveCameraToPreviousRoom()
     {
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
         roomIndex--;
-        Camera.main.transform.position = cameraPositions[currentLevelIndex][roomIndex];
+        Camera.main.transform.position = cameraPositions[currentLevelIndex][roomIndex - 1];
     }
 
     public void MoveCameraToRoom(int targetRoomIndex)
     {
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
         roomIndex = targetRoomIndex;
-        Camera.main.transform.position = cameraPositions[currentLevelIndex][roomIndex];
+        Camera.main.transform.position = cameraPositions[currentLevelIndex][roomIndex - 1];
     }
 
     public void TrackPlayer(GameObject player)
@@ -55,8 +55,8 @@ public class CameraController : MonoBehaviour
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
         if (longVerticalRooms.ContainsKey((currentLevelIndex, roomIndex)))
         {
-            float bottomBorder = cameraPositions[currentLevelIndex][roomIndex].y;
-            float offset = Mathf.Pow(2, longVerticalRooms[(currentLevelIndex, roomIndex)] - 1) * 5;
+            float bottomBorder = cameraPositions[currentLevelIndex][roomIndex - 1].y;
+            float offset = (longVerticalRooms[(currentLevelIndex, roomIndex)] - 1) * 10;
             float topBorder = bottomBorder + offset;
             float playerY = player.transform.position.y;
             if (playerY > bottomBorder && playerY < topBorder)
@@ -66,8 +66,8 @@ public class CameraController : MonoBehaviour
         }
         if (longHorizontalRooms.ContainsKey((currentLevelIndex, roomIndex)))
         {
-            float leftBorder = cameraPositions[currentLevelIndex][roomIndex].x;
-            float offset = Mathf.Pow(2, longHorizontalRooms[(currentLevelIndex, roomIndex)] - 1) * 8.89f;
+            float leftBorder = cameraPositions[currentLevelIndex][roomIndex - 1].x;
+            float offset = (longHorizontalRooms[(currentLevelIndex, roomIndex)] - 1) * 17.78f;
             float rightBorder = leftBorder + offset;
             float playerX = player.transform.position.x;
             if (playerX > leftBorder && playerX < rightBorder)

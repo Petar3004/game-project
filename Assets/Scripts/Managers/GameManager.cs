@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     public void MovePlayerToRoom(int roomIndex)
     {
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
-        player.transform.position = spawnPoints[currentLevelIndex][roomIndex];
+        player.transform.position = spawnPoints[currentLevelIndex][roomIndex - 1];
         // Reset velocity after player is moved
         player.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
     }
@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
     public void MovePlayerToLevel(int levelIndex)
     {
         ManagersRoot.instance.sceneController.GoToLevel(levelIndex);
-        MovePlayerToRoom(0);
+        MovePlayerToRoom(1);
     }
 
     public void MovePlayerToNextLevel()
@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         ManagersRoot.instance.timeManager.ResetTimer();
-        ManagersRoot.instance.cameraController.roomIndex = 0;
+        ManagersRoot.instance.cameraController.roomIndex = 1;
 
         SaveProgress();
     }
@@ -90,18 +90,18 @@ public class GameManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
-                ManagersRoot.instance.cameraController.MoveCameraToRoom(0);
-                MovePlayerToRoom(0);
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
                 ManagersRoot.instance.cameraController.MoveCameraToRoom(1);
                 MovePlayerToRoom(1);
             }
-            else if (Input.GetKeyDown(KeyCode.Alpha3))
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 ManagersRoot.instance.cameraController.MoveCameraToRoom(2);
                 MovePlayerToRoom(2);
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                ManagersRoot.instance.cameraController.MoveCameraToRoom(3);
+                MovePlayerToRoom(3);
             }
             else if (Input.GetKeyDown(KeyCode.R))
             {
