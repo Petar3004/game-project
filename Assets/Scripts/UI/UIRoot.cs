@@ -18,10 +18,18 @@ public class UIRoot : MonoBehaviour
     public TMP_Text timerText;
     public Slider timerSlider;
 
-    [Header("Ability")]
+    [Header("Abilities")]
     public TMP_Text abilityText;
     public Image abilityImage;
     private Coroutine chargeCoroutine;
+
+    [Header("Hints")]
+    public GameObject hintBox;
+    public Image hintImage;
+    public TMP_Text hintText;
+
+    [Header("Pause Menu")]
+    public GameObject pauseMenu;
 
     void Awake()
     {
@@ -59,9 +67,28 @@ public class UIRoot : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+        pauseMenu.SetActive(false);
+        hintBox.SetActive(false);
+    }
+
+    public void SetActiveSpecial()
+    {
+        gameObject.SetActive(true);
+        pauseMenu.SetActive(false);
+        hintBox.SetActive(false);
     }
 
     // Pause Menu
+    public void ShowPauseUI()
+    {
+        pauseMenu.SetActive(true);
+    }
+
+    public void HidePauseUI()
+    {
+        pauseMenu.SetActive(false);
+    }
+
     public void OnResumeClicked()
     {
         ManagersRoot.instance.pauseManager.Resume();
@@ -91,7 +118,7 @@ public class UIRoot : MonoBehaviour
         }
     }
 
-    // Ability
+    // Abilities
     public void UpdateAbiliyUI(float slowTimeDuration, AbilityType ability)
     {
         if (ManagersRoot.instance.timeManager.isSlowed)
@@ -127,6 +154,18 @@ public class UIRoot : MonoBehaviour
 
         abilityImage.fillAmount = 1f;
         chargeCoroutine = null;
+    }
+
+    // Hints
+    public void ShowHintUI(string hint)
+    {
+        hintBox.SetActive(true);
+        hintText.text = hint;
+    }
+
+    public void HideHintUI()
+    {
+        hintBox.SetActive(false);
     }
 }
 

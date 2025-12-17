@@ -12,6 +12,7 @@ public class ManagersRoot : MonoBehaviour
     public PauseManager pauseManager;
     public AbilityManager abilityManager;
     public PlayerManager playerManager;
+    public HintManager hintManager;
 
     void Awake()
     {

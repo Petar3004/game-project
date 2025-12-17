@@ -314,6 +314,7 @@ Transform:
   - {fileID: 6312526709685615816}
   - {fileID: 6886550197201900100}
   - {fileID: 2442802960230109701}
+  - {fileID: 835794675706258489}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6542424777776344305
@@ -335,6 +336,7 @@ MonoBehaviour:
   pauseManager: {fileID: 2950018571763163790}
   abilityManager: {fileID: 8415997528275518567}
   playerManager: {fileID: 2217126364786596864}
+  hintManager: {fileID: 4920976379983192649}
 --- !u!1 &9016398040679067051
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,3 +381,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de69a9f00799b104895b40520fe8c455, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneController
+--- !u!1 &9171762616658834598
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 835794675706258489}
+  - component: {fileID: 4920976379983192649}
+  m_Layer: 0
+  m_Name: Hint Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &835794675706258489
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9171762616658834598}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.02035, y: 2.09699, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2681217765299678863}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4920976379983192649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9171762616658834598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce8bd4b4a61773f44afef1b118048cb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript

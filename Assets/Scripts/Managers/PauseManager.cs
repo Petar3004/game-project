@@ -3,33 +3,30 @@ using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour
 {
-    private GameObject pauseMenu;
     public bool isPaused = false;
-
-    void Start()
-    {
-        pauseMenu = GameObject.Find("Pause Menu");
-        pauseMenu.SetActive(false);
-    }
 
     public void Pause()
     {
+        if (ManagersRoot.instance.hintManager.hintIsShown)
+        {
+            return;
+        }
         isPaused = true;
-        pauseMenu.SetActive(true);
+        UIRoot.instance.ShowPauseUI();
         Time.timeScale = 0f;
     }
 
     public void Resume()
     {
         isPaused = false;
-        pauseMenu.SetActive(false);
+        UIRoot.instance.HidePauseUI();
         Time.timeScale = 1f;
     }
 
     public void MainMenu()
     {
         isPaused = false;
-        pauseMenu.SetActive(false);
+        UIRoot.instance.HidePauseUI();
         Time.timeScale = 1f;
         ManagersRoot.instance.gameManager.gameStarted = false;
         UIRoot.instance.gameObject.SetActive(false);

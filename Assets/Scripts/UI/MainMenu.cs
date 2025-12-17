@@ -22,7 +22,7 @@ public class MainMenu : MonoBehaviour
             ManagersRoot.instance.sceneController.GoToLevel(1);
         }
         ManagersRoot.instance.gameManager.gameStarted = true;
-        UIRoot.instance.gameObject.SetActive(true);
+        UIRoot.instance.SetActiveSpecial();
     }
 
     public void Chapters()
