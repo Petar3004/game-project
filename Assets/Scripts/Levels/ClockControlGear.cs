@@ -23,11 +23,7 @@ public class ClockControlGear : MonoBehaviour
     {
         if (playerMovement == null)
         {
-            var player = ManagersRoot.instance.playerManager.Player;
-            if (player == null) return;
-
-            playerMovement = player.GetComponent<PlayerMovement>();
-            return;
+            playerMovement = ManagersRoot.instance.playerManager.Player.GetComponent<PlayerMovement>();
         }
 
         bool playerInPosition = Physics2D.OverlapBox(playerCheckCollider.position, playerCheckSize, 0, playerLayer) && playerMovement.state == MovementState.STANDING;

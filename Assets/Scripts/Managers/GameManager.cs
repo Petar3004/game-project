@@ -25,6 +25,37 @@ public class GameManager : MonoBehaviour
         { 9, new Vector3[] { Vector3.zero, Vector3.zero, Vector3.zero } }
     };
 
+    void Awake()
+    {
+        if (SceneManager.GetActiveScene().buildIndex != 0)
+        {
+            gameStarted = true;
+        }
+    }
+
+    void Start()
+    {
+        int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
+        ManagersRoot.instance.playerManager.SpawnPlayer(spawnPoints[currentLevelIndex][0]);
+    }
+
+    void Update()
+    {
+        if (player == null)
+        {
+            player = ManagersRoot.instance.playerManager.Player;
+        }
+
+        if (player == null)
+        {
+            return;
+        }
+
+        ManagersRoot.instance.cameraController.TrackPlayer(player);
+
+        HandleInput();
+    }
+
     public void MovePlayerToRoom(int roomIndex)
     {
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
@@ -83,30 +114,8 @@ public class GameManager : MonoBehaviour
         // TODO save level in storage
     }
 
-    void Awake()
+    private void HandleInput()
     {
-        if (SceneManager.GetActiveScene().buildIndex != 0)
-        {
-            gameStarted = true;
-        }
-    }
-
-    void Start()
-    {
-        int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
-        ManagersRoot.instance.playerManager.SpawnPlayer(spawnPoints[currentLevelIndex][0]);
-    }
-
-    void Update()
-    {
-        if (player == null)
-        {
-            player = ManagersRoot.instance.playerManager.Player;
-
-        }
-
-        ManagersRoot.instance.cameraController.TrackPlayer(player);
-
         if (gameStarted && !ManagersRoot.instance.pauseManager.isPaused)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))

@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0b99fe6828c7d248bbc37bdaef20c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraController
-  roomIndex: 0
+  roomIndex: 1
 --- !u!1 &7796907448131602634
 GameObject:
   m_ObjectHideFlags: 0
