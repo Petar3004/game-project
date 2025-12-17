@@ -6,14 +6,14 @@ public class RoomDoor : MonoBehaviour
     private Move move;
 
     // Change room and move player depending on the door
-    private void OnTriggerEnter2D(Collider2D player)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (player.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             switch (door.doorType)
             {
                 case RoomDoorType.VERTICAL:
-                    if (player.transform.position.x < transform.position.x)
+                    if (other.transform.position.x < transform.position.x)
                     {
                         move = Move.RIGHT;
                         ManagersRoot.instance.cameraController.MoveCameraToNextRoom();
@@ -25,7 +25,7 @@ public class RoomDoor : MonoBehaviour
                     }
                     break;
                 case RoomDoorType.HORIZONTAL:
-                    if (player.transform.position.y < transform.position.y)
+                    if (other.transform.position.y < transform.position.y)
                     {
                         move = Move.UP;
                         ManagersRoot.instance.cameraController.MoveCameraToNextRoom();
@@ -40,15 +40,15 @@ public class RoomDoor : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D player)
+    private void OnTriggerExit2D(Collider2D other)
     {
-        if (player.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            if ((move == Move.RIGHT && player.transform.position.x < transform.position.x) || (move == Move.UP && player.transform.position.y < transform.position.y))
+            if ((move == Move.RIGHT && other.transform.position.x < transform.position.x) || (move == Move.UP && other.transform.position.y < transform.position.y))
             {
                 ManagersRoot.instance.cameraController.MoveCameraToPreviousRoom();
             }
-            else if ((move == Move.LEFT && player.transform.position.x > transform.position.x) || (move == Move.DOWN && player.transform.position.y > transform.position.y))
+            else if ((move == Move.LEFT && other.transform.position.x > transform.position.x) || (move == Move.DOWN && other.transform.position.y > transform.position.y))
             {
                 ManagersRoot.instance.cameraController.MoveCameraToNextRoom();
             }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -27,9 +28,7 @@ public class GameManager : MonoBehaviour
     public void MovePlayerToRoom(int roomIndex)
     {
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
-        player.transform.position = spawnPoints[currentLevelIndex][roomIndex - 1];
-        // Reset velocity after player is moved
-        player.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
+        ManagersRoot.instance.playerManager.SpawnPlayer(spawnPoints[currentLevelIndex][roomIndex - 1]);
     }
 
     public void MovePlayerToLevel(int levelIndex)
@@ -57,9 +56,24 @@ public class GameManager : MonoBehaviour
     // Called when the player dies or the timer hits 0
     public void RestartLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        StartCoroutine(RestartRoutine());
+    }
+
+    private IEnumerator RestartRoutine()
+    {
+        int index = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(index);
+
+        yield return null; // wait 1 frame
+        yield return new WaitUntil(() => SceneManager.GetActiveScene().buildIndex == index);
+
         ManagersRoot.instance.timeManager.ResetTimer();
-        ManagersRoot.instance.cameraController.roomIndex = 1;
+
+        int roomIndex = 1;
+        ManagersRoot.instance.cameraController.roomIndex = roomIndex;
+        ManagersRoot.instance.playerManager.SpawnPlayer(
+            spawnPoints[index][roomIndex - 1]
+        );
 
         SaveProgress();
     }
@@ -77,11 +91,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
+        ManagersRoot.instance.playerManager.SpawnPlayer(spawnPoints[currentLevelIndex][0]);
+    }
+
     void Update()
     {
         if (player == null)
         {
-            player = GameObject.FindGameObjectWithTag("PlayerObject");
+            player = ManagersRoot.instance.playerManager.Player;
+
         }
 
         ManagersRoot.instance.cameraController.TrackPlayer(player);

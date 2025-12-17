@@ -44,8 +44,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257e6cc7f9544fa4796821c1d8487df2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  currentLevel: 0
   gameStarted: 0
+--- !u!1 &2853783061131586025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2442802960230109701}
+  - component: {fileID: 2217126364786596864}
+  m_Layer: 0
+  m_Name: Player Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2442802960230109701
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2853783061131586025}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.02035, y: 2.09699, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2681217765299678863}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2217126364786596864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2853783061131586025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e08fd224c34ce749848ce3b067372da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  playerPrefab: {fileID: 6789828063486030330, guid: 6de5f8e134120274eafc5550f2c93768, type: 3}
 --- !u!1 &5839063919904450464
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,7 +187,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AbilityManager
   ability: 0
-  abilityUI: {fileID: 0}
 --- !u!1 &6708173223431361217
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,6 +313,7 @@ Transform:
   - {fileID: 5320913126475597887}
   - {fileID: 6312526709685615816}
   - {fileID: 6886550197201900100}
+  - {fileID: 2442802960230109701}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6542424777776344305
@@ -290,6 +334,7 @@ MonoBehaviour:
   cameraController: {fileID: 904768357761631885}
   pauseManager: {fileID: 2950018571763163790}
   abilityManager: {fileID: 8415997528275518567}
+  playerManager: {fileID: 2217126364786596864}
 --- !u!1 &9016398040679067051
 GameObject:
   m_ObjectHideFlags: 0

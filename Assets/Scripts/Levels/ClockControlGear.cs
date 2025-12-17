@@ -6,7 +6,6 @@ using UnityEngine.UIElements;
 
 public class ClockControlGear : MonoBehaviour
 {
-    public GameObject player;
     private PlayerMovement playerMovement;
     public Transform playerCheckCollider;
     private Vector2 playerCheckSize = new Vector2(0.2f, 0.2f);
@@ -20,13 +19,17 @@ public class ClockControlGear : MonoBehaviour
     public int handOrientation = 0;
     private float timeLocked = 0f;
 
-    void Start()
-    {
-        playerMovement = player.GetComponent<PlayerMovement>();
-    }
-
     void Update()
     {
+        if (playerMovement == null)
+        {
+            var player = ManagersRoot.instance.playerManager.Player;
+            if (player == null) return;
+
+            playerMovement = player.GetComponent<PlayerMovement>();
+            return;
+        }
+
         bool playerInPosition = Physics2D.OverlapBox(playerCheckCollider.position, playerCheckSize, 0, playerLayer) && playerMovement.state == MovementState.STANDING;
         if (playerInPosition)
         {

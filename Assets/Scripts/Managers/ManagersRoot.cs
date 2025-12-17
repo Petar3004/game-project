@@ -11,6 +11,7 @@ public class ManagersRoot : MonoBehaviour
     public CameraController cameraController;
     public PauseManager pauseManager;
     public AbilityManager abilityManager;
+    public PlayerManager playerManager;
 
     void Awake()
     {

@@ -4,11 +4,11 @@ public class EnemyDamage : MonoBehaviour
 {
     public int damage = 1;
 
-    private void OnCollisionEnter2D(Collision2D player)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (player.gameObject.CompareTag("PlayerObject"))
+        if (other.gameObject.CompareTag("PlayerObject"))
         {
-            player.gameObject.GetComponentInChildren<PlayerHealth>().TakeDamage(damage);
+            other.gameObject.GetComponentInChildren<PlayerHealth>().TakeDamage(damage);
         }
     }
 }
