@@ -10159,6 +10159,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1357364680}
     m_Modifications:
+    - target: {fileID: 1837076660843935136, guid: a4c1551b7a27aad45b5183b6d6ce611b, type: 3}
+      propertyPath: doorType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2093193992983097273, guid: a4c1551b7a27aad45b5183b6d6ce611b, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2093193992983097273, guid: a4c1551b7a27aad45b5183b6d6ce611b, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -10193,11 +10201,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2423894582505113392, guid: a4c1551b7a27aad45b5183b6d6ce611b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2423894582505113392, guid: a4c1551b7a27aad45b5183b6d6ce611b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2423894582505113392, guid: a4c1551b7a27aad45b5183b6d6ce611b, type: 3}
       propertyPath: m_LocalRotation.z
@@ -10213,15 +10221,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2423894582505113392, guid: a4c1551b7a27aad45b5183b6d6ce611b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 3449535729805226489, guid: a4c1551b7a27aad45b5183b6d6ce611b, type: 3}
       propertyPath: m_Name
       value: Room Door
       objectReference: {fileID: 0}
+    - target: {fileID: 3449535729805226489, guid: a4c1551b7a27aad45b5183b6d6ce611b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3503884749908506426, guid: a4c1551b7a27aad45b5183b6d6ce611b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3942102197865025101, guid: a4c1551b7a27aad45b5183b6d6ce611b, type: 3}
       propertyPath: doorType
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985893337812162661, guid: a4c1551b7a27aad45b5183b6d6ce611b, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
