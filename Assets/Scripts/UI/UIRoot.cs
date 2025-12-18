@@ -21,7 +21,6 @@ public class UIRoot : MonoBehaviour
     [Header("Abilities")]
     public TMP_Text abilityText;
     public Image abilityImage;
-    private Coroutine chargeCoroutine;
 
     [Header("Hints")]
     public GameObject hintBox;
@@ -105,8 +104,9 @@ public class UIRoot : MonoBehaviour
     }
 
     // Timer
-    public void UpdateTimerUI(float timeLeft)
+    public void UpdateTimerUI()
     {
+        float timeLeft = ManagersRoot.instance.timeManager.timeLeft;
         if (timerText != null)
         {
             timerText.text = "Time: " + Mathf.CeilToInt(timeLeft).ToString();
@@ -119,17 +119,11 @@ public class UIRoot : MonoBehaviour
     }
 
     // Abilities
-    public void UpdateAbiliyUI(float slowTimeDuration, AbilityType ability)
+    public void UpdateAbiliyUI()
     {
-        if (ManagersRoot.instance.timeManager.isSlowed)
-        {
-            if (chargeCoroutine == null)
-            {
-                chargeCoroutine = StartCoroutine(ChargeAbilityUI(slowTimeDuration));
-            }
-        }
+        abilityImage.fillAmount = ManagersRoot.instance.abilityManager.abilityCharge;
 
-        switch (ability)
+        switch (ManagersRoot.instance.abilityManager.ability)
         {
             case AbilityType.TIME_SLOW:
                 abilityText.text = "Time Magnet";
@@ -138,22 +132,6 @@ public class UIRoot : MonoBehaviour
                 abilityText.text = "Quick Boots";
                 break;
         }
-    }
-
-    private IEnumerator ChargeAbilityUI(float slowTimeDuration)
-    {
-        abilityImage.fillAmount = 0f;
-        float elapsed = 0f;
-
-        while (elapsed < slowTimeDuration)
-        {
-            elapsed += Time.deltaTime;
-            abilityImage.fillAmount = elapsed / slowTimeDuration;
-            yield return null;
-        }
-
-        abilityImage.fillAmount = 1f;
-        chargeCoroutine = null;
     }
 
     // Hints

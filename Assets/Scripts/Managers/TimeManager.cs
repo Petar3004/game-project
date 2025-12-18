@@ -14,12 +14,6 @@ public class TimeManager : MonoBehaviour
     public Text timerText;
     public Slider timerSlider;
 
-    [Header("Slow Time Settings")]
-    public float slowTimeDuration = 5f;
-    public float slowTimePenalty = 10f;
-    public float slowTimeFactor = 0.5f;
-    public bool isSlowed = false;
-
     void Start()
     {
         timeLeft = maxTime;
@@ -30,7 +24,6 @@ public class TimeManager : MonoBehaviour
         if (timeLeft > 0)
         {
             timeLeft -= Time.deltaTime;
-            UIRoot.instance.UpdateTimerUI(timeLeft);
 
             if (timeLeft <= 0)
             {
@@ -39,25 +32,7 @@ public class TimeManager : MonoBehaviour
                 ManagersRoot.instance.gameManager.RestartLevel();
             }
         }
-    }
-
-    public void ActivateSlowTime()
-    {
-        if (!isSlowed && timeLeft > slowTimePenalty)
-        {
-            StartCoroutine(StartSlowTime());
-        }
-    }
-
-    private IEnumerator StartSlowTime()
-    {
-        isSlowed = true;
-        timeLeft -= slowTimePenalty;
-        UIRoot.instance.UpdateTimerUI(timeLeft);
-
-        yield return new WaitForSecondsRealtime(slowTimeDuration);
-
-        isSlowed = false;
+        UIRoot.instance.UpdateTimerUI();
     }
 
     public void ResetTimer()

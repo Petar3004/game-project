@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            ManagersRoot.instance.timeManager.ActivateSlowTime();
+            ManagersRoot.instance.abilityManager.ActivateAbility();
         }
     }
 
@@ -146,7 +146,11 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleHorizontalMovement(float xInput)
     {
-        float speed = (state == MovementState.CROUCHING || IsSlowed()) ? crouchSpeed : moveSpeed;
+        float speed = moveSpeed;
+        if (state == MovementState.CROUCHING || (IsSlowed() && !ManagersRoot.instance.abilityManager.abilityIsActive))
+        {
+            speed = crouchSpeed;
+        }
         if (Mathf.Sign(xInput) == IsOnWall() || isLocked)
         {
             xInput = 0;

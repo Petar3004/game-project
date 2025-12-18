@@ -30,7 +30,12 @@ public class Gear : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(0, 0, spinSpeed * Time.deltaTime);
+        float currentSpinSpeed = spinSpeed;
+        if (ManagersRoot.instance.abilityManager.abilityIsActive)
+        {
+            currentSpinSpeed *= ManagersRoot.instance.abilityManager.slowTimeFactor;
+        }
+        transform.Rotate(0, 0, currentSpinSpeed * Time.deltaTime);
     }
 
     void InitializeBounds()
@@ -65,8 +70,8 @@ public class Gear : MonoBehaviour
         Vector3 target = currentDirection ? pointB : pointA;
 
         float currentSpeed = moveSpeed;
-        if (ManagersRoot.instance.timeManager.isSlowed)
-            currentSpeed *= ManagersRoot.instance.timeManager.slowTimeFactor;
+        if (ManagersRoot.instance.abilityManager.abilityIsActive)
+            currentSpeed *= ManagersRoot.instance.abilityManager.slowTimeFactor;
 
         transform.position = Vector3.MoveTowards(pos, target, currentSpeed * Time.deltaTime);
 

@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -20,9 +21,17 @@ public class AbilityManager : MonoBehaviour
         { AbilityType.SAND_SPEED, new List<int> { 4, 5, 6 } }
     };
 
+    public float abilityDuration = 5f;
+    public float abilityTimePenalty = 10f;
+    public bool abilityIsActive = false;
+    public float abilityCharge = 1f;
+
+    [Header("Slow Time")]
+    public float slowTimeFactor = 0.5f;
+
     void Update()
     {
-        UIRoot.instance.UpdateAbiliyUI(ManagersRoot.instance.timeManager.slowTimeDuration, ability);
+        UIRoot.instance.UpdateAbiliyUI();
     }
 
     public void UpdateAbility()
@@ -35,5 +44,29 @@ public class AbilityManager : MonoBehaviour
                 ability = abilityType;
             }
         }
+    }
+
+    public void ActivateAbility()
+    {
+        if (!abilityIsActive && ManagersRoot.instance.timeManager.timeLeft > abilityTimePenalty)
+        {
+            ManagersRoot.instance.timeManager.timeLeft -= abilityTimePenalty;
+            StartCoroutine(StartAbility());
+        }
+    }
+
+    private IEnumerator StartAbility()
+    {
+        abilityIsActive = true;
+        float elapsed = 0f;
+        while (elapsed < abilityDuration && abilityIsActive)
+        {
+            elapsed += Time.deltaTime;
+            abilityCharge = elapsed / abilityDuration;
+            yield return null;
+        }
+
+        abilityCharge = 1f;
+        abilityIsActive = false;
     }
 }

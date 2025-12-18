@@ -27,8 +27,7 @@ public class SceneController : MonoBehaviour
         while (!asyncLoad.isDone)
             yield return null;
 
-        ManagersRoot.instance.gameManager.RestartLevel();
-        ManagersRoot.instance.abilityManager.UpdateAbility();
+        ManagersRoot.instance.playerManager.SpawnPlayer(levelIndex, 0);
     }
 
     public void GoToMainMenu()
