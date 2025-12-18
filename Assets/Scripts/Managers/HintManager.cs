@@ -1,35 +1,46 @@
 using System.Collections.Generic;
+using NUnit.Framework;
 using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class HintManager : MonoBehaviour
 {
     public bool hintIsShown = false;
-
-    // (level, position), hint
-    Dictionary<(int, Vector3), string> hints = new Dictionary<(int, Vector3), string>
-    {
-        {(1, new Vector3(-24.98f, -3.08f, 0)), "hint 1"}
-    };
+    private List<string> hints;
+    private int currentHintIndex;
 
     void Update()
     {
         if (hintIsShown && Input.GetKeyDown(KeyCode.Space))
         {
+            ShowNextHint();
+        }
+    }
+
+    public void ShowFirstHint(List<string> currentHints)
+    {
+        hints = currentHints;
+        currentHintIndex = 0;
+        ManagersRoot.instance.pauseManager.Pause(showPauseScreen: false);
+        hintIsShown = true;
+        UIRoot.instance.ShowHintUI(hints[currentHintIndex]);
+    }
+
+    public void ShowNextHint()
+    {
+        if (currentHintIndex < hints.Count - 1)
+        {
+            UIRoot.instance.ShowHintUI(hints[++currentHintIndex]);
+        }
+        else
+        {
             HideHint();
         }
     }
 
-    public void ShowHint(int level, Vector3 pos)
-    {
-        Time.timeScale = 0;
-        hintIsShown = true;
-        UIRoot.instance.ShowHintUI(hints[(level, pos)]);
-    }
-
     public void HideHint()
     {
-        Time.timeScale = 1;
+        ManagersRoot.instance.pauseManager.Resume();
         hintIsShown = false;
         UIRoot.instance.HideHintUI();
     }

@@ -112,7 +112,7 @@ public class GameManager : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.Escape))
             {
-                ManagersRoot.instance.pauseManager.Pause();
+                ManagersRoot.instance.pauseManager.Pause(showPauseScreen: true);
             }
         }
         else

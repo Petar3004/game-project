@@ -48,11 +48,6 @@ public class PlayerMovement : MonoBehaviour
 
         HandleState();
         HandleHorizontalMovement(xInput);
-
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            ManagersRoot.instance.abilityManager.ActivateAbility();
-        }
     }
 
     private void HandleState()
@@ -116,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
 
     bool IsSlowed()
     {
-        return Physics2D.OverlapBox(groundCheckCollider.position, groundCheckSize, 0, slowGroundLayer);
+        return Physics2D.OverlapBox(groundCheckCollider.position, groundCheckSize, 0, slowGroundLayer) && !(ManagersRoot.instance.abilityManager.abilityIsActive && ManagersRoot.instance.abilityManager.ability == AbilityType.SAND_SPEED);
     }
 
     bool IsStuck()
@@ -147,7 +142,7 @@ public class PlayerMovement : MonoBehaviour
     void HandleHorizontalMovement(float xInput)
     {
         float speed = moveSpeed;
-        if (state == MovementState.CROUCHING || (IsSlowed() && !ManagersRoot.instance.abilityManager.abilityIsActive))
+        if (state == MovementState.CROUCHING || IsSlowed())
         {
             speed = crouchSpeed;
         }

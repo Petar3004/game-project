@@ -31,6 +31,14 @@ public class AbilityManager : MonoBehaviour
 
     void Update()
     {
+        bool gamePaused = ManagersRoot.instance.pauseManager.isPaused;
+        bool gameStarted = ManagersRoot.instance.gameManager.gameStarted;
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) && gameStarted && !gamePaused)
+        {
+            ActivateAbility();
+        }
+
         UIRoot.instance.UpdateAbiliyUI();
     }
 

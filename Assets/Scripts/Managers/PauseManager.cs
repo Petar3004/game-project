@@ -5,22 +5,24 @@ public class PauseManager : MonoBehaviour
 {
     public bool isPaused = false;
 
-    public void Pause()
+    public void Pause(bool showPauseScreen)
     {
-        if (ManagersRoot.instance.hintManager.hintIsShown)
-        {
-            return;
-        }
         isPaused = true;
-        UIRoot.instance.ShowPauseUI();
         Time.timeScale = 0f;
+        if (showPauseScreen)
+        {
+            UIRoot.instance.ShowPauseUI();
+        }
     }
 
     public void Resume()
     {
         isPaused = false;
-        UIRoot.instance.HidePauseUI();
         Time.timeScale = 1f;
+        UIRoot.instance.HidePauseUI();
+
+        ManagersRoot.instance.hintManager.hintIsShown = false;
+        UIRoot.instance.HideHintUI();
     }
 
     public void MainMenu()

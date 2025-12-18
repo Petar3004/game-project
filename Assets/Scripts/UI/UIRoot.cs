@@ -85,7 +85,10 @@ public class UIRoot : MonoBehaviour
 
     public void HidePauseUI()
     {
-        pauseMenu.SetActive(false);
+        if (pauseMenu.activeInHierarchy)
+        {
+            pauseMenu.SetActive(false);
+        }
     }
 
     public void OnResumeClicked()
@@ -143,7 +146,10 @@ public class UIRoot : MonoBehaviour
 
     public void HideHintUI()
     {
-        hintBox.SetActive(false);
+        if (hintBox.activeInHierarchy)
+        {
+            hintBox.SetActive(false);
+        }
     }
 }
 

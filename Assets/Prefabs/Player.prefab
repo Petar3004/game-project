@@ -516,7 +516,7 @@ MonoBehaviour:
   wallCheckColliderRight: {fileID: 4774374241145539829}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 640
   springLayer:
     serializedVersion: 2
     m_Bits: 1024
@@ -535,7 +535,6 @@ MonoBehaviour:
   crouchingCollider: {fileID: 1351217804084703848}
   standingSprite: {fileID: 2050165648894658985}
   crouchingSprite: {fileID: 0}
-  isLocked: 0
 --- !u!114 &1291358939746498937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -548,7 +547,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e10a16eb38529448abb7df185902a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
-  currentHealth: 0
   maxHealth: 1
 --- !u!1 &7538662683424903399
 GameObject:
