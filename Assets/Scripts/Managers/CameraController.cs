@@ -13,7 +13,7 @@ public class CameraController : MonoBehaviour
         { 3, new Vector3[] { new Vector3(0, 0, -10f) } },
         { 4, new Vector3[] { new Vector3(0, 0, -10f), new Vector3(17.81f, 0, -10f), new Vector3(9.21f, 10f, -10f) } },
         { 5, null},
-        { 6, null}
+        { 6, new Vector3[] { new Vector3(0, 0, -10f) } }
     };
 
     public int roomIndex = 1;
@@ -21,12 +21,14 @@ public class CameraController : MonoBehaviour
     private Dictionary<(int, int), int> longVerticalRooms = new Dictionary<(int, int), int>
     {
         { (2, 3), 4 },
-        { (3, 1), 2 }
+        { (3, 1), 2 },
+        { (6, 1), 2 }
     };
     // (level, room), width
     private Dictionary<(int, int), int> longHorizontalRooms = new Dictionary<(int, int), int>
     {
-        { (1, 2), 2 }
+        { (1, 2), 2 },
+        { (6, 1), 4 }
     };
 
     public void MoveCameraToNextRoom()

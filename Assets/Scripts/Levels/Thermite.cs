@@ -36,7 +36,7 @@ public class Thermite : MonoBehaviour
     private Vector3 flyEndPos;
 
     [Header("Collectable")]
-    public ClockPuzzle clock;
+    public Clock clock;
 
     void Start()
     {

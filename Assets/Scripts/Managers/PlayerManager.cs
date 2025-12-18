@@ -14,7 +14,7 @@ public class PlayerManager : MonoBehaviour
         { 3, new Vector3[] { new Vector3(0.12f, -3.7f, 0) } },
         { 4, new Vector3[] { new Vector3(-7.8f, -3.75f, 0), Vector3.zero, Vector3.zero } },
         { 5, new Vector3[] { new Vector3(-20f, -3f, 0f), Vector3.zero, Vector3.zero } },
-        { 6, new Vector3[] { Vector3.zero, Vector3.zero, Vector3.zero } },
+        { 6, new Vector3[] { new Vector3(27.13f, -3.43f, 0f) } },
         { 7, new Vector3[] { Vector3.zero, Vector3.zero, Vector3.zero } },
         { 8, new Vector3[] { Vector3.zero, Vector3.zero, Vector3.zero } },
         { 9, new Vector3[] { Vector3.zero, Vector3.zero, Vector3.zero } }

@@ -1,8 +1,7 @@
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class ClockPuzzle : MonoBehaviour
+public class Clock : MonoBehaviour
 {
     private string riddleStr;
     private string[] hours = { "TLEWVE", "ONE", "TWO", "THREE", "FOUR", "FIVE", "SIX", "SEVEN", "EIGHT", "NINE", "TEN", "ELEVEN", };
@@ -14,6 +13,7 @@ public class ClockPuzzle : MonoBehaviour
     private int hoursTargetAngle;
     private int minutesTargetAngle;
     private int numPieces = 0;
+    public int maxNumPieces = 3;
     private int hourStepAngle;
     private int minuteStepAngle;
     public TMP_Text riddleTextUI;
@@ -27,7 +27,7 @@ public class ClockPuzzle : MonoBehaviour
 
         RandomizeRiddle();
 
-        numPiecesUI.gameObject.SetActive(true);
+        UpdatePiecesUI(0);
         riddleTextUI.gameObject.SetActive(false);
     }
 
@@ -73,23 +73,23 @@ public class ClockPuzzle : MonoBehaviour
     public void GetRiddlePiece()
     {
         numPieces++;
-        if (numPieces == 3)
+        if (numPieces == maxNumPieces)
         {
-            updateRiddleUI();
+            UpdateRiddleUI();
         }
 
-        updatePiecesUI(numPieces);
+        UpdatePiecesUI(numPieces);
     }
 
-    private void updateRiddleUI()
+    private void UpdateRiddleUI()
     {
         riddleTextUI.text = riddleStr;
         numPiecesUI.gameObject.SetActive(false);
         riddleTextUI.gameObject.SetActive(true);
     }
 
-    private void updatePiecesUI(int numPieces)
+    private void UpdatePiecesUI(int numPieces)
     {
-        numPiecesUI.text = numPieces + "/3";
+        numPiecesUI.text = numPieces + "/" + maxNumPieces;
     }
 }

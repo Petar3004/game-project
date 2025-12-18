@@ -11,12 +11,6 @@ public class ChaptersMenu : MonoBehaviour
     public TMP_Text chapter;
     public TMP_Text level;
     public GameObject main;
-    Dictionary<int, int[]> chapterToLevel = new Dictionary<int, int[]>
-    {
-        { 1, new int[] {1, 2, 3 } },
-        { 2, new int[] {4, 5, 6 } },
-        { 3, new int[] {7, 8, 9 } }
-    };
 
     public void NextChapter()
     {
@@ -56,7 +50,7 @@ public class ChaptersMenu : MonoBehaviour
 
     public void PlayLevel()
     {
-        ManagersRoot.instance.sceneController.GoToLevel(chapterToLevel[currentChapter][currentLevel - 1]);
+        ManagersRoot.instance.sceneController.GoToLevel((currentChapter - 1) * 3 + currentLevel);
         ManagersRoot.instance.gameManager.gameStarted = true;
         UIRoot.instance.SetActiveSpecial();
     }

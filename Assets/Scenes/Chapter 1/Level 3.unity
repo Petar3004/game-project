@@ -490,7 +490,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3d3c5a9ff0cc0e479ae1c6881906618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  player: {fileID: 0}
   playerCheckCollider: {fileID: 1502259282}
   playerLayer:
     serializedVersion: 2
@@ -915,7 +914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1003,7 +1002,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 219, y: 122}
+  m_AnchoredPosition: {x: 133, y: 122}
   m_SizeDelta: {x: 383.148, y: 137.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1239033386
@@ -1327,7 +1326,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -417, y: 242}
+  m_AnchoredPosition: {x: -288, y: 51}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1433652275
@@ -1566,7 +1565,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -417.00003, y: 242.00006}
+  m_AnchoredPosition: {x: -326, y: 180}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1489680543
@@ -2146,7 +2145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -2252,6 +2251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clock
   shortHandGear: {fileID: 7045678840473679531}
   longHandGear: {fileID: 760812319}
+  maxNumPieces: 3
   riddleTextUI: {fileID: 1433652275}
   numPiecesUI: {fileID: 1489680543}
 --- !u!1 &1918467864
@@ -2459,7 +2459,7 @@ GameObject:
   - component: {fileID: 2038740890}
   - component: {fileID: 2038740891}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2948,7 +2948,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3d3c5a9ff0cc0e479ae1c6881906618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  player: {fileID: 0}
   playerCheckCollider: {fileID: 1564336355709525676}
   playerLayer:
     serializedVersion: 2
