@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dc3f8d448f763043ae0edc0bcab375f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HorizontalSpike
-  velX: 5
+  velX: 7
   velY: 0
   leftToRight: 1
 --- !u!61 &553297604693158973
@@ -241,4 +241,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
