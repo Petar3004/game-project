@@ -12,13 +12,18 @@ public class ClockControlGear : MonoBehaviour
     public GameObject clockHand;
     public int clockFaceDivisions;
     private bool isRotating;
-    public GameObject clockface;
+    public GameObject pivot;
     private bool playerLocked = false;
     public int handOrientation = 0;
     private float timeLocked = 0f;
 
     void Update()
     {
+        if (ManagersRoot.instance.playerManager.Player == null)
+        {
+            return;
+        }
+
         if (playerMovement == null)
         {
             playerMovement = ManagersRoot.instance.playerManager.Player.GetComponent<PlayerMovement>();
@@ -81,14 +86,14 @@ public class ClockControlGear : MonoBehaviour
             float delta = stepAngle / duration * Time.deltaTime;
             rotatedSoFar += delta;
 
-            clockHand.transform.RotateAround(clockface.transform.position, Vector3.forward, delta);
+            clockHand.transform.RotateAround(pivot.transform.position, Vector3.forward, delta);
 
             elapsed += Time.deltaTime;
             yield return null;
         }
 
         float correction = stepAngle - rotatedSoFar;
-        clockHand.transform.RotateAround(clockface.transform.position, Vector3.forward, correction);
+        clockHand.transform.RotateAround(pivot.transform.position, Vector3.forward, correction);
 
         handOrientation = (int)(handOrientation + stepAngle) % 360;
         if (handOrientation < 0) handOrientation += 360;

@@ -20,15 +20,8 @@ public class SuspendedPlatform : MonoBehaviour
 
     void FixedUpdate()
     {
-        float currentSpeed = speed;
-
-        if (ManagersRoot.instance.abilityManager.abilityIsActive)
-        {
-            currentSpeed *= ManagersRoot.instance.abilityManager.slowTimeFactor;
-        }
-
         float target = isActive ? targetY : initY;
-        float newY = Mathf.MoveTowards(transform.position.y, target, currentSpeed * Time.deltaTime);
+        float newY = Mathf.MoveTowards(transform.position.y, target, speed * Time.deltaTime);
         rb.MovePosition(new UnityEngine.Vector2(rb.position.x, newY));
 
     }

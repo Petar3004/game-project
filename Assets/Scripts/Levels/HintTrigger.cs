@@ -6,12 +6,24 @@ using UnityEngine.SceneManagement;
 public class HintTrigger : MonoBehaviour
 {
     public List<string> hints = new List<string>();
+    public HintType type;
+    public float secondsForSmallHint;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (hints.Count > 0)
+        if (type == HintType.SMALL)
         {
-            ManagersRoot.instance.hintManager.ShowFirstHint(hints);
+            if (!ManagersRoot.instance.hintManager.smallHintIsShown)
+            {
+                ManagersRoot.instance.hintManager.ShowSmallHintForSeconds(hints[0], secondsForSmallHint);
+            }
+        }
+        else
+        {
+            if (hints.Count > 0)
+            {
+                ManagersRoot.instance.hintManager.ShowFirstBigHint(hints);
+            }
         }
     }
 }

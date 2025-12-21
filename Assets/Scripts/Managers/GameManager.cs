@@ -80,6 +80,7 @@ public class GameManager : MonoBehaviour
         ManagersRoot.instance.abilityManager.abilityIsActive = false;
         ManagersRoot.instance.cameraController.roomIndex = 1;
         ManagersRoot.instance.abilityManager.UpdateAbility();
+        ManagersRoot.instance.hintManager.HideSmallHint();
     }
 
     public void SaveProgress()

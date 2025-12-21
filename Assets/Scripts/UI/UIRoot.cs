@@ -3,6 +3,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+public enum HintType
+{
+    BIG,
+    SMALL
+}
+
 public class UIRoot : MonoBehaviour
 {
     public static UIRoot instance;
@@ -16,9 +22,12 @@ public class UIRoot : MonoBehaviour
     public Image abilityImage;
 
     [Header("Hints")]
-    public GameObject hintBox;
-    public Image hintImage;
-    public TMP_Text hintText;
+    public GameObject bigHintBox;
+    public Image bigHintImage;
+    public TMP_Text bigHintText;
+    public GameObject smallHintBox;
+    public Image smallHintImage;
+    public TMP_Text smallHintText;
 
     [Header("Pause Menu")]
     public GameObject pauseMenu;
@@ -60,14 +69,16 @@ public class UIRoot : MonoBehaviour
             gameObject.SetActive(false);
         }
         pauseMenu.SetActive(false);
-        hintBox.SetActive(false);
+        bigHintBox.SetActive(false);
+        smallHintBox.SetActive(false);
     }
 
     public void SetActiveSpecial()
     {
         gameObject.SetActive(true);
         pauseMenu.SetActive(false);
-        hintBox.SetActive(false);
+        bigHintBox.SetActive(false);
+        smallHintBox.SetActive(false);
     }
 
     // Pause Menu
@@ -131,17 +142,29 @@ public class UIRoot : MonoBehaviour
     }
 
     // Hints
-    public void ShowHintUI(string hint)
+    public void ShowHintUI(string hint, HintType type)
     {
-        hintBox.SetActive(true);
-        hintText.text = hint;
+        if (type == HintType.SMALL)
+        {
+            smallHintBox.SetActive(true);
+            smallHintText.text = hint;
+        }
+        else
+        {
+            bigHintBox.SetActive(true);
+            bigHintText.text = hint;
+        }
     }
 
     public void HideHintUI()
     {
-        if (hintBox.activeInHierarchy)
+        if (smallHintBox.activeInHierarchy)
         {
-            hintBox.SetActive(false);
+            smallHintBox.SetActive(false);
+        }
+        else if (bigHintBox.activeInHierarchy)
+        {
+            bigHintBox.SetActive(false);
         }
     }
 }

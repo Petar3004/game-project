@@ -21,7 +21,8 @@ public class PauseManager : MonoBehaviour
         Time.timeScale = 1f;
         UIRoot.instance.HidePauseUI();
 
-        ManagersRoot.instance.hintManager.hintIsShown = false;
+        ManagersRoot.instance.hintManager.bigHintIsShown = false;
+        ManagersRoot.instance.hintManager.smallHintIsShown = false;
         UIRoot.instance.HideHintUI();
     }
 

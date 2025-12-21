@@ -18,7 +18,7 @@ public class Pendulum : MonoBehaviour
     {
         float currentSpeed = speed;
 
-        if (ManagersRoot.instance.abilityManager.abilityIsActive)
+        if (ManagersRoot.instance.abilityManager.abilityIsActive && ManagersRoot.instance.abilityManager.ability == AbilityType.TIME_SLOW)
         {
             currentSpeed *= ManagersRoot.instance.abilityManager.slowTimeFactor;
         }

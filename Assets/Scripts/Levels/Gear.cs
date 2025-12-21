@@ -31,7 +31,7 @@ public class Gear : MonoBehaviour
     void Update()
     {
         float currentSpinSpeed = spinSpeed;
-        if (ManagersRoot.instance.abilityManager.abilityIsActive)
+        if (ManagersRoot.instance.abilityManager.abilityIsActive && ManagersRoot.instance.abilityManager.ability == AbilityType.TIME_SLOW)
         {
             currentSpinSpeed *= ManagersRoot.instance.abilityManager.slowTimeFactor;
         }
@@ -70,7 +70,7 @@ public class Gear : MonoBehaviour
         Vector3 target = currentDirection ? pointB : pointA;
 
         float currentSpeed = moveSpeed;
-        if (ManagersRoot.instance.abilityManager.abilityIsActive)
+        if (ManagersRoot.instance.abilityManager.abilityIsActive && ManagersRoot.instance.abilityManager.ability == AbilityType.TIME_SLOW)
             currentSpeed *= ManagersRoot.instance.abilityManager.slowTimeFactor;
 
         transform.position = Vector3.MoveTowards(pos, target, currentSpeed * Time.deltaTime);

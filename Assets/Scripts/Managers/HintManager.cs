@@ -1,47 +1,96 @@
+using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
 using Unity.Burst.CompilerServices;
+using UnityEditor.Rendering.BuiltIn.ShaderGraph;
 using UnityEngine;
 
 public class HintManager : MonoBehaviour
 {
-    public bool hintIsShown = false;
-    private List<string> hints;
+    public bool smallHintIsShown = false;
+    public bool bigHintIsShown = false;
+    private List<string> currentBigHints;
     private int currentHintIndex;
+    private Dictionary<string, HintType> unlockedHints = new Dictionary<string, HintType>();
+    private Coroutine smallHintRoutine;
 
     void Update()
     {
-        if (hintIsShown && Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            ShowNextHint();
+            if (smallHintIsShown)
+            {
+                HideSmallHint();
+            }
+            if (bigHintIsShown)
+            {
+                ShowNextBigHint();
+            }
         }
     }
 
-    public void ShowFirstHint(List<string> currentHints)
+    public void ShowFirstBigHint(List<string> hints)
     {
-        hints = currentHints;
+        currentBigHints = hints;
         currentHintIndex = 0;
+        bigHintIsShown = true;
         ManagersRoot.instance.pauseManager.Pause(showPauseScreen: false);
-        hintIsShown = true;
-        UIRoot.instance.ShowHintUI(hints[currentHintIndex]);
+        UIRoot.instance.ShowHintUI(currentBigHints[currentHintIndex], HintType.BIG);
+        UnlockHint(currentBigHints[0], HintType.BIG);
     }
 
-    public void ShowNextHint()
+    public void ShowNextBigHint()
     {
-        if (currentHintIndex < hints.Count - 1)
+        if (currentHintIndex < currentBigHints.Count - 1)
         {
-            UIRoot.instance.ShowHintUI(hints[++currentHintIndex]);
+            currentHintIndex++;
+            UIRoot.instance.ShowHintUI(currentBigHints[currentHintIndex], HintType.BIG);
+            UnlockHint(currentBigHints[currentHintIndex], HintType.BIG);
         }
         else
         {
-            HideHint();
+            HideBigHint();
         }
     }
 
-    public void HideHint()
+    public void ShowSmallHintForSeconds(string hint, float seconds)
+    {
+        smallHintRoutine = StartCoroutine(SmallHintRoutine(hint, seconds));
+    }
+
+    private IEnumerator SmallHintRoutine(string hint, float seconds)
+    {
+        smallHintIsShown = true;
+        UIRoot.instance.ShowHintUI(hint, HintType.SMALL);
+        UnlockHint(hint, HintType.SMALL);
+        yield return new WaitForSecondsRealtime(seconds);
+        UIRoot.instance.HideHintUI();
+        smallHintIsShown = false;
+    }
+
+    public void HideBigHint()
     {
         ManagersRoot.instance.pauseManager.Resume();
-        hintIsShown = false;
+        bigHintIsShown = false;
         UIRoot.instance.HideHintUI();
+    }
+
+    public void HideSmallHint()
+    {
+        if (!smallHintIsShown)
+        {
+            return;
+        }
+        smallHintIsShown = false;
+        StopCoroutine(smallHintRoutine);
+        UIRoot.instance.HideHintUI();
+    }
+
+    public void UnlockHint(string hint, HintType type)
+    {
+        if (!unlockedHints.ContainsKey(hint))
+        {
+            unlockedHints.Add(hint, type);
+        }
     }
 }
