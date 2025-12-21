@@ -1,6 +1,7 @@
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class DissapearingPlatform : MonoBehaviour
 {
@@ -8,16 +9,75 @@ public class DissapearingPlatform : MonoBehaviour
     public int secondsToRegenerate = 3;
     private SpriteRenderer sprite;
     private Collider2D col;
+    public bool isStatic = true;
+    public bool disappearing = true;
+    [Header("Move")]
+    public float moveSpeed = 2f;
+    public float distance = 3f;
+    public float pauseTimeSeconds = 0;
+    private Vector3 startPosition;
+    private bool currentDirection;
+    private bool lastDirection;
+    private Vector3 pointA;
+    private Vector3 pointB;
 
     void Start()
     {
         sprite = gameObject.GetComponent<SpriteRenderer>();
         col = gameObject.GetComponent<EdgeCollider2D>();
+        if (!isStatic)
+        {
+            startPosition = transform.position;
+            InitializeBounds();
+            currentDirection = true;  
+            lastDirection = false;
+            StartCoroutine(Move());
+        }
     }
+    void InitializeBounds()
+    {
+        pointA = startPosition;
+        pointB = new Vector3(startPosition.x + distance, startPosition.y, startPosition.z);
+    }
+
+    private IEnumerator Move()
+    {
+        while (true)
+        {
+            if (lastDirection != currentDirection)
+            {
+                yield return new WaitForSecondsRealtime(pauseTimeSeconds);
+                lastDirection = currentDirection;
+            }
+            MoveInOneDirection();
+            yield return null;
+        }
+    }
+
+    private void MoveInOneDirection()
+    {
+        Vector3 currentPos = transform.position;
+        Vector3 target = currentDirection ? pointB : pointA;
+
+        target.y = currentPos.y;
+        target.z = currentPos.z;
+
+        float currentSpeed = moveSpeed;
+        if (ManagersRoot.instance.timeManager.isSlowed)
+            currentSpeed *= ManagersRoot.instance.timeManager.slowTimeFactor;
+
+        transform.position = Vector3.MoveTowards(currentPos, target, currentSpeed * Time.deltaTime);
+
+        if (Vector3.Distance(transform.position, target) < 0.01f)
+        {
+            currentDirection = !currentDirection;
+        }
+    }
+
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("PlayerObject"))
+        if (other.gameObject.CompareTag("PlayerObject") && disappearing)
         {
             StartCoroutine(FadeAndDisappear());
         }
@@ -43,4 +103,7 @@ public class DissapearingPlatform : MonoBehaviour
         sprite.color = color;
         col.enabled = true;
     }
+
+
+
 }
