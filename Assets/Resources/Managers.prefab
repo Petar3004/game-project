@@ -138,10 +138,6 @@ MonoBehaviour:
   timeLeft: 0
   timerText: {fileID: 0}
   timerSlider: {fileID: 0}
-  slowTimeDuration: 5
-  slowTimePenalty: 10
-  slowTimeFactor: 0.5
-  isSlowed: 0
 --- !u!1 &6479191232212831825
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,6 +183,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AbilityManager
   ability: 0
+  abilityDuration: 5
+  abilityTimePenalty: 10
+  abilityIsActive: 0
+  abilityCharge: 1
+  slowTimeFactor: 0.5
 --- !u!1 &6708173223431361217
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,6 +382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de69a9f00799b104895b40520fe8c455, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneController
+  sceneFadeDuration: 0.5
 --- !u!1 &9171762616658834598
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,3 +427,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce8bd4b4a61773f44afef1b118048cb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+  smallHintIsShown: 0
+  bigHintIsShown: 0

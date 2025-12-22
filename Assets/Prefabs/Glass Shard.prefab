@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5089809809381837276}
   - component: {fileID: 6400977481486632972}
   m_Layer: 0
-  m_Name: Poison Fang
+  m_Name: Glass Shard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

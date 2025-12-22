@@ -12,7 +12,7 @@ public class PlayerManager : MonoBehaviour
         { 1, new Vector3[] { new Vector3(-26f, -3.2f, 0f), new Vector3(-7.76f, -3.2f, 0f), new Vector3(27.83f, -3.2f, 0f) } },
         { 2, new Vector3[] { new Vector3(-11.5f, -4.1f, 0f), new Vector3(-24.68f, 5.78f, 0), new Vector3(-11.53f, 15.84f, 0) } },
         { 3, new Vector3[] { new Vector3(0.12f, -3.7f, 0) } },
-        { 4, new Vector3[] { new Vector3(-7.8f, -3.75f, 0), Vector3.zero, Vector3.zero } },
+        { 4, new Vector3[] { new Vector3(-7.8f, -3.75f, 0), new Vector3(10.28f, -3.43f, 0), new Vector3(11.2f, 5.8f, 0) } },
         { 5, new Vector3[] { new Vector3(-20f, -3f, 0f), Vector3.zero, Vector3.zero } },
         { 6, new Vector3[] { new Vector3(27.13f, -3.43f, 0f) } },
         { 7, new Vector3[] { Vector3.zero, Vector3.zero, Vector3.zero } },

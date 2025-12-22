@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8979118711498660829}
   - component: {fileID: 6926118292044494169}
   m_Layer: 0
-  m_Name: Horizontal Spike
+  m_Name: Stinger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 0.78431374, g: 0, b: 0.51187444, a: 1}
+  m_Color: {r: 0.28627452, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
