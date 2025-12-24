@@ -11,18 +11,20 @@ public class HintTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (type == HintType.SMALL)
-        {
-            if (!ManagersRoot.instance.hintManager.smallHintIsShown)
+        if(collision.CompareTag("Player")) {
+            if (type == HintType.SMALL)
             {
-                ManagersRoot.instance.hintManager.ShowSmallHintForSeconds(hints[0], secondsForSmallHint);
+                if (!ManagersRoot.instance.hintManager.smallHintIsShown)
+                {
+                    ManagersRoot.instance.hintManager.ShowSmallHintForSeconds(hints[0], secondsForSmallHint);
+                }
             }
-        }
-        else
-        {
-            if (hints.Count > 0)
+            else
             {
-                ManagersRoot.instance.hintManager.ShowFirstBigHint(hints);
+                if (hints.Count > 0)
+                {
+                    ManagersRoot.instance.hintManager.ShowFirstBigHint(hints);
+                }
             }
         }
     }
