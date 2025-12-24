@@ -25,8 +25,7 @@ public class CameraController : MonoBehaviour
         { (3, 1), 2 },
         { (5, 1), 2 },
         { (5, 2), 2 },
-        { (5, 3), 4 }
-
+        { (5, 3), 4 },
         { (6, 1), 2 }
     };
     // (level, room), width
@@ -34,7 +33,7 @@ public class CameraController : MonoBehaviour
     {
         { (1, 2), 2 },
         { (5, 1), 2 },
-        { (5, 2), 2 }
+        { (5, 2), 2 },
         { (6, 1), 4 }
     };
 

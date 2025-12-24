@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public bool gameStarted = false;
 
     void Start()
+    {
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
         if (currentLevelIndex != 0)
         {

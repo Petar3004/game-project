@@ -62,9 +62,7 @@ public class DissapearingPlatform : MonoBehaviour
         target.z = currentPos.z;
 
         float currentSpeed = moveSpeed;
-        if (ManagersRoot.instance.timeManager.isSlowed)
-            currentSpeed *= ManagersRoot.instance.timeManager.slowTimeFactor;
-
+        
         transform.position = Vector3.MoveTowards(currentPos, target, currentSpeed * Time.deltaTime);
 
         if (Vector3.Distance(transform.position, target) < 0.01f)
