@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Runtime.CompilerServices;
+using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
@@ -10,6 +12,8 @@ public class GameManager : MonoBehaviour
 {
     private GameObject player;
     public bool gameStarted = false;
+    public bool chapterComplete = false;
+    public int savedLevel = -1;
 
     void Start()
     {
@@ -17,7 +21,15 @@ public class GameManager : MonoBehaviour
         if (currentLevelIndex != 0)
         {
             gameStarted = true;
-            MovePlayerToLevel(currentLevelIndex);
+            ManagersRoot.instance.sceneController.GoToLevel(currentLevelIndex);
+        }
+
+        if (File.Exists(Application.persistentDataPath + "/savedGames.gd"))
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(Application.persistentDataPath + "/savedGames.gd", FileMode.Open);
+            savedLevel = (int)bf.Deserialize(file);
+            file.Close();
         }
     }
 
@@ -36,6 +48,8 @@ public class GameManager : MonoBehaviour
         ManagersRoot.instance.cameraController.TrackPlayer(player);
 
         HandleInput();
+
+        Debug.Log(savedLevel);
     }
 
     public void MovePlayerToRoom(int roomIndex)
@@ -44,37 +58,14 @@ public class GameManager : MonoBehaviour
         ManagersRoot.instance.playerManager.SpawnPlayer(currentLevelIndex, roomIndex - 1);
     }
 
-    public void MovePlayerToLevel(int levelIndex)
-    {
-        ResetLevelParameters();
-        ManagersRoot.instance.sceneController.GoToLevel(levelIndex);
-    }
-
-    public void MovePlayerToNextLevel()
-    {
-        int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
-        MovePlayerToLevel(currentLevelIndex + 1);
-
-        SaveProgress();
-    }
-
-    public void MovePlayerToPreviousLevel()
-    {
-        int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
-        MovePlayerToLevel(currentLevelIndex - 1);
-
-        SaveProgress();
-    }
-
     // Called when the player dies or the timer hits 0
     public void RestartLevel()
     {
-        ManagersRoot.instance.sceneController.GoToLevel(SceneManager.GetActiveScene().buildIndex);
-        ResetLevelParameters();
-        SaveProgress();
+        int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
+        ManagersRoot.instance.sceneController.GoToLevel(currentLevelIndex);
     }
 
-    private void ResetLevelParameters()
+    public void ResetLevelParameters()
     {
         ManagersRoot.instance.timeManager.ResetTimer();
         ManagersRoot.instance.abilityManager.abilityIsActive = false;
@@ -85,7 +76,11 @@ public class GameManager : MonoBehaviour
 
     public void SaveProgress()
     {
-        // TODO save level in storage
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream file = File.Create(Application.persistentDataPath + "/savedGames.gd");
+        savedLevel = SceneManager.GetActiveScene().buildIndex;
+        bf.Serialize(file, savedLevel);
+        file.Close();
     }
 
     private void HandleInput()

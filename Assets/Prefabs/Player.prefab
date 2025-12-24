@@ -534,7 +534,7 @@ MonoBehaviour:
   standingCollider: {fileID: 5248742689268583572}
   crouchingCollider: {fileID: 1351217804084703848}
   standingSprite: {fileID: 2050165648894658985}
-  crouchingSprite: {fileID: 0}
+  crouchingSprite: {fileID: 7321458290951813592}
 --- !u!114 &1291358939746498937
 MonoBehaviour:
   m_ObjectHideFlags: 0

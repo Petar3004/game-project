@@ -14,16 +14,20 @@ public enum HintType
 public class UIRoot : MonoBehaviour
 {
     public static UIRoot instance;
+    public Canvas HUD;
 
     [Header("Timer")]
-    public TMP_Text timerText;
     public Slider timerSlider;
+    public Image timerFill;
+    public float flashSpeed;
+    private Coroutine flashCoroutine;
 
     [Header("Abilities")]
     public TMP_Text abilityText;
     public Image abilityImage;
 
     [Header("Hints")]
+    public Canvas overlay;
     public GameObject bigHintBox;
     public Image bigHintImage;
     public TMP_Text bigHintText;
@@ -32,9 +36,10 @@ public class UIRoot : MonoBehaviour
     public TMP_Text smallHintText;
 
     [Header("Pause Menu")]
-    public GameObject pauseMenu;
+    public Canvas pauseMenu;
 
-    [Header("Fading")]
+    [Header("Transitions")]
+    public Canvas transition;
     public Image sceneFadeImage;
 
     void Awake()
@@ -69,34 +74,29 @@ public class UIRoot : MonoBehaviour
 
     void Start()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 0)
-        {
-            gameObject.SetActive(false);
-        }
-        pauseMenu.SetActive(false);
-        bigHintBox.SetActive(false);
-        smallHintBox.SetActive(false);
+        ActivateUI();
     }
 
-    public void SetActiveSpecial()
+    public void ActivateUI()
     {
-        gameObject.SetActive(true);
-        pauseMenu.SetActive(false);
-        bigHintBox.SetActive(false);
-        smallHintBox.SetActive(false);
+        bool isMainMenu = SceneManager.GetActiveScene().buildIndex == 0;
+
+        HUD.gameObject.SetActive(!isMainMenu);
+        pauseMenu.gameObject.SetActive(false);
+        overlay.gameObject.SetActive(false);
     }
 
     // Pause Menu
     public void ShowPauseUI()
     {
-        pauseMenu.SetActive(true);
+        pauseMenu.gameObject.SetActive(true);
     }
 
     public void HidePauseUI()
     {
-        if (pauseMenu.activeInHierarchy)
+        if (pauseMenu.gameObject.activeInHierarchy)
         {
-            pauseMenu.SetActive(false);
+            pauseMenu.gameObject.SetActive(false);
         }
     }
 
@@ -119,30 +119,45 @@ public class UIRoot : MonoBehaviour
     public void UpdateTimerUI()
     {
         float timeLeft = ManagersRoot.instance.timeManager.timeLeft;
-        if (timerText != null)
-        {
-            timerText.text = "Time: " + Mathf.CeilToInt(timeLeft).ToString();
-        }
+        bool timerFlashing = ManagersRoot.instance.timeManager.timeLeft < ManagersRoot.instance.abilityManager.abilityTimePenalty;
+        timerSlider.value = timeLeft;
 
-        if (timerSlider != null)
+        if (timerFlashing && flashCoroutine == null)
         {
-            timerSlider.value = timeLeft;
+            flashCoroutine = StartCoroutine(FlashSlider());
+        }
+        else if (!timerFlashing && flashCoroutine != null)
+        {
+            StopCoroutine(flashCoroutine);
+            flashCoroutine = null;
+            timerFill.color = Color.white;
         }
     }
+
+    private IEnumerator FlashSlider()
+    {
+        while (true)
+        {
+            float t = Mathf.PingPong(Time.unscaledTime * flashSpeed, 1f);
+            timerFill.color = Color.Lerp(Color.white, Color.yellow, t);
+            yield return null;
+        }
+    }
+
 
     // Abilities
     public void UpdateAbiliyUI()
     {
+        AbilityType currentAbility = ManagersRoot.instance.abilityManager.ability;
         abilityImage.fillAmount = ManagersRoot.instance.abilityManager.abilityCharge;
-
-        switch (ManagersRoot.instance.abilityManager.ability)
+        abilityText.text = ManagersRoot.instance.abilityManager.abilityToData[currentAbility].Item1;
+        if (ManagersRoot.instance.timeManager.timeLeft < ManagersRoot.instance.abilityManager.abilityTimePenalty)
         {
-            case AbilityType.TIME_SLOW:
-                abilityText.text = "Time Magnet";
-                break;
-            case AbilityType.SAND_SPEED:
-                abilityText.text = "Quick Boots";
-                break;
+            abilityImage.color = Color.softRed;
+        }
+        else
+        {
+            abilityImage.color = ManagersRoot.instance.abilityManager.abilityToData[currentAbility].Item2;
         }
     }
 
@@ -181,7 +196,7 @@ public class UIRoot : MonoBehaviour
 
         yield return FadeCoroutine(startColor, targetColor, duration);
 
-        sceneFadeImage.gameObject.SetActive(false);
+        transition.gameObject.SetActive(false);
     }
 
     public IEnumerator FadeOutCoroutine(float duration)
@@ -189,7 +204,7 @@ public class UIRoot : MonoBehaviour
         Color startColor = new Color(sceneFadeImage.color.r, sceneFadeImage.color.g, sceneFadeImage.color.b, 0);
         Color targetColor = new Color(sceneFadeImage.color.r, sceneFadeImage.color.g, sceneFadeImage.color.b, 1);
 
-        sceneFadeImage.gameObject.SetActive(true);
+        transition.gameObject.SetActive(true);
         yield return FadeCoroutine(startColor, targetColor, duration);
     }
 
@@ -204,7 +219,7 @@ public class UIRoot : MonoBehaviour
             sceneFadeImage.color = Color.Lerp(startColor, targetColor, elapsedPercentage);
 
             yield return null;
-            elapsedTime += Time.deltaTime;
+            elapsedTime += Time.unscaledDeltaTime;
         }
     }
 }

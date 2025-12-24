@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
+    [HideInInspector]
     public GameObject playerPrefab;
     private GameObject currentPlayer;
 
@@ -26,6 +27,11 @@ public class PlayerManager : MonoBehaviour
             Destroy(currentPlayer);
 
         currentPlayer = Instantiate(playerPrefab, spawnPoints[level][room], Quaternion.identity);
+    }
+
+    public void TurnRed()
+    {
+        currentPlayer.GetComponentInChildren<SpriteRenderer>().color = Color.red;
     }
 
     public GameObject Player => currentPlayer;
