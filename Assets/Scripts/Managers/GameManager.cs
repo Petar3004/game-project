@@ -48,8 +48,6 @@ public class GameManager : MonoBehaviour
         ManagersRoot.instance.cameraController.TrackPlayer(player);
 
         HandleInput();
-
-        Debug.Log(savedLevel);
     }
 
     public void MovePlayerToRoom(int roomIndex)
