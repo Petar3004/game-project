@@ -2,25 +2,27 @@
 
 public class SandRising : MonoBehaviour
 {
-    public float riseSpeed = 0.5f;   // units per second
-    public float maxHeight = 10f;    // room height
+    public float riseSpeed = 0.5f;   
+    public float maxHeight = 10f;    
     private Vector3 startScale;
+    private Material sandMat;
 
     void Start()
     {
-        startScale = transform.localScale;
+        sandMat = GetComponent<SpriteRenderer>().material;
     }
 
     void Update()
     {
         float newHeight = transform.localScale.y + riseSpeed * Time.deltaTime;
+        sandMat.mainTextureOffset += new Vector2(0, Time.deltaTime * 0.1f);
 
         if (newHeight <= maxHeight)
         {
             transform.localScale = new Vector3(
-                startScale.x,
+                transform.localScale.x,
                 newHeight,
-                startScale.z
+                transform.localScale.z
             );
         }
 
