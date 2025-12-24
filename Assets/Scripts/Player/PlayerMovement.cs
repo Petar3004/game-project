@@ -31,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
         groundCheckSize = new Vector2(0.9f * standingCollider.bounds.size.x, 0.2f);
         ceilingCheckSize = new Vector2(0.9f * standingCollider.bounds.size.x, 0.2f);
         wallCheckSize = new Vector2(0.05f, 0.9f * standingCollider.bounds.size.y);
+
+        UpdateSprite(false);
     }
 
     void Update()
@@ -151,6 +153,7 @@ public class PlayerMovement : MonoBehaviour
     void UpdateSprite(bool crouched)
     {
         standingSprite.enabled = !crouched;
+        crouchingSprite.enabled = crouched;
     }
 
     void UpdateCollider(bool crouched)

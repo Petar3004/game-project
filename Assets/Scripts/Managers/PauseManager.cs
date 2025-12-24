@@ -7,6 +7,10 @@ public class PauseManager : MonoBehaviour
 
     public void Pause(bool showPauseScreen)
     {
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            return;
+        }
         isPaused = true;
         Time.timeScale = 0f;
         if (showPauseScreen)
@@ -32,7 +36,6 @@ public class PauseManager : MonoBehaviour
         UIRoot.instance.HidePauseUI();
         Time.timeScale = 1f;
         ManagersRoot.instance.gameManager.gameStarted = false;
-        UIRoot.instance.gameObject.SetActive(false);
         ManagersRoot.instance.sceneController.GoToMainMenu();
     }
 
