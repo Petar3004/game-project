@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public bool gameStarted = false;
     public bool chapterComplete = false;
     public int savedLevel = -1;
+    public List<int> unlockedLevels = new List<int>();
 
     void Start()
     {
@@ -24,11 +25,25 @@ public class GameManager : MonoBehaviour
             ManagersRoot.instance.sceneController.GoToLevel(currentLevelIndex);
         }
 
-        if (File.Exists(Application.persistentDataPath + "/savedGames.gd"))
+        if (File.Exists(Application.persistentDataPath + "/savedLevel.gd"))
         {
             BinaryFormatter bf = new BinaryFormatter();
-            FileStream file = File.Open(Application.persistentDataPath + "/savedGames.gd", FileMode.Open);
+            FileStream file = File.Open(Application.persistentDataPath + "/savedLevel.gd", FileMode.Open);
             savedLevel = (int)bf.Deserialize(file);
+            file.Close();
+        }
+        if (File.Exists(Application.persistentDataPath + "/unlockedLevels.gd"))
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(Application.persistentDataPath + "/unlockedLevels.gd", FileMode.Open);
+            unlockedLevels = (List<int>)bf.Deserialize(file);
+            file.Close();
+        }
+        if (File.Exists(Application.persistentDataPath + "/unlockedHints.gd"))
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(Application.persistentDataPath + "/unlockedHints.gd", FileMode.Open);
+            ManagersRoot.instance.hintManager.unlockedHints = (Dictionary<string, HintType>)bf.Deserialize(file);
             file.Close();
         }
     }
@@ -75,10 +90,16 @@ public class GameManager : MonoBehaviour
     public void SaveProgress()
     {
         BinaryFormatter bf = new BinaryFormatter();
-        FileStream file = File.Create(Application.persistentDataPath + "/savedGames.gd");
-        savedLevel = SceneManager.GetActiveScene().buildIndex;
-        bf.Serialize(file, savedLevel);
-        file.Close();
+        FileStream levelFile = File.Create(Application.persistentDataPath + "/savedLevel.gd");
+        FileStream unlockedLevelsFile = File.Create(Application.persistentDataPath + "/unlockedLevels.gd");
+        FileStream unlockedHintsFile = File.Create(Application.persistentDataPath + "/unlockedHints.gd");
+        int savedLevel = SceneManager.GetActiveScene().buildIndex;
+        bf.Serialize(levelFile, savedLevel);
+        bf.Serialize(unlockedLevelsFile, unlockedLevels);
+        bf.Serialize(unlockedHintsFile, ManagersRoot.instance.hintManager.unlockedHints);
+        levelFile.Close();
+        unlockedLevelsFile.Close();
+        unlockedHintsFile.Close();
     }
 
     private void HandleInput()

@@ -5,12 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class HintTrigger : MonoBehaviour
 {
+    bool seen = false;
     public List<string> hints = new List<string>();
     public HintType type;
     public float secondsForSmallHint;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        if (seen)
+        {
+            return;
+        }
+        seen = true;
+
         if (type == HintType.SMALL)
         {
             if (!ManagersRoot.instance.hintManager.smallHintIsShown)

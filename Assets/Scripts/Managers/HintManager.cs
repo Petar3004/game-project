@@ -11,7 +11,7 @@ public class HintManager : MonoBehaviour
     public bool bigHintIsShown = false;
     private List<string> currentBigHints;
     private int currentHintIndex;
-    private Dictionary<string, HintType> unlockedHints = new Dictionary<string, HintType>();
+    public Dictionary<string, HintType> unlockedHints = new Dictionary<string, HintType>();
     private Coroutine smallHintRoutine;
 
     void Update()

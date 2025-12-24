@@ -34,6 +34,7 @@ public class SceneController : MonoBehaviour
             yield return null;
 
         ManagersRoot.instance.gameManager.ResetLevelParameters();
+        ManagersRoot.instance.gameManager.unlockedLevels.Add(levelIndex);
         ManagersRoot.instance.gameManager.SaveProgress();
         ManagersRoot.instance.playerManager.SpawnPlayer(levelIndex, 0);
         UIRoot.instance.ActivateUI();

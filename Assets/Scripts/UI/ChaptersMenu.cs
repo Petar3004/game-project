@@ -84,7 +84,13 @@ public class ChaptersMenu : MonoBehaviour
 
     public void PlayLevel()
     {
-        ManagersRoot.instance.sceneController.GoToLevel((currentChapter - 1) * 3 + currentLevel);
+        int level = (currentChapter - 1) * 3 + currentLevel;
+        if (!ManagersRoot.instance.gameManager.unlockedLevels.Contains(level))
+        {
+            Debug.Log("Level not unlocked.");
+            return;
+        }
+        ManagersRoot.instance.sceneController.GoToLevel(level);
         ManagersRoot.instance.gameManager.gameStarted = true;
     }
 
