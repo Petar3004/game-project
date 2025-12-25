@@ -105,7 +105,6 @@ public class GameManager : MonoBehaviour
         FileStream unlockedLevelsFile = File.Create(unlockedLevelsPath);
         FileStream unlockedHintsFile = File.Create(unlockedHintsPath);
         savedLevel = SceneManager.GetActiveScene().buildIndex;
-        Debug.Log(savedLevel);
         bf.Serialize(levelFile, savedLevel);
         bf.Serialize(unlockedLevelsFile, unlockedLevels);
         bf.Serialize(unlockedHintsFile, ManagersRoot.instance.hintManager.unlockedHints);

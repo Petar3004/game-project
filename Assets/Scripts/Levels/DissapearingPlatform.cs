@@ -22,13 +22,13 @@ public class DissapearingPlatform : MonoBehaviour
 
     void Start()
     {
-        sprite = gameObject.GetComponent<SpriteRenderer>();
-        col = gameObject.GetComponent<EdgeCollider2D>();
+        sprite = GetComponent<SpriteRenderer>();
+        col = GetComponent<BoxCollider2D>();
         if (!isStatic)
         {
             startPosition = transform.position;
             InitializeBounds();
-            currentDirection = true;  
+            currentDirection = true;
             lastDirection = false;
             StartCoroutine(Move());
         }
@@ -62,7 +62,7 @@ public class DissapearingPlatform : MonoBehaviour
         target.z = currentPos.z;
 
         float currentSpeed = moveSpeed;
-        
+
         transform.position = Vector3.MoveTowards(currentPos, target, currentSpeed * Time.deltaTime);
 
         if (Vector3.Distance(transform.position, target) < 0.01f)

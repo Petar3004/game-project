@@ -60,7 +60,7 @@ public class ClockControlGear : MonoBehaviour
         {
             xInput = Input.GetAxis("Horizontal");
         }
-        gearOrientation += xInput;
+        gearOrientation += xInput / 10;
         transform.rotation = Quaternion.Euler(0, 0, gearOrientation);
         if (xInput != 0 && !isRotating)
         {
