@@ -374,6 +374,97 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4c5183238eb22440ae9ce6a70459075, type: 3}
+--- !u!1001 &510081190
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1918467865}
+    m_Modifications:
+    - target: {fileID: 828636259221409206, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Name
+      value: Chronos
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: hints.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: 'hints.Array.data[0]'
+      value: 'This Level will challenge your intellect.  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: 'hints.Array.data[1]'
+      value: 'Catch the yellow thermites to unlock the riddle hidden in plain sight. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: 'hints.Array.data[2]'
+      value: 'Once you are able to see this riddle, complete it by standing on the
+        corresponding cogs for the clock hands and solve the riddle.  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: 'hints.Array.data[3]'
+      value: I wish you best of luck!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: secondsForSmallHint
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+--- !u!4 &510081191 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+  m_PrefabInstance: {fileID: 510081190}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &554793064
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -443,6 +534,162 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1530520131673612775, guid: f6895afc77ddf18459cf42940eaec542, type: 3}
   m_PrefabInstance: {fileID: 2138630959}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &729248466
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1918467865}
+    m_Modifications:
+    - target: {fileID: 828636259221409206, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Name
+      value: Hint Trigger (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: hints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: 'hints.Array.data[0]'
+      value: "That\u2019s it I have to stand in the centre to move the clock"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: secondsForSmallHint
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+--- !u!4 &729248467 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+  m_PrefabInstance: {fileID: 729248466}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &742519098
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1918467865}
+    m_Modifications:
+    - target: {fileID: 828636259221409206, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Name
+      value: Hint Trigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: hints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: 'hints.Array.data[0]'
+      value: 'Wow there are a lot of those thermites, should I use my ability? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: secondsForSmallHint
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+--- !u!4 &742519099 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+  m_PrefabInstance: {fileID: 742519098}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &760812317
 GameObject:
@@ -2074,6 +2321,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 729248467}
+  - {fileID: 742519099}
+  - {fileID: 510081191}
   - {fileID: 1910096719}
   - {fileID: 1538418417}
   - {fileID: 1791823813}
@@ -2169,6 +2419,22 @@ PrefabInstance:
     - target: {fileID: 1623276952709704254, guid: 925aaa7a4e564724bbb8844c5723d6d6, type: 3}
       propertyPath: m_Points.Array.data[0].y
       value: -14.226646
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623276952709704254, guid: 925aaa7a4e564724bbb8844c5723d6d6, type: 3}
+      propertyPath: m_Points.Array.data[1].x
+      value: -5.598444
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623276952709704254, guid: 925aaa7a4e564724bbb8844c5723d6d6, type: 3}
+      propertyPath: m_Points.Array.data[1].y
+      value: 5.6834803
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623276952709704254, guid: 925aaa7a4e564724bbb8844c5723d6d6, type: 3}
+      propertyPath: m_Points.Array.data[2].x
+      value: 12.040775
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623276952709704254, guid: 925aaa7a4e564724bbb8844c5723d6d6, type: 3}
+      propertyPath: m_Points.Array.data[2].y
+      value: 5.659916
       objectReference: {fileID: 0}
     - target: {fileID: 1623276952709704254, guid: 925aaa7a4e564724bbb8844c5723d6d6, type: 3}
       propertyPath: m_Points.Array.data[3].x
