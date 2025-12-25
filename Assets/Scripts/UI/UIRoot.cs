@@ -83,7 +83,8 @@ public class UIRoot : MonoBehaviour
 
         HUD.gameObject.SetActive(!isMainMenu);
         pauseMenu.gameObject.SetActive(false);
-        overlay.gameObject.SetActive(false);
+        bigHintBox.SetActive(false);
+        smallHintBox.SetActive(false);
     }
 
     // Pause Menu
