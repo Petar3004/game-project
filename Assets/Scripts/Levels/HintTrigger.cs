@@ -12,6 +12,12 @@ public class HintTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        if (seen)
+        {
+            return;
+        }
+        seen = true;
+
         if (collision.CompareTag("Player"))
         {
             if (type == HintType.SMALL)

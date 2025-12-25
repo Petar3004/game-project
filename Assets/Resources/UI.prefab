@@ -204,12 +204,12 @@ MonoBehaviour:
   abilityText: {fileID: 1062176169878378798}
   abilityImage: {fileID: 3028625943937433820}
   overlay: {fileID: 9217011474130516905}
-  bigHintBox: {fileID: 0}
-  bigHintImage: {fileID: 0}
-  bigHintText: {fileID: 0}
-  smallHintBox: {fileID: 0}
-  smallHintImage: {fileID: 0}
-  smallHintText: {fileID: 0}
+  bigHintBox: {fileID: 6743967389087214837}
+  bigHintImage: {fileID: 8650576911449406106}
+  bigHintText: {fileID: 8048917470264350818}
+  smallHintBox: {fileID: 4268656439624008562}
+  smallHintImage: {fileID: 1971436743189374296}
+  smallHintText: {fileID: 9177745464331760180}
   pauseMenu: {fileID: 1349947213905886035}
   transition: {fileID: 2772362764518910756}
   sceneFadeImage: {fileID: 6925367509564164482}
