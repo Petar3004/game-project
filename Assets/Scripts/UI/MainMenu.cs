@@ -21,7 +21,13 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-    public void Play()
+    public void NewGame()
+    {
+        ManagersRoot.instance.gameManager.ResetProgress();
+        Continue();
+    }
+
+    public void Continue()
     {
         int savedLevel = ManagersRoot.instance.gameManager.savedLevel;
         if (savedLevel != -1)

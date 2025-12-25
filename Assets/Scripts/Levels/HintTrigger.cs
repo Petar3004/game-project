@@ -5,18 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class HintTrigger : MonoBehaviour
 {
-    bool seen = false;
     public List<string> hints = new List<string>();
     public HintType type;
     public float secondsForSmallHint;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (seen)
+        if (ManagersRoot.instance.hintManager.unlockedHints.ContainsKey(hints[0]))
         {
             return;
         }
-        seen = true;
 
         if (collision.CompareTag("Player"))
         {

@@ -82,6 +82,7 @@ public class UIRoot : MonoBehaviour
         bool isMainMenu = SceneManager.GetActiveScene().buildIndex == 0;
 
         HUD.gameObject.SetActive(!isMainMenu);
+        overlay.gameObject.SetActive(!isMainMenu);
         pauseMenu.gameObject.SetActive(false);
         bigHintBox.SetActive(false);
         smallHintBox.SetActive(false);
