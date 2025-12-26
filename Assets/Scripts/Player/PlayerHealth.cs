@@ -38,11 +38,13 @@ public class PlayerHealth : MonoBehaviour
         isDead = true;
         currentHealth = 0;
         
-        animator.Play("death");
-
         if (playerMovement != null)
         {
-            playerMovement.PositionLock(true);
+            playerMovement.TriggerDeath();
+        }
+        else 
+        {
+            animator.Play("death");
         }
 
         StartCoroutine(WaitAndRestartLevel());
@@ -67,15 +69,14 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = maxHealth;
         isDead = false;
         
-        if (animator != null)
-        {
-            animator.Play("idle"); 
-            
-        }
-
         if (playerMovement != null)
         {
+            playerMovement.Revive(); 
             playerMovement.PositionLock(false);
+        }
+        else if (animator != null)
+        {
+             animator.Play("idle");
         }
     }
 }

@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
 
     private string currentAnimState;
+    private bool isDead = false;
 
     const string ANIM_IDLE = "idle";       
     const string ANIM_RUN = "run";         
@@ -44,6 +45,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (isDead) return;
+
         float xInput = 0;
         if (!ManagersRoot.instance.pauseManager.isPaused)
         {
@@ -199,17 +202,31 @@ public class PlayerMovement : MonoBehaviour
         standingCollider.enabled = !crouched;
         crouchingCollider.enabled = crouched;
     }
-
+    public void TriggerDeath()
+    {
+        isDead = true; 
+        playerRb.linearVelocity = Vector2.zero; 
+        ChangeAnimation("death"); 
+    }
     public void PositionLock(bool locked)
     {
         isLocked = locked;
-
         if (locked)
         {
-            state = MovementState.STANDING;
-            UpdateCollider(false);
-            ChangeAnimation(ANIM_IDLE); 
+            // Chỉ về Idle nếu CHƯA CHẾT
+            if (!isDead) 
+            {
+                state = MovementState.STANDING;
+                UpdateCollider(false);
+                ChangeAnimation(ANIM_IDLE);
+            }
         }
+    }
+    public void Revive()
+    {
+        isDead = false;
+        state = MovementState.STANDING;
+        ChangeAnimation(ANIM_IDLE);
     }
 }
 
