@@ -22,8 +22,17 @@ public class PlayerMovement : MonoBehaviour
     public Collider2D standingCollider;
     public Collider2D crouchingCollider;
     public SpriteRenderer standingSprite;
-    public SpriteRenderer crouchingSprite;
+    
     private bool isLocked = false;
+    private Animator animator;
+
+    private string currentAnimState;
+    private bool isDead = false;
+
+    const string ANIM_IDLE = "idle";       
+    const string ANIM_RUN = "run";         
+    const string ANIM_JUMP = "jump";       
+    const string ANIM_CROUCH = "crouching"; 
 
     void Start()
     {
@@ -31,12 +40,13 @@ public class PlayerMovement : MonoBehaviour
         groundCheckSize = new Vector2(0.9f * standingCollider.bounds.size.x, 0.2f);
         ceilingCheckSize = new Vector2(0.9f * standingCollider.bounds.size.x, 0.2f);
         wallCheckSize = new Vector2(0.05f, 0.9f * standingCollider.bounds.size.y);
-
-        UpdateSprite(false);
+        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
+        if (isDead) return;
+
         float xInput = 0;
         if (!ManagersRoot.instance.pauseManager.isPaused)
         {
@@ -45,6 +55,14 @@ public class PlayerMovement : MonoBehaviour
 
         HandleState();
         HandleHorizontalMovement(xInput);
+    }
+
+    void ChangeAnimation(string newAnimation)
+    {
+        if (currentAnimState == newAnimation) return;
+
+        animator.Play(newAnimation);
+        currentAnimState = newAnimation;
     }
 
     private void HandleState()
@@ -61,39 +79,82 @@ public class PlayerMovement : MonoBehaviour
         switch (state)
         {
             case MovementState.STANDING:
-                UpdateSprite(false);
                 UpdateCollider(false);
                 if (jumpPressed && IsGrounded() && !IsSlowed())
                 {
                     playerRb.linearVelocityY = jumpForce;
                     state = MovementState.JUMPING;
+                    ChangeAnimation(ANIM_JUMP); 
                 }
                 else if (jumpPressed && IsOnSpring())
                 {
                     playerRb.linearVelocityY = jumpForce * springMultiplier;
                     state = MovementState.JUMPING;
+                    ChangeAnimation(ANIM_JUMP); 
                 }
                 else if (crouchHeld && (IsGrounded() || IsSlowed()))
                 {
                     state = MovementState.CROUCHING;
+                    ChangeAnimation(ANIM_CROUCH); 
                 }
                 break;
+
             case MovementState.CROUCHING:
-                UpdateSprite(true);
                 UpdateCollider(true);
+                ChangeAnimation(ANIM_CROUCH);
+
                 if (!crouchHeld && !IsStuck())
                 {
                     state = MovementState.STANDING;
                 }
                 break;
+
             case MovementState.JUMPING:
-                UpdateSprite(false);
+                ChangeAnimation(ANIM_JUMP);
+
                 if (IsGrounded() || IsOnSpring())
                 {
                     state = MovementState.STANDING;
                 }
                 break;
         }
+    }
+
+    void HandleHorizontalMovement(float xInput)
+    {
+        float speed = moveSpeed;
+        if (state == MovementState.CROUCHING || IsSlowed())
+        {
+            speed = crouchSpeed;
+        }
+
+        if (xInput > 0)
+        {
+            standingSprite.flipX = false;
+        }
+        else if (xInput < 0)
+        {
+            standingSprite.flipX = true;
+        }
+
+        if (Mathf.Sign(xInput) == IsOnWall() || isLocked)
+        {
+            xInput = 0;
+        }
+
+        if (state == MovementState.STANDING)
+        {
+            if (xInput != 0)
+            {
+                ChangeAnimation(ANIM_RUN); 
+            }
+            else
+            {
+                ChangeAnimation(ANIM_IDLE);
+            }
+        }
+
+        playerRb.linearVelocity = new Vector2(xInput * speed, playerRb.linearVelocityY);
     }
 
     bool IsOnSpring()
@@ -136,42 +197,36 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void HandleHorizontalMovement(float xInput)
-    {
-        float speed = moveSpeed;
-        if (state == MovementState.CROUCHING || IsSlowed())
-        {
-            speed = crouchSpeed;
-        }
-        if (Mathf.Sign(xInput) == IsOnWall() || isLocked)
-        {
-            xInput = 0;
-        }
-        playerRb.linearVelocity = new Vector2(xInput * speed, playerRb.linearVelocityY);
-    }
-
-    void UpdateSprite(bool crouched)
-    {
-        standingSprite.enabled = !crouched;
-        crouchingSprite.enabled = crouched;
-    }
-
     void UpdateCollider(bool crouched)
     {
         standingCollider.enabled = !crouched;
         crouchingCollider.enabled = crouched;
     }
-
+    public void TriggerDeath()
+    {
+        isDead = true; 
+        playerRb.linearVelocity = Vector2.zero; 
+        ChangeAnimation("death"); 
+    }
     public void PositionLock(bool locked)
     {
         isLocked = locked;
-
         if (locked)
         {
-            state = MovementState.STANDING;
-            UpdateSprite(false);
-            UpdateCollider(false);
+            // Chỉ về Idle nếu CHƯA CHẾT
+            if (!isDead) 
+            {
+                state = MovementState.STANDING;
+                UpdateCollider(false);
+                ChangeAnimation(ANIM_IDLE);
+            }
         }
+    }
+    public void Revive()
+    {
+        isDead = false;
+        state = MovementState.STANDING;
+        ChangeAnimation(ANIM_IDLE);
     }
 }
 
@@ -181,6 +236,3 @@ public enum MovementState
     CROUCHING,
     JUMPING
 }
-
-
-

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Art/Cutscenes/Screen Texture.renderTexture.meta
 guid: 625d9119a8ff3e141b0b0e87541d9ad7
+========
+guid: 480c8160f277b4a07ad9d5e5c150628b
+>>>>>>>> angi:Assets/Sprites/Animations/damage.anim.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 8400000

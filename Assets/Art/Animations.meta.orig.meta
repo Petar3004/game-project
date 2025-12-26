@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Art/Animations.meta.orig.meta
 guid: 2f10cd11bbebd514f975197cdd0e1aec
 DefaultImporter:
+========
+guid: 061828fe8cbac4c92b33e17ac6537308
+NativeFormatImporter:
+>>>>>>>> angi:Assets/Sprites/Animations/climb.anim.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

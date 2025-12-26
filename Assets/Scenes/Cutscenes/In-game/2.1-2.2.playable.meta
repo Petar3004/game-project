@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/Cutscenes/In-game/2.1-2.2.playable.meta
 guid: 009f1255e8b87384680a83ee45998ec7
+========
+guid: bfbccfb471705420c8a58aa84dbec246
+>>>>>>>> angi:Assets/Sprites/Animations/jump.anim.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000
