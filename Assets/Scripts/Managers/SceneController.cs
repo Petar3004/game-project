@@ -46,4 +46,9 @@ public class SceneController : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    public void GoToCutscene()
+    {
+        SceneManager.LoadScene(10);
+    }
 }
