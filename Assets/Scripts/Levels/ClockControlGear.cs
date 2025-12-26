@@ -34,7 +34,7 @@ public class ClockControlGear : MonoBehaviour
         {
             if (!playerLocked)
             {
-                playerMovement.PositionLock(true);
+                playerMovement.LockPosition(true);
                 playerLocked = true;
                 timeLocked = Time.time;
             }
@@ -47,7 +47,7 @@ public class ClockControlGear : MonoBehaviour
         {
             if (playerLocked)
             {
-                playerMovement.PositionLock(false);
+                playerMovement.LockPosition(false);
                 playerLocked = false;
             }
         }

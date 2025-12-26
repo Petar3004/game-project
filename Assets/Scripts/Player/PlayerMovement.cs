@@ -22,17 +22,17 @@ public class PlayerMovement : MonoBehaviour
     public Collider2D standingCollider;
     public Collider2D crouchingCollider;
     public SpriteRenderer standingSprite;
-    
+
     private bool isLocked = false;
     private Animator animator;
 
     private string currentAnimState;
     private bool isDead = false;
 
-    const string ANIM_IDLE = "idle";       
-    const string ANIM_RUN = "run";         
-    const string ANIM_JUMP = "jump";       
-    const string ANIM_CROUCH = "crouching"; 
+    const string ANIM_IDLE = "idle";
+    const string ANIM_RUN = "run";
+    const string ANIM_JUMP = "jump";
+    const string ANIM_CROUCH = "crouching";
 
     void Start()
     {
@@ -84,18 +84,18 @@ public class PlayerMovement : MonoBehaviour
                 {
                     playerRb.linearVelocityY = jumpForce;
                     state = MovementState.JUMPING;
-                    ChangeAnimation(ANIM_JUMP); 
+                    ChangeAnimation(ANIM_JUMP);
                 }
                 else if (jumpPressed && IsOnSpring())
                 {
                     playerRb.linearVelocityY = jumpForce * springMultiplier;
                     state = MovementState.JUMPING;
-                    ChangeAnimation(ANIM_JUMP); 
+                    ChangeAnimation(ANIM_JUMP);
                 }
                 else if (crouchHeld && (IsGrounded() || IsSlowed()))
                 {
                     state = MovementState.CROUCHING;
-                    ChangeAnimation(ANIM_CROUCH); 
+                    ChangeAnimation(ANIM_CROUCH);
                 }
                 break;
 
@@ -146,7 +146,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (xInput != 0)
             {
-                ChangeAnimation(ANIM_RUN); 
+                ChangeAnimation(ANIM_RUN);
             }
             else
             {
@@ -202,31 +202,27 @@ public class PlayerMovement : MonoBehaviour
         standingCollider.enabled = !crouched;
         crouchingCollider.enabled = crouched;
     }
+
     public void TriggerDeath()
     {
-        isDead = true; 
-        playerRb.linearVelocity = Vector2.zero; 
-        ChangeAnimation("death"); 
+        isDead = true;
+        playerRb.linearVelocity = Vector2.zero;
+        ChangeAnimation("death");
     }
-    public void PositionLock(bool locked)
+
+    public void LockPosition(bool locked)
     {
         isLocked = locked;
         if (locked)
         {
             // Chỉ về Idle nếu CHƯA CHẾT
-            if (!isDead) 
+            if (!isDead)
             {
                 state = MovementState.STANDING;
                 UpdateCollider(false);
                 ChangeAnimation(ANIM_IDLE);
             }
         }
-    }
-    public void Revive()
-    {
-        isDead = false;
-        state = MovementState.STANDING;
-        ChangeAnimation(ANIM_IDLE);
     }
 }
 

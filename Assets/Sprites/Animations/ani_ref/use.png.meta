@@ -1,49 +1,46 @@
 fileFormatVersion: 2
-guid: 3ad4baf93ddac4989be4f6df72b0112f
+guid: f842b14559e6ff04b90c77e6f432f242
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1448427241372007323
-    second: talk_0
+      213: 4657495792207451389
+    second: use_0
   - first:
-      213: 6631804873353466193
-    second: talk_1
+      213: 4863148878954719675
+    second: use_1
   - first:
-      213: 7860509012912954692
-    second: talk_2
+      213: 2870114721057524212
+    second: use_2
   - first:
-      213: -44324108811587735
-    second: talk_3
+      213: 3885421165936169942
+    second: use_3
   - first:
-      213: 4061177465640785244
-    second: talk_4
+      213: 3104513642090087904
+    second: use_4
   - first:
-      213: 7036752810973532432
-    second: talk_5
+      213: 69147787368223812
+    second: use_5
   - first:
-      213: 2940954926778383178
-    second: talk_6
+      213: -2820594749086773393
+    second: use_6
   - first:
-      213: 6022365957334032478
-    second: talk_7
+      213: 942403798721936680
+    second: use_7
   - first:
-      213: -7184156248626947830
-    second: talk_8
+      213: 7508111716260723438
+    second: use_8
   - first:
-      213: -3406688125671805655
-    second: talk_9
+      213: 4877326943126745887
+    second: use_9
   - first:
-      213: 8181687006949189846
-    second: talk_10
+      213: -7085232360831890667
+    second: use_10
   - first:
-      213: 1719247713647101665
-    second: talk_11
+      213: 1709968978916658923
+    second: use_11
   - first:
-      213: 2904164092163334373
-    second: talk_12
-  - first:
-      213: 4611819324051924538
-    second: talk_13
+      213: 7188617255351761820
+    second: use_12
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -76,7 +73,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -139,12 +136,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: talk_0
+      name: use_0
       rect:
         serializedVersion: 2
         x: 22
         y: 15
-        width: 24
+        width: 19
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -154,173 +151,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 564c50b191726ebe0800000000000000
-      internalID: -1448427241372007323
+      spriteID: df4d66d1fbfb2a040800000000000000
+      internalID: 4657495792207451389
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: talk_1
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 37
-        width: 13
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 15110ff3567e80c50800000000000000
-      internalID: 6631804873353466193
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: talk_2
+      name: use_1
       rect:
         serializedVersion: 2
         x: 86
         y: 15
-        width: 24
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 44dde6cec43261d60800000000000000
-      internalID: 7860509012912954692
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: talk_3
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 37
-        width: 13
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 96fac473577826ff0800000000000000
-      internalID: -44324108811587735
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: talk_4
-      rect:
-        serializedVersion: 2
-        x: 150
-        y: 15
-        width: 24
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c55175153633c5830800000000000000
-      internalID: 4061177465640785244
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: talk_5
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 37
-        width: 13
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0111f46366197a160800000000000000
-      internalID: 7036752810973532432
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: talk_6
-      rect:
-        serializedVersion: 2
-        x: 214
-        y: 15
-        width: 24
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a4b7f0f8cee50d820800000000000000
-      internalID: 2940954926778383178
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: talk_7
-      rect:
-        serializedVersion: 2
-        x: 232
-        y: 37
-        width: 13
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e50ec4a2eedb39350800000000000000
-      internalID: 6022365957334032478
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: talk_8
-      rect:
-        serializedVersion: 2
-        x: 278
-        y: 15
-        width: 24
+        width: 19
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -330,85 +173,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a0910b584ffbc4c90800000000000000
-      internalID: -7184156248626947830
+      spriteID: bb96feba3206d7340800000000000000
+      internalID: 4863148878954719675
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: talk_9
+      name: use_2
       rect:
         serializedVersion: 2
-        x: 296
-        y: 37
-        width: 13
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 92d6ac8f23309b0d0800000000000000
-      internalID: -3406688125671805655
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: talk_10
-      rect:
-        serializedVersion: 2
-        x: 342
+        x: 148
         y: 15
-        width: 24
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6d8a2a00cf03b8170800000000000000
-      internalID: 8181687006949189846
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: talk_11
-      rect:
-        serializedVersion: 2
-        x: 360
-        y: 37
-        width: 13
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1e686d4cfaefbd710800000000000000
-      internalID: 1719247713647101665
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: talk_12
-      rect:
-        serializedVersion: 2
-        x: 406
-        y: 15
-        width: 24
+        width: 22
         height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -418,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5e027dadad9ad4820800000000000000
-      internalID: 2904164092163334373
+      spriteID: 4f9c04dd122b4d720800000000000000
+      internalID: 2870114721057524212
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: talk_13
+      name: use_3
       rect:
         serializedVersion: 2
-        x: 424
-        y: 37
-        width: 13
-        height: 12
+        x: 212
+        y: 15
+        width: 22
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -440,8 +217,206 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a36a562ad39700040800000000000000
-      internalID: 4611819324051924538
+      spriteID: 6d3d86ee6f9cbe530800000000000000
+      internalID: 3885421165936169942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: use_4
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 15
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e5422585b2751b20800000000000000
+      internalID: 3104513642090087904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: use_5
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 15
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4445617db89a5f000800000000000000
+      internalID: 69147787368223812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: use_6
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 15
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6fc955150c3bd8d0800000000000000
+      internalID: -2820594749086773393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: use_7
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 15
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82dbcc90347141d00800000000000000
+      internalID: 942403798721936680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: use_8
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 15
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eea3ba583db223860800000000000000
+      internalID: 7508111716260723438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: use_9
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 15
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f13f28a730fbfa340800000000000000
+      internalID: 4877326943126745887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: use_10
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 15
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51b438df4b23cad90800000000000000
+      internalID: -7085232360831890667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: use_11
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 15
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beec34df9b70bb710800000000000000
+      internalID: 1709968978916658923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: use_12
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 15
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9b3c7b8e4913c360800000000000000
+      internalID: 7188617255351761820
       vertices: []
       indices: 
       edges: []
@@ -460,20 +435,19 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      talk_0: -1448427241372007323
-      talk_1: 6631804873353466193
-      talk_10: 8181687006949189846
-      talk_11: 1719247713647101665
-      talk_12: 2904164092163334373
-      talk_13: 4611819324051924538
-      talk_2: 7860509012912954692
-      talk_3: -44324108811587735
-      talk_4: 4061177465640785244
-      talk_5: 7036752810973532432
-      talk_6: 2940954926778383178
-      talk_7: 6022365957334032478
-      talk_8: -7184156248626947830
-      talk_9: -3406688125671805655
+      use_0: 4657495792207451389
+      use_1: 4863148878954719675
+      use_10: -7085232360831890667
+      use_11: 1709968978916658923
+      use_12: 7188617255351761820
+      use_2: 2870114721057524212
+      use_3: 3885421165936169942
+      use_4: 3104513642090087904
+      use_5: 69147787368223812
+      use_6: -2820594749086773393
+      use_7: 942403798721936680
+      use_8: 7508111716260723438
+      use_9: 4877326943126745887
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

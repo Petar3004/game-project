@@ -5,7 +5,7 @@ public class PlayerHealth : MonoBehaviour
 {
     private int currentHealth;
     public int maxHealth = 1;
-    
+
     private Animator animator;
     private bool isDead = false;
     private PlayerMovement playerMovement;
@@ -29,7 +29,7 @@ public class PlayerHealth : MonoBehaviour
         }
         else
         {
-            animator.Play("damage"); 
+            animator.Play("damage");
         }
     }
 
@@ -37,12 +37,12 @@ public class PlayerHealth : MonoBehaviour
     {
         isDead = true;
         currentHealth = 0;
-        
+
         if (playerMovement != null)
         {
             playerMovement.TriggerDeath();
         }
-        else 
+        else
         {
             animator.Play("death");
         }
@@ -52,8 +52,8 @@ public class PlayerHealth : MonoBehaviour
 
     IEnumerator WaitAndRestartLevel()
     {
-        yield return new WaitForSeconds(2f); 
-        
+        yield return new WaitForSeconds(1f);
+
         ManagersRoot.instance.gameManager.RestartLevel();
     }
 
@@ -68,15 +68,14 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth = maxHealth;
         isDead = false;
-        
+
         if (playerMovement != null)
         {
-            playerMovement.Revive(); 
-            playerMovement.PositionLock(false);
+            playerMovement.LockPosition(false);
         }
         else if (animator != null)
         {
-             animator.Play("idle");
+            animator.Play("idle");
         }
     }
 }

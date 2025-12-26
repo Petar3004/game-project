@@ -1,5 +1,4 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Art/Sprites/Object/Chapter 2/2.1.png.meta
 guid: cce2cccf07eb6ce4b900287e1ee321da
 TextureImporter:
   internalIDToNameTable:
@@ -36,50 +35,6 @@ TextureImporter:
   - first:
       213: -1457545716271931557
     second: 2.1_10
-========
-guid: 5f11aaad8dd674f9ca44dd0a1081f017
-TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 4657495792207451389
-    second: use_0
-  - first:
-      213: 4863148878954719675
-    second: use_1
-  - first:
-      213: 2870114721057524212
-    second: use_2
-  - first:
-      213: 3885421165936169942
-    second: use_3
-  - first:
-      213: 3104513642090087904
-    second: use_4
-  - first:
-      213: 69147787368223812
-    second: use_5
-  - first:
-      213: -2820594749086773393
-    second: use_6
-  - first:
-      213: 942403798721936680
-    second: use_7
-  - first:
-      213: 7508111716260723438
-    second: use_8
-  - first:
-      213: 4877326943126745887
-    second: use_9
-  - first:
-      213: -7085232360831890667
-    second: use_10
-  - first:
-      213: 1709968978916658923
-    second: use_11
-  - first:
-      213: 7188617255351761820
-    second: use_12
->>>>>>>> angi:Assets/Sprites/Animations/ani_ref/use.png.meta
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -175,7 +130,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-<<<<<<<< HEAD:Assets/Art/Sprites/Object/Chapter 2/2.1.png.meta
       name: 2.1_0
       rect:
         serializedVersion: 2
@@ -183,15 +137,6 @@ TextureImporter:
         y: 0
         width: 547
         height: 180
-========
-      name: use_0
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 15
-        width: 19
-        height: 32
->>>>>>>> angi:Assets/Sprites/Animations/ani_ref/use.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,19 +145,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-<<<<<<<< HEAD:Assets/Art/Sprites/Object/Chapter 2/2.1.png.meta
       spriteID: b4db6ef2050a16c50800000000000000
       internalID: 6656777990491782475
-========
-      spriteID: df4d66d1fbfb2a040800000000000000
-      internalID: 4657495792207451389
->>>>>>>> angi:Assets/Sprites/Animations/ani_ref/use.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-<<<<<<<< HEAD:Assets/Art/Sprites/Object/Chapter 2/2.1.png.meta
       name: 2.1_1
       rect:
         serializedVersion: 2
@@ -220,15 +159,6 @@ TextureImporter:
         y: 21
         width: 6
         height: 6
-========
-      name: use_1
-      rect:
-        serializedVersion: 2
-        x: 86
-        y: 15
-        width: 19
-        height: 32
->>>>>>>> angi:Assets/Sprites/Animations/ani_ref/use.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,19 +167,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-<<<<<<<< HEAD:Assets/Art/Sprites/Object/Chapter 2/2.1.png.meta
       spriteID: 7f1fa1c4e13420910800000000000000
       internalID: 1802076598306533879
-========
-      spriteID: bb96feba3206d7340800000000000000
-      internalID: 4863148878954719675
->>>>>>>> angi:Assets/Sprites/Animations/ani_ref/use.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-<<<<<<<< HEAD:Assets/Art/Sprites/Object/Chapter 2/2.1.png.meta
       name: 2.1_2
       rect:
         serializedVersion: 2
@@ -257,15 +181,6 @@ TextureImporter:
         y: 26
         width: 6
         height: 6
-========
-      name: use_2
-      rect:
-        serializedVersion: 2
-        x: 148
-        y: 15
-        width: 22
-        height: 33
->>>>>>>> angi:Assets/Sprites/Animations/ani_ref/use.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,19 +189,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-<<<<<<<< HEAD:Assets/Art/Sprites/Object/Chapter 2/2.1.png.meta
       spriteID: 4796f5f0d251003f0800000000000000
       internalID: -936725439217440396
-========
-      spriteID: 4f9c04dd122b4d720800000000000000
-      internalID: 2870114721057524212
->>>>>>>> angi:Assets/Sprites/Animations/ani_ref/use.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-<<<<<<<< HEAD:Assets/Art/Sprites/Object/Chapter 2/2.1.png.meta
       name: 2.1_3
       rect:
         serializedVersion: 2
@@ -294,15 +203,6 @@ TextureImporter:
         y: 19
         width: 6
         height: 8
-========
-      name: use_3
-      rect:
-        serializedVersion: 2
-        x: 212
-        y: 15
-        width: 22
-        height: 33
->>>>>>>> angi:Assets/Sprites/Animations/ani_ref/use.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -311,19 +211,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-<<<<<<<< HEAD:Assets/Art/Sprites/Object/Chapter 2/2.1.png.meta
       spriteID: 0c7958937ec4ee670800000000000000
       internalID: 8569871696918845376
-========
-      spriteID: 6d3d86ee6f9cbe530800000000000000
-      internalID: 3885421165936169942
->>>>>>>> angi:Assets/Sprites/Animations/ani_ref/use.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-<<<<<<<< HEAD:Assets/Art/Sprites/Object/Chapter 2/2.1.png.meta
       name: 2.1_4
       rect:
         serializedVersion: 2
@@ -331,15 +225,6 @@ TextureImporter:
         y: 4
         width: 6
         height: 6
-========
-      name: use_4
-      rect:
-        serializedVersion: 2
-        x: 276
-        y: 15
-        width: 22
-        height: 32
->>>>>>>> angi:Assets/Sprites/Animations/ani_ref/use.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -348,19 +233,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-<<<<<<<< HEAD:Assets/Art/Sprites/Object/Chapter 2/2.1.png.meta
       spriteID: ad1e60128260dc120800000000000000
       internalID: 2435609742899864026
-========
-      spriteID: 0e5422585b2751b20800000000000000
-      internalID: 3104513642090087904
->>>>>>>> angi:Assets/Sprites/Animations/ani_ref/use.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-<<<<<<<< HEAD:Assets/Art/Sprites/Object/Chapter 2/2.1.png.meta
       name: 2.1_5
       rect:
         serializedVersion: 2
@@ -368,15 +247,6 @@ TextureImporter:
         y: 24
         width: 6
         height: 6
-========
-      name: use_5
-      rect:
-        serializedVersion: 2
-        x: 340
-        y: 15
-        width: 22
-        height: 31
->>>>>>>> angi:Assets/Sprites/Animations/ani_ref/use.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -385,19 +255,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-<<<<<<<< HEAD:Assets/Art/Sprites/Object/Chapter 2/2.1.png.meta
       spriteID: c04e49804c349aa40800000000000000
       internalID: 5379905739107394572
-========
-      spriteID: 4445617db89a5f000800000000000000
-      internalID: 69147787368223812
->>>>>>>> angi:Assets/Sprites/Animations/ani_ref/use.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-<<<<<<<< HEAD:Assets/Art/Sprites/Object/Chapter 2/2.1.png.meta
       name: 2.1_6
       rect:
         serializedVersion: 2
@@ -405,15 +269,6 @@ TextureImporter:
         y: 15
         width: 6
         height: 6
-========
-      name: use_6
-      rect:
-        serializedVersion: 2
-        x: 404
-        y: 15
-        width: 22
-        height: 32
->>>>>>>> angi:Assets/Sprites/Animations/ani_ref/use.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -422,19 +277,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-<<<<<<<< HEAD:Assets/Art/Sprites/Object/Chapter 2/2.1.png.meta
       spriteID: f28a3ba246d48ead0800000000000000
       internalID: -2672801286235903953
-========
-      spriteID: f6fc955150c3bd8d0800000000000000
-      internalID: -2820594749086773393
->>>>>>>> angi:Assets/Sprites/Animations/ani_ref/use.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-<<<<<<<< HEAD:Assets/Art/Sprites/Object/Chapter 2/2.1.png.meta
       name: 2.1_7
       rect:
         serializedVersion: 2
@@ -442,15 +291,6 @@ TextureImporter:
         y: 4
         width: 6
         height: 7
-========
-      name: use_7
-      rect:
-        serializedVersion: 2
-        x: 468
-        y: 15
-        width: 22
-        height: 32
->>>>>>>> angi:Assets/Sprites/Animations/ani_ref/use.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -459,19 +299,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-<<<<<<<< HEAD:Assets/Art/Sprites/Object/Chapter 2/2.1.png.meta
       spriteID: d2313756c5ebb8690800000000000000
       internalID: -7598770642209270995
-========
-      spriteID: 82dbcc90347141d00800000000000000
-      internalID: 942403798721936680
->>>>>>>> angi:Assets/Sprites/Animations/ani_ref/use.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-<<<<<<<< HEAD:Assets/Art/Sprites/Object/Chapter 2/2.1.png.meta
       name: 2.1_8
       rect:
         serializedVersion: 2
@@ -479,15 +313,6 @@ TextureImporter:
         y: 29
         width: 6
         height: 8
-========
-      name: use_8
-      rect:
-        serializedVersion: 2
-        x: 532
-        y: 15
-        width: 22
-        height: 32
->>>>>>>> angi:Assets/Sprites/Animations/ani_ref/use.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -496,19 +321,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-<<<<<<<< HEAD:Assets/Art/Sprites/Object/Chapter 2/2.1.png.meta
       spriteID: 12cb07b57bfa15120800000000000000
       internalID: 2400893278413175841
-========
-      spriteID: eea3ba583db223860800000000000000
-      internalID: 7508111716260723438
->>>>>>>> angi:Assets/Sprites/Animations/ani_ref/use.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-<<<<<<<< HEAD:Assets/Art/Sprites/Object/Chapter 2/2.1.png.meta
       name: 2.1_9
       rect:
         serializedVersion: 2
@@ -516,15 +335,6 @@ TextureImporter:
         y: 7
         width: 6
         height: 10
-========
-      name: use_9
-      rect:
-        serializedVersion: 2
-        x: 596
-        y: 15
-        width: 22
-        height: 32
->>>>>>>> angi:Assets/Sprites/Animations/ani_ref/use.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -533,19 +343,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-<<<<<<<< HEAD:Assets/Art/Sprites/Object/Chapter 2/2.1.png.meta
       spriteID: ac1943dae41933140800000000000000
       internalID: 4698258603376939466
-========
-      spriteID: f13f28a730fbfa340800000000000000
-      internalID: 4877326943126745887
->>>>>>>> angi:Assets/Sprites/Animations/ani_ref/use.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-<<<<<<<< HEAD:Assets/Art/Sprites/Object/Chapter 2/2.1.png.meta
       name: 2.1_10
       rect:
         serializedVersion: 2
@@ -553,15 +357,6 @@ TextureImporter:
         y: 18
         width: 6
         height: 10
-========
-      name: use_10
-      rect:
-        serializedVersion: 2
-        x: 662
-        y: 15
-        width: 20
-        height: 30
->>>>>>>> angi:Assets/Sprites/Animations/ani_ref/use.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -570,57 +365,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-<<<<<<<< HEAD:Assets/Art/Sprites/Object/Chapter 2/2.1.png.meta
       spriteID: b5f18b9b4e1c5cbe0800000000000000
       internalID: -1457545716271931557
-========
-      spriteID: 51b438df4b23cad90800000000000000
-      internalID: -7085232360831890667
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: use_11
-      rect:
-        serializedVersion: 2
-        x: 726
-        y: 15
-        width: 20
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: beec34df9b70bb710800000000000000
-      internalID: 1709968978916658923
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: use_12
-      rect:
-        serializedVersion: 2
-        x: 790
-        y: 15
-        width: 19
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c9b3c7b8e4913c360800000000000000
-      internalID: 7188617255351761820
->>>>>>>> angi:Assets/Sprites/Animations/ani_ref/use.png.meta
       vertices: []
       indices: 
       edges: []
@@ -639,7 +385,6 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-<<<<<<<< HEAD:Assets/Art/Sprites/Object/Chapter 2/2.1.png.meta
       2.1_0: 6656777990491782475
       2.1_1: 1802076598306533879
       2.1_10: -1457545716271931557
@@ -651,21 +396,6 @@ TextureImporter:
       2.1_7: -7598770642209270995
       2.1_8: 2400893278413175841
       2.1_9: 4698258603376939466
-========
-      use_0: 4657495792207451389
-      use_1: 4863148878954719675
-      use_10: -7085232360831890667
-      use_11: 1709968978916658923
-      use_12: 7188617255351761820
-      use_2: 2870114721057524212
-      use_3: 3885421165936169942
-      use_4: 3104513642090087904
-      use_5: 69147787368223812
-      use_6: -2820594749086773393
-      use_7: 942403798721936680
-      use_8: 7508111716260723438
-      use_9: 4877326943126745887
->>>>>>>> angi:Assets/Sprites/Animations/ani_ref/use.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
