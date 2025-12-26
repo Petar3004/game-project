@@ -14,7 +14,7 @@ public class PlayerManager : MonoBehaviour
         { 2, new Vector3[] { new Vector3(-11.5f, -4.1f, 0f), new Vector3(-24.68f, 5.78f, 0), new Vector3(-11.53f, 15.84f, 0) } },
         { 3, new Vector3[] { new Vector3(0.12f, -3.7f, 0) } },
         { 4, new Vector3[] { new Vector3(-7.8f, -3.75f, 0), new Vector3(10.28f, -3.43f, 0), new Vector3(11.2f, 5.8f, 0) } },
-        { 5, new Vector3[] { new Vector3(-25.03f, -3f, 0f), new Vector3(11.5f, -0.3f, 0), new Vector3(16.4f, 17.35f, 0)} },
+        { 5, new Vector3[] { new Vector3(-25.11f, -4.07f, 0f), new Vector3(11.5f, -0.3f, 0), new Vector3(16.4f, 17.35f, 0)} },
         { 6, new Vector3[] { new Vector3(27.13f, -3.43f, 0f) } },
         { 7, new Vector3[] { Vector3.zero, Vector3.zero, Vector3.zero } },
         { 8, new Vector3[] { Vector3.zero, Vector3.zero, Vector3.zero } },
@@ -27,6 +27,14 @@ public class PlayerManager : MonoBehaviour
             Destroy(currentPlayer);
 
         currentPlayer = Instantiate(playerPrefab, spawnPoints[level][room], Quaternion.identity);
+    }
+
+    public void SpawnPlayer(Vector3 coordinates)
+    {
+        if (currentPlayer != null)
+            Destroy(currentPlayer);
+
+        currentPlayer = Instantiate(playerPrefab, coordinates, Quaternion.identity);
     }
 
     public void TurnRed()

@@ -7,6 +7,8 @@ public class DissapearingPlatform : MonoBehaviour
     public float secondsToFadeOpacityBy1 = 0.01f;
     public int secondsToRegenerate = 3;
     private SpriteRenderer sprite;
+    public Sprite DisappearingSprite;
+    public Sprite nonDisappearingSprite;
     private Collider2D col;
     public bool isStatic = true;
     public bool disappearing = true;
@@ -101,6 +103,21 @@ public class DissapearingPlatform : MonoBehaviour
         col.enabled = true;
     }
 
+    private void OnValidate()
+    {
+        sprite = GetComponent<SpriteRenderer>();
+        col = GetComponent<BoxCollider2D>();
 
+        if (!disappearing)
+        {
+            sprite.sprite = nonDisappearingSprite;
+            col.offset = new Vector2(col.offset.x, 0);
+        }
+        else
+        {
+            sprite.sprite = DisappearingSprite;
+            col.offset = new Vector2(col.offset.x, 0.05f);
+        }
+    }
 
 }

@@ -7,7 +7,6 @@ public class Pendulum : MonoBehaviour
     public float speed = 100f;
 
     float currentAngle = 0f;
-    int direction = 1;
     float localTime = 0f;
 
     void Update()

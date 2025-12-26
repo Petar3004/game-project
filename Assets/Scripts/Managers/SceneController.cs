@@ -11,24 +11,33 @@ public class SceneController : MonoBehaviour
     public void GoToNextLevel()
     {
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
-        StartCoroutine(LoadLevelAndMovePlayer(currentLevelIndex + 1));
+        StartCoroutine(LoadLevelAndMovePlayer(currentLevelIndex + 1, fade: true));
     }
 
     public void GoToPreviousLevel()
     {
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
-        StartCoroutine(LoadLevelAndMovePlayer(currentLevelIndex - 1));
+        StartCoroutine(LoadLevelAndMovePlayer(currentLevelIndex - 1, fade: true));
+    }
+
+    public void GoToLevelFromCutscene(int levelIndex)
+    {
+        StartCoroutine(LoadLevelAndMovePlayer(levelIndex, false));
+
     }
 
     public void GoToLevel(int levelIndex)
     {
-        StartCoroutine(LoadLevelAndMovePlayer(levelIndex));
+        StartCoroutine(LoadLevelAndMovePlayer(levelIndex, true));
     }
 
-    private IEnumerator LoadLevelAndMovePlayer(int levelIndex)
+    private IEnumerator LoadLevelAndMovePlayer(int levelIndex, bool fade)
     {
         ManagersRoot.instance.pauseManager.Pause(false);
-        yield return UIRoot.instance.FadeOutCoroutine(sceneFadeDuration);
+        if (fade)
+        {
+            yield return UIRoot.instance.FadeOutCoroutine(sceneFadeDuration);
+        }
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(levelIndex);
         while (!asyncLoad.isDone)
             yield return null;
@@ -38,17 +47,27 @@ public class SceneController : MonoBehaviour
         ManagersRoot.instance.gameManager.SaveProgress();
         ManagersRoot.instance.playerManager.SpawnPlayer(levelIndex, 0);
         UIRoot.instance.ActivateUI();
-        yield return UIRoot.instance.FadeInCoroutine(sceneFadeDuration);
+        if (fade)
+        {
+            yield return UIRoot.instance.FadeInCoroutine(sceneFadeDuration);
+        }
         ManagersRoot.instance.pauseManager.Resume();
     }
 
     public void GoToMainMenu()
     {
-        SceneManager.LoadScene(0);
+        StartCoroutine(LoadMainMenu());
     }
 
-    public void GoToCutscene()
+    private IEnumerator LoadMainMenu()
     {
-        SceneManager.LoadScene(10);
+        yield return UIRoot.instance.FadeOutCoroutine(sceneFadeDuration);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(0);
+        while (!asyncLoad.isDone)
+            yield return null;
+
+        ManagersRoot.instance.gameManager.SaveProgress();
+        UIRoot.instance.ActivateUI();
+        yield return UIRoot.instance.FadeInCoroutine(sceneFadeDuration);
     }
 }

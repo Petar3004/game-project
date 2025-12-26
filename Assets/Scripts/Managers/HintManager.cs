@@ -62,7 +62,6 @@ public class HintManager : MonoBehaviour
     {
         smallHintIsShown = true;
         UIRoot.instance.ShowHintUI(hint, HintType.SMALL);
-        UnlockHint(hint, HintType.SMALL);
         yield return new WaitForSecondsRealtime(seconds);
         UIRoot.instance.HideHintUI();
         smallHintIsShown = false;
