@@ -2,32 +2,31 @@ using UnityEngine;
 
 public class Pendulum : MonoBehaviour
 {
-    public float amplitude = 6f;
-    public float height = 0.3f;
-    public float speed = 0.7f;
+    public Transform pivot;
+    public float maxAngle = 10f;
+    public float speed = 100f;
 
-    private Vector3 startPos;
-    private float localTime = 0f;
-
-    void Start()
-    {
-        startPos = transform.position;
-    }
+    float currentAngle = 0f;
+    int direction = 1;
+    float localTime = 0f;
 
     void Update()
     {
         float currentSpeed = speed;
 
-        if (ManagersRoot.instance.abilityManager.abilityIsActive && ManagersRoot.instance.abilityManager.ability == AbilityType.TIME_SLOW)
+        if (ManagersRoot.instance.abilityManager.abilityIsActive &&
+            ManagersRoot.instance.abilityManager.ability == AbilityType.TIME_SLOW)
         {
             currentSpeed *= ManagersRoot.instance.abilityManager.slowTimeFactor;
         }
 
         localTime += Time.deltaTime * currentSpeed;
 
-        float x = Mathf.Sin(localTime) * amplitude;
-        float y = Mathf.Pow(x / amplitude, 2) * height + startPos.y;
+        float targetAngle = Mathf.Sin(localTime) * maxAngle;
+        float deltaAngle = targetAngle - currentAngle;
 
-        transform.position = startPos + new Vector3(x, y, 0);
+        currentAngle = targetAngle;
+
+        transform.RotateAround(pivot.position, Vector3.forward, deltaAngle);
     }
 }
