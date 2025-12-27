@@ -940,7 +940,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3060598
+      value: -1.34606
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3316,11 +3316,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.54
+      value: -8.55
       objectReference: {fileID: 0}
     - target: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.52
+      value: -3.2
       objectReference: {fileID: 0}
     - target: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6026,7 +6026,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2535912752290841145, guid: fabad9d298f42874584e142ba3454c12, type: 3}
       propertyPath: cutsceneIndex
-      value: 8
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535912752290841145, guid: fabad9d298f42874584e142ba3454c12, type: 3}
+      propertyPath: secondsBeforeCutscene
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6149225145773517586, guid: fabad9d298f42874584e142ba3454c12, type: 3}
       propertyPath: m_LocalPosition.x

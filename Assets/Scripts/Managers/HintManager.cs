@@ -56,6 +56,7 @@ public class HintManager : MonoBehaviour
     public void ShowSmallHintForSeconds(string hint, float seconds)
     {
         smallHintRoutine = StartCoroutine(SmallHintRoutine(hint, seconds));
+        UnlockHint(hint, HintType.SMALL);
     }
 
     private IEnumerator SmallHintRoutine(string hint, float seconds)
