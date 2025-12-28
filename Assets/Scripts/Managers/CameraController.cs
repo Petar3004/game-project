@@ -37,11 +37,15 @@ public class CameraController : MonoBehaviour
         { (6, 1), 4 }
     };
 
+    public static event Action<int> OnRoomChanged;
+
     public void MoveCameraToNextRoom()
     {
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
         roomIndex++;
         Camera.main.transform.position = cameraPositions[currentLevelIndex][roomIndex - 1];
+
+        OnRoomChanged?.Invoke(roomIndex);
     }
 
     public void MoveCameraToPreviousRoom()
@@ -49,6 +53,8 @@ public class CameraController : MonoBehaviour
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
         roomIndex--;
         Camera.main.transform.position = cameraPositions[currentLevelIndex][roomIndex - 1];
+
+        OnRoomChanged?.Invoke(roomIndex);
     }
 
     public void MoveCameraToRoom(int targetRoomIndex)
@@ -56,6 +62,7 @@ public class CameraController : MonoBehaviour
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
         roomIndex = targetRoomIndex;
         Camera.main.transform.position = cameraPositions[currentLevelIndex][roomIndex - 1];
+        OnRoomChanged?.Invoke(roomIndex);
     }
 
     public void TrackPlayer(GameObject player)

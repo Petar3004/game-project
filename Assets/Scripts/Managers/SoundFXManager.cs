@@ -2,15 +2,30 @@
 
 public class SoundFXManager : MonoBehaviour
 {
-    [SerializeField] private AudioSource soundFXObject;
+    public static SoundFXManager instance;
 
-    public void PlaySoundFXClip(AudioClip audioClip, Transform spawnTransform, float volume)
+    [SerializeField] private AudioSource soundFXPrefab;
+
+    private void Awake()
     {
-        AudioSource audioSource = Instantiate(soundFXObject, spawnTransform.position, Quaternion.identity);
-        audioSource.clip = audioClip;
-        audioSource.volume = volume;
-        audioSource.Play();
-        float clipLenght = audioSource.clip.length;
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
+    public void PlaySoundFX(AudioClip clip, Vector3 position, float volume = 1f)
+    {
+        AudioSource source = Instantiate(soundFXPrefab, position, Quaternion.identity);
+        source.clip = clip;
+        source.volume = volume;
+        source.Play();
+
+        Destroy(source.gameObject, clip.length);
     }
 }
