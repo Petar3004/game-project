@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
         {
             gameStarted = true;
             ManagersRoot.instance.sceneController.GoToLevel(currentLevelIndex);
+            ManagersRoot.instance.audioManager.PlayBackgroundMusic(currentLevelIndex);
         }
 
         RetrieveProgress();
