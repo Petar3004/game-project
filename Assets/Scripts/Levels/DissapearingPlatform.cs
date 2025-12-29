@@ -7,6 +7,8 @@ public class DissapearingPlatform : MonoBehaviour
     public float secondsToFadeOpacityBy1 = 0.01f;
     public int secondsToRegenerate = 3;
     private SpriteRenderer sprite;
+    public Sprite DisappearingSprite;
+    public Sprite nonDisappearingSprite;
     private Collider2D col;
     public bool isStatic = true;
     public bool disappearing = true;
@@ -22,13 +24,13 @@ public class DissapearingPlatform : MonoBehaviour
 
     void Start()
     {
-        sprite = gameObject.GetComponent<SpriteRenderer>();
-        col = gameObject.GetComponent<EdgeCollider2D>();
+        sprite = GetComponent<SpriteRenderer>();
+        col = GetComponent<BoxCollider2D>();
         if (!isStatic)
         {
             startPosition = transform.position;
             InitializeBounds();
-            currentDirection = true;  
+            currentDirection = true;
             lastDirection = false;
             StartCoroutine(Move());
         }
@@ -62,7 +64,7 @@ public class DissapearingPlatform : MonoBehaviour
         target.z = currentPos.z;
 
         float currentSpeed = moveSpeed;
-        
+
         transform.position = Vector3.MoveTowards(currentPos, target, currentSpeed * Time.deltaTime);
 
         if (Vector3.Distance(transform.position, target) < 0.01f)
@@ -101,6 +103,21 @@ public class DissapearingPlatform : MonoBehaviour
         col.enabled = true;
     }
 
+    private void OnValidate()
+    {
+        sprite = GetComponent<SpriteRenderer>();
+        col = GetComponent<BoxCollider2D>();
 
+        if (!disappearing)
+        {
+            sprite.sprite = nonDisappearingSprite;
+            col.offset = new Vector2(col.offset.x, 0);
+        }
+        else
+        {
+            sprite.sprite = DisappearingSprite;
+            col.offset = new Vector2(col.offset.x, 0.05f);
+        }
+    }
 
 }

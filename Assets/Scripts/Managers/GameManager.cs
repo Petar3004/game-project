@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Runtime.CompilerServices;
+using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
@@ -10,6 +12,19 @@ public class GameManager : MonoBehaviour
 {
     private GameObject player;
     public bool gameStarted = false;
+    public bool chapterComplete = false;
+    public int savedLevel = -1;
+    public HashSet<int> unlockedLevels = new HashSet<int>();
+    private string levelPath;
+    private string unlockedLevelsPath;
+    private string unlockedHintsPath;
+
+    void Awake()
+    {
+        levelPath = Application.persistentDataPath + "/savedLevel.gd";
+        unlockedLevelsPath = Application.persistentDataPath + "/unlockedLevels.gd";
+        unlockedHintsPath = Application.persistentDataPath + "/unlockedHints.gd";
+    }
 
     void Start()
     {
@@ -17,8 +32,10 @@ public class GameManager : MonoBehaviour
         if (currentLevelIndex != 0)
         {
             gameStarted = true;
-            MovePlayerToLevel(currentLevelIndex);
+            ManagersRoot.instance.sceneController.GoToLevel(currentLevelIndex);
         }
+
+        RetrieveProgress();
     }
 
     void Update()
@@ -44,37 +61,14 @@ public class GameManager : MonoBehaviour
         ManagersRoot.instance.playerManager.SpawnPlayer(currentLevelIndex, roomIndex - 1);
     }
 
-    public void MovePlayerToLevel(int levelIndex)
-    {
-        ResetLevelParameters();
-        ManagersRoot.instance.sceneController.GoToLevel(levelIndex);
-    }
-
-    public void MovePlayerToNextLevel()
-    {
-        int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
-        MovePlayerToLevel(currentLevelIndex + 1);
-
-        SaveProgress();
-    }
-
-    public void MovePlayerToPreviousLevel()
-    {
-        int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
-        MovePlayerToLevel(currentLevelIndex - 1);
-
-        SaveProgress();
-    }
-
     // Called when the player dies or the timer hits 0
     public void RestartLevel()
     {
-        ManagersRoot.instance.sceneController.GoToLevel(SceneManager.GetActiveScene().buildIndex);
-        ResetLevelParameters();
-        SaveProgress();
+        int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
+        ManagersRoot.instance.sceneController.GoToLevel(currentLevelIndex);
     }
 
-    private void ResetLevelParameters()
+    public void ResetLevelParameters()
     {
         ManagersRoot.instance.timeManager.ResetTimer();
         ManagersRoot.instance.abilityManager.abilityIsActive = false;
@@ -83,9 +77,85 @@ public class GameManager : MonoBehaviour
         ManagersRoot.instance.hintManager.HideSmallHint();
     }
 
+    public void ResetProgress()
+    {
+        if (File.Exists(levelPath))
+        {
+            File.Delete(levelPath);
+        }
+        savedLevel = -1;
+
+        if (File.Exists(unlockedLevelsPath))
+        {
+            File.Delete(unlockedLevelsPath);
+        }
+        unlockedLevels.Clear();
+
+        if (File.Exists(unlockedHintsPath))
+        {
+            File.Delete(unlockedHintsPath);
+        }
+        ManagersRoot.instance.hintManager.unlockedHints.Clear();
+    }
+
     public void SaveProgress()
     {
-        // TODO save level in storage
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream levelFile = File.Create(levelPath);
+        FileStream unlockedLevelsFile = File.Create(unlockedLevelsPath);
+        FileStream unlockedHintsFile = File.Create(unlockedHintsPath);
+        savedLevel = SceneManager.GetActiveScene().buildIndex;
+        bf.Serialize(levelFile, savedLevel);
+        bf.Serialize(unlockedLevelsFile, unlockedLevels);
+        bf.Serialize(unlockedHintsFile, ManagersRoot.instance.hintManager.unlockedHints);
+        levelFile.Close();
+        unlockedLevelsFile.Close();
+        unlockedHintsFile.Close();
+    }
+
+    private void RetrieveProgress()
+    {
+        if (File.Exists(levelPath))
+        {
+            FileInfo info = new FileInfo(levelPath);
+            if (info.Length > 0)
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+                FileStream file = File.Open(levelPath, FileMode.Open);
+                savedLevel = (int)bf.Deserialize(file);
+                file.Close();
+            }
+        }
+        if (File.Exists(unlockedLevelsPath))
+        {
+            FileInfo info = new FileInfo(unlockedLevelsPath);
+            if (info.Length > 0)
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+                FileStream file = File.Open(unlockedLevelsPath, FileMode.Open);
+                unlockedLevels.Clear();
+                foreach (int level in (HashSet<int>)bf.Deserialize(file))
+                {
+                    unlockedLevels.Add(level);
+                }
+                file.Close();
+            }
+        }
+        if (File.Exists(unlockedHintsPath))
+        {
+            FileInfo info = new FileInfo(unlockedHintsPath);
+            if (info.Length > 0)
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+                FileStream file = File.Open(unlockedHintsPath, FileMode.Open);
+                ManagersRoot.instance.hintManager.unlockedHints.Clear();
+                foreach (KeyValuePair<string, HintType> hint in (Dictionary<string, HintType>)bf.Deserialize(file))
+                {
+                    ManagersRoot.instance.hintManager.unlockedHints.Add(hint.Key, hint.Value);
+                }
+                file.Close();
+            }
+        }
     }
 
     private void HandleInput()

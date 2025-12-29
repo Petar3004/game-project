@@ -11,7 +11,7 @@ public class HintManager : MonoBehaviour
     public bool bigHintIsShown = false;
     private List<string> currentBigHints;
     private int currentHintIndex;
-    private Dictionary<string, HintType> unlockedHints = new Dictionary<string, HintType>();
+    public Dictionary<string, HintType> unlockedHints = new Dictionary<string, HintType>();
     private Coroutine smallHintRoutine;
 
     void Update()
@@ -56,13 +56,13 @@ public class HintManager : MonoBehaviour
     public void ShowSmallHintForSeconds(string hint, float seconds)
     {
         smallHintRoutine = StartCoroutine(SmallHintRoutine(hint, seconds));
+        UnlockHint(hint, HintType.SMALL);
     }
 
     private IEnumerator SmallHintRoutine(string hint, float seconds)
     {
         smallHintIsShown = true;
         UIRoot.instance.ShowHintUI(hint, HintType.SMALL);
-        UnlockHint(hint, HintType.SMALL);
         yield return new WaitForSecondsRealtime(seconds);
         UIRoot.instance.HideHintUI();
         smallHintIsShown = false;

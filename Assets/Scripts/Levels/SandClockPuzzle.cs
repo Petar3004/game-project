@@ -21,6 +21,7 @@ public class SandClockPuzzle : MonoBehaviour
         if (IsComplete())
         {
             ManagersRoot.instance.sceneController.GoToMainMenu();
+            ManagersRoot.instance.gameManager.chapterComplete = true;
         }
     }
 

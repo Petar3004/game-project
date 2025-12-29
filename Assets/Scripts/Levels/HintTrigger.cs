@@ -11,7 +11,13 @@ public class HintTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player")) {
+        if (type == HintType.BIG && ManagersRoot.instance.hintManager.unlockedHints.ContainsKey(hints[0]))
+        {
+            return;
+        }
+
+        if (collision.CompareTag("Player"))
+        {
             if (type == HintType.SMALL)
             {
                 if (!ManagersRoot.instance.hintManager.smallHintIsShown)

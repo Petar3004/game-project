@@ -36,6 +36,7 @@ public class Clock : MonoBehaviour
         if (AnswerIsCorrect())
         {
             ManagersRoot.instance.sceneController.GoToMainMenu();
+            ManagersRoot.instance.gameManager.chapterComplete = true;
         }
     }
 

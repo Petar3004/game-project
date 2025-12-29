@@ -34,7 +34,7 @@ public class ClockControlGear : MonoBehaviour
         {
             if (!playerLocked)
             {
-                playerMovement.PositionLock(true);
+                playerMovement.LockPosition(true);
                 playerLocked = true;
                 timeLocked = Time.time;
             }
@@ -47,7 +47,7 @@ public class ClockControlGear : MonoBehaviour
         {
             if (playerLocked)
             {
-                playerMovement.PositionLock(false);
+                playerMovement.LockPosition(false);
                 playerLocked = false;
             }
         }
@@ -60,7 +60,7 @@ public class ClockControlGear : MonoBehaviour
         {
             xInput = Input.GetAxis("Horizontal");
         }
-        gearOrientation += xInput;
+        gearOrientation += xInput / 10;
         transform.rotation = Quaternion.Euler(0, 0, gearOrientation);
         if (xInput != 0 && !isRotating)
         {

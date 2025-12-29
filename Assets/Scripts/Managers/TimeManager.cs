@@ -29,6 +29,7 @@ public class TimeManager : MonoBehaviour
             {
                 timeLeft = 0;
                 Debug.Log("Time's Up!");
+                ManagersRoot.instance.playerManager.TurnRed();
                 ManagersRoot.instance.gameManager.RestartLevel();
             }
         }

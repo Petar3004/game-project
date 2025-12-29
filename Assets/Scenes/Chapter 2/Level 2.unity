@@ -185,6 +185,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 601480917
+      objectReference: {fileID: 0}
     - target: {fileID: 7847895516405227147, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
       propertyPath: m_Name
       value: Poison Fang (13)
@@ -399,9 +407,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 272084492264703787, guid: f5c736e387de9b34e83500622dc03ff0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 24862853}
-    - targetCorrespondingSourceObject: {fileID: 272084492264703787, guid: f5c736e387de9b34e83500622dc03ff0, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 24862856}
   m_SourcePrefab: {fileID: 100100000, guid: f5c736e387de9b34e83500622dc03ff0, type: 3}
 --- !u!4 &24862851 stripped
@@ -414,18 +419,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 272084492264703787, guid: f5c736e387de9b34e83500622dc03ff0, type: 3}
   m_PrefabInstance: {fileID: 24862850}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &24862853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 24862852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dc52dca2229d4f478e55fecf4d9198c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SandCatcher
 --- !u!61 &24862856
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -674,6 +667,22 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.768
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.788
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -685,14 +694,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (11)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -799,6 +800,18 @@ PrefabInstance:
     - target: {fileID: 5089809809381837276, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 601480917
       objectReference: {fileID: 0}
     - target: {fileID: 7847895516405227147, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
       propertyPath: m_Name
@@ -1287,7 +1300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.493
+      value: 4.403
       objectReference: {fileID: 0}
     - target: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1295,7 +1308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1529,11 +1542,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.55
+      value: 4.383
       objectReference: {fileID: 0}
     - target: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.25
+      value: -5.227
       objectReference: {fileID: 0}
     - target: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1765,6 +1778,14 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -1776,14 +1797,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5933995
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.24776144
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2111,6 +2124,14 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -2122,14 +2143,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (11)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5933995
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.24776144
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2231,6 +2244,18 @@ PrefabInstance:
     - target: {fileID: 5089809809381837276, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 601480917
       objectReference: {fileID: 0}
     - target: {fileID: 7847895516405227147, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
       propertyPath: m_Name
@@ -2872,6 +2897,14 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -2883,14 +2916,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5933995
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.24776144
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2993,6 +3018,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 601480917
+      objectReference: {fileID: 0}
     - target: {fileID: 7847895516405227147, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
       propertyPath: m_Name
       value: Poison Fang (4)
@@ -3088,6 +3125,14 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -3099,14 +3144,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (15)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3227,6 +3264,22 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.768
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.788
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -3238,14 +3291,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (17)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3551,6 +3596,18 @@ PrefabInstance:
     - target: {fileID: 5089809809381837276, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 601480917
       objectReference: {fileID: 0}
     - target: {fileID: 7847895516405227147, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
       propertyPath: m_Name
@@ -4200,6 +4257,22 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.768
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.788
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -4211,14 +4284,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4326,6 +4391,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 601480917
+      objectReference: {fileID: 0}
     - target: {fileID: 7847895516405227147, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
       propertyPath: m_Name
       value: Poison Fang (8)
@@ -4389,15 +4466,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.493
+      value: 4.405
       objectReference: {fileID: 0}
     - target: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.25
+      value: 7.253
       objectReference: {fileID: 0}
     - target: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4458,6 +4535,22 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.768
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.788
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -4469,14 +4562,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4697,96 +4782,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
   m_PrefabInstance: {fileID: 424345882}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &427496446
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 427496447}
-  - component: {fileID: 427496448}
-  m_Layer: 0
-  m_Name: Background
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &427496447
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 427496446}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.805, y: 5.315, z: 0}
-  m_LocalScale: {x: 35.56182, y: 20.16168, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1357364680}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &427496448
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 427496446}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 601480917
-  m_SortingLayer: 1
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.30081883, g: 0.9811321, b: 0.8829548, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1001 &433758350
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4923,6 +4918,26 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 817497916212530750, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: secondsToFadeOpacityBy1
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.768
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.788
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -4934,14 +4949,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5226,8 +5233,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1609078099}
-  - {fileID: 1892375749}
-  - {fileID: 2067451680}
+  - {fileID: 1174139131}
   - {fileID: 342306731}
   - {fileID: 2057417390}
   - {fileID: 1966560686}
@@ -5570,7 +5576,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.9716981, g: 0.94146967, b: 0.56376827, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6134,6 +6140,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 601480917
+      objectReference: {fileID: 0}
     - target: {fileID: 7847895516405227147, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
       propertyPath: m_Name
       value: Poison Fang (3)
@@ -6177,12 +6195,14 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1179886675}
   - {fileID: 1873314662}
   - {fileID: 675259882}
   - {fileID: 337198690}
   - {fileID: 1815328126}
   - {fileID: 218852796}
+  - {fileID: 1503805444}
+  - {fileID: 1727588968}
+  - {fileID: 924246839}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &619825381 stripped
@@ -6481,6 +6501,26 @@ PrefabInstance:
     - target: {fileID: 1729618991020324755, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_Name
       value: Horizontal Spike
+      objectReference: {fileID: 0}
+    - target: {fileID: 2582380015289039543, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5622901713081898559, guid: 55b7f12c230204a54b34455b75b47e65, type: 3}
+    - target: {fileID: 2582380015289039543, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2582380015289039543, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2582380015289039543, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2582380015289039543, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2582380015289039543, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_SortingLayer
@@ -6971,6 +7011,14 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -6982,14 +7030,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5933995
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.24776144
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7110,6 +7150,22 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.768
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.788
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -7121,14 +7177,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (14)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7468,6 +7516,14 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -7479,14 +7535,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5933995
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.24776144
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7674,6 +7722,22 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.768
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.788
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -7685,14 +7749,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8068,6 +8124,14 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -8079,14 +8143,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8378,6 +8434,14 @@ PrefabInstance:
     - target: {fileID: 5089809809381837276, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 601480917
       objectReference: {fileID: 0}
     - target: {fileID: 7847895516405227147, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
       propertyPath: m_Name
@@ -8957,6 +9021,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 601480917
+      objectReference: {fileID: 0}
     - target: {fileID: 7847895516405227147, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
       propertyPath: m_Name
       value: Poison Fang (9)
@@ -9146,6 +9222,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 601480917
+      objectReference: {fileID: 0}
     - target: {fileID: 7847895516405227147, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
       propertyPath: m_Name
       value: Poison Fang (18)
@@ -9223,7 +9307,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 611655878}
     m_Modifications:
     - target: {fileID: 378363239929716202, guid: 925aaa7a4e564724bbb8844c5723d6d6, type: 3}
       propertyPath: m_Name
@@ -9323,11 +9407,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4893346948204541453, guid: 925aaa7a4e564724bbb8844c5723d6d6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 49.1
+      value: 40.039997
       objectReference: {fileID: 0}
     - target: {fileID: 4893346948204541453, guid: 925aaa7a4e564724bbb8844c5723d6d6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 30.3
+      value: 27.539999
       objectReference: {fileID: 0}
     - target: {fileID: 4893346948204541453, guid: 925aaa7a4e564724bbb8844c5723d6d6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9366,6 +9450,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 925aaa7a4e564724bbb8844c5723d6d6, type: 3}
+--- !u!4 &924246839 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4893346948204541453, guid: 925aaa7a4e564724bbb8844c5723d6d6, type: 3}
+  m_PrefabInstance: {fileID: 924246838}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &929040824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9382,6 +9471,14 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -9393,14 +9490,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9602,6 +9691,22 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.768
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.788
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -9613,14 +9718,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9820,6 +9917,14 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -9831,14 +9936,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9897,6 +9994,14 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -9908,14 +10013,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5933995
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.24776144
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9979,6 +10076,14 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -9990,14 +10095,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10503,6 +10600,14 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -10514,14 +10619,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5933995
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.24776144
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10585,6 +10682,22 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.768
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.788
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -10596,14 +10709,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (13)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11058,7 +11163,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5089809809381837276, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
   m_PrefabInstance: {fileID: 1155815251}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1179886674
+--- !u!1 &1174139130
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11066,37 +11171,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1179886675}
-  - component: {fileID: 1179886676}
+  - component: {fileID: 1174139131}
+  - component: {fileID: 1174139132}
   m_Layer: 0
-  m_Name: Background
+  m_Name: Background (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1179886675
+--- !u!4 &1174139131
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1179886674}
+  m_GameObject: {fileID: 1174139130}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.39, y: 32.69, z: 0}
-  m_LocalScale: {x: 17.78091, y: 40.32336, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 10.0785, y: -0.9296, z: 0}
+  m_LocalScale: {x: 2.659672, y: 2.6064012, z: 0.01406}
+  m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 611655878}
+  m_Father: {fileID: 497269670}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1179886676
+--- !u!212 &1174139132
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1179886674}
+  m_GameObject: {fileID: 1174139130}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -11136,9 +11241,99 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 601480917
   m_SortingLayer: 1
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.30196077, g: 0.71947056, b: 0.98039216, a: 1}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: -1497676104397895540, guid: 1e197d0ece422ef4c91199d12da17abc, type: 3}
+  m_Color: {r: 0.990566, g: 0.9111338, b: 0.9111338, a: 1}
+  m_FlipX: 1
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &1183020136
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1183020137}
+  - component: {fileID: 1183020138}
+  m_Layer: 0
+  m_Name: Background (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1183020137
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183020136}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.8971, y: 5.0629, z: 0}
+  m_LocalScale: {x: 2.6391315, y: 2.6278572, z: 0.014060022}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1357364680}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1183020138
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183020136}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 601480917
+  m_SortingLayer: 1
+  m_SortingOrder: 2
+  m_Sprite: {fileID: -1497676104397895540, guid: 1e197d0ece422ef4c91199d12da17abc, type: 3}
+  m_Color: {r: 0.990566, g: 0.9111338, b: 0.9111338, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -11160,6 +11355,22 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.768
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.788
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -11171,14 +11382,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11320,6 +11523,14 @@ PrefabInstance:
       propertyPath: secondsToRegenerate
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -11331,14 +11542,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11569,6 +11772,14 @@ PrefabInstance:
     - target: {fileID: 5089809809381837276, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 601480917
       objectReference: {fileID: 0}
     - target: {fileID: 7847895516405227147, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
       propertyPath: m_Name
@@ -11865,9 +12076,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 272084492264703787, guid: f5c736e387de9b34e83500622dc03ff0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1274675275}
-    - targetCorrespondingSourceObject: {fileID: 272084492264703787, guid: f5c736e387de9b34e83500622dc03ff0, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1274675274}
   m_SourcePrefab: {fileID: 100100000, guid: f5c736e387de9b34e83500622dc03ff0, type: 3}
 --- !u!4 &1274675272 stripped
@@ -11926,18 +12134,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1274675275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1274675273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dc52dca2229d4f478e55fecf4d9198c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SandCatcher
 --- !u!1001 &1306439300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12289,7 +12485,7 @@ Transform:
   - {fileID: 164713837}
   - {fileID: 870269253}
   - {fileID: 1496567844}
-  - {fileID: 427496447}
+  - {fileID: 1183020137}
   - {fileID: 1249160909}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12558,6 +12754,14 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -12569,14 +12773,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (13)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12869,6 +13065,22 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.768
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.788
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -12880,14 +13092,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12955,6 +13159,14 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -12966,14 +13178,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13268,6 +13472,22 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.768
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.788
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -13279,14 +13499,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (15)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13589,6 +13801,96 @@ Transform:
   - {fileID: 480997524}
   m_Father: {fileID: 1357364680}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1503805443
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1503805444}
+  - component: {fileID: 1503805445}
+  m_Layer: 0
+  m_Name: Background (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1503805444
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503805443}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.44, y: 32.5946, z: 0}
+  m_LocalScale: {x: 1.3133665, y: 1.3102928, z: 0.014060022}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 611655878}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1503805445
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503805443}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 601480917
+  m_SortingLayer: 1
+  m_SortingOrder: 2
+  m_Sprite: {fileID: -8979583526809578324, guid: f91d0b16d8395d744b30c8e765e15c1d, type: 3}
+  m_Color: {r: 0.990566, g: 0.9111338, b: 0.9111338, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1516408434
 GameObject:
   m_ObjectHideFlags: 0
@@ -13739,6 +14041,22 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.768
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.788
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -13750,14 +14068,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14207,6 +14517,22 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.768
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.788
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -14218,14 +14544,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14288,6 +14606,14 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -14299,14 +14625,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5933995
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.24776144
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14451,7 +14769,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.482
+      value: 4.377
       objectReference: {fileID: 0}
     - target: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14459,7 +14777,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_LocalRotation.w
@@ -14727,15 +15045,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.493
+      value: 4.39
       objectReference: {fileID: 0}
     - target: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.25
+      value: 2.26
       objectReference: {fileID: 0}
     - target: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_LocalRotation.w
@@ -19851,6 +20169,14 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -19862,14 +20188,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (12)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19938,6 +20256,14 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -19949,14 +20275,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5933995
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.24776144
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20414,7 +20732,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 611655878}
     m_Modifications:
     - target: {fileID: 378363239929716202, guid: 925aaa7a4e564724bbb8844c5723d6d6, type: 3}
       propertyPath: m_Name
@@ -20506,11 +20824,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4893346948204541453, guid: 925aaa7a4e564724bbb8844c5723d6d6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.8
+      value: 14.739999
       objectReference: {fileID: 0}
     - target: {fileID: 4893346948204541453, guid: 925aaa7a4e564724bbb8844c5723d6d6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 19.4
+      value: 16.64
       objectReference: {fileID: 0}
     - target: {fileID: 4893346948204541453, guid: 925aaa7a4e564724bbb8844c5723d6d6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20549,6 +20867,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 925aaa7a4e564724bbb8844c5723d6d6, type: 3}
+--- !u!4 &1727588968 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4893346948204541453, guid: 925aaa7a4e564724bbb8844c5723d6d6, type: 3}
+  m_PrefabInstance: {fileID: 1727588967}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1728268481
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20561,6 +20884,14 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -20572,14 +20903,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20709,6 +21032,14 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -20720,14 +21051,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21011,6 +21334,14 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -21022,14 +21353,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (14)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21136,6 +21459,14 @@ PrefabInstance:
     - target: {fileID: 5089809809381837276, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 601480917
       objectReference: {fileID: 0}
     - target: {fileID: 7847895516405227147, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
       propertyPath: m_Name
@@ -21478,6 +21809,14 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -21489,14 +21828,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5933995
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.24776144
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21692,15 +22023,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.493
+      value: 4.382
       objectReference: {fileID: 0}
     - target: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.75
+      value: 4.759
       objectReference: {fileID: 0}
     - target: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_LocalRotation.w
@@ -22008,6 +22339,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 601480917
+      objectReference: {fileID: 0}
     - target: {fileID: 7847895516405227147, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
       propertyPath: m_Name
       value: Poison Fang (19)
@@ -22191,6 +22530,22 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.768
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.788
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -22202,14 +22557,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22385,96 +22732,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5089809809381837276, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
   m_PrefabInstance: {fileID: 1889546267}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1892375748
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1892375749}
-  - component: {fileID: 1892375750}
-  m_Layer: 0
-  m_Name: Background (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1892375749
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1892375748}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.89, y: -0.76, z: 0}
-  m_LocalScale: {x: 35.56182, y: 20.16168, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 497269670}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1892375750
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1892375748}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 601480917
-  m_SortingLayer: 1
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.30196077, g: 0.71947056, b: 0.98039216, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!4 &1897439870 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8995433621757197839, guid: bc54fa9703a3f1645a9450c8e44d4966, type: 3}
@@ -22535,6 +22792,18 @@ PrefabInstance:
     - target: {fileID: 5089809809381837276, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 601480917
       objectReference: {fileID: 0}
     - target: {fileID: 7847895516405227147, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
       propertyPath: m_Name
@@ -22600,6 +22869,18 @@ PrefabInstance:
     - target: {fileID: 5089809809381837276, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 601480917
       objectReference: {fileID: 0}
     - target: {fileID: 7847895516405227147, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
       propertyPath: m_Name
@@ -22727,6 +23008,14 @@ PrefabInstance:
     - target: {fileID: 5089809809381837276, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 601480917
       objectReference: {fileID: 0}
     - target: {fileID: 7847895516405227147, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
       propertyPath: m_Name
@@ -22914,6 +23203,14 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -22925,14 +23222,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5933995
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.24776144
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23035,6 +23324,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 601480917
+      objectReference: {fileID: 0}
     - target: {fileID: 7847895516405227147, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
       propertyPath: m_Name
       value: Poison Fang (21)
@@ -23060,6 +23357,14 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -23071,14 +23376,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5933995
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.24776144
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23314,6 +23611,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 601480917
+      objectReference: {fileID: 0}
     - target: {fileID: 7847895516405227147, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
       propertyPath: m_Name
       value: Poison Fang (17)
@@ -23378,6 +23683,18 @@ PrefabInstance:
     - target: {fileID: 5089809809381837276, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 601480917
       objectReference: {fileID: 0}
     - target: {fileID: 7847895516405227147, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
       propertyPath: m_Name
@@ -23483,96 +23800,6 @@ Transform:
   - {fileID: 1951788250}
   m_Father: {fileID: 497269670}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2067451679
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2067451680}
-  - component: {fileID: 2067451681}
-  m_Layer: 0
-  m_Name: Background (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2067451680
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2067451679}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.89, y: -0.76, z: 0}
-  m_LocalScale: {x: 35.56182, y: 20.16168, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 497269670}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2067451681
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2067451679}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 601480917
-  m_SortingLayer: 1
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.30196077, g: 0.71947056, b: 0.98039216, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1001 &2077934004
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23792,6 +24019,14 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -23803,14 +24038,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (11)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23918,6 +24145,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400977481486632972, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 601480917
+      objectReference: {fileID: 0}
     - target: {fileID: 7847895516405227147, guid: 38d530160a9a44b49b3c8e5fa916f764, type: 3}
       propertyPath: m_Name
       value: Poison Fang (20)
@@ -24001,6 +24236,26 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 817497916212530750, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: secondsToFadeOpacityBy1
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.768
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.788
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -24012,14 +24267,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24185,6 +24432,14 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -24196,14 +24451,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (17)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24262,6 +24509,22 @@ PrefabInstance:
       propertyPath: disappearing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.768
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229984426920280987, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.788
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6823302843864903724, guid: 62b8eaea4bf290a4da71108d015160e4, type: 3}
     - target: {fileID: 3428809802625060597, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -24273,14 +24536,6 @@ PrefabInstance:
     - target: {fileID: 7745538859437310588, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_Name
       value: Sand Platform (12)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2227107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15586351
       objectReference: {fileID: 0}
     - target: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24699,5 +24954,3 @@ SceneRoots:
   - {fileID: 1357364680}
   - {fileID: 497269670}
   - {fileID: 611655878}
-  - {fileID: 1727588967}
-  - {fileID: 924246838}

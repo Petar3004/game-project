@@ -20,6 +20,11 @@ public class AbilityManager : MonoBehaviour
         { AbilityType.TIME_SLOW, new List<int> { 1, 2, 3 } },
         { AbilityType.SAND_SPEED, new List<int> { 4, 5, 6 } }
     };
+    public Dictionary<AbilityType, (string, Color)> abilityToData = new Dictionary<AbilityType, (string, Color)>
+    {
+        {   AbilityType.TIME_SLOW, ("Time Magnet", Color.skyBlue) },
+        {   AbilityType.SAND_SPEED, ("Quick Boots", Color.beige) }
+    };
 
     public float abilityDuration = 5f;
     public float abilityTimePenalty = 10f;
