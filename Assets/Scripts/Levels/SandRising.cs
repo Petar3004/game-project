@@ -100,7 +100,6 @@ public class SandRising : MonoBehaviour
     public void StartRising()
     {
         isRising = true;
-        Debug.Log($"Sand rising started in room {targetRoomIndex}");
     }
 
     public void StopRising()
@@ -112,6 +111,7 @@ public class SandRising : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            ManagersRoot.instance.audioManager.PlaySFX(ManagersRoot.instance.audioManager.death);
             ManagersRoot.instance.gameManager.RestartLevel();
         }
     }

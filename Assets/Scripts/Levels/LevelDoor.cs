@@ -6,6 +6,7 @@ public class LevelDoor : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            ManagersRoot.instance.audioManager.PlaySFX(ManagersRoot.instance.audioManager.levelComplete);
             ManagersRoot.instance.sceneController.GoToNextLevel();
         }
     }

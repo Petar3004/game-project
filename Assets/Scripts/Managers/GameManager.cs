@@ -65,7 +65,8 @@ public class GameManager : MonoBehaviour
     public void RestartLevel()
     {
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
-        ManagersRoot.instance.sceneController.GoToLevel(currentLevelIndex);    
+        ManagersRoot.instance.sceneController.GoToLevel(currentLevelIndex); 
+        
     }
 
     public void ResetLevelParameters()
