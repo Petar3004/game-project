@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     private string levelPath;
     private string unlockedLevelsPath;
     private string unlockedHintsPath;
-
+    
     void Awake()
     {
         levelPath = Application.persistentDataPath + "/savedLevel.gd";
@@ -65,8 +65,7 @@ public class GameManager : MonoBehaviour
     public void RestartLevel()
     {
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
-        ManagersRoot.instance.sceneController.GoToLevel(currentLevelIndex);
-
+        ManagersRoot.instance.sceneController.GoToLevel(currentLevelIndex);    
     }
 
     public void ResetLevelParameters()

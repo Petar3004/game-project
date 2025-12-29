@@ -8,6 +8,7 @@ public class EnemyDamage : MonoBehaviour
     {
         if (other.gameObject.CompareTag("PlayerObject"))
         {
+            ManagersRoot.instance.audioManager.PlaySFX(ManagersRoot.instance.audioManager.death);
             other.gameObject.GetComponentInChildren<PlayerHealth>().TakeDamage(damage);
         }
     }
