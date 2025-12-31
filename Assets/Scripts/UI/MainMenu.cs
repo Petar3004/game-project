@@ -24,7 +24,7 @@ public class MainMenu : MonoBehaviour
     public void NewGame()
     {
         ManagersRoot.instance.gameManager.ResetProgress();
-        Continue();
+        ManagersRoot.instance.sceneController.GoToCutscene(8);
     }
 
     public void Continue()

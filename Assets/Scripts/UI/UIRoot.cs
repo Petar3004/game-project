@@ -42,6 +42,9 @@ public class UIRoot : MonoBehaviour
     public Canvas transition;
     public Image sceneFadeImage;
 
+    [Header("Cutsene")]
+    public Canvas cutscene;
+
     void Awake()
     {
         if (instance == null)
@@ -223,6 +226,17 @@ public class UIRoot : MonoBehaviour
             yield return null;
             elapsedTime += Time.unscaledDeltaTime;
         }
+    }
+
+    // Cutscene
+    public void ShowCutsceneUI()
+    {
+        cutscene.gameObject.SetActive(true);
+    }
+
+    public void HideCutsceneUI()
+    {
+        cutscene.gameObject.SetActive(false);
     }
 }
 
