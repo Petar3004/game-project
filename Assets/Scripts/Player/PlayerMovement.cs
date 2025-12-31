@@ -215,7 +215,6 @@ public class PlayerMovement : MonoBehaviour
         isLocked = locked;
         if (locked)
         {
-            // Chỉ về Idle nếu CHƯA CHẾT
             if (!isDead)
             {
                 state = MovementState.STANDING;

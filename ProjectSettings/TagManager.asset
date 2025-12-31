@@ -8,6 +8,7 @@ TagManager:
   - PlayerObject
   - PlayerLeft
   - PlayerRight
+  - Audio
   layers:
   - Default
   - TransparentFX

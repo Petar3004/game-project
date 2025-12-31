@@ -46,6 +46,11 @@ public class SceneController : MonoBehaviour
         ManagersRoot.instance.gameManager.unlockedLevels.Add(levelIndex);
         ManagersRoot.instance.gameManager.SaveProgress();
         ManagersRoot.instance.playerManager.SpawnPlayer(levelIndex, 0);
+        if(levelIndex == 1 ||  levelIndex == 4 || levelIndex == 7)
+        {
+            ManagersRoot.instance.audioManager.PlayBackgroundMusic(levelIndex);
+        }
+        
         UIRoot.instance.ActivateUI();
         if (fade)
         {
