@@ -2238,6 +2238,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+    - {fileID: 4135840053015096009, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
+    - {fileID: 7549093026625340650, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4325,6 +4327,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+    - {fileID: 4135840053015096009, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
+    - {fileID: 7549093026625340650, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8823,8 +8827,8 @@ SceneRoots:
   - {fileID: 460333468}
   - {fileID: 1193684694}
   - {fileID: 1334661129}
-  - {fileID: 113340337}
   - {fileID: 150531244}
   - {fileID: 727066062}
   - {fileID: 819251780}
   - {fileID: 1520426198}
+  - {fileID: 113340337}
