@@ -13,7 +13,8 @@ public class CameraController : MonoBehaviour
         { 3, new Vector3[] { new Vector3(0, 0, -10f) } },
         { 4, new Vector3[] { new Vector3(0, 0, -10f), new Vector3(17.81f, 0, -10f), new Vector3(9.21f, 10f, -10f) } },
         { 5, new Vector3[] { new Vector3(-17.701f, 0, -10f), new Vector3(17.81f, 0, -10f), new Vector3(9.45f, 20.3f, -10f) } },
-        { 6, new Vector3[] { new Vector3(0, 0, -10f) } }
+        { 6, new Vector3[] { new Vector3(0, 0, -10f) } },
+        { 7, new Vector3[] { new Vector3(0, 0, -10f) } }
     };
 
     public int roomIndex = 1;
