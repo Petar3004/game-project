@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class DissapearingPlatform : MonoBehaviour
+public class SandPlatform : MonoBehaviour
 {
     public float secondsToFadeOpacityBy1 = 0.01f;
     public int secondsToRegenerate = 3;
@@ -10,7 +10,7 @@ public class DissapearingPlatform : MonoBehaviour
     public Sprite DisappearingSprite;
     public Sprite nonDisappearingSprite;
     private Collider2D col;
-    public bool isStatic = true;
+    public bool moving = true;
     public bool disappearing = true;
     [Header("Move")]
     public float moveSpeed = 2f;
@@ -21,14 +21,16 @@ public class DissapearingPlatform : MonoBehaviour
     private bool lastDirection;
     private Vector3 pointA;
     private Vector3 pointB;
+    public Rigidbody2D platformRb;
+    private PlayerMovement player;
 
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
         col = GetComponent<BoxCollider2D>();
-        if (!isStatic)
+        if (moving)
         {
-            startPosition = transform.position;
+            startPosition = platformRb.position;
             InitializeBounds();
             currentDirection = true;
             lastDirection = false;
@@ -51,13 +53,19 @@ public class DissapearingPlatform : MonoBehaviour
                 lastDirection = currentDirection;
             }
             MoveInOneDirection();
+
+            if (player != null)
+            {
+                player.platformVelocityX = currentDirection ? moveSpeed : -moveSpeed;
+            }
+
             yield return null;
         }
     }
 
     private void MoveInOneDirection()
     {
-        Vector3 currentPos = transform.position;
+        Vector3 currentPos = platformRb.position;
         Vector3 target = currentDirection ? pointB : pointA;
 
         target.y = currentPos.y;
@@ -65,9 +73,15 @@ public class DissapearingPlatform : MonoBehaviour
 
         float currentSpeed = moveSpeed;
 
-        transform.position = Vector3.MoveTowards(currentPos, target, currentSpeed * Time.deltaTime);
+        platformRb.MovePosition(
+            Vector3.MoveTowards(
+                platformRb.position,
+                target,
+                currentSpeed * Time.fixedDeltaTime
+            )
+        );
 
-        if (Vector3.Distance(transform.position, target) < 0.01f)
+        if (Vector3.Distance(platformRb.position, target) < 0.01f)
         {
             currentDirection = !currentDirection;
         }
@@ -76,9 +90,29 @@ public class DissapearingPlatform : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("PlayerObject") && disappearing)
+        if (other.gameObject.CompareTag("PlayerObject"))
         {
-            StartCoroutine(FadeAndDisappear());
+            if (disappearing)
+            {
+                StartCoroutine(FadeAndDisappear());
+            }
+            if (moving)
+            {
+                player = other.gameObject.GetComponent<PlayerMovement>();
+                player.platformVelocityX = currentDirection ? moveSpeed : -moveSpeed;
+            }
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("PlayerObject"))
+        {
+            if (moving)
+            {
+                player.platformVelocityX = 0;
+                player = null;
+            }
         }
     }
 
@@ -119,5 +153,4 @@ public class DissapearingPlatform : MonoBehaviour
             col.offset = new Vector2(col.offset.x, 0.05f);
         }
     }
-
 }

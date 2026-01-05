@@ -34,11 +34,13 @@ public class PlayerMovement : MonoBehaviour
     const string ANIM_JUMP = "jump";
     const string ANIM_CROUCH = "crouching";
 
+    public float platformVelocityX = 0;
+
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
-        groundCheckSize = new Vector2(0.9f * standingCollider.bounds.size.x, 0.2f);
-        ceilingCheckSize = new Vector2(0.9f * standingCollider.bounds.size.x, 0.2f);
+        groundCheckSize = new Vector2(0.8f * standingCollider.bounds.size.x, 0.05f);
+        ceilingCheckSize = new Vector2(0.8f * standingCollider.bounds.size.x, 0.05f);
         wallCheckSize = new Vector2(0.05f, 0.9f * standingCollider.bounds.size.y);
         animator = GetComponent<Animator>();
     }
@@ -154,7 +156,14 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        playerRb.linearVelocity = new Vector2(xInput * speed, playerRb.linearVelocityY);
+        Vector2 velocity = playerRb.linearVelocity;
+
+        float targetX = xInput * speed + platformVelocityX;
+        float deltaX = targetX - playerRb.linearVelocity.x;
+
+        velocity.x += deltaX;
+        velocity.x = Mathf.Clamp(velocity.x, platformVelocityX - speed, platformVelocityX + speed);
+        playerRb.linearVelocity = velocity;
     }
 
     bool IsOnSpring()
@@ -223,6 +232,16 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawCube(groundCheckCollider.position, groundCheckSize);
+        Gizmos.DrawCube(wallCheckColliderLeft.position, wallCheckSize);
+        Gizmos.DrawCube(wallCheckColliderRight.position, wallCheckSize);
+        Gizmos.DrawCube(ceilingCheckCollider.position, ceilingCheckSize);
+
+    }
 }
 
 public enum MovementState
@@ -231,3 +250,4 @@ public enum MovementState
     CROUCHING,
     JUMPING
 }
+
