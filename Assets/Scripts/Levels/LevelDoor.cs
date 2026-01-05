@@ -30,7 +30,6 @@ public class LevelDoor : MonoBehaviour
     {
         GameObject player = ManagersRoot.instance.playerManager.Player;
         Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
-        SpriteRenderer sprite = player.GetComponent<SpriteRenderer>();
 
         player.GetComponent<PlayerMovement>().LockPosition(true);
         rb.gravityScale = 0;
@@ -44,8 +43,8 @@ public class LevelDoor : MonoBehaviour
                 attractSpeed * Time.deltaTime
             );
 
-            sprite.transform.localScale = Vector3.MoveTowards(
-                sprite.transform.localScale,
+            player.transform.localScale = Vector3.MoveTowards(
+                player.transform.localScale,
                 Vector3.zero,
                 attractSpeed * Time.deltaTime
             );
