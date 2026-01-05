@@ -22,8 +22,14 @@ public class SceneController : MonoBehaviour
 
     public void GoToLevelFromCutscene(int levelIndex)
     {
-        StartCoroutine(LoadLevelAndMovePlayer(levelIndex, false));
+        StartCoroutine(LoadLevelAndMovePlayer(levelIndex, fade: false));
+        ManagersRoot.instance.gameManager.gameStarted = true;
+    }
 
+    public void GoToCutscene(int cutsceneIndex)
+    {
+        StartCoroutine(LoadLevelAndMovePlayer(cutsceneIndex, fade: true));
+        ManagersRoot.instance.gameManager.gameStarted = false;
     }
 
     public void GoToLevel(int levelIndex)
@@ -46,11 +52,11 @@ public class SceneController : MonoBehaviour
         ManagersRoot.instance.gameManager.unlockedLevels.Add(levelIndex);
         ManagersRoot.instance.gameManager.SaveProgress();
         ManagersRoot.instance.playerManager.SpawnPlayer(levelIndex, 0);
-        if(levelIndex == 1 ||  levelIndex == 4 || levelIndex == 7)
+        if (levelIndex == 1 || levelIndex == 4 || levelIndex == 7)
         {
             ManagersRoot.instance.audioManager.PlayBackgroundMusic(levelIndex);
         }
-        
+
         UIRoot.instance.ActivateUI();
         if (fade)
         {
