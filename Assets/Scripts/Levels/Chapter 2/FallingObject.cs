@@ -10,19 +10,20 @@ public class FallingObject : MonoBehaviour
 {
     public FallingObjectType fallingObjectType;
     public EnemyDamage enemyDamage;
-    public SpriteRenderer sprite;
+    public SpriteRenderer spriteRenderer;
     private SandClockPuzzle puzzle;
+    public Sprite[] sprites;
 
     void Start()
     {
         if (fallingObjectType == FallingObjectType.COLLECTABLE)
         {
-            sprite.color = Color.yellow;
+            spriteRenderer.sprite = sprites[0];
             enemyDamage.damage = 0;
         }
         else
         {
-            sprite.color = Color.red;
+            spriteRenderer.sprite = sprites[Random.Range(1, 3)];
             enemyDamage.damage = 1;
         }
 
@@ -31,14 +32,21 @@ public class FallingObject : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("PlayerObject") && fallingObjectType == FallingObjectType.COLLECTABLE)
+        if (other.gameObject.CompareTag("PlayerObject"))
         {
-            puzzle.GetSequencePiece();
-            Destroy(gameObject);
+            if (fallingObjectType == FallingObjectType.COLLECTABLE)
+            {
+                puzzle.GetSequencePiece();
+                Destroy(gameObject);
+            }
         }
         else
         {
-            StartCoroutine(DestroyObject());
+            if (fallingObjectType == FallingObjectType.ENEMY)
+            {
+                enemyDamage.damage = 0;
+                StartCoroutine(DestroyObject());
+            }
         }
     }
 

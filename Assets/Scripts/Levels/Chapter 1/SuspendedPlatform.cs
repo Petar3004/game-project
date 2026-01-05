@@ -23,7 +23,6 @@ public class SuspendedPlatform : MonoBehaviour
         float target = isActive ? targetY : initY;
         float newY = Mathf.MoveTowards(transform.position.y, target, speed * Time.deltaTime);
         rb.MovePosition(new UnityEngine.Vector2(rb.position.x, newY));
-
     }
 
     void OnCollisionEnter2D(Collision2D collision)

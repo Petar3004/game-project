@@ -33,7 +33,6 @@ public class FallingObjectSpawner : MonoBehaviour
 
     private void SpawnObject()
     {
-
         n++;
         FallingObject newFallingObject = Instantiate(fallingObject, spawnPos, Quaternion.Euler(new Vector3(0, 0, rotation)));
         Rigidbody2D objRb = newFallingObject.GetComponent<Rigidbody2D>();

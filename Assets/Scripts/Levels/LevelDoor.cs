@@ -1,13 +1,85 @@
+using System.Collections;
 using UnityEngine;
 
 public class LevelDoor : MonoBehaviour
 {
+    public SpriteRenderer front;
+    public SpriteRenderer back;
+    public float spinSpeed = 1;
+    public float attractSpeed = 0.3f;
+    private Coroutine animationRoutine = null;
+    public bool chapterEnd = false;
+
+    void Update()
+    {
+        front.transform.Rotate(0, 0, spinSpeed * 2 * Time.deltaTime);
+        back.transform.Rotate(0, 0, -spinSpeed * Time.deltaTime);
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (!other.CompareTag("Player") || animationRoutine != null)
         {
-            ManagersRoot.instance.audioManager.PlaySFX(ManagersRoot.instance.audioManager.levelComplete);
+            return;
+        }
+
+        animationRoutine = StartCoroutine(PortalAnimation());
+    }
+
+    private IEnumerator PortalAnimation()
+    {
+        GameObject player = ManagersRoot.instance.playerManager.Player;
+        Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
+        SpriteRenderer sprite = player.GetComponent<SpriteRenderer>();
+
+        player.GetComponent<PlayerMovement>().LockPosition(true);
+        rb.gravityScale = 0;
+        rb.linearVelocity = Vector3.zero;
+
+        while (Vector2.Distance(rb.position, transform.position) > 0.05f)
+        {
+            rb.position = Vector2.MoveTowards(
+                rb.position,
+                transform.position,
+                attractSpeed * Time.deltaTime
+            );
+
+            sprite.transform.localScale = Vector3.MoveTowards(
+                sprite.transform.localScale,
+                Vector3.zero,
+                attractSpeed * Time.deltaTime
+            );
+
+            yield return null;
+        }
+
+        ManagersRoot.instance.audioManager.PlaySFX(
+            ManagersRoot.instance.audioManager.levelComplete
+        );
+        if (!chapterEnd)
+        {
             ManagersRoot.instance.sceneController.GoToNextLevel();
+        }
+        else
+        {
+            ManagersRoot.instance.sceneController.GoToMainMenu();
+            ManagersRoot.instance.gameManager.chapterComplete = true;
+        }
+    }
+
+    void OnValidate()
+    {
+        if (chapterEnd)
+        {
+            front.color = Color.gold;
+            back.color = Color.gold;
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            front.color = Color.white;
+            back.color = Color.white;
+            gameObject.SetActive(true);
         }
     }
 }

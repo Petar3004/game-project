@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEditor.Callbacks;
 using UnityEngine;
 
@@ -8,7 +9,6 @@ public class Scorpion : MonoBehaviour
     private bool movingRight = false;
     private float elapsed;
 
-
     void Update()
     {
         if (ManagersRoot.instance.playerManager.Player == null)
@@ -16,7 +16,7 @@ public class Scorpion : MonoBehaviour
             return;
         }
 
-        if (ManagersRoot.instance.playerManager.Player.transform.position.y < -3f)
+        if (ManagersRoot.instance.playerManager.Player.transform.position.y < -2f)
         {
             Chase();
         }
@@ -42,10 +42,12 @@ public class Scorpion : MonoBehaviour
         if (movingRight)
         {
             scorpionRb.linearVelocityX = speed / 2;
+            Flip(true);
         }
         else
         {
             scorpionRb.linearVelocityX = -speed / 2;
+            Flip(false);
         }
     }
 
@@ -55,11 +57,20 @@ public class Scorpion : MonoBehaviour
         {
             movingRight = false;
             scorpionRb.linearVelocityX = -speed;
+            Flip(false);
         }
         else
         {
             movingRight = true;
             scorpionRb.linearVelocityX = speed;
+            Flip(true);
         }
+    }
+
+    private void Flip(bool faceRight)
+    {
+        Vector3 scale = transform.localScale;
+        scale.x = Mathf.Abs(scale.x) * (faceRight ? 1 : -1);
+        transform.localScale = scale;
     }
 }

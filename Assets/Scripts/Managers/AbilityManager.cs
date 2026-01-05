@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -15,16 +16,14 @@ public enum AbilityType
 public class AbilityManager : MonoBehaviour
 {
     public AbilityType ability;
+    public Sprite[] icons;
+
     private Dictionary<AbilityType, List<int>> abilityToLevels = new Dictionary<AbilityType, List<int>>
     {
         { AbilityType.TIME_SLOW, new List<int> { 1, 2, 3 } },
         { AbilityType.SAND_SPEED, new List<int> { 4, 5, 6 } }
     };
-    public Dictionary<AbilityType, (string, Color)> abilityToData = new Dictionary<AbilityType, (string, Color)>
-    {
-        {   AbilityType.TIME_SLOW, ("Time Magnet", Color.skyBlue) },
-        {   AbilityType.SAND_SPEED, ("Quick Boots", Color.beige) }
-    };
+    public Dictionary<AbilityType, (string, Sprite)> abilityToData = new Dictionary<AbilityType, (string, Sprite)>();
 
     public float abilityDuration = 5f;
     public float abilityTimePenalty = 10f;
@@ -33,6 +32,12 @@ public class AbilityManager : MonoBehaviour
 
     [Header("Slow Time")]
     public float slowTimeFactor = 0.5f;
+
+    void Awake()
+    {
+        abilityToData.Add(AbilityType.TIME_SLOW, ("Time Magnet", icons[0]));
+        abilityToData.Add(AbilityType.SAND_SPEED, ("Quick Boots", icons[1]));
+    }
 
     void Update()
     {

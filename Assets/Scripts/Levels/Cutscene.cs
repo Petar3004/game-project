@@ -24,7 +24,7 @@ public class Cutscene : MonoBehaviour
             {
                 StopAllCoroutines();
                 UIRoot.instance.HideCutsceneUI();
-                ManagersRoot.instance.sceneController.GoToLevelFromCutscene(nextLevel);
+                ManagersRoot.instance.sceneController.GoToLevel(nextLevel);
             }
         }
     }
@@ -32,7 +32,7 @@ public class Cutscene : MonoBehaviour
     private IEnumerator PlayCutscene(float secondsCutsene)
     {
         yield return new WaitForSecondsRealtime(secondsCutsene);
-        ManagersRoot.instance.sceneController.GoToLevelFromCutscene(nextLevel);
+        ManagersRoot.instance.sceneController.GoToCutscene(nextLevel);
     }
 
     private IEnumerator ConfirmSkip()

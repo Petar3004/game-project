@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 5cbe1137c5476a442b2e29fdf61d4053
+guid: fac756d2fa135f441b5429c4e19f8296
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4281637774074219296
-    second: jump_0
-  - first:
-      213: -7862396843884538191
-    second: jump_1
+      213: -8904610000044342131
+    second: stinger_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jump_0
+      name: stinger_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 22
-        width: 20
-        height: 31
+        x: 0
+        y: 0
+        width: 571
+        height: 208
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 02b8694dede6b6b30800000000000000
-      internalID: 4281637774074219296
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_1
-      rect:
-        serializedVersion: 2
-        x: 85
-        y: 22
-        width: 20
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1b61c1d2ab723e290800000000000000
-      internalID: -7862396843884538191
+      spriteID: d8447f332687c6480800000000000000
+      internalID: -8904610000044342131
       vertices: []
       indices: 
       edges: []
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      jump_0: 4281637774074219296
-      jump_1: -7862396843884538191
+      stinger_0: -8904610000044342131
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

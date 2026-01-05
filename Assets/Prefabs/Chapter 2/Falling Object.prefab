@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5239592216546583380}
   - component: {fileID: 3301762580475911708}
   - component: {fileID: 1494370996576434380}
-  - component: {fileID: 900110054165227960}
   - component: {fileID: 6320069363060643350}
   - component: {fileID: 3923038380572666752}
+  - component: {fileID: 5783265209695314576}
   m_Layer: 0
   m_Name: Falling Object
   m_TagString: Untagged
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayerID: 1947147559
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: 8288426215254106694, guid: 64fadd4dfe4194ac49ab3fbe27d974a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -121,8 +121,40 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!70 &900110054165227960
-CapsuleCollider2D:
+--- !u!114 &6320069363060643350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7908099869185587648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82efa9d5414079c49b93d7525078f0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FallingObject
+  fallingObjectType: 0
+  enemyDamage: {fileID: 3923038380572666752}
+  spriteRenderer: {fileID: 3301762580475911708}
+  sprites:
+  - {fileID: 7028616704906629411, guid: 00ab6be83176543c590239c33cecbb1d, type: 3}
+  - {fileID: 8288426215254106694, guid: 64fadd4dfe4194ac49ab3fbe27d974a5, type: 3}
+  - {fileID: 4113829005332862926, guid: 27f28e18d5eae4056b7a49d7509f87fa, type: 3}
+--- !u!114 &3923038380572666752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7908099869185587648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e809cb5bc19923e43b8ad4a2cd722e67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyDamage
+  damage: 1
+--- !u!61 &5783265209695314576
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -156,34 +188,14 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
-  m_Direction: 0
---- !u!114 &6320069363060643350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7908099869185587648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82efa9d5414079c49b93d7525078f0c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FallingObject
-  fallingObjectType: 0
-  enemyDamage: {fileID: 3923038380572666752}
-  sprite: {fileID: 3301762580475911708}
-  puzzle: {fileID: 0}
---- !u!114 &3923038380572666752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7908099869185587648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e809cb5bc19923e43b8ad4a2cd722e67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyDamage
-  damage: 1
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.5983334, y: 1.9233333}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.5983334, y: 1.9233333}
+  m_EdgeRadius: 0

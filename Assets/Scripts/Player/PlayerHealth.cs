@@ -29,7 +29,10 @@ public class PlayerHealth : MonoBehaviour
         }
         else
         {
-            animator.Play("damage");
+            if (amount > 0)
+            {
+                animator.Play("damage");
+            }
         }
     }
 

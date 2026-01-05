@@ -20,12 +20,6 @@ public class SceneController : MonoBehaviour
         StartCoroutine(LoadLevelAndMovePlayer(currentLevelIndex - 1, fade: true));
     }
 
-    public void GoToLevelFromCutscene(int levelIndex)
-    {
-        StartCoroutine(LoadLevelAndMovePlayer(levelIndex, fade: false));
-        ManagersRoot.instance.gameManager.gameStarted = true;
-    }
-
     public void GoToCutscene(int cutsceneIndex)
     {
         StartCoroutine(LoadLevelAndMovePlayer(cutsceneIndex, fade: true));
@@ -34,7 +28,8 @@ public class SceneController : MonoBehaviour
 
     public void GoToLevel(int levelIndex)
     {
-        StartCoroutine(LoadLevelAndMovePlayer(levelIndex, true));
+        StartCoroutine(LoadLevelAndMovePlayer(levelIndex, fade: true));
+        ManagersRoot.instance.gameManager.gameStarted = true;
     }
 
     private IEnumerator LoadLevelAndMovePlayer(int levelIndex, bool fade)

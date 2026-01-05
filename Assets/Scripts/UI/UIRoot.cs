@@ -162,7 +162,7 @@ public class UIRoot : MonoBehaviour
         }
         else
         {
-            abilityImage.color = ManagersRoot.instance.abilityManager.abilityToData[currentAbility].Item2;
+            abilityImage.sprite = ManagersRoot.instance.abilityManager.abilityToData[currentAbility].Item2;
         }
     }
 

@@ -1,4 +1,5 @@
 using TMPro;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Clock : MonoBehaviour
@@ -18,6 +19,7 @@ public class Clock : MonoBehaviour
     private int minuteStepAngle;
     public TMP_Text riddleTextUI;
     public TMP_Text numPiecesUI;
+    public GameObject portal;
 
 
     void Start()
@@ -35,8 +37,7 @@ public class Clock : MonoBehaviour
     {
         if (AnswerIsCorrect())
         {
-            ManagersRoot.instance.sceneController.GoToMainMenu();
-            ManagersRoot.instance.gameManager.chapterComplete = true;
+            portal.SetActive(true);
         }
     }
 

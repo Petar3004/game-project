@@ -417,6 +417,9 @@ MonoBehaviour:
   flashSpeed: 2
   abilityText: {fileID: 1062176169878378798}
   abilityImage: {fileID: 3028625943937433820}
+  icons:
+  - {fileID: 4877825377717948546, guid: 2dfe72f422077b5499b24c897c7cf71b, type: 3}
+  - {fileID: -8630435554779211992, guid: 2bc9c9a903af9db469a0ac27d40796dc, type: 3}
   overlay: {fileID: 9217011474130516905}
   bigHintBox: {fileID: 6743967389087214837}
   bigHintImage: {fileID: 8650576911449406106}
