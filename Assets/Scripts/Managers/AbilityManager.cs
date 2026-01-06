@@ -11,6 +11,7 @@ public enum AbilityType
 {
     TIME_SLOW,
     SAND_SPEED,
+    ELECTRICITY_DISABLE
 }
 
 public class AbilityManager : MonoBehaviour
@@ -21,7 +22,8 @@ public class AbilityManager : MonoBehaviour
     private Dictionary<AbilityType, List<int>> abilityToLevels = new Dictionary<AbilityType, List<int>>
     {
         { AbilityType.TIME_SLOW, new List<int> { 1, 2, 3 } },
-        { AbilityType.SAND_SPEED, new List<int> { 4, 5, 6 } }
+        { AbilityType.SAND_SPEED, new List<int> { 4, 5, 6 } },
+        { AbilityType.ELECTRICITY_DISABLE, new List<int> { 7, 8, 9 } }
     };
     public Dictionary<AbilityType, (string, Sprite)> abilityToData = new Dictionary<AbilityType, (string, Sprite)>();
 
@@ -47,6 +49,7 @@ public class AbilityManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift) && gameStarted && !gamePaused)
         {
             ActivateAbility();
+            ManagersRoot.instance.audioManager.PlaySFX(ManagersRoot.instance.audioManager.specialAbility);
         }
 
         UIRoot.instance.UpdateAbiliyUI();

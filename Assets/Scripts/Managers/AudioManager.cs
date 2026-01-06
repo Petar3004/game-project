@@ -15,6 +15,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip death;
     public AudioClip levelComplete;
     public AudioClip roomComplete;
+    public AudioClip specialAbility;
 
     public void PlaySFX(AudioClip clip)
     {
