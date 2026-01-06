@@ -2,14 +2,13 @@ using System.Collections;
 using UnityEngine;
 public enum FallingObjectType
 {
-    ENEMY,
+    TRASH,
     COLLECTABLE
 }
 
 public class FallingObject : MonoBehaviour
 {
     public FallingObjectType fallingObjectType;
-    public EnemyDamage enemyDamage;
     public SpriteRenderer spriteRenderer;
     private SandClockPuzzle puzzle;
     public Sprite[] sprites;
@@ -19,12 +18,10 @@ public class FallingObject : MonoBehaviour
         if (fallingObjectType == FallingObjectType.COLLECTABLE)
         {
             spriteRenderer.sprite = sprites[0];
-            enemyDamage.damage = 0;
         }
         else
         {
             spriteRenderer.sprite = sprites[Random.Range(1, 3)];
-            enemyDamage.damage = 1;
         }
 
         puzzle = GameObject.Find("Puzzle").GetComponent<SandClockPuzzle>();
@@ -42,11 +39,7 @@ public class FallingObject : MonoBehaviour
         }
         else
         {
-            if (fallingObjectType == FallingObjectType.ENEMY)
-            {
-                enemyDamage.damage = 0;
-                StartCoroutine(DestroyObject());
-            }
+            StartCoroutine(DestroyObject());
         }
     }
 

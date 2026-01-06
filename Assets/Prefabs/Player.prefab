@@ -72,6 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6268845881846833338}
   - component: {fileID: 1351217804084703848}
+  - component: {fileID: 1405571389829511087}
   m_Layer: 6
   m_Name: Crouching Collider
   m_TagString: Untagged
@@ -101,7 +102,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2513684446598103868}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -140,6 +141,43 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 0.47597975}
   m_EdgeRadius: 0
+--- !u!70 &1405571389829511087
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2513684446598103868}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.012625518, y: -0.26382074}
+  m_Size: {x: 0.90403, y: 0.47331095}
+  m_Direction: 1
 --- !u!1 &2856652856144009629
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,6 +309,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1828896654373554861}
   - component: {fileID: 5248742689268583572}
+  - component: {fileID: 3916626659205632006}
   m_Layer: 6
   m_Name: Standing Collider
   m_TagString: Player
@@ -300,7 +339,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4438434774787445318}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -339,6 +378,43 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!70 &3916626659205632006
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4438434774787445318}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.01578187, y: 0}
+  m_Size: {x: 0.8724654, y: 1}
+  m_Direction: 0
 --- !u!1 &6686474664228449078
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,11 +606,11 @@ MonoBehaviour:
     m_Bits: 256
   state: 0
   moveSpeed: 9
-  crouchSpeed: 4.5
+  crouchSpeed: 3
   jumpForce: 30
   springMultiplier: 1.5
-  standingCollider: {fileID: 5248742689268583572}
-  crouchingCollider: {fileID: 1351217804084703848}
+  standingCollider: {fileID: 3916626659205632006}
+  crouchingCollider: {fileID: 1405571389829511087}
   standingSprite: {fileID: 8647921577032531940}
   platformVelocityX: 0
 --- !u!114 &1291358939746498937

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class CameraController : MonoBehaviour
 {
+    public Vector3 cameraPosCache;
     private Dictionary<int, Vector3[]> cameraPositions = new Dictionary<int, Vector3[]>
     {
         { 1, new Vector3[] { new Vector3(-17.86f, 0, -10f), new Vector3(0, 0, -10f), new Vector3(35.56f, 0, -10f) } },
@@ -38,24 +39,21 @@ public class CameraController : MonoBehaviour
         { (6, 1), 4 }
     };
 
-    public static event Action<int> OnRoomChanged;
-
     public void MoveCameraToNextRoom()
     {
-        int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
-        roomIndex++;
-        Camera.main.transform.position = cameraPositions[currentLevelIndex][roomIndex - 1];
-
-        OnRoomChanged?.Invoke(roomIndex);
+        cameraPosCache = Camera.main.transform.position;
+        MoveCameraToRoom(++roomIndex);
     }
 
     public void MoveCameraToPreviousRoom()
     {
-        int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
-        roomIndex--;
-        Camera.main.transform.position = cameraPositions[currentLevelIndex][roomIndex - 1];
+        MoveCameraToRoom(--roomIndex);
+    }
 
-        OnRoomChanged?.Invoke(roomIndex);
+    public void MoveCameraToPreviousRoomEnd()
+    {
+        roomIndex--;
+        Camera.main.transform.position = cameraPosCache;
     }
 
     public void MoveCameraToRoom(int targetRoomIndex)
@@ -63,7 +61,6 @@ public class CameraController : MonoBehaviour
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
         roomIndex = targetRoomIndex;
         Camera.main.transform.position = cameraPositions[currentLevelIndex][roomIndex - 1];
-        OnRoomChanged?.Invoke(roomIndex);
     }
 
     public void TrackPlayer(GameObject player)

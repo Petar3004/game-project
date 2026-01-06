@@ -9,6 +9,7 @@ public class SandClockPuzzle : MonoBehaviour
     public TMP_Text numPiecesUI;
     public TMP_Text sequenceTextUI;
     public List<SandClock> clocks;
+    public GameObject portal;
 
     void Start()
     {
@@ -20,8 +21,7 @@ public class SandClockPuzzle : MonoBehaviour
     {
         if (IsComplete())
         {
-            ManagersRoot.instance.sceneController.GoToMainMenu();
-            ManagersRoot.instance.gameManager.chapterComplete = true;
+            portal.SetActive(true);
         }
     }
 

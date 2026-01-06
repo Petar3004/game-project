@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Resources;
+using UnityEngine;
 
 public class SandRising : MonoBehaviour
 {
@@ -19,18 +21,7 @@ public class SandRising : MonoBehaviour
 
     private float startX;
     private float startWidth;
-
-
-
-    void OnEnable()
-    {
-        CameraController.OnRoomChanged += HandleRoomChanged;
-    }
-
-    void OnDisable()
-    {
-        CameraController.OnRoomChanged -= HandleRoomChanged;
-    }
+    public float secondsBeforeRising;
 
     void Start()
     {
@@ -80,25 +71,9 @@ public class SandRising : MonoBehaviour
         sandMat.mainTextureOffset += new Vector2(0, Time.deltaTime * 0.1f);
     }
 
-
-
-    private void HandleRoomChanged(int newRoomIndex)
+    public IEnumerator StartRising()
     {
-        if (newRoomIndex == targetRoomIndex)
-        {
-            StartRising();
-            growWidth = (newRoomIndex == 3);
-        }
-        else
-        {
-            StopRising();
-            growWidth = false;
-        }
-    }
-
-
-    public void StartRising()
-    {
+        yield return new WaitForSeconds(secondsBeforeRising);
         isRising = true;
     }
 

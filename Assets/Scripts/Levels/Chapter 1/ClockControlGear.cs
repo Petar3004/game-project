@@ -64,8 +64,13 @@ public class ClockControlGear : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, gearOrientation);
         if (xInput != 0 && !isRotating)
         {
+            ManagersRoot.instance.playerManager.Player.GetComponent<PlayerMovement>().ChangeAnimation("run");
             int clockwise = xInput > 0 ? -1 : 1;
             StartCoroutine(StepClockHand(clockwise));
+        }
+        else if (xInput == 0)
+        {
+            ManagersRoot.instance.playerManager.Player.GetComponent<PlayerMovement>().ChangeAnimation("idle");
         }
     }
 

@@ -4,7 +4,7 @@ public class RoomDoor : MonoBehaviour
 {
     public RoomDoorOrientation door;
     private Move move;
-   
+
     // Change room and move player depending on the door
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -21,7 +21,7 @@ public class RoomDoor : MonoBehaviour
                     else
                     {
                         move = Move.LEFT;
-                        ManagersRoot.instance.cameraController.MoveCameraToPreviousRoom();
+                        ManagersRoot.instance.cameraController.MoveCameraToPreviousRoomEnd();
                     }
                     break;
                 case RoomDoorType.HORIZONTAL:
@@ -33,7 +33,7 @@ public class RoomDoor : MonoBehaviour
                     else
                     {
                         move = Move.DOWN;
-                        ManagersRoot.instance.cameraController.MoveCameraToPreviousRoom();
+                        ManagersRoot.instance.cameraController.MoveCameraToPreviousRoomEnd();
                     }
                     break;
             }
@@ -46,7 +46,7 @@ public class RoomDoor : MonoBehaviour
         {
             if ((move == Move.RIGHT && other.transform.position.x < transform.position.x) || (move == Move.UP && other.transform.position.y < transform.position.y))
             {
-                ManagersRoot.instance.cameraController.MoveCameraToPreviousRoom();
+                ManagersRoot.instance.cameraController.MoveCameraToPreviousRoomEnd();
             }
             else if ((move == Move.LEFT && other.transform.position.x > transform.position.x) || (move == Move.DOWN && other.transform.position.y > transform.position.y))
             {

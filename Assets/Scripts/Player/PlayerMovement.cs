@@ -19,8 +19,8 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce = 8f;
     public float springMultiplier = 1.5f;
     private Rigidbody2D playerRb;
-    public Collider2D standingCollider;
-    public Collider2D crouchingCollider;
+    public CapsuleCollider2D standingCollider;
+    public CapsuleCollider2D crouchingCollider;
     public SpriteRenderer standingSprite;
 
     private bool isLocked = false;
@@ -39,8 +39,8 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
-        groundCheckSize = new Vector2(0.8f * standingCollider.bounds.size.x, 0.05f);
-        ceilingCheckSize = new Vector2(0.8f * standingCollider.bounds.size.x, 0.05f);
+        groundCheckSize = new Vector2(0.8f * standingCollider.bounds.size.x, 0.1f);
+        ceilingCheckSize = new Vector2(0.8f * standingCollider.bounds.size.x, 0.1f);
         wallCheckSize = new Vector2(0.05f, 0.9f * standingCollider.bounds.size.y);
         animator = GetComponent<Animator>();
     }
@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
         HandleHorizontalMovement(xInput);
     }
 
-    void ChangeAnimation(string newAnimation)
+    public void ChangeAnimation(string newAnimation)
     {
         if (currentAnimState == newAnimation) return;
 
@@ -150,7 +150,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 ChangeAnimation(ANIM_RUN);
             }
-            else
+            else if (!isLocked)
             {
                 ChangeAnimation(ANIM_IDLE);
             }

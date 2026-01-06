@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     private string levelPath;
     private string unlockedLevelsPath;
     private string unlockedHintsPath;
-    
+
     void Awake()
     {
         levelPath = Application.persistentDataPath + "/savedLevel.gd";
@@ -66,8 +66,8 @@ public class GameManager : MonoBehaviour
     public void RestartLevel()
     {
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
-        ManagersRoot.instance.sceneController.GoToLevel(currentLevelIndex); 
-        
+        ManagersRoot.instance.sceneController.GoToLevel(currentLevelIndex);
+
     }
 
     public void ResetLevelParameters()
@@ -77,6 +77,7 @@ public class GameManager : MonoBehaviour
         ManagersRoot.instance.cameraController.roomIndex = 1;
         ManagersRoot.instance.abilityManager.UpdateAbility();
         ManagersRoot.instance.hintManager.HideSmallHint();
+        UIRoot.instance.UpdateAbiliyUI();
     }
 
     public void ResetProgress()

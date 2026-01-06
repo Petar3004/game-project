@@ -5,7 +5,7 @@ using UnityEngine;
 public class Clock : MonoBehaviour
 {
     private string riddleStr;
-    private string[] hours = { "TLEWVE", "ONE", "TWO", "THREE", "FOUR", "FIVE", "SIX", "SEVEN", "EIGHT", "NINE", "TEN", "ELEVEN", };
+    private string[] hours = { "TWELVE", "ONE", "TWO", "THREE", "FOUR", "FIVE", "SIX", "SEVEN", "EIGHT", "NINE", "TEN", "ELEVEN", };
     private string hourStr;
     private int hour;
     private int minuteSteps;
@@ -38,6 +38,10 @@ public class Clock : MonoBehaviour
         if (AnswerIsCorrect())
         {
             portal.SetActive(true);
+        }
+        else
+        {
+            portal.SetActive(false);
         }
     }
 

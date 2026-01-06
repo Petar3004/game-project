@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3301762580475911708}
   - component: {fileID: 1494370996576434380}
   - component: {fileID: 6320069363060643350}
-  - component: {fileID: 3923038380572666752}
   - component: {fileID: 5783265209695314576}
   m_Layer: 0
   m_Name: Falling Object
@@ -134,25 +133,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FallingObject
   fallingObjectType: 0
-  enemyDamage: {fileID: 3923038380572666752}
+  enemyDamage: {fileID: 0}
   spriteRenderer: {fileID: 3301762580475911708}
   sprites:
   - {fileID: 7028616704906629411, guid: 00ab6be83176543c590239c33cecbb1d, type: 3}
   - {fileID: 8288426215254106694, guid: 64fadd4dfe4194ac49ab3fbe27d974a5, type: 3}
   - {fileID: 4113829005332862926, guid: 27f28e18d5eae4056b7a49d7509f87fa, type: 3}
---- !u!114 &3923038380572666752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7908099869185587648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e809cb5bc19923e43b8ad4a2cd722e67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyDamage
-  damage: 1
 --- !u!61 &5783265209695314576
 BoxCollider2D:
   m_ObjectHideFlags: 0

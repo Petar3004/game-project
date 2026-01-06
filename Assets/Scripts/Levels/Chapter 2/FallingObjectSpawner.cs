@@ -45,7 +45,7 @@ public class FallingObjectSpawner : MonoBehaviour
         }
         else
         {
-            objType = FallingObjectType.ENEMY;
+            objType = FallingObjectType.TRASH;
         }
     }
 
