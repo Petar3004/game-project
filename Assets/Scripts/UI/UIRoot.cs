@@ -82,10 +82,12 @@ public class UIRoot : MonoBehaviour
 
     public void ActivateUI()
     {
-        bool isMainMenuOrCutscene = SceneManager.GetActiveScene().buildIndex == 0 || SceneManager.GetActiveScene().buildIndex > 6;
+        int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
+        bool isCutscene = currentLevelIndex > 9;
+        bool isMainMenu = currentLevelIndex == 0;
 
-        HUD.gameObject.SetActive(!isMainMenuOrCutscene);
-        overlay.gameObject.SetActive(!isMainMenuOrCutscene);
+        HUD.gameObject.SetActive(!isMainMenu && !isCutscene);
+        overlay.gameObject.SetActive(!isMainMenu && !isCutscene);
         pauseMenu.gameObject.SetActive(false);
         bigHintBox.SetActive(false);
         smallHintBox.SetActive(false);

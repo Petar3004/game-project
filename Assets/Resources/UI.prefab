@@ -417,9 +417,6 @@ MonoBehaviour:
   flashSpeed: 2
   abilityText: {fileID: 1062176169878378798}
   abilityImage: {fileID: 3028625943937433820}
-  icons:
-  - {fileID: 4877825377717948546, guid: 2dfe72f422077b5499b24c897c7cf71b, type: 3}
-  - {fileID: -8630435554779211992, guid: 2bc9c9a903af9db469a0ac27d40796dc, type: 3}
   overlay: {fileID: 9217011474130516905}
   bigHintBox: {fileID: 6743967389087214837}
   bigHintImage: {fileID: 8650576911449406106}
@@ -1107,7 +1104,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!114 &3692701156707726979
 MonoBehaviour:
@@ -1121,7 +1118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1994,7 +1991,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 334, y: -240}
+  m_AnchoredPosition: {x: 272, y: -207}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8110025816108414316

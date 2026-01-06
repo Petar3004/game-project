@@ -5,6 +5,7 @@ public class LevelDoor : MonoBehaviour
 {
     public SpriteRenderer front;
     public SpriteRenderer back;
+    public SpriteRenderer backBack;
     public float spinSpeed = 1;
     public float attractSpeed = 0.3f;
     private Coroutine animationRoutine = null;
@@ -72,12 +73,14 @@ public class LevelDoor : MonoBehaviour
         {
             front.color = Color.gold;
             back.color = Color.gold;
+            backBack.color = Color.gold;
             gameObject.SetActive(false);
         }
         else
         {
             front.color = Color.white;
             back.color = Color.white;
+            backBack.color = Color.white;
             gameObject.SetActive(true);
         }
     }

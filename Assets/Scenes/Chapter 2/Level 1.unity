@@ -936,23 +936,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5398863883562780445, guid: 1b61c6c5befb09244a9d1cd1d0ad23d1, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.7147
+      value: 1.0983326
       objectReference: {fileID: 0}
     - target: {fileID: 5398863883562780445, guid: 1b61c6c5befb09244a9d1cd1d0ad23d1, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.7147
+      value: 1.4145566
       objectReference: {fileID: 0}
     - target: {fileID: 5398863883562780445, guid: 1b61c6c5befb09244a9d1cd1d0ad23d1, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.7147
+      value: 0.94962186
       objectReference: {fileID: 0}
     - target: {fileID: 5398863883562780445, guid: 1b61c6c5befb09244a9d1cd1d0ad23d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.19000053
+      value: -0.56
       objectReference: {fileID: 0}
     - target: {fileID: 5398863883562780445, guid: 1b61c6c5befb09244a9d1cd1d0ad23d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.09
+      value: 14.83
       objectReference: {fileID: 0}
     - target: {fileID: 5398863883562780445, guid: 1b61c6c5befb09244a9d1cd1d0ad23d1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6023,7 +6023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2535912752290841145, guid: fabad9d298f42874584e142ba3454c12, type: 3}
       propertyPath: cutsceneIndex
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2535912752290841145, guid: fabad9d298f42874584e142ba3454c12, type: 3}
       propertyPath: secondsBeforeCutscene

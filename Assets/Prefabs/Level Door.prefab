@@ -260,7 +260,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: -6470460504253458178, guid: 08ba9cc0afbe547b8ac61cf3047d24ca, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -280,7 +280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5398863883562780445}
   - component: {fileID: 6298212905997242458}
-  - component: {fileID: 5324830081629629480}
+  - component: {fileID: 6194079290180080984}
   m_Layer: 0
   m_Name: Level Door
   m_TagString: Untagged
@@ -296,16 +296,16 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9177987462310904396}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 25.18, y: 7.1332, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.3, y: 4.36, z: 0}
+  m_LocalScale: {x: 0.59672385, y: 0.9643988, z: 0.7788095}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6511222096715708077}
   - {fileID: 610425693936270590}
   - {fileID: 3502688895452067604}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6298212905997242458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,12 +320,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   front: {fileID: 6014260900462367910}
   back: {fileID: 6691665260673152238}
+  backBack: {fileID: 6435380782296408011}
   spinSpeed: 5
   attractSpeed: 1
   chapterEnd: 0
-  animationSprite: {fileID: 4671811295830470272, guid: 9cad6bc23877747dcb901871b69ccd5d, type: 3}
---- !u!58 &5324830081629629480
-CircleCollider2D:
+--- !u!70 &6194079290180080984
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -354,9 +354,10 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.43156242, y: 0.029532194}
-  m_Radius: 1.3729856
+  m_Offset: {x: 0.45211053, y: 0.015942605}
+  m_Size: {x: 3.1174808, y: 3.11997}
+  m_Direction: 0

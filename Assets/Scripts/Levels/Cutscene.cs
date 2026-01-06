@@ -32,7 +32,7 @@ public class Cutscene : MonoBehaviour
     private IEnumerator PlayCutscene(float secondsCutsene)
     {
         yield return new WaitForSecondsRealtime(secondsCutsene);
-        ManagersRoot.instance.sceneController.GoToCutscene(nextLevel);
+        ManagersRoot.instance.sceneController.GoToLevel(nextLevel);
     }
 
     private IEnumerator ConfirmSkip()
