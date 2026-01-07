@@ -61,7 +61,7 @@ public class Electricity : MonoBehaviour
     {
         if (!sprite.enabled) return;
 
-        if (other.CompareTag("PlayerObject") && (red || green))
+        if (other.CompareTag("Player") && (red || green))
         {
             ManagersRoot.instance.gameManager.RestartLevel();
             ManagersRoot.instance.audioManager.PlaySFX(ManagersRoot.instance.audioManager.death);

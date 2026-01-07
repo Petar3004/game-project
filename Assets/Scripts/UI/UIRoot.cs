@@ -157,6 +157,7 @@ public class UIRoot : MonoBehaviour
     {
         AbilityType currentAbility = ManagersRoot.instance.abilityManager.ability;
         abilityImage.fillAmount = ManagersRoot.instance.abilityManager.abilityCharge;
+        abilityImage.sprite = ManagersRoot.instance.abilityManager.abilityToData[currentAbility].Item2;
         abilityText.text = ManagersRoot.instance.abilityManager.abilityToData[currentAbility].Item1;
         if (ManagersRoot.instance.timeManager.timeLeft < ManagersRoot.instance.abilityManager.abilityTimePenalty)
         {
@@ -164,7 +165,7 @@ public class UIRoot : MonoBehaviour
         }
         else
         {
-            abilityImage.sprite = ManagersRoot.instance.abilityManager.abilityToData[currentAbility].Item2;
+            abilityImage.color = Color.white;
         }
     }
 
