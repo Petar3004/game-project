@@ -43,6 +43,7 @@ public class CameraController : MonoBehaviour
     {
         cameraPosCache = Camera.main.transform.position;
         MoveCameraToRoom(++roomIndex);
+        ManagersRoot.instance.audioManager.PlaySFX(ManagersRoot.instance.audioManager.roomComplete);
     }
 
     public void MoveCameraToPreviousRoom()

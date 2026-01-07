@@ -274,7 +274,8 @@ MonoBehaviour:
   backgroundChapter3: {fileID: 8300000, guid: e807a9e5365ef3142a87ef6c3592669a, type: 3}
   death: {fileID: 8300000, guid: d22dfbebd39ef314e8899ece4601e233, type: 3}
   levelComplete: {fileID: 8300000, guid: a82b16a944f59674e8acee31cd2d067d, type: 3}
-  roomComplete: {fileID: 0}
+  roomComplete: {fileID: 8300000, guid: f76ee110f9ae7e84699c2d19af5ee2ed, type: 3}
+  specialAbility: {fileID: 8300000, guid: 610a6784c0c8b4242b2a548b5e6e719a, type: 3}
 --- !u!1 &5839063919904450464
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,6 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0b99fe6828c7d248bbc37bdaef20c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraController
+  cameraPosCache: {x: 0, y: 0, z: 0}
   roomIndex: 1
 --- !u!1 &6930920461257140294
 GameObject:
