@@ -70,12 +70,12 @@ public class SceneController : MonoBehaviour
 
     private IEnumerator LoadMainMenu()
     {
+        ManagersRoot.instance.gameManager.SaveProgress();
         yield return UIRoot.instance.FadeOutCoroutine(sceneFadeDuration);
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(0);
         while (!asyncLoad.isDone)
             yield return null;
 
-        ManagersRoot.instance.gameManager.SaveProgress();
         UIRoot.instance.ActivateUI();
         yield return UIRoot.instance.FadeInCoroutine(sceneFadeDuration);
     }

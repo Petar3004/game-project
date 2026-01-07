@@ -24,7 +24,7 @@ public class MainMenu : MonoBehaviour
     public void NewGame()
     {
         ManagersRoot.instance.gameManager.ResetProgress();
-        ManagersRoot.instance.sceneController.GoToCutscene(10);
+        ManagersRoot.instance.sceneController.GoToCutscene(12);
     }
 
     public void Continue()
@@ -71,7 +71,7 @@ public class MainMenu : MonoBehaviour
         {
             level = 3;
         }
-        continueText.text = "Continue (" + chapter + "/" + level + ")";
+        continueText.text = "Continue (Chapter " + chapter + " / Level " + level + ")";
     }
 
     public void ChapterComplete()

@@ -6,8 +6,20 @@ public class ChapterComplete : MonoBehaviour
 
     public void Continue()
     {
-        ManagersRoot.instance.sceneController.GoToLevel(ManagersRoot.instance.gameManager.savedLevel + 1);
-        ManagersRoot.instance.gameManager.gameStarted = true;
+        int savedLevel = ManagersRoot.instance.gameManager.savedLevel;
+        switch (savedLevel)
+        {
+            case 3:
+                ManagersRoot.instance.sceneController.GoToCutscene(13);
+                break;
+            case 6:
+                ManagersRoot.instance.sceneController.GoToCutscene(14);
+                break;
+            default:
+                Debug.Log("Saved level: " + savedLevel);
+                ManagersRoot.instance.sceneController.GoToLevel(savedLevel + 1);
+                break;
+        }
         ManagersRoot.instance.gameManager.chapterComplete = false;
     }
 

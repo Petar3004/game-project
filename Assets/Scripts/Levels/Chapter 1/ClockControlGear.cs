@@ -34,6 +34,7 @@ public class ClockControlGear : MonoBehaviour
         {
             if (!playerLocked)
             {
+                ManagersRoot.instance.playerManager.Player.GetComponent<PlayerMovement>().ChangeAnimation("crouching");
                 playerMovement.LockPosition(true);
                 playerLocked = true;
                 timeLocked = Time.time;
@@ -70,7 +71,7 @@ public class ClockControlGear : MonoBehaviour
         }
         else if (xInput == 0)
         {
-            ManagersRoot.instance.playerManager.Player.GetComponent<PlayerMovement>().ChangeAnimation("idle");
+            ManagersRoot.instance.playerManager.Player.GetComponent<PlayerMovement>().ChangeAnimation("crouching");
         }
     }
 

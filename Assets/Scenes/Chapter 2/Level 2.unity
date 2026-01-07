@@ -3490,6 +3490,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1885666785}
     m_Modifications:
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.y
+      value: 17.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.y
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: standingCol
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: crouchingCol
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1729618991020324755, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_Name
       value: Horizontal Spike (10)
@@ -3557,38 +3589,6 @@ PrefabInstance:
     - target: {fileID: 8979118711498660829, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_Offset.y
       value: 10.9802
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.y
-      value: 17.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.y
-      value: 8.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: standingCol
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: crouchingCol
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
@@ -3705,6 +3705,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1496567844}
     m_Modifications:
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.y
+      value: 17.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.y
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: standingCol
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: crouchingCol
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1729618991020324755, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_Name
       value: Horizontal Spike (8)
@@ -3764,38 +3796,6 @@ PrefabInstance:
     - target: {fileID: 6926118292044494169, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_Constraints
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.y
-      value: 17.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.y
-      value: 8.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: standingCol
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: crouchingCol
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
@@ -3896,6 +3896,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1496567844}
     m_Modifications:
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.y
+      value: 17.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.y
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: standingCol
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: crouchingCol
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1729618991020324755, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_Name
       value: Horizontal Spike (1)
@@ -3947,38 +3979,6 @@ PrefabInstance:
     - target: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 269.951
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.y
-      value: 17.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.y
-      value: 8.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: standingCol
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: crouchingCol
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
@@ -5343,6 +5343,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 675259882}
     m_Modifications:
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.y
+      value: 17.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.y
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: standingCol
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: crouchingCol
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1729618991020324755, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_Name
       value: Horizontal Spike (10)
@@ -5402,38 +5434,6 @@ PrefabInstance:
     - target: {fileID: 7549093026625340650, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: leftToRight
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.y
-      value: 17.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.y
-      value: 8.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: standingCol
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: crouchingCol
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
@@ -6494,6 +6494,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1496567844}
     m_Modifications:
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.y
+      value: 17.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.y
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: standingCol
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: crouchingCol
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1729618991020324755, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_Name
       value: Horizontal Spike (6)
@@ -6545,38 +6577,6 @@ PrefabInstance:
     - target: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 269.951
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.y
-      value: 17.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.y
-      value: 8.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: standingCol
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: crouchingCol
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
@@ -6737,6 +6737,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1496567844}
     m_Modifications:
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.y
+      value: 17.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.y
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: standingCol
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: crouchingCol
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1729618991020324755, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_Name
       value: Horizontal Spike
@@ -6817,6 +6849,30 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
+--- !u!4 &644928629 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
+  m_PrefabInstance: {fileID: 644928628}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &646194498 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
+  m_PrefabInstance: {fileID: 953950409}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &658677386
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 675259882}
+    m_Modifications:
     - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
       propertyPath: m_Size.x
       value: 1
@@ -6849,30 +6905,6 @@ PrefabInstance:
       propertyPath: crouchingCol
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
---- !u!4 &644928629 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4256906535951826614, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
-  m_PrefabInstance: {fileID: 644928628}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &646194498 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8977952293376378410, guid: 6375f69a989e10f47b371411178fb47e, type: 3}
-  m_PrefabInstance: {fileID: 953950409}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &658677386
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 675259882}
-    m_Modifications:
     - target: {fileID: 1729618991020324755, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_Name
       value: Horizontal Spike (11)
@@ -6936,38 +6968,6 @@ PrefabInstance:
     - target: {fileID: 7549093026625340650, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: leftToRight
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.y
-      value: 17.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.y
-      value: 8.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: standingCol
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: crouchingCol
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
@@ -7889,6 +7889,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1885666785}
     m_Modifications:
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.y
+      value: 17.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.y
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: standingCol
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: crouchingCol
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1729618991020324755, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_Name
       value: Horizontal Spike (12)
@@ -7956,38 +7988,6 @@ PrefabInstance:
     - target: {fileID: 8979118711498660829, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_Offset.y
       value: 5.788558
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.y
-      value: 17.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.y
-      value: 8.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: standingCol
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: crouchingCol
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
@@ -8942,6 +8942,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 675259882}
     m_Modifications:
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.y
+      value: 17.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.y
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: standingCol
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: crouchingCol
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1729618991020324755, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_Name
       value: Horizontal Spike (13)
@@ -9001,38 +9033,6 @@ PrefabInstance:
     - target: {fileID: 7549093026625340650, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: leftToRight
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.y
-      value: 17.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.y
-      value: 8.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: standingCol
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: crouchingCol
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
@@ -14809,6 +14809,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1885666785}
     m_Modifications:
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.y
+      value: 17.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.y
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: standingCol
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: crouchingCol
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1729618991020324755, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_Name
       value: Horizontal Spike (11)
@@ -14876,38 +14908,6 @@ PrefabInstance:
     - target: {fileID: 8979118711498660829, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_Offset.y
       value: 8.158837
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.y
-      value: 17.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.y
-      value: 8.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: standingCol
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: crouchingCol
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
@@ -16636,6 +16636,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 675259882}
     m_Modifications:
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.y
+      value: 17.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.y
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: standingCol
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: crouchingCol
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1729618991020324755, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_Name
       value: Horizontal Spike (8)
@@ -16691,38 +16723,6 @@ PrefabInstance:
     - target: {fileID: 7549093026625340650, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: velX
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.y
-      value: 17.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.y
-      value: 8.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: standingCol
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: crouchingCol
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
@@ -17978,7 +17978,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2535912752290841145, guid: fabad9d298f42874584e142ba3454c12, type: 3}
       propertyPath: cutsceneIndex
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2535912752290841145, guid: fabad9d298f42874584e142ba3454c12, type: 3}
       propertyPath: secondsBeforeCutscene
@@ -18697,6 +18697,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1496567844}
     m_Modifications:
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.y
+      value: 17.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.y
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: standingCol
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: crouchingCol
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1729618991020324755, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_Name
       value: Horizontal Spike (4)
@@ -18756,38 +18788,6 @@ PrefabInstance:
     - target: {fileID: 7549093026625340650, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: leftToRight
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.y
-      value: 17.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.y
-      value: 8.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: standingCol
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: crouchingCol
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
@@ -19115,6 +19115,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1496567844}
     m_Modifications:
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.y
+      value: 17.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.y
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: standingCol
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: crouchingCol
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1729618991020324755, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_Name
       value: Horizontal Spike (10)
@@ -19174,38 +19206,6 @@ PrefabInstance:
     - target: {fileID: 7549093026625340650, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: leftToRight
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.y
-      value: 17.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.y
-      value: 8.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: standingCol
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: crouchingCol
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
@@ -19480,6 +19480,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1885666785}
     m_Modifications:
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.y
+      value: 17.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.y
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: standingCol
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: crouchingCol
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1729618991020324755, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_Name
       value: Horizontal Spike (13)
@@ -19547,38 +19579,6 @@ PrefabInstance:
     - target: {fileID: 8979118711498660829, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_Offset.y
       value: 3.324917
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.y
-      value: 17.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.y
-      value: 8.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: standingCol
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: crouchingCol
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
@@ -19967,6 +19967,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 675259882}
     m_Modifications:
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.y
+      value: 17.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.y
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: standingCol
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: crouchingCol
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1729618991020324755, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_Name
       value: Horizontal Spike (7)
@@ -20022,38 +20054,6 @@ PrefabInstance:
     - target: {fileID: 7549093026625340650, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: velX
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.y
-      value: 17.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.y
-      value: 8.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: standingCol
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: crouchingCol
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
@@ -20136,6 +20136,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 675259882}
     m_Modifications:
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.y
+      value: 17.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.y
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: standingCol
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: crouchingCol
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1729618991020324755, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_Name
       value: Horizontal Spike (6)
@@ -20195,38 +20227,6 @@ PrefabInstance:
     - target: {fileID: 7549093026625340650, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: velX
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.y
-      value: 17.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.y
-      value: 8.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: standingCol
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: crouchingCol
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
@@ -24188,6 +24188,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 675259882}
     m_Modifications:
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.y
+      value: 17.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Offset.y
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: standingCol
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
+      propertyPath: crouchingCol
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1729618991020324755, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_Name
       value: Horizontal Spike (9)
@@ -24259,38 +24291,6 @@ PrefabInstance:
     - target: {fileID: 8098864250683305203, guid: c3d5e628f703adc4da3a4b305a01d529, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.y
-      value: 17.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794927165259445037, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Offset.y
-      value: 8.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1817840432104532493, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: standingCol
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}
-      propertyPath: crouchingCol
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9138810825907663193, guid: 73ce4073b454e334cb78469cd333e539, type: 3}

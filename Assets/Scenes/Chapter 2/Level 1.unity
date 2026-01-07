@@ -6182,7 +6182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2535912752290841145, guid: fabad9d298f42874584e142ba3454c12, type: 3}
       propertyPath: cutsceneIndex
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2535912752290841145, guid: fabad9d298f42874584e142ba3454c12, type: 3}
       propertyPath: secondsBeforeCutscene
