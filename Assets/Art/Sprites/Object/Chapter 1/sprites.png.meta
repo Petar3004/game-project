@@ -1,12 +1,10 @@
 fileFormatVersion: 2
-guid: c87c29eb00ee740dfab94ea10ac22ffd
+guid: 610544a47186842f89b6e3596c4703b6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6426763346951136372
-    second: A high-quality 2D pixel art sand dune sprite, designed specifically at
-      a true 32-pixel resolution for a retro side-scrolling video game. The sand
-      dune is a single standalone sprite object, not a b_0
+      213: 6128299156075563123
+    second: sprites_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -102,9 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: A high-quality 2D pixel art sand dune sprite, designed specifically at
-        a true 32-pixel resolution for a retro side-scrolling video game. The sand
-        dune is a single standalone sprite object, not a b_0
+      name: sprites_0
       rect:
         serializedVersion: 2
         x: 146
@@ -119,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 474e58ea633703950800000000000000
-      internalID: 6426763346951136372
+      spriteID: 378c5330d971c0550800000000000000
+      internalID: 6128299156075563123
       vertices: []
       indices: 
       edges: []
@@ -139,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      A high-quality 2D pixel art sand dune sprite, designed specifically at a true 32-pixel resolution for a retro side-scrolling video game. The sand dune is a single standalone sprite object, not a b_0: 6426763346951136372
+      sprites_0: 6128299156075563123
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
