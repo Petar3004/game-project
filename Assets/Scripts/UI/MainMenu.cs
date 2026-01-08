@@ -71,7 +71,7 @@ public class MainMenu : MonoBehaviour
         {
             level = 3;
         }
-        continueText.text = "Continue (Chapter " + chapter + " / Level " + level + ")";
+        continueText.text = "Continue (" + chapter + "/" + level + ")";
     }
 
     public void ChapterComplete()
