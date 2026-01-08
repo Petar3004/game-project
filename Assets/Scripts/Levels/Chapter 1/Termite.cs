@@ -11,17 +11,17 @@ public enum MovementType
     FLYING
 }
 
-public enum ThermiteType
+public enum TermiteType
 {
     ENEMY,
     COLLECTABLE
 }
 
-public class Thermite : MonoBehaviour
+public class Termite : MonoBehaviour
 {
     public MovementType movementType;
-    public ThermiteType thermiteType;
-    public Rigidbody2D thermiteRb;
+    public TermiteType termiteType;
+    public Rigidbody2D termiteRb;
     public Sprite[] sprites;
     public SpriteRenderer sprite;
 
@@ -104,18 +104,18 @@ public class Thermite : MonoBehaviour
             direction = -1;
         }
 
-        thermiteRb.linearVelocity = new Vector2(2.6f * direction, 10f * yMult);
+        termiteRb.linearVelocity = new Vector2(2.6f * direction, 10f * yMult);
     }
 
     private void MoveFlying()
     {
-        thermiteRb.gravityScale = 0;
+        termiteRb.gravityScale = 0;
 
         Vector3 pos = transform.position;
         Vector3 target = flyDirection == 1 ? flyStartPos : flyEndPos;
 
         float currentSpeed = flySpeed;
-        if (thermiteType == ThermiteType.ENEMY && ManagersRoot.instance.abilityManager.abilityIsActive)
+        if (termiteType == TermiteType.ENEMY && ManagersRoot.instance.abilityManager.abilityIsActive)
         {
             currentSpeed = flySpeed * ManagersRoot.instance.abilityManager.slowTimeFactor;
         }
@@ -142,7 +142,7 @@ public class Thermite : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("PlayerObject") && thermiteType == ThermiteType.COLLECTABLE)
+        if (collision.gameObject.CompareTag("PlayerObject") && termiteType == TermiteType.COLLECTABLE)
         {
             clock.GetRiddlePiece();
             Destroy(gameObject);
@@ -156,7 +156,7 @@ public class Thermite : MonoBehaviour
 
     private void OnValidate()
     {
-        if (thermiteType == ThermiteType.COLLECTABLE)
+        if (termiteType == TermiteType.COLLECTABLE)
         {
             sprite.sprite = sprites[0];
             enemyDamage.damage = 0;

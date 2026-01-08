@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 1947147559
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8389134475083476877, guid: 333f7eeec057f4ba0ac6b5f7719d63f4, type: 3}
+  m_Sprite: {fileID: 6128299156075563123, guid: 610544a47186842f89b6e3596c4703b6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 8312922936595629903}
   - component: {fileID: 7828850898282297104}
   m_Layer: 0
-  m_Name: Thermite
+  m_Name: Termite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -171,8 +171,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   movementType: 0
-  thermiteType: 1
-  thermiteRb: {fileID: 8312922936595629903}
+  termiteType: 0
+  termiteRb: {fileID: 8312922936595629903}
   sprites:
   - {fileID: 8389134475083476877, guid: 333f7eeec057f4ba0ac6b5f7719d63f4, type: 3}
   - {fileID: 6128299156075563123, guid: 610544a47186842f89b6e3596c4703b6, type: 3}
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e809cb5bc19923e43b8ad4a2cd722e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDamage
-  damage: 0
+  damage: 1
 --- !u!50 &8312922936595629903
 Rigidbody2D:
   serializedVersion: 5
