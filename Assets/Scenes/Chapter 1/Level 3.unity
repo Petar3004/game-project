@@ -395,96 +395,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1530520131673612775, guid: f6895afc77ddf18459cf42940eaec542, type: 3}
   m_PrefabInstance: {fileID: 4185795093576577051}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &446233431
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 446233433}
-  - component: {fileID: 446233432}
-  m_Layer: 0
-  m_Name: 1_0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &446233432
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 446233431}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: -855298285791758126, guid: 915117435bb21420ba8a36ac2cfd02ee, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 11.2, y: 6.67}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &446233433
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 446233431}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -399.9723, y: -212.21927, z: 0}
-  m_LocalScale: {x: 1.1165086, y: 0.54218024, z: 0.7926878}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1853592492}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &473260945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -493,6 +403,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1791823813}
     m_Modifications:
+    - target: {fileID: 1524376167985122310, guid: f4c5183238eb22440ae9ce6a70459075, type: 3}
+      propertyPath: m_Size.y
+      value: 0.345888
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524376167985122310, guid: f4c5183238eb22440ae9ce6a70459075, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.087055996
+      objectReference: {fileID: 0}
     - target: {fileID: 57503875309017009, guid: 0bd5cc88eb6804d43afe3f845e341369, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.26
@@ -536,14 +454,6 @@ PrefabInstance:
     - target: {fileID: 7157179881305409368, guid: 0bd5cc88eb6804d43afe3f845e341369, type: 3}
       propertyPath: m_Name
       value: Wood Platform (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1524376167985122310, guid: f4c5183238eb22440ae9ce6a70459075, type: 3}
-      propertyPath: m_Size.y
-      value: 0.345888
-      objectReference: {fileID: 0}
-    - target: {fileID: 1524376167985122310, guid: f4c5183238eb22440ae9ce6a70459075, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.087055996
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -847,6 +757,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1791823813}
     m_Modifications:
+    - target: {fileID: 1524376167985122310, guid: f4c5183238eb22440ae9ce6a70459075, type: 3}
+      propertyPath: m_Size.y
+      value: 0.3458883
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524376167985122310, guid: f4c5183238eb22440ae9ce6a70459075, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.08705585
+      objectReference: {fileID: 0}
     - target: {fileID: 57503875309017009, guid: 0bd5cc88eb6804d43afe3f845e341369, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -890,14 +808,6 @@ PrefabInstance:
     - target: {fileID: 7157179881305409368, guid: 0bd5cc88eb6804d43afe3f845e341369, type: 3}
       propertyPath: m_Name
       value: Wood Platform (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1524376167985122310, guid: f4c5183238eb22440ae9ce6a70459075, type: 3}
-      propertyPath: m_Size.y
-      value: 0.3458883
-      objectReference: {fileID: 0}
-    - target: {fileID: 1524376167985122310, guid: f4c5183238eb22440ae9ce6a70459075, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.08705585
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1392,6 +1302,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1791823813}
     m_Modifications:
+    - target: {fileID: 1524376167985122310, guid: f4c5183238eb22440ae9ce6a70459075, type: 3}
+      propertyPath: m_Size.y
+      value: 0.36419943
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524376167985122310, guid: f4c5183238eb22440ae9ce6a70459075, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.077900276
+      objectReference: {fileID: 0}
     - target: {fileID: 57503875309017009, guid: 0bd5cc88eb6804d43afe3f845e341369, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.33
@@ -1435,14 +1353,6 @@ PrefabInstance:
     - target: {fileID: 7157179881305409368, guid: 0bd5cc88eb6804d43afe3f845e341369, type: 3}
       propertyPath: m_Name
       value: Wood Platform (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1524376167985122310, guid: f4c5183238eb22440ae9ce6a70459075, type: 3}
-      propertyPath: m_Size.y
-      value: 0.36419943
-      objectReference: {fileID: 0}
-    - target: {fileID: 1524376167985122310, guid: f4c5183238eb22440ae9ce6a70459075, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.077900276
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1603,7 +1513,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.26638222, y: -0.26725626, z: 14.574485, w: 5.7821517}
+  m_margin: {x: 3.5431957, y: 3.2944996, z: 12.294964, w: 3.2176893}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1996,8 +1906,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.0204, y: 6.1051}
-  m_SizeDelta: {x: 9.6874, y: 18.2913}
+  m_AnchoredPosition: {x: 1.1947, y: 7.97}
+  m_SizeDelta: {x: 15.3387, y: 2.6671}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1458415874
 Canvas:
@@ -2202,6 +2112,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1791823813}
     m_Modifications:
+    - target: {fileID: 1524376167985122310, guid: f4c5183238eb22440ae9ce6a70459075, type: 3}
+      propertyPath: m_Size.y
+      value: 0.34588775
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524376167985122310, guid: f4c5183238eb22440ae9ce6a70459075, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.087056115
+      objectReference: {fileID: 0}
     - target: {fileID: 57503875309017009, guid: 0bd5cc88eb6804d43afe3f845e341369, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.66
@@ -2245,14 +2163,6 @@ PrefabInstance:
     - target: {fileID: 7157179881305409368, guid: 0bd5cc88eb6804d43afe3f845e341369, type: 3}
       propertyPath: m_Name
       value: Wood Platform
-      objectReference: {fileID: 0}
-    - target: {fileID: 1524376167985122310, guid: f4c5183238eb22440ae9ce6a70459075, type: 3}
-      propertyPath: m_Size.y
-      value: 0.34588775
-      objectReference: {fileID: 0}
-    - target: {fileID: 1524376167985122310, guid: f4c5183238eb22440ae9ce6a70459075, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.087056115
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2687,7 +2597,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1489680542}
-  - {fileID: 446233433}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2803,6 +2712,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1791823813}
     m_Modifications:
+    - target: {fileID: 1524376167985122310, guid: f4c5183238eb22440ae9ce6a70459075, type: 3}
+      propertyPath: m_Size.y
+      value: 0.36419934
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524376167985122310, guid: f4c5183238eb22440ae9ce6a70459075, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.07790032
+      objectReference: {fileID: 0}
     - target: {fileID: 57503875309017009, guid: 0bd5cc88eb6804d43afe3f845e341369, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.7900004
@@ -2846,14 +2763,6 @@ PrefabInstance:
     - target: {fileID: 7157179881305409368, guid: 0bd5cc88eb6804d43afe3f845e341369, type: 3}
       propertyPath: m_Name
       value: Wood Platform (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1524376167985122310, guid: f4c5183238eb22440ae9ce6a70459075, type: 3}
-      propertyPath: m_Size.y
-      value: 0.36419934
-      objectReference: {fileID: 0}
-    - target: {fileID: 1524376167985122310, guid: f4c5183238eb22440ae9ce6a70459075, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.07790032
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Runtime.CompilerServices;
 using NUnit.Framework.Constraints;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public enum MovementType
@@ -21,6 +22,8 @@ public class Thermite : MonoBehaviour
     public MovementType movementType;
     public ThermiteType thermiteType;
     public Rigidbody2D thermiteRb;
+    public Sprite[] sprites;
+    public SpriteRenderer sprite;
 
     [Header("Jump")]
     public Transform groundCheckCollider;
@@ -37,6 +40,9 @@ public class Thermite : MonoBehaviour
 
     [Header("Collectable")]
     public Clock clock;
+
+    [Header("Enemy")]
+    public EnemyDamage enemyDamage;
 
     void Start()
     {
@@ -119,6 +125,18 @@ public class Thermite : MonoBehaviour
         if (transform.position == target)
         {
             flyDirection = flyDirection == 1 ? -1 : 1;
+            switch (flyDirection)
+            {
+                case 1:
+                    sprite.flipX = true;
+                    break;
+                case -1:
+                    sprite.flipX = false;
+                    break;
+                default:
+                    Debug.Log("Invalid fly diretion");
+                    break;
+            }
         }
     }
 
@@ -138,17 +156,14 @@ public class Thermite : MonoBehaviour
 
     private void OnValidate()
     {
-        SpriteRenderer sprite = GetComponent<SpriteRenderer>();
-        EnemyDamage enemyDamage = GetComponent<EnemyDamage>();
-
         if (thermiteType == ThermiteType.COLLECTABLE)
         {
-            sprite.color = Color.yellow;
+            sprite.sprite = sprites[0];
             enemyDamage.damage = 0;
         }
         else
         {
-            sprite.color = Color.red;
+            sprite.sprite = sprites[1];
             enemyDamage.damage = 1;
         }
     }
@@ -156,6 +171,14 @@ public class Thermite : MonoBehaviour
     private int PickRandomDirection()
     {
         int signPicker = Random.Range(0, 2);
+        if (signPicker == 0)
+        {
+            sprite.flipX = true;
+        }
+        else
+        {
+            sprite.flipX = false;
+        }
         return signPicker == 0 ? -1 : 1;
     }
 }
