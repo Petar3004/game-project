@@ -1,0 +1,109 @@
+using System;
+using System.Collections;
+using UnityEngine;
+
+public class ClockControlGear : MonoBehaviour
+{
+    private PlayerMovement playerMovement;
+    public Transform playerCheckCollider;
+    private Vector2 playerCheckSize = new Vector2(0.2f, 0.2f);
+    public LayerMask playerLayer;
+    public float gearOrientation = 0;
+    public GameObject clockHand;
+    public int clockFaceDivisions;
+    private bool isRotating;
+    public GameObject pivot;
+    private bool playerLocked = false;
+    public int handOrientation = 0;
+    private float timeLocked = 0f;
+
+    void Update()
+    {
+        if (ManagersRoot.instance.playerManager.Player == null)
+        {
+            return;
+        }
+
+        if (playerMovement == null)
+        {
+            playerMovement = ManagersRoot.instance.playerManager.Player.GetComponent<PlayerMovement>();
+        }
+
+        bool playerInPosition = Physics2D.OverlapBox(playerCheckCollider.position, playerCheckSize, 0, playerLayer) && playerMovement.state == MovementState.STANDING;
+        if (playerInPosition)
+        {
+            if (!playerLocked)
+            {
+                playerMovement.LockPosition(true);
+                playerLocked = true;
+                timeLocked = Time.time;
+            }
+            if (Time.time - timeLocked >= 0.5f)
+            {
+                SpinGear();
+            }
+        }
+        else
+        {
+            if (playerLocked)
+            {
+                playerMovement.LockPosition(false);
+                playerLocked = false;
+            }
+        }
+    }
+
+    private void SpinGear()
+    {
+        float xInput = 0;
+        if (!ManagersRoot.instance.pauseManager.isPaused)
+        {
+            xInput = Input.GetAxis("Horizontal");
+        }
+        gearOrientation += xInput / 10;
+        transform.rotation = Quaternion.Euler(0, 0, gearOrientation);
+        if (xInput != 0 && !isRotating)
+        {
+            ManagersRoot.instance.playerManager.Player.GetComponent<PlayerMovement>().ChangeAnimation("run");
+            int clockwise = xInput > 0 ? -1 : 1;
+            StartCoroutine(StepClockHand(clockwise));
+        }
+        else if (xInput == 0)
+        {
+            ManagersRoot.instance.playerManager.Player.GetComponent<PlayerMovement>().ChangeAnimation("idle");
+        }
+    }
+
+    private IEnumerator StepClockHand(int clockwise)
+    {
+        isRotating = true;
+
+        float stepAngle = 360f / clockFaceDivisions * clockwise;
+        float duration = 0.25f;
+        float elapsed = 0f;
+
+        float rotatedSoFar = 0f;
+
+        yield return new WaitForSecondsRealtime(0.5f);
+
+        while (elapsed < duration)
+        {
+            float delta = stepAngle / duration * Time.deltaTime;
+            rotatedSoFar += delta;
+
+            clockHand.transform.RotateAround(pivot.transform.position, Vector3.forward, delta);
+
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        float correction = stepAngle - rotatedSoFar;
+        clockHand.transform.RotateAround(pivot.transform.position, Vector3.forward, correction);
+
+        handOrientation = (int)(handOrientation + stepAngle) % 360;
+        if (handOrientation < 0) handOrientation += 360;
+
+        isRotating = false;
+    }
+}
+

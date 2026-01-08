@@ -42,6 +42,9 @@ public class UIRoot : MonoBehaviour
     public Canvas transition;
     public Image sceneFadeImage;
 
+    [Header("Cutsene")]
+    public Canvas cutscene;
+
     void Awake()
     {
         if (instance == null)
@@ -79,10 +82,12 @@ public class UIRoot : MonoBehaviour
 
     public void ActivateUI()
     {
-        bool isMainMenuOrCutscene = SceneManager.GetActiveScene().buildIndex == 0 || SceneManager.GetActiveScene().buildIndex > 6;
+        int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
+        bool isCutscene = currentLevelIndex > 9;
+        bool isMainMenu = currentLevelIndex == 0;
 
-        HUD.gameObject.SetActive(!isMainMenuOrCutscene);
-        overlay.gameObject.SetActive(!isMainMenuOrCutscene);
+        HUD.gameObject.SetActive(!isMainMenu && !isCutscene);
+        overlay.gameObject.SetActive(!isMainMenu && !isCutscene);
         pauseMenu.gameObject.SetActive(false);
         bigHintBox.SetActive(false);
         smallHintBox.SetActive(false);
@@ -159,7 +164,7 @@ public class UIRoot : MonoBehaviour
         }
         else
         {
-            abilityImage.color = ManagersRoot.instance.abilityManager.abilityToData[currentAbility].Item2;
+            abilityImage.sprite = ManagersRoot.instance.abilityManager.abilityToData[currentAbility].Item2;
         }
     }
 
@@ -223,6 +228,17 @@ public class UIRoot : MonoBehaviour
             yield return null;
             elapsedTime += Time.unscaledDeltaTime;
         }
+    }
+
+    // Cutscene
+    public void ShowCutsceneUI()
+    {
+        cutscene.gameObject.SetActive(true);
+    }
+
+    public void HideCutsceneUI()
+    {
+        cutscene.gameObject.SetActive(false);
     }
 }
 

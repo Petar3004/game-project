@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
         {
             gameStarted = true;
             ManagersRoot.instance.sceneController.GoToLevel(currentLevelIndex);
+            ManagersRoot.instance.audioManager.PlayBackgroundMusic(currentLevelIndex);
         }
 
         RetrieveProgress();
@@ -66,6 +67,7 @@ public class GameManager : MonoBehaviour
     {
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
         ManagersRoot.instance.sceneController.GoToLevel(currentLevelIndex);
+
     }
 
     public void ResetLevelParameters()
@@ -75,6 +77,7 @@ public class GameManager : MonoBehaviour
         ManagersRoot.instance.cameraController.roomIndex = 1;
         ManagersRoot.instance.abilityManager.UpdateAbility();
         ManagersRoot.instance.hintManager.HideSmallHint();
+        UIRoot.instance.UpdateAbiliyUI();
     }
 
     public void ResetProgress()

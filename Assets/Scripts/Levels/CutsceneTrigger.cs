@@ -10,7 +10,10 @@ public class CutsceneTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        StartCoroutine(LoadCutscene());
+        if (collision.CompareTag("Player"))
+        {
+            StartCoroutine(LoadCutscene());
+        }
     }
 
     IEnumerator LoadCutscene()

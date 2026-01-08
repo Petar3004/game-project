@@ -8,6 +8,7 @@ TagManager:
   - PlayerObject
   - PlayerLeft
   - PlayerRight
+  - Audio
   layers:
   - Default
   - TransparentFX
@@ -42,6 +43,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 669423485
+    locked: 0
+  - name: Decor
+    uniqueID: 1663155215
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
@@ -50,6 +57,9 @@ TagManager:
     locked: 0
   - name: Front front
     uniqueID: 1947147559
+    locked: 0
+  - name: Player
+    uniqueID: 2982439097
     locked: 0
   m_RenderingLayers:
   - Default

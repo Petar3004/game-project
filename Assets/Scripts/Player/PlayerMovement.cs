@@ -19,8 +19,8 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce = 8f;
     public float springMultiplier = 1.5f;
     private Rigidbody2D playerRb;
-    public Collider2D standingCollider;
-    public Collider2D crouchingCollider;
+    public CapsuleCollider2D standingCollider;
+    public CapsuleCollider2D crouchingCollider;
     public SpriteRenderer standingSprite;
 
     private bool isLocked = false;
@@ -34,11 +34,13 @@ public class PlayerMovement : MonoBehaviour
     const string ANIM_JUMP = "jump";
     const string ANIM_CROUCH = "crouching";
 
+    public float platformVelocityX = 0;
+
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
-        groundCheckSize = new Vector2(0.9f * standingCollider.bounds.size.x, 0.2f);
-        ceilingCheckSize = new Vector2(0.9f * standingCollider.bounds.size.x, 0.2f);
+        groundCheckSize = new Vector2(0.8f * standingCollider.bounds.size.x, 0.1f);
+        ceilingCheckSize = new Vector2(0.8f * standingCollider.bounds.size.x, 0.1f);
         wallCheckSize = new Vector2(0.05f, 0.9f * standingCollider.bounds.size.y);
         animator = GetComponent<Animator>();
     }
@@ -57,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
         HandleHorizontalMovement(xInput);
     }
 
-    void ChangeAnimation(string newAnimation)
+    public void ChangeAnimation(string newAnimation)
     {
         if (currentAnimState == newAnimation) return;
 
@@ -148,13 +150,20 @@ public class PlayerMovement : MonoBehaviour
             {
                 ChangeAnimation(ANIM_RUN);
             }
-            else
+            else if (!isLocked)
             {
                 ChangeAnimation(ANIM_IDLE);
             }
         }
 
-        playerRb.linearVelocity = new Vector2(xInput * speed, playerRb.linearVelocityY);
+        Vector2 velocity = playerRb.linearVelocity;
+
+        float targetX = xInput * speed + platformVelocityX;
+        float deltaX = targetX - playerRb.linearVelocity.x;
+
+        velocity.x += deltaX;
+        velocity.x = Mathf.Clamp(velocity.x, platformVelocityX - speed, platformVelocityX + speed);
+        playerRb.linearVelocity = velocity;
     }
 
     bool IsOnSpring()
@@ -215,7 +224,6 @@ public class PlayerMovement : MonoBehaviour
         isLocked = locked;
         if (locked)
         {
-            // Chỉ về Idle nếu CHƯA CHẾT
             if (!isDead)
             {
                 state = MovementState.STANDING;
@@ -223,6 +231,16 @@ public class PlayerMovement : MonoBehaviour
                 ChangeAnimation(ANIM_IDLE);
             }
         }
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawCube(groundCheckCollider.position, groundCheckSize);
+        Gizmos.DrawCube(wallCheckColliderLeft.position, wallCheckSize);
+        Gizmos.DrawCube(wallCheckColliderRight.position, wallCheckSize);
+        Gizmos.DrawCube(ceilingCheckCollider.position, ceilingCheckSize);
+
     }
 }
 
@@ -232,3 +250,4 @@ public enum MovementState
     CROUCHING,
     JUMPING
 }
+

@@ -13,6 +13,8 @@ public class ManagersRoot : MonoBehaviour
     public AbilityManager abilityManager;
     public PlayerManager playerManager;
     public HintManager hintManager;
+    public AudioManager audioManager;
+
 
     void Awake()
     {

@@ -20,15 +20,16 @@ public class SceneController : MonoBehaviour
         StartCoroutine(LoadLevelAndMovePlayer(currentLevelIndex - 1, fade: true));
     }
 
-    public void GoToLevelFromCutscene(int levelIndex)
+    public void GoToCutscene(int cutsceneIndex)
     {
-        StartCoroutine(LoadLevelAndMovePlayer(levelIndex, false));
-
+        StartCoroutine(LoadLevelAndMovePlayer(cutsceneIndex, fade: true));
+        ManagersRoot.instance.gameManager.gameStarted = false;
     }
 
     public void GoToLevel(int levelIndex)
     {
-        StartCoroutine(LoadLevelAndMovePlayer(levelIndex, true));
+        StartCoroutine(LoadLevelAndMovePlayer(levelIndex, fade: true));
+        ManagersRoot.instance.gameManager.gameStarted = true;
     }
 
     private IEnumerator LoadLevelAndMovePlayer(int levelIndex, bool fade)
@@ -45,7 +46,15 @@ public class SceneController : MonoBehaviour
         ManagersRoot.instance.gameManager.ResetLevelParameters();
         ManagersRoot.instance.gameManager.unlockedLevels.Add(levelIndex);
         ManagersRoot.instance.gameManager.SaveProgress();
-        ManagersRoot.instance.playerManager.SpawnPlayer(levelIndex, 0);
+        if (levelIndex <= 9)
+        {
+            ManagersRoot.instance.playerManager.SpawnPlayer(levelIndex, 0);
+        }
+        if (levelIndex == 1 || levelIndex == 4 || levelIndex == 7)
+        {
+            ManagersRoot.instance.audioManager.PlayBackgroundMusic(levelIndex);
+        }
+
         UIRoot.instance.ActivateUI();
         if (fade)
         {
