@@ -22,6 +22,11 @@ public class UIRoot : MonoBehaviour
     public float flashSpeed;
     private Coroutine flashCoroutine;
 
+    [Header("Health")]
+    public Image heart1;
+    public Image heart2;
+    public Image heart3;
+
     [Header("Abilities")]
     public TMP_Text abilityText;
     public Image abilityImage;
@@ -148,6 +153,31 @@ public class UIRoot : MonoBehaviour
             float t = Mathf.PingPong(Time.unscaledTime * flashSpeed, 1f);
             timerFill.color = Color.Lerp(Color.white, Color.yellow, t);
             yield return null;
+        }
+    }
+
+    // Health
+    public void UpdateHealthUI()
+    {
+        switch (ManagersRoot.instance.playerManager.Player.GetComponent<PlayerHealth>().currentHealth)
+        {
+            case 2:
+                heart3.gameObject.SetActive(false);
+                break;
+            case 1:
+                heart3.gameObject.SetActive(false);
+                heart2.gameObject.SetActive(false);
+                break;
+            case 0:
+                heart3.gameObject.SetActive(false);
+                heart2.gameObject.SetActive(false);
+                heart1.gameObject.SetActive(false);
+                break;
+            default:
+                heart3.gameObject.SetActive(true);
+                heart2.gameObject.SetActive(true);
+                heart1.gameObject.SetActive(true);
+                break;
         }
     }
 

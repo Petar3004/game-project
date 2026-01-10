@@ -1,10 +1,13 @@
 using UnityEngine;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class PlayerHealth : MonoBehaviour
 {
-    private int currentHealth;
+    public int currentHealth;
     public int maxHealth = 1;
+    public float invincibleTime = 2;
+    private Coroutine invincibleRoutine = null;
 
     private Animator animator;
     private bool isDead = false;
@@ -19,11 +22,10 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
-        if (isDead) return;
+        if (isDead || invincibleRoutine != null) return;
 
         currentHealth -= amount;
-
-        if (currentHealth <= 0)
+        if (currentHealth == 0)
         {
             Die();
         }
@@ -31,9 +33,23 @@ public class PlayerHealth : MonoBehaviour
         {
             if (amount > 0)
             {
+                invincibleRoutine = StartCoroutine(MakeInvincible());
                 animator.Play("damage");
             }
         }
+        UIRoot.instance.UpdateHealthUI();
+    }
+
+    private IEnumerator MakeInvincible()
+    {
+        SpriteRenderer sprite = ManagersRoot.instance.playerManager.Player.GetComponent<SpriteRenderer>();
+        Color col = sprite.color;
+        Color newCol = new Color(col.r, col.g, col.b, col.a * 0.7f);
+
+        sprite.color = newCol;
+        yield return new WaitForSeconds(invincibleTime);
+        sprite.color = col;
+        invincibleRoutine = null;
     }
 
     private void Die()

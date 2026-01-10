@@ -625,7 +625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e10a16eb38529448abb7df185902a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
-  maxHealth: 1
+  maxHealth: 3
 --- !u!212 &8647921577032531940
 SpriteRenderer:
   m_ObjectHideFlags: 0
