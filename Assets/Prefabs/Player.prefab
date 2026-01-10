@@ -415,6 +415,37 @@ CapsuleCollider2D:
   m_Offset: {x: 0.01578187, y: 0}
   m_Size: {x: 0.8724654, y: 1}
   m_Direction: 0
+--- !u!1 &4579532250580574985
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6848116049683565525}
+  m_Layer: 6
+  m_Name: Squish Check
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6848116049683565525
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4579532250580574985}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.001, y: -0.0314, z: 0}
+  m_LocalScale: {x: 0.6488, y: 0.7245, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3277553711405718484}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6686474664228449078
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,6 +574,7 @@ Transform:
   - {fileID: 8001390182788177095}
   - {fileID: 7284461937690683080}
   - {fileID: 4774374241145539829}
+  - {fileID: 6848116049683565525}
   - {fileID: 1828896654373554861}
   - {fileID: 6268845881846833338}
   - {fileID: 2354170761262080538}
@@ -592,6 +624,7 @@ MonoBehaviour:
   ceilingCheckCollider: {fileID: 8001390182788177095}
   wallCheckColliderLeft: {fileID: 7284461937690683080}
   wallCheckColliderRight: {fileID: 4774374241145539829}
+  squishCheckCollider: {fileID: 6848116049683565525}
   groundLayer:
     serializedVersion: 2
     m_Bits: 640
@@ -625,7 +658,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e10a16eb38529448abb7df185902a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  currentHealth: 0
   maxHealth: 3
+  invincibleTime: 2
 --- !u!212 &8647921577032531940
 SpriteRenderer:
   m_ObjectHideFlags: 0

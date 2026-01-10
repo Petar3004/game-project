@@ -26,7 +26,7 @@ public class PlayerHealth : MonoBehaviour
         if (isDead || invincibleRoutine != null) return;
 
         currentHealth -= amount;
-        if (currentHealth == 0)
+        if (currentHealth <= 0)
         {
             Die();
         }
@@ -35,7 +35,6 @@ public class PlayerHealth : MonoBehaviour
             if (amount > 0)
             {
                 invincibleRoutine = StartCoroutine(MakeInvincible());
-                animator.Play("damage");
             }
         }
         UIRoot.instance.UpdateHealthUI();
@@ -48,7 +47,11 @@ public class PlayerHealth : MonoBehaviour
         Color newCol = new Color(col.r, col.g, col.b, col.a * 0.7f);
 
         sprite.color = newCol;
+        animator.Play("damage");
+
         yield return new WaitForSeconds(invincibleTime);
+
+        animator.Play("idle");
         sprite.color = col;
         invincibleRoutine = null;
     }
