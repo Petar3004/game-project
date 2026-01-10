@@ -16,6 +16,7 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        UIRoot.instance.UpdateHealthUI();
         animator = GetComponent<Animator>();
         playerMovement = GetComponent<PlayerMovement>();
     }
@@ -76,25 +77,25 @@ public class PlayerHealth : MonoBehaviour
         ManagersRoot.instance.gameManager.RestartLevel();
     }
 
+    // public void Heal(int amount)
+    // {
+    //     if (isDead) return;
+    //     currentHealth += amount;
+    // }
 
-    public void Heal(int amount)
-    {
-        if (isDead) return;
-        currentHealth += amount;
-    }
+    // public void ResetHealth()
+    // {
+    //     currentHealth = maxHealth;
+    //     isDead = false;
+    //     UIRoot.instance.UpdateHealthUI();
 
-    public void ResetHealth()
-    {
-        currentHealth = maxHealth;
-        isDead = false;
-
-        if (playerMovement != null)
-        {
-            playerMovement.LockPosition(false);
-        }
-        else if (animator != null)
-        {
-            animator.Play("idle");
-        }
-    }
+    //     if (playerMovement != null)
+    //     {
+    //         playerMovement.LockPosition(false);
+    //     }
+    //     else if (animator != null)
+    //     {
+    //         animator.Play("idle");
+    //     }
+    // }
 }
