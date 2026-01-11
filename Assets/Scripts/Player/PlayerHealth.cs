@@ -44,7 +44,7 @@ public class PlayerHealth : MonoBehaviour
     {
         SpriteRenderer sprite = ManagersRoot.instance.playerManager.Player.GetComponent<SpriteRenderer>();
         Color col = sprite.color;
-        Color newCol = new Color(col.r, col.g, col.b, col.a * 0.7f);
+        Color newCol = new Color(col.r, col.g, col.b, col.a * 0.3f);
 
         sprite.color = newCol;
         animator.Play("damage");

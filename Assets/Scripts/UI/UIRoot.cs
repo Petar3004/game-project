@@ -28,7 +28,7 @@ public class UIRoot : MonoBehaviour
     public Image heart3;
 
     [Header("Abilities")]
-    public TMP_Text abilityText;
+    public Image abilityKey;
     public Image abilityImage;
 
     [Header("Hints")]
@@ -96,6 +96,12 @@ public class UIRoot : MonoBehaviour
         pauseMenu.gameObject.SetActive(false);
         bigHintBox.SetActive(false);
         smallHintBox.SetActive(false);
+    }
+
+    private Color ChangeAlpha(Image img, float alpha)
+    {
+        Color col = img.color;
+        return new Color(col.r, col.g, col.b, alpha);
     }
 
     // Pause Menu
@@ -186,9 +192,16 @@ public class UIRoot : MonoBehaviour
     public void UpdateAbiliyUI()
     {
         AbilityType currentAbility = ManagersRoot.instance.abilityManager.ability;
-        abilityImage.fillAmount = ManagersRoot.instance.abilityManager.abilityCharge;
         abilityImage.sprite = ManagersRoot.instance.abilityManager.abilityToData[currentAbility].Item2;
-        abilityText.text = ManagersRoot.instance.abilityManager.abilityToData[currentAbility].Item1;
+        abilityImage.fillAmount = ManagersRoot.instance.abilityManager.abilityCharge;
+        if (ManagersRoot.instance.abilityManager.abilityIsActive || ManagersRoot.instance.timeManager.timeLeft < ManagersRoot.instance.abilityManager.abilityTimePenalty)
+        {
+            abilityKey.color = ChangeAlpha(abilityKey, 0.2f);
+        }
+        else
+        {
+            abilityKey.color = ChangeAlpha(abilityKey, 1f);
+        }
         if (ManagersRoot.instance.timeManager.timeLeft < ManagersRoot.instance.abilityManager.abilityTimePenalty)
         {
             abilityImage.color = Color.softRed;
@@ -262,12 +275,12 @@ public class UIRoot : MonoBehaviour
     }
 
     // Cutscene
-    public void ShowCutsceneUI()
+    public void ShowSkipCutsceneText()
     {
         cutscene.gameObject.SetActive(true);
     }
 
-    public void HideCutsceneUI()
+    public void HideSkipCutsceneText()
     {
         cutscene.gameObject.SetActive(false);
     }
