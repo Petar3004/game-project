@@ -39,7 +39,7 @@ public class Termite : MonoBehaviour
     private Vector3 flyEndPos;
 
     [Header("Collectable")]
-    public Clock clock;
+    public GrandfatherClock clock;
 
     [Header("Enemy")]
     public EnemyDamage enemyDamage;

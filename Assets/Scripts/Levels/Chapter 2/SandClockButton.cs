@@ -6,7 +6,7 @@ public enum ButtonType
     RIGHT
 }
 
-public class ClockControlButton : MonoBehaviour
+public class SandClockButton : MonoBehaviour
 {
     public SandClock sandClock;
     public ButtonType buttonType;

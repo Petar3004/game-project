@@ -18,7 +18,7 @@ public class PlayerManager : MonoBehaviour
         { 6, new Vector3[] { new Vector3(26.11f, -4.38f, 0f) } },
         { 7, new Vector3[] { new Vector3(-18.23f, 17.65f, 0f), Vector3.zero, Vector3.zero } },
         { 8, new Vector3[] { Vector3.zero, Vector3.zero, Vector3.zero } },
-        { 9, new Vector3[] { Vector3.zero, Vector3.zero, Vector3.zero } }
+        { 9, new Vector3[] { new Vector3(-8.03f, -3.41f, 0f), Vector3.zero, Vector3.zero } },
     };
 
     public void SpawnPlayer(int level, int room)

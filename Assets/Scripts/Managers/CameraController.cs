@@ -15,7 +15,9 @@ public class CameraController : MonoBehaviour
         { 4, new Vector3[] { new Vector3(0, 0, -10f), new Vector3(17.81f, 0, -10f), new Vector3(9.21f, 10f, -10f) } },
         { 5, new Vector3[] { new Vector3(-17.701f, 0, -10f), new Vector3(17.81f, 0, -10f), new Vector3(9.45f, 20.3f, -10f) } },
         { 6, new Vector3[] { new Vector3(0, 0, -10f) } },
-        { 7, new Vector3[] { new Vector3(0, 0, -10f) } }
+        { 7, new Vector3[] { new Vector3(0, 0, -10f) } },
+        { 8, null },
+        { 9, new Vector3[] { new Vector3(0, 0, -10f) } },
     };
 
     public int roomIndex = 1;
@@ -36,7 +38,8 @@ public class CameraController : MonoBehaviour
         { (1, 2), 2 },
         { (5, 1), 2 },
         { (5, 2), 2 },
-        { (6, 1), 4 }
+        { (6, 1), 4 },
+        { (9, 1), 3 }
     };
 
     public void MoveCameraToNextRoom()
