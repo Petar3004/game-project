@@ -19,8 +19,6 @@ public class Electricity : MonoBehaviour
     private SpriteRenderer sprite;
     private Collider2D col;
 
-    private int damage = 1;
-
     private void Awake()
     {
         sprite = GetComponent<SpriteRenderer>();
@@ -42,22 +40,21 @@ public class Electricity : MonoBehaviour
         }
     }
 
-    /*
     private void Update()
     {
-        if (type == ElectricityType.BLUE)
-        {
-            bool disableActive =
-                ManagersRoot.instance.abilityManager.abilityIsActive &&
-                ManagersRoot.instance.abilityManager.ability == AbilityType.ELECTRICITY_DISABLE;
+        // Only BLUE electricity is affected by the ability
+        if (type != ElectricityType.BLUE)
+            return;
 
-            if (disableActive)
-                DisableElectricity();
-            else
-                EnableElectricity();
-        }
+        bool electricityDisableActive =
+            ManagersRoot.instance.abilityManager.abilityIsActive &&
+            ManagersRoot.instance.abilityManager.ability == AbilityType.ELECTRICITY_DISABLE;
+
+        if (electricityDisableActive)
+            DisableElectricity();
+        else
+            EnableElectricity();
     }
-    */
 
     private IEnumerator GreenRoutine()
     {
@@ -68,21 +65,6 @@ public class Electricity : MonoBehaviour
 
             DisableElectricity();
             yield return new WaitForSeconds(greenOffTime);
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (!sprite.enabled) return;
-
-        if (other.CompareTag("Player"))
-        {
-            ManagersRoot.instance.audioManager.PlaySFX(
-                ManagersRoot.instance.audioManager.death
-            );
-
-            other.GetComponentInChildren<PlayerHealth>().TakeDamage(damage);
-            ManagersRoot.instance.gameManager.RestartLevel();
         }
     }
 
