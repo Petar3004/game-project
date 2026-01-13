@@ -3942,7 +3942,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 973684618886353678, guid: f6895afc77ddf18459cf42940eaec542, type: 3}
       propertyPath: flyDistance
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 973684618886353678, guid: f6895afc77ddf18459cf42940eaec542, type: 3}
       propertyPath: movementType
