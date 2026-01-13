@@ -733,13 +733,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: hints.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: 'hints.Array.data[0]'
-      value: Behold the final puzzle, mortal. Electronics tend to experience bugs,
-        some fixable, others only suppressable temporarily, if you have the right
-        tools. I am sure this is familiar to you by now. Good luck.
+      value: 'Behold the final puzzle, mortal. You should be familiar with the general
+        concept by now. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: 'hints.Array.data[1]'
+      value: Electronics tend to experience bugs and this clock is no exception.
+        Collect information from the non-harmful bugs in the maze of cables and then
+        use the buttons to give your answer. Good luck.
       objectReference: {fileID: 0}
     - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: m_Size.y

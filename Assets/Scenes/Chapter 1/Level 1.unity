@@ -1126,10 +1126,6 @@ PrefabInstance:
       propertyPath: 'hints.Array.data[0]'
       value: Well that's a conveniently placed platform.
       objectReference: {fileID: 0}
-    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
-      propertyPath: secondsForSmallHint
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: m_Size.y
       value: 8.572575
@@ -2564,19 +2560,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: hints.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: 'hints.Array.data[0]'
-      value: "Hint: To move, use \u2191, \u2190, \u2193, \u2192    or W, A, S, D "
+      value: "Here is the gist. To move, jump and crouch, use \u2191, \u2190, \u2193,
+        \u2192 or W, A, S, D. Press SHIFT to use your ability: slowing down harmful
+        entities. Pay attention to the timer."
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: 'hints.Array.data[1]'
-      value: Press SHIFT to slow down objects
+      value: This is what I can give you for now, good luck.
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: 'hints.Array.data[2]'
-      value: TIMER at the top of the screen
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: 'hints.Array.data[3]'
@@ -3708,10 +3706,6 @@ PrefabInstance:
       propertyPath: 'hints.Array.data[0]'
       value: WOOOOOAAH WAIT..
       objectReference: {fileID: 0}
-    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
-      propertyPath: secondsForSmallHint
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: m_Size.y
       value: 2.2770329
@@ -4440,10 +4434,6 @@ PrefabInstance:
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: 'hints.Array.data[2]'
       value: test1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
-      propertyPath: secondsForSmallHint
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: m_Size.y
@@ -5900,10 +5890,6 @@ PrefabInstance:
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: 'hints.Array.data[0]'
       value: He said something about slowing down, right...?
-      objectReference: {fileID: 0}
-    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
-      propertyPath: secondsForSmallHint
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: m_Size.y

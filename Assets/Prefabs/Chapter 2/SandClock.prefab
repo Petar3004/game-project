@@ -518,6 +518,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3318917331953869062}
     m_Modifications:
+    - target: {fileID: 1128167824595207460, guid: 64aa9826cba39324ab4327269cac2eff, type: 3}
+      propertyPath: sandClock
+      value: 
+      objectReference: {fileID: 5738189417944934157}
+    - target: {fileID: 1128167824595207460, guid: 64aa9826cba39324ab4327269cac2eff, type: 3}
+      propertyPath: buttonType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3444694667447237515, guid: 64aa9826cba39324ab4327269cac2eff, type: 3}
       propertyPath: m_Name
       value: Sand Clock Button

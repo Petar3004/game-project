@@ -252,17 +252,17 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    // void OnDrawGizmos()
-    // {
-    //     Gizmos.color = Color.red;
-    //     Gizmos.DrawCube(groundCheckCollider.position, groundCheckSize);
-    //     Gizmos.DrawCube(wallCheckColliderLeft.position, wallCheckSize);
-    //     Gizmos.DrawCube(wallCheckColliderRight.position, wallCheckSize);
-    //     Gizmos.DrawCube(ceilingCheckCollider.position, groundCheckSize);
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawCube(groundCheckCollider.position, groundCheckSize);
+        Gizmos.DrawCube(wallCheckColliderLeft.position, wallCheckSize);
+        Gizmos.DrawCube(wallCheckColliderRight.position, wallCheckSize);
+        Gizmos.DrawCube(ceilingCheckCollider.position, groundCheckSize);
 
-    //     Gizmos.color = Color.green;
-    //     Gizmos.DrawCube(squishCheckCollider.position, groundCheckSize);
-    // }
+        Gizmos.color = Color.green;
+        Gizmos.DrawCube(squishCheckCollider.position, groundCheckSize);
+    }
 }
 
 public enum MovementState

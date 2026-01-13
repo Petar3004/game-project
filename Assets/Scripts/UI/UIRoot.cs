@@ -95,6 +95,9 @@ public class UIRoot : MonoBehaviour
 
         HUD.gameObject.SetActive(!isMainMenu && !isCutscene);
         overlay.gameObject.SetActive(!isMainMenu && !isCutscene);
+        HideContinueText();
+        HideSkipCutsceneText();
+        cutscene.gameObject.SetActive(isCutscene);
         pauseMenu.gameObject.SetActive(false);
         bigHintBox.SetActive(false);
         smallHintBox.SetActive(false);

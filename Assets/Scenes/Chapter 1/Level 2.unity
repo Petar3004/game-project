@@ -1587,10 +1587,6 @@ PrefabInstance:
       propertyPath: 'hints.Array.data[0]'
       value: Is that a termite...?
       objectReference: {fileID: 0}
-    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
-      propertyPath: secondsForSmallHint
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5082,10 +5078,6 @@ PrefabInstance:
       propertyPath: 'hints.Array.data[0]'
       value: OUCH!
       objectReference: {fileID: 0}
-    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
-      propertyPath: secondsForSmallHint
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6223,10 +6215,6 @@ PrefabInstance:
       propertyPath: 'hints.Array.data[0]'
       value: 'And a conveniently placed giant spring now? Come on... '
       objectReference: {fileID: 0}
-    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
-      propertyPath: secondsForSmallHint
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7086,10 +7074,6 @@ PrefabInstance:
       propertyPath: 'hints.Array.data[0]'
       value: Ohhhhh, I'm in a clock... Still really confusing. Only way is up, I
         guess.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
-      propertyPath: secondsForSmallHint
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: m_Size.y

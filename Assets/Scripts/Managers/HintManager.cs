@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
 using Unity.Burst.CompilerServices;
-using UnityEditor.Rendering.BuiltIn.ShaderGraph;
 using UnityEngine;
 
 public class HintManager : MonoBehaviour

@@ -776,6 +776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Cutscene
   secondsCutsene: 43.23
   nextLevel: 1
+  gameOver: 0
 --- !u!1 &217292357
 GameObject:
   m_ObjectHideFlags: 0
@@ -1242,8 +1243,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: ANOTHER *$%@&!* I'M LATE AGAIN!!!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
+  m_sharedMaterial: {fileID: 6296456812177468565, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1597,14 +1598,14 @@ MonoBehaviour:
       m_Calls: []
   m_text: Years Later...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
+  m_sharedMaterial: {fileID: 6296456812177468565, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 67108863
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1989,8 +1990,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'I will break free of it all, this is my life now. '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
+  m_sharedMaterial: {fileID: 6296456812177468565, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2775,8 +2776,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Another sleepless night of these useless studies...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
+  m_sharedMaterial: {fileID: 6296456812177468565, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3435,8 +3436,8 @@ MonoBehaviour:
   m_text: I am impressed you have reached so far, mortal. But to be truly free of
     my confines, you need to complete my trials first.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
+  m_sharedMaterial: {fileID: 6296456812177468565, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3850,8 +3851,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Trials??? What do you mea...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
+  m_sharedMaterial: {fileID: 6296456812177468565, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4131,8 +4132,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Another day wasted on this stupid job...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
+  m_sharedMaterial: {fileID: 6296456812177468565, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4421,8 +4422,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Who.. What are you?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
+  m_sharedMaterial: {fileID: 6296456812177468565, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4582,8 +4583,8 @@ MonoBehaviour:
 
     I know what I have to do.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
+  m_sharedMaterial: {fileID: 6296456812177468565, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4877,8 +4878,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: I will never fear time again.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
+  m_sharedMaterial: {fileID: 6296456812177468565, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5428,8 +5429,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: I WILL NEVER BE CHASED BY A DEADLINE!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
+  m_sharedMaterial: {fileID: 6296456812177468565, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

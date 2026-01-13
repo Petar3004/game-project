@@ -93,4 +93,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   hints: []
   type: 0
-  secondsForSmallHint: 2
+  secondsForSmallHint: 4

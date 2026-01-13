@@ -416,8 +416,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: So when the time finally comes, I am happy to be caught.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
+  m_sharedMaterial: {fileID: 6296456812177468565, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1050,8 +1050,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: But that's fine. I just need to find the balance.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
+  m_sharedMaterial: {fileID: 6296456812177468565, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1408,8 +1408,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Years Later...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
+  m_sharedMaterial: {fileID: 6296456812177468565, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1874,8 +1874,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Time will catch up to me in the end either way.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
+  m_sharedMaterial: {fileID: 6296456812177468565, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2677,8 +2677,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Maybe I can't break the chains as I imagined.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
+  m_sharedMaterial: {fileID: 6296456812177468565, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2990,8 +2990,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: It's time to go home.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
+  m_sharedMaterial: {fileID: 6296456812177468565, guid: dd2f74387ce5ad449a3a2a10e9915c08, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

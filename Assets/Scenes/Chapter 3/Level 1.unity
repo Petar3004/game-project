@@ -2556,7 +2556,7 @@ Transform:
   m_GameObject: {fileID: 655326012}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 46.05336, y: 1.5563202, z: 0}
+  m_LocalPosition: {x: 35.86093, y: 22.54732, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2564,7 +2564,7 @@ Transform:
   - {fileID: 729826967}
   - {fileID: 1816415578}
   - {fileID: 924067443}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 735579025}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &708881815
 GameObject:
@@ -2866,6 +2866,7 @@ Transform:
   - {fileID: 1952545439}
   - {fileID: 1774287563}
   - {fileID: 546008364}
+  - {fileID: 655326013}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &759012148
@@ -4201,37 +4202,6 @@ Transform:
   - {fileID: 145056898}
   m_Father: {fileID: 735579025}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1126951170
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1126951171}
-  m_Layer: 0
-  m_Name: Red Electricity (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1126951171
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1126951170}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.19243, y: -20.991, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1136273887
 GameObject:
   m_ObjectHideFlags: 0
@@ -4976,9 +4946,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: 'hints.Array.data[0]'
-      value: 'Welcome again. This is the third and final of my trials, the digital
-        clock. All these wires have been ill-maintained, perhaps an electromagnetic
-        weapon can be helpful. '
+      value: 'Welcome to the third and final of my trials, the digital clock. All
+        these wires have been ill-maintained, perhaps an electromagnetic weapon can
+        be helpful. '
       objectReference: {fileID: 0}
     - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: m_Size.y
@@ -7760,37 +7730,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8301552669221138521, guid: b00479ffacdc65e43b8055a0412bda52, type: 3}
   m_PrefabInstance: {fileID: 1878252831}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1887982801
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1887982802}
-  m_Layer: 0
-  m_Name: Blue Electricity (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1887982802
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1887982801}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.19243, y: -20.991, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1900702320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9371,6 +9310,3 @@ SceneRoots:
   - {fileID: 708881816}
   - {fileID: 735579025}
   - {fileID: 1922947281}
-  - {fileID: 1887982802}
-  - {fileID: 655326013}
-  - {fileID: 1126951171}
