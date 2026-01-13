@@ -107,6 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Bug
   type: 0
   sprite: {fileID: 31537323191304248}
+  enemyDamage: {fileID: 7831612075694471270}
   speed: 2
   cables:
   - {fileID: 0}
