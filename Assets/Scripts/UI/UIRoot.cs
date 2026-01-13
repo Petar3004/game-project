@@ -49,6 +49,8 @@ public class UIRoot : MonoBehaviour
 
     [Header("Cutsene")]
     public Canvas cutscene;
+    public TMP_Text skipText;
+    public TMP_Text continueText;
 
     void Awake()
     {
@@ -277,12 +279,22 @@ public class UIRoot : MonoBehaviour
     // Cutscene
     public void ShowSkipCutsceneText()
     {
-        cutscene.gameObject.SetActive(true);
+        skipText.gameObject.SetActive(true);
     }
 
     public void HideSkipCutsceneText()
     {
-        cutscene.gameObject.SetActive(false);
+        skipText.gameObject.SetActive(false);
+    }
+
+    public void ShowContinueText()
+    {
+        continueText.gameObject.SetActive(true);
+    }
+
+    public void HideContinueText()
+    {
+        continueText.gameObject.SetActive(false);
     }
 }
 

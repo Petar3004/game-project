@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     public float springMultiplier = 1.5f;
     private Rigidbody2D playerRb;
     public CapsuleCollider2D standingCollider;
-    public CapsuleCollider2D crouchingCollider;
+    // public CapsuleCollider2D crouchingCollider;
     public SpriteRenderer standingSprite;
 
     private bool isLocked = false;
@@ -219,8 +219,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void UpdateCollider(bool crouched)
     {
-        standingCollider.enabled = !crouched;
-        crouchingCollider.enabled = crouched;
+        if (!crouched)
+        {
+            standingCollider.size = new Vector2(1f, 0.95f);
+            standingCollider.offset = new Vector2(0f, 0f);
+        }
+        else
+        {
+            standingCollider.size = new Vector2(1f, 0.7f);
+            standingCollider.offset = new Vector2(0f, -0.12f);
+        }
     }
 
     public void TriggerDeath()
@@ -244,17 +252,17 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawCube(groundCheckCollider.position, groundCheckSize);
-        Gizmos.DrawCube(wallCheckColliderLeft.position, wallCheckSize);
-        Gizmos.DrawCube(wallCheckColliderRight.position, wallCheckSize);
-        Gizmos.DrawCube(ceilingCheckCollider.position, groundCheckSize);
+    // void OnDrawGizmos()
+    // {
+    //     Gizmos.color = Color.red;
+    //     Gizmos.DrawCube(groundCheckCollider.position, groundCheckSize);
+    //     Gizmos.DrawCube(wallCheckColliderLeft.position, wallCheckSize);
+    //     Gizmos.DrawCube(wallCheckColliderRight.position, wallCheckSize);
+    //     Gizmos.DrawCube(ceilingCheckCollider.position, groundCheckSize);
 
-        Gizmos.color = Color.green;
-        Gizmos.DrawCube(squishCheckCollider.position, groundCheckSize);
-    }
+    //     Gizmos.color = Color.green;
+    //     Gizmos.DrawCube(squishCheckCollider.position, groundCheckSize);
+    // }
 }
 
 public enum MovementState

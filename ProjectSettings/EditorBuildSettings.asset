@@ -36,6 +36,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Chapter 3/Level 3.unity
     guid: 6ef9d1acc36b76a419289a66e36b357d
   - enabled: 1
+    path: Assets/Scenes/Question.unity
+    guid: 6170a0c5720c4fb4da90023bf9c808f7
+  - enabled: 1
     path: Assets/Scenes/Cutscenes/In-game/2.1-2.2.unity
     guid: 577104f7a8280d845abc0d17ef117ce1
   - enabled: 1
@@ -47,6 +50,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cutscenes/Normal/1-2.unity
     guid: a7bcae036e2ac114f8163a35828184b6
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/Normal/2-3.unity
+    guid: ea35e88e7dc615845874ad2d7c0e4f44
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/Normal/4.unity
+    guid: 871aa020cb8b52b4998713cf2325e213
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 69f702c6578a0964da83ca6c9780174a, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

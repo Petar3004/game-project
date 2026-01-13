@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class ClockControlGear : MonoBehaviour
+public class GrandfatherClockGear : MonoBehaviour
 {
     private PlayerMovement playerMovement;
     public Transform playerCheckCollider;
