@@ -16,7 +16,7 @@ public class CameraController : MonoBehaviour
         { 5, new Vector3[] { new Vector3(-17.701f, 0, -10f), new Vector3(17.81f, 0, -10f), new Vector3(9.45f, 20.3f, -10f) } },
         { 6, new Vector3[] { new Vector3(0, 0, -10f) } },
         { 7, new Vector3[] { new Vector3(0, 0, -10f), new Vector3(17.8f, 0, -10f), new Vector3(53.05f, 0, -10f) } },
-        { 8, null },
+        { 8, new Vector3[] { new Vector3(0, 0, -10f), new Vector3(17.8f, 0, -10f), new Vector3(53.05f, 0, -10f) } },
         { 9, new Vector3[] { new Vector3(0, 0, -10f) } },
     };
 
@@ -32,7 +32,9 @@ public class CameraController : MonoBehaviour
         { (5, 3), 4 },
         { (6, 1), 2 },
         { (7, 2), 2 },
-        { (7, 3), 2 }
+        { (7, 3), 2 },
+        { (8, 2), 2 },
+        { (8, 3), 2 }
     };
     // (level, room), width
     private Dictionary<(int, int), int> longHorizontalRooms = new Dictionary<(int, int), int>
@@ -43,6 +45,8 @@ public class CameraController : MonoBehaviour
         { (6, 1), 4 },
         { (7, 2), 2 },
         { (7, 3), 2 },
+        { (8, 2), 2 },
+        { (8, 3), 2 },
         { (9, 1), 3 }
     };
 

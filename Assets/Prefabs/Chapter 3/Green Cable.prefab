@@ -157,7 +157,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5965820572404790264}
   - component: {fileID: 2028008850541368541}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Green Cable
   m_TagString: Untagged
   m_Icon: {fileID: 0}

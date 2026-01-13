@@ -1,0 +1,689 @@
+fileFormatVersion: 2
+guid: 6b83735d0cbf5b240b59d594444604b5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2161901526928920307
+    second: Electricity_transparent_0
+  - first:
+      213: -7507358902756912470
+    second: Electricity_transparent_1
+  - first:
+      213: -1962385324485612602
+    second: Electricity_transparent_2
+  - first:
+      213: 388118533457014949
+    second: Electricity_transparent_3
+  - first:
+      213: -7829450396501632448
+    second: Electricity_transparent_4
+  - first:
+      213: -6717493426668885714
+    second: Electricity_transparent_5
+  - first:
+      213: -2953368321429295
+    second: Electricity_transparent_6
+  - first:
+      213: 3204573080406004171
+    second: Electricity_transparent_7
+  - first:
+      213: -7177306977366071480
+    second: Electricity_transparent_8
+  - first:
+      213: 1614200849265853197
+    second: Electricity_transparent_9
+  - first:
+      213: 8401356979488286696
+    second: Electricity_transparent_10
+  - first:
+      213: 4046769011841126171
+    second: Electricity_transparent_11
+  - first:
+      213: 1454675215352115176
+    second: Electricity_transparent_12
+  - first:
+      213: -7490326723288343827
+    second: Electricity_transparent_13
+  - first:
+      213: 8196255585271623190
+    second: Electricity_transparent_14
+  - first:
+      213: 3640941086553146744
+    second: Electricity_transparent_15
+  - first:
+      213: 3161416301862888591
+    second: Electricity_transparent_16
+  - first:
+      213: 9115950514836767370
+    second: Electricity_transparent_17
+  - first:
+      213: 6710565269832024274
+    second: Electricity_transparent_18
+  - first:
+      213: 8200192288149869486
+    second: Electricity_transparent_19
+  - first:
+      213: 8993342205772744184
+    second: Electricity_transparent_20
+  - first:
+      213: 8137924338588327293
+    second: Electricity_transparent_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Electricity_transparent_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 307
+        width: 539
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fe09f70cfd900e10800000000000000
+      internalID: 2161901526928920307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Electricity_transparent_1
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 301
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa2dec78ad080d790800000000000000
+      internalID: -7507358902756912470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Electricity_transparent_2
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 301
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cb689dc1f434c4e0800000000000000
+      internalID: -1962385324485612602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Electricity_transparent_3
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 301
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a07375ffbfd26500800000000000000
+      internalID: 388118533457014949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Electricity_transparent_4
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 301
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04a9af9b854385390800000000000000
+      internalID: -7829450396501632448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Electricity_transparent_5
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 301
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e29216ab15ba6c2a0800000000000000
+      internalID: -6717493426668885714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Electricity_transparent_6
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 301
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d07f4a5de185fff0800000000000000
+      internalID: -2953368321429295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Electricity_transparent_7
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 250
+        width: 125
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc11162fc3ee87c20800000000000000
+      internalID: 3204573080406004171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Electricity_transparent_8
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 243
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 847a922c455156c90800000000000000
+      internalID: -7177306977366071480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Electricity_transparent_9
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 177
+        width: 550
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0300a8be1bc66610800000000000000
+      internalID: 1614200849265853197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Electricity_transparent_10
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 189
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e7e5a919ad979470800000000000000
+      internalID: 8401356979488286696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Electricity_transparent_11
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 136
+        width: 130
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1f49deb9f2092830800000000000000
+      internalID: 4046769011841126171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Electricity_transparent_12
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 161
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8efa0a2b66b003410800000000000000
+      internalID: 1454675215352115176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Electricity_transparent_13
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 130
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dea58c6d7830d0890800000000000000
+      internalID: -7490326723288343827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Electricity_transparent_14
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 128
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61e2d687703feb170800000000000000
+      internalID: 8196255585271623190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Electricity_transparent_15
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 59
+        width: 371
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8750020b0a8378230800000000000000
+      internalID: 3640941086553146744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Electricity_transparent_16
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 54
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f84aaab606b9fdb20800000000000000
+      internalID: 3161416301862888591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Electricity_transparent_17
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 53
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8282e2e1bc528e70800000000000000
+      internalID: 9115950514836767370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Electricity_transparent_18
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 54
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d0496e0f87b02d50800000000000000
+      internalID: 6710565269832024274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Electricity_transparent_19
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 54
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea31219807fecc170800000000000000
+      internalID: 8200192288149869486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Electricity_transparent_20
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 55
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f5cc9e5615cecc70800000000000000
+      internalID: 8993342205772744184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Electricity_transparent_21
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 54
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7d1092c117bfe070800000000000000
+      internalID: 8137924338588327293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Electricity_transparent_0: 2161901526928920307
+      Electricity_transparent_1: -7507358902756912470
+      Electricity_transparent_10: 8401356979488286696
+      Electricity_transparent_11: 4046769011841126171
+      Electricity_transparent_12: 1454675215352115176
+      Electricity_transparent_13: -7490326723288343827
+      Electricity_transparent_14: 8196255585271623190
+      Electricity_transparent_15: 3640941086553146744
+      Electricity_transparent_16: 3161416301862888591
+      Electricity_transparent_17: 9115950514836767370
+      Electricity_transparent_18: 6710565269832024274
+      Electricity_transparent_19: 8200192288149869486
+      Electricity_transparent_2: -1962385324485612602
+      Electricity_transparent_20: 8993342205772744184
+      Electricity_transparent_21: 8137924338588327293
+      Electricity_transparent_3: 388118533457014949
+      Electricity_transparent_4: -7829450396501632448
+      Electricity_transparent_5: -6717493426668885714
+      Electricity_transparent_6: -2953368321429295
+      Electricity_transparent_7: 3204573080406004171
+      Electricity_transparent_8: -7177306977366071480
+      Electricity_transparent_9: 1614200849265853197
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
