@@ -2,15 +2,15 @@ using TMPro;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-public class Clock : MonoBehaviour
+public class GrandfatherClock : MonoBehaviour
 {
     private string riddleStr;
     private string[] hours = { "TWELVE", "ONE", "TWO", "THREE", "FOUR", "FIVE", "SIX", "SEVEN", "EIGHT", "NINE", "TEN", "ELEVEN", };
     private string hourStr;
     private int hour;
     private int minuteSteps;
-    public ClockControlGear shortHandGear;
-    public ClockControlGear longHandGear;
+    public GrandfatherClockGear shortHandGear;
+    public GrandfatherClockGear longHandGear;
     private int hoursTargetAngle;
     private int minutesTargetAngle;
     private int numPieces = 0;

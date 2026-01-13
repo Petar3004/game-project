@@ -51,7 +51,15 @@ public class PlayerHealth : MonoBehaviour
 
         yield return new WaitForSeconds(invincibleTime);
 
-        animator.Play("idle");
+        switch (playerMovement.state)
+        {
+            case MovementState.CROUCHING:
+                animator.Play("crouching");
+                break;
+            default:
+                animator.Play("idle");
+                break;
+        }
         sprite.color = col;
         invincibleRoutine = null;
     }

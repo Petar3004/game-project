@@ -2743,7 +2743,7 @@ GameObject:
   - component: {fileID: 1714679452}
   - component: {fileID: 1714679451}
   m_Layer: 0
-  m_Name: Sequence UI
+  m_Name: Pieces UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
