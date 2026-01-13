@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9025771027599940350}
   - component: {fileID: -9168382353167647564}
   - component: {fileID: 2117123375679111242}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Blue Electricity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,8 +150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bf0941e4518ddf4bbfe67e25ef46499, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Electricity
-  red: 0
-  blue: 1
-  green: 0
+  type: 1
   greenOnTime: 3
   greenOffTime: 4

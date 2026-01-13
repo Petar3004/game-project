@@ -1124,11 +1124,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: 'hints.Array.data[0]'
-      value: 'These platforms look safe '
+      value: Well that's a conveniently placed platform.
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: secondsForSmallHint
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Size.y
+      value: 8.572575
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Offset.y
+      value: 3.7862873
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2564,21 +2572,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: 'hints.Array.data[0]'
-      value: 'Apologies for the abrupt shift. This is a challenge you are now forced
-        to face due to your consequences. Let me give you some hints to help you
-        in this challenge. '
+      value: 'Apologies for the abrupt shift. Let me give you some hints to help
+        you in this challenge. To move, jump and crouch, use the ARROW KEYS or W,
+        A, S, D. '
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: 'hints.Array.data[1]'
-      value: 'To complete the level, reach the end of the rooms and traverse the
-        doors in each clock.  To move use the arrow keys or W, A, S, D. '
+      value: To make it even easier for you mortal, I have decided to give you some
+        of my abilities. For this challenge when you press SHIFT you will slow down
+        all objects that can harm you.
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: 'hints.Array.data[2]'
-      value: "To Make this challenge easier for you mortal I\u2019ve decided to give
-        you some of my abilities. For this clock when you press shift you slow down
-        all objects around you, this ability naturally comes at a cost for such a
-        thing as a mortal. "
+      value: 'But look out for the timer at the top of the room, such a powerful
+        ability naturally comes at a cost. Traverse the three levels of this challenge
+        without perishing and we shall meet again. Good luck. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: 'hints.Array.data[3]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Size.y
+      value: 6.332168
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Offset.y
+      value: 2.666084
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3634,6 +3654,92 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 514042001023971582, guid: 1a61bbba5f1f96642bc0613f21e280b5, type: 3}
   m_PrefabInstance: {fileID: 1186078346}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1280465607
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1580047567}
+    m_Modifications:
+    - target: {fileID: 828636259221409206, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Name
+      value: Hint Trigger (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: hints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: 'hints.Array.data[0]'
+      value: WOOOOOAAH WAIT..
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: secondsForSmallHint
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Size.y
+      value: 2.2770329
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Offset.y
+      value: 6.7548265
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+--- !u!4 &1280465608 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+  m_PrefabInstance: {fileID: 1280465607}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1330985035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3959,11 +4065,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 514042001023971582, guid: 1a61bbba5f1f96642bc0613f21e280b5, type: 3}
   m_PrefabInstance: {fileID: 1558501953}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1519650211 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
-  m_PrefabInstance: {fileID: 2942219748014812070}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1536207348
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4255,6 +4356,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1991913765}
+  - {fileID: 1280465608}
   - {fileID: 1687449031}
   - {fileID: 529623085}
   - {fileID: 1956335992}
@@ -4338,7 +4441,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: 'hints.Array.data[0]'
-      value: I think it would be best if I avoid this cog
+      value: What the hell is this place... I'd better not touch these cogs.
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: 'hints.Array.data[1]'
@@ -4351,6 +4454,14 @@ PrefabInstance:
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: secondsForSmallHint
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Size.y
+      value: 8.527768
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Offset.y
+      value: 3.763883
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5736,6 +5847,92 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a61bbba5f1f96642bc0613f21e280b5, type: 3}
+--- !u!1001 &1991913764
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1580047567}
+    m_Modifications:
+    - target: {fileID: 828636259221409206, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Name
+      value: Hint Trigger (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: hints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: 'hints.Array.data[0]'
+      value: He said something about slowing down, right...?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: secondsForSmallHint
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Size.y
+      value: 8.572575
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Offset.y
+      value: 3.7862873
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+--- !u!4 &1991913765 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+  m_PrefabInstance: {fileID: 1991913764}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2019928990 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3866434621808376417, guid: a82603de6f405e04c950c2f564f46515, type: 3}
@@ -6214,7 +6411,6 @@ Transform:
   - {fileID: 976168848}
   - {fileID: 1083088817}
   - {fileID: 1609372484}
-  - {fileID: 1519650211}
   - {fileID: 274852097}
   - {fileID: 1540549754}
   - {fileID: 1574218716}
@@ -6342,91 +6538,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5398863883562780445, guid: 1b61c6c5befb09244a9d1cd1d0ad23d1, type: 3}
   m_PrefabInstance: {fileID: 3494008842095983830}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &2942219748014812070
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 357260536187398956}
-    m_Modifications:
-    - target: {fileID: 828636259221409206, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
-      propertyPath: m_Name
-      value: Hint Trigger
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7.74
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789711198628368061, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
-      propertyPath: hint
-      value: test
-      objectReference: {fileID: 0}
-    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
-      propertyPath: type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
-      propertyPath: hints.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
-      propertyPath: 'hints.Array.data[0]'
-      value: This is the door that God was talking about
-      objectReference: {fileID: 0}
-    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
-      propertyPath: 'hints.Array.data[1]'
-      value: test1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
-      propertyPath: 'hints.Array.data[2]'
-      value: test1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
-      propertyPath: secondsForSmallHint
-      value: 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
 --- !u!1001 &3494008842095983830
 PrefabInstance:
   m_ObjectHideFlags: 0

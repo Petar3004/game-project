@@ -22,8 +22,13 @@ public class UIRoot : MonoBehaviour
     public float flashSpeed;
     private Coroutine flashCoroutine;
 
+    [Header("Health")]
+    public Image heart1;
+    public Image heart2;
+    public Image heart3;
+
     [Header("Abilities")]
-    public TMP_Text abilityText;
+    public Image abilityKey;
     public Image abilityImage;
 
     [Header("Hints")]
@@ -93,6 +98,12 @@ public class UIRoot : MonoBehaviour
         smallHintBox.SetActive(false);
     }
 
+    private Color ChangeAlpha(Image img, float alpha)
+    {
+        Color col = img.color;
+        return new Color(col.r, col.g, col.b, alpha);
+    }
+
     // Pause Menu
     public void ShowPauseUI()
     {
@@ -151,14 +162,46 @@ public class UIRoot : MonoBehaviour
         }
     }
 
+    // Health
+    public void UpdateHealthUI()
+    {
+        switch (ManagersRoot.instance.playerManager.Player.GetComponent<PlayerHealth>().currentHealth)
+        {
+            case 2:
+                heart3.gameObject.SetActive(false);
+                break;
+            case 1:
+                heart3.gameObject.SetActive(false);
+                heart2.gameObject.SetActive(false);
+                break;
+            case 0:
+                heart3.gameObject.SetActive(false);
+                heart2.gameObject.SetActive(false);
+                heart1.gameObject.SetActive(false);
+                break;
+            default:
+                heart3.gameObject.SetActive(true);
+                heart2.gameObject.SetActive(true);
+                heart1.gameObject.SetActive(true);
+                break;
+        }
+    }
+
 
     // Abilities
     public void UpdateAbiliyUI()
     {
         AbilityType currentAbility = ManagersRoot.instance.abilityManager.ability;
-        abilityImage.fillAmount = ManagersRoot.instance.abilityManager.abilityCharge;
         abilityImage.sprite = ManagersRoot.instance.abilityManager.abilityToData[currentAbility].Item2;
-        abilityText.text = ManagersRoot.instance.abilityManager.abilityToData[currentAbility].Item1;
+        abilityImage.fillAmount = ManagersRoot.instance.abilityManager.abilityCharge;
+        if (ManagersRoot.instance.abilityManager.abilityIsActive || ManagersRoot.instance.timeManager.timeLeft < ManagersRoot.instance.abilityManager.abilityTimePenalty)
+        {
+            abilityKey.color = ChangeAlpha(abilityKey, 0.2f);
+        }
+        else
+        {
+            abilityKey.color = ChangeAlpha(abilityKey, 1f);
+        }
         if (ManagersRoot.instance.timeManager.timeLeft < ManagersRoot.instance.abilityManager.abilityTimePenalty)
         {
             abilityImage.color = Color.softRed;
@@ -232,12 +275,12 @@ public class UIRoot : MonoBehaviour
     }
 
     // Cutscene
-    public void ShowCutsceneUI()
+    public void ShowSkipCutsceneText()
     {
         cutscene.gameObject.SetActive(true);
     }
 
-    public void HideCutsceneUI()
+    public void HideSkipCutsceneText()
     {
         cutscene.gameObject.SetActive(false);
     }

@@ -11,7 +11,7 @@ public enum AbilityType
 {
     TIME_SLOW,
     SAND_SPEED,
-    ELECTRICITY_DISABLE
+    //ELECTRICITY_DISABLE
 }
 
 public class AbilityManager : MonoBehaviour
@@ -23,7 +23,7 @@ public class AbilityManager : MonoBehaviour
     {
         { AbilityType.TIME_SLOW, new List<int> { 1, 2, 3 } },
         { AbilityType.SAND_SPEED, new List<int> { 4, 5, 6 } },
-        { AbilityType.ELECTRICITY_DISABLE, new List<int> { 7, 8, 9 } }
+        //{ AbilityType.ELECTRICITY_DISABLE, new List<int> { 7, 8, 9 } }
     };
     public Dictionary<AbilityType, (string, Sprite)> abilityToData = new Dictionary<AbilityType, (string, Sprite)>();
 
@@ -39,6 +39,7 @@ public class AbilityManager : MonoBehaviour
     {
         abilityToData.Add(AbilityType.TIME_SLOW, ("Time Magnet", icons[0]));
         abilityToData.Add(AbilityType.SAND_SPEED, ("Quick Boots", icons[1]));
+        //abilityToData.Add(AbilityType.ELECTRICITY_DISABLE, ("Electricity Disable", icons[2]));
     }
 
     void Update()

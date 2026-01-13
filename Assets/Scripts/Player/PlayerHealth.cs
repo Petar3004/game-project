@@ -1,10 +1,13 @@
 using UnityEngine;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class PlayerHealth : MonoBehaviour
 {
-    private int currentHealth;
+    public int currentHealth;
     public int maxHealth = 1;
+    public float invincibleTime = 2;
+    private Coroutine invincibleRoutine = null;
 
     private Animator animator;
     private bool isDead = false;
@@ -13,16 +16,16 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        UIRoot.instance.UpdateHealthUI();
         animator = GetComponent<Animator>();
         playerMovement = GetComponent<PlayerMovement>();
     }
 
     public void TakeDamage(int amount)
     {
-        if (isDead) return;
+        if (isDead || invincibleRoutine != null) return;
 
         currentHealth -= amount;
-
         if (currentHealth <= 0)
         {
             Die();
@@ -31,9 +34,26 @@ public class PlayerHealth : MonoBehaviour
         {
             if (amount > 0)
             {
-                animator.Play("damage");
+                invincibleRoutine = StartCoroutine(MakeInvincible());
             }
         }
+        UIRoot.instance.UpdateHealthUI();
+    }
+
+    private IEnumerator MakeInvincible()
+    {
+        SpriteRenderer sprite = ManagersRoot.instance.playerManager.Player.GetComponent<SpriteRenderer>();
+        Color col = sprite.color;
+        Color newCol = new Color(col.r, col.g, col.b, col.a * 0.3f);
+
+        sprite.color = newCol;
+        animator.Play("damage");
+
+        yield return new WaitForSeconds(invincibleTime);
+
+        animator.Play("idle");
+        sprite.color = col;
+        invincibleRoutine = null;
     }
 
     private void Die()
@@ -60,25 +80,25 @@ public class PlayerHealth : MonoBehaviour
         ManagersRoot.instance.gameManager.RestartLevel();
     }
 
+    // public void Heal(int amount)
+    // {
+    //     if (isDead) return;
+    //     currentHealth += amount;
+    // }
 
-    public void Heal(int amount)
-    {
-        if (isDead) return;
-        currentHealth += amount;
-    }
+    // public void ResetHealth()
+    // {
+    //     currentHealth = maxHealth;
+    //     isDead = false;
+    //     UIRoot.instance.UpdateHealthUI();
 
-    public void ResetHealth()
-    {
-        currentHealth = maxHealth;
-        isDead = false;
-
-        if (playerMovement != null)
-        {
-            playerMovement.LockPosition(false);
-        }
-        else if (animator != null)
-        {
-            animator.Play("idle");
-        }
-    }
+    //     if (playerMovement != null)
+    //     {
+    //         playerMovement.LockPosition(false);
+    //     }
+    //     else if (animator != null)
+    //     {
+    //         animator.Play("idle");
+    //     }
+    // }
 }

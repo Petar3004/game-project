@@ -69,6 +69,8 @@ public class SandRising : MonoBehaviour
 
         // Texture scroll
         sandMat.mainTextureOffset += new Vector2(0, Time.deltaTime * 0.1f);
+
+
     }
 
     public IEnumerator StartRising()

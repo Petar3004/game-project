@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1789711198628368061}
-  - component: {fileID: 2306363958718135110}
+  - component: {fileID: 5552148814190102354}
   - component: {fileID: 2914549539511308616}
   m_Layer: 0
   m_Name: Hint Trigger
@@ -33,8 +33,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &2306363958718135110
-CircleCollider2D:
+--- !u!61 &5552148814190102354
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -68,7 +68,17 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!114 &2914549539511308616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,4 +91,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51f9a9a52fc6d90459bf8f598cd8615b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  hint: 
+  hints: []
+  type: 0
+  secondsForSmallHint: 0
