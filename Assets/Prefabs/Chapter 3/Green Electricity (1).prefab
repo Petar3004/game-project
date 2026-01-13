@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 9015834756783313136}
   - component: {fileID: 4515664980839804352}
   - component: {fileID: 5132706026936647820}
-  m_Layer: 0
+  - component: {fileID: 4878367122601455832}
+  m_Layer: 7
   m_Name: Green Electricity (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,8 +151,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bf0941e4518ddf4bbfe67e25ef46499, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Electricity
-  red: 0
-  blue: 0
-  green: 1
+  type: 2
   greenOnTime: 3
   greenOffTime: 4
+--- !u!114 &4878367122601455832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8919357176084524716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e809cb5bc19923e43b8ad4a2cd722e67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyDamage
+  damage: 1

@@ -39,10 +39,6 @@ public class Clock : MonoBehaviour
         {
             portal.SetActive(true);
         }
-        else
-        {
-            portal.SetActive(false);
-        }
     }
 
     void RandomizeRiddle()

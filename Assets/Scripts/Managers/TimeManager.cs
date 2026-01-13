@@ -21,6 +21,11 @@ public class TimeManager : MonoBehaviour
 
     void Update()
     {
+        if (!ManagersRoot.instance.gameManager.gameStarted)
+        {
+            return;
+        }
+
         if (timeLeft > 0)
         {
             timeLeft -= Time.deltaTime;

@@ -3,12 +3,12 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Vector2 groundCheckSize;
-    private Vector2 ceilingCheckSize;
     private Vector2 wallCheckSize;
     public Transform groundCheckCollider;
     public Transform ceilingCheckCollider;
     public Transform wallCheckColliderLeft;
     public Transform wallCheckColliderRight;
+    public Transform squishCheckCollider;
     public LayerMask groundLayer;
     public LayerMask springLayer;
     public LayerMask slowGroundLayer;
@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isLocked = false;
     private Animator animator;
+    private PlayerHealth playerHealth;
 
     private string currentAnimState;
     private bool isDead = false;
@@ -40,14 +41,19 @@ public class PlayerMovement : MonoBehaviour
     {
         playerRb = GetComponent<Rigidbody2D>();
         groundCheckSize = new Vector2(0.8f * standingCollider.bounds.size.x, 0.1f);
-        ceilingCheckSize = new Vector2(0.8f * standingCollider.bounds.size.x, 0.1f);
         wallCheckSize = new Vector2(0.05f, 0.9f * standingCollider.bounds.size.y);
         animator = GetComponent<Animator>();
+        playerHealth = GetComponent<PlayerHealth>();
     }
 
     void Update()
     {
         if (isDead) return;
+
+        if (IsSquished())
+        {
+            playerHealth.TakeDamage(3);
+        }
 
         float xInput = 0;
         if (!ManagersRoot.instance.pauseManager.isPaused)
@@ -122,7 +128,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void HandleHorizontalMovement(float xInput)
+    private void HandleHorizontalMovement(float xInput)
     {
         float speed = moveSpeed;
         if (state == MovementState.CROUCHING || IsSlowed())
@@ -166,27 +172,32 @@ public class PlayerMovement : MonoBehaviour
         playerRb.linearVelocity = velocity;
     }
 
-    bool IsOnSpring()
+    private bool IsSquished()
+    {
+        return Physics2D.OverlapBox(squishCheckCollider.position, groundCheckSize, 0, slowGroundLayer) && Physics2D.OverlapBox(ceilingCheckCollider.position, groundCheckSize, 0, groundLayer);
+    }
+
+    private bool IsOnSpring()
     {
         return Physics2D.OverlapBox(groundCheckCollider.position, groundCheckSize, 0, springLayer);
     }
 
-    bool IsGrounded()
+    private bool IsGrounded()
     {
         return Physics2D.OverlapBox(groundCheckCollider.position, groundCheckSize, 0, groundLayer);
     }
 
-    bool IsSlowed()
+    private bool IsSlowed()
     {
         return Physics2D.OverlapBox(groundCheckCollider.position, groundCheckSize, 0, slowGroundLayer) && !(ManagersRoot.instance.abilityManager.abilityIsActive && ManagersRoot.instance.abilityManager.ability == AbilityType.SAND_SPEED);
     }
 
-    bool IsStuck()
+    private bool IsStuck()
     {
-        return Physics2D.OverlapBox(ceilingCheckCollider.position, ceilingCheckSize, 0, groundLayer);
+        return Physics2D.OverlapBox(ceilingCheckCollider.position, groundCheckSize, 0, groundLayer);
     }
 
-    int IsOnWall()
+    private int IsOnWall()
     {
         if ((Physics2D.OverlapBox(wallCheckColliderLeft.position, wallCheckSize, 0, wallLayer)
         || Physics2D.OverlapBox(wallCheckColliderLeft.position, wallCheckSize, 0, groundLayer))
@@ -206,7 +217,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void UpdateCollider(bool crouched)
+    private void UpdateCollider(bool crouched)
     {
         standingCollider.enabled = !crouched;
         crouchingCollider.enabled = crouched;
@@ -239,8 +250,10 @@ public class PlayerMovement : MonoBehaviour
         Gizmos.DrawCube(groundCheckCollider.position, groundCheckSize);
         Gizmos.DrawCube(wallCheckColliderLeft.position, wallCheckSize);
         Gizmos.DrawCube(wallCheckColliderRight.position, wallCheckSize);
-        Gizmos.DrawCube(ceilingCheckCollider.position, ceilingCheckSize);
+        Gizmos.DrawCube(ceilingCheckCollider.position, groundCheckSize);
 
+        Gizmos.color = Color.green;
+        Gizmos.DrawCube(squishCheckCollider.position, groundCheckSize);
     }
 }
 

@@ -14,7 +14,7 @@ public class Cutscene : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Mouse0))
         {
             if (confirmRoutine == null)
             {
@@ -23,7 +23,7 @@ public class Cutscene : MonoBehaviour
             else
             {
                 StopAllCoroutines();
-                UIRoot.instance.HideCutsceneUI();
+                UIRoot.instance.HideSkipCutsceneText();
                 ManagersRoot.instance.sceneController.GoToLevel(nextLevel);
             }
         }
@@ -37,9 +37,9 @@ public class Cutscene : MonoBehaviour
 
     private IEnumerator ConfirmSkip()
     {
-        UIRoot.instance.ShowCutsceneUI();
+        UIRoot.instance.ShowSkipCutsceneText();
         yield return new WaitForSecondsRealtime(3);
-        UIRoot.instance.HideCutsceneUI();
+        UIRoot.instance.ShowSkipCutsceneText();
         confirmRoutine = null;
     }
 }

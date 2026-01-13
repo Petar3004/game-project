@@ -1,20 +1,23 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+public enum ElectricityType
+{
+    RED,
+    BLUE,
+    GREEN
+}
+
 public class Electricity : MonoBehaviour
 {
-    public bool red;
-    public bool blue;
-    public bool green;
+    public ElectricityType type;
 
+    [Header("Green Settings")]
     public float greenOnTime = 3f;
     public float greenOffTime = 4f;
 
     private SpriteRenderer sprite;
     private Collider2D col;
-
-    private int damage = 1;
-    private bool disabledByPlayer = false;
 
     private void Awake()
     {
@@ -24,14 +27,33 @@ public class Electricity : MonoBehaviour
 
     private void Start()
     {
-        if (green)
+        switch (type)
         {
-            StartCoroutine(GreenRoutine());
+            case ElectricityType.GREEN:
+                StartCoroutine(GreenRoutine());
+                break;
+
+            case ElectricityType.RED:
+            case ElectricityType.BLUE:
+                EnableElectricity();
+                break;
         }
+    }
+
+    private void Update()
+    {
+        // Only BLUE electricity is affected by the ability
+        if (type != ElectricityType.BLUE)
+            return;
+
+        bool electricityDisableActive =
+            ManagersRoot.instance.abilityManager.abilityIsActive &&
+            ManagersRoot.instance.abilityManager.ability == AbilityType.ELECTRICITY_DISABLE;
+
+        if (electricityDisableActive)
+            DisableElectricity();
         else
-        {
             EnableElectricity();
-        }
     }
 
     private IEnumerator GreenRoutine()
@@ -43,29 +65,6 @@ public class Electricity : MonoBehaviour
 
             DisableElectricity();
             yield return new WaitForSeconds(greenOffTime);
-        }
-    }
-
-    private void OnMouseDown()
-    {
-        if (!blue || disabledByPlayer) return;
-
-        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
-        {
-            DisableElectricity();
-            disabledByPlayer = true;
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (!sprite.enabled) return;
-
-        if (other.CompareTag("PlayerObject") && (red || green))
-        {
-            ManagersRoot.instance.gameManager.RestartLevel();
-            ManagersRoot.instance.audioManager.PlaySFX(ManagersRoot.instance.audioManager.death);
-            other.GetComponentInChildren<PlayerHealth>().TakeDamage(damage);
         }
     }
 

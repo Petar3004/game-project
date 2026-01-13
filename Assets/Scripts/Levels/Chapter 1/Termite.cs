@@ -1,0 +1,184 @@
+using System.Collections;
+using System.Runtime.CompilerServices;
+using NUnit.Framework.Constraints;
+using Unity.VisualScripting;
+using UnityEngine;
+
+public enum MovementType
+{
+    STATIC,
+    JUMPING,
+    FLYING
+}
+
+public enum TermiteType
+{
+    ENEMY,
+    COLLECTABLE
+}
+
+public class Termite : MonoBehaviour
+{
+    public MovementType movementType;
+    public TermiteType termiteType;
+    public Rigidbody2D termiteRb;
+    public Sprite[] sprites;
+    public SpriteRenderer sprite;
+
+    [Header("Jump")]
+    public Transform groundCheckCollider;
+    public LayerMask groundLayer;
+    private float groundCheckRadius = 0.2f;
+    private Coroutine jumpRoutine;
+
+    [Header("Fly")]
+    public float flyDistance = 10;
+    public float flySpeed = -1;
+    private int flyDirection;
+    private Vector3 flyStartPos;
+    private Vector3 flyEndPos;
+
+    [Header("Collectable")]
+    public Clock clock;
+
+    [Header("Enemy")]
+    public EnemyDamage enemyDamage;
+
+    void Start()
+    {
+        if (movementType == MovementType.FLYING)
+        {
+            flyStartPos = transform.position;
+            flyEndPos = new Vector3(flyStartPos.x + flyDistance, flyStartPos.y, flyStartPos.z);
+            if (flySpeed == -1)
+            {
+                flySpeed = Random.Range(3f, 8f);
+            }
+        }
+    }
+
+    void Update()
+    {
+        switch (movementType)
+        {
+            case MovementType.STATIC:
+                break;
+            case MovementType.JUMPING:
+                if (jumpRoutine == null)
+                {
+                    jumpRoutine = StartCoroutine(MoveJumping());
+                }
+                break;
+            case MovementType.FLYING:
+                MoveFlying();
+                break;
+        }
+    }
+
+    IEnumerator MoveJumping()
+    {
+        while (true)
+        {
+            yield return new WaitUntil(IsGrounded);
+            float waitTime = Random.Range(0.5f, 2f);
+            yield return new WaitForSecondsRealtime(waitTime);
+            JumpOnce();
+            yield return new WaitForSecondsRealtime(0.1f);
+        }
+    }
+
+    void JumpOnce()
+    {
+        int direction = PickRandomDirection();
+        float yMult = 1f;
+        if (transform.position.y > 7)
+        {
+            yMult = 0.5f;
+        }
+        if (IsGrounded() && transform.position.x < -7.5f)
+        {
+            direction = 1;
+        }
+        else if (IsGrounded() && transform.position.y > 7.5f)
+        {
+            direction = -1;
+        }
+
+        termiteRb.linearVelocity = new Vector2(2.6f * direction, 10f * yMult);
+    }
+
+    private void MoveFlying()
+    {
+        termiteRb.gravityScale = 0;
+
+        Vector3 pos = transform.position;
+        Vector3 target = flyDirection == 1 ? flyStartPos : flyEndPos;
+
+        float currentSpeed = flySpeed;
+        if (termiteType == TermiteType.ENEMY && ManagersRoot.instance.abilityManager.abilityIsActive)
+        {
+            currentSpeed = flySpeed * ManagersRoot.instance.abilityManager.slowTimeFactor;
+        }
+
+        transform.position = Vector3.MoveTowards(pos, target, currentSpeed * Time.deltaTime);
+
+        if (transform.position == target)
+        {
+            flyDirection = flyDirection == 1 ? -1 : 1;
+            switch (flyDirection)
+            {
+                case 1:
+                    sprite.flipX = true;
+                    break;
+                case -1:
+                    sprite.flipX = false;
+                    break;
+                default:
+                    Debug.Log("Invalid fly diretion");
+                    break;
+            }
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("PlayerObject") && termiteType == TermiteType.COLLECTABLE)
+        {
+            clock.GetRiddlePiece();
+            Destroy(gameObject);
+        }
+    }
+
+    bool IsGrounded()
+    {
+        return Physics2D.OverlapCircle(groundCheckCollider.position, groundCheckRadius, groundLayer);
+    }
+
+    private void OnValidate()
+    {
+        if (termiteType == TermiteType.COLLECTABLE)
+        {
+            sprite.sprite = sprites[0];
+            enemyDamage.damage = 0;
+        }
+        else
+        {
+            sprite.sprite = sprites[1];
+            enemyDamage.damage = 1;
+        }
+    }
+
+    private int PickRandomDirection()
+    {
+        int signPicker = Random.Range(0, 2);
+        if (signPicker == 0)
+        {
+            sprite.flipX = true;
+        }
+        else
+        {
+            sprite.flipX = false;
+        }
+        return signPicker == 0 ? -1 : 1;
+    }
+}

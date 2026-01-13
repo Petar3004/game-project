@@ -25,6 +25,7 @@ public class AbilityManager : MonoBehaviour
         { AbilityType.SAND_SPEED, new List<int> { 4, 5, 6 } },
         { AbilityType.ELECTRICITY_DISABLE, new List<int> { 7, 8, 9 } }
     };
+
     public Dictionary<AbilityType, (string, Sprite)> abilityToData = new Dictionary<AbilityType, (string, Sprite)>();
 
     public float abilityDuration = 5f;
@@ -39,6 +40,7 @@ public class AbilityManager : MonoBehaviour
     {
         abilityToData.Add(AbilityType.TIME_SLOW, ("Time Magnet", icons[0]));
         abilityToData.Add(AbilityType.SAND_SPEED, ("Quick Boots", icons[1]));
+        abilityToData.Add(AbilityType.ELECTRICITY_DISABLE, ("Electricity Disable", icons[1]));
     }
 
     void Update()
