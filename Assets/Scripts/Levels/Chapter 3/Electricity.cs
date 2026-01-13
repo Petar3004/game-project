@@ -10,6 +10,9 @@ public enum ElectricityType
 
 public class Electricity : MonoBehaviour
 {
+    public float interval = 1f;
+    private float timer;
+
     public ElectricityType type;
 
     [Header("Green Settings")]
@@ -42,6 +45,14 @@ public class Electricity : MonoBehaviour
 
     private void Update()
     {
+        timer += Time.deltaTime;
+
+        if (timer >= interval)
+        {
+            sprite.flipY = !sprite.flipY;
+            timer = 0f;
+        }
+
         // Only BLUE electricity is affected by the ability
         if (type != ElectricityType.BLUE)
             return;

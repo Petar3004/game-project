@@ -154,6 +154,11 @@ public class UIRoot : MonoBehaviour
         }
     }
 
+    public void UpdateMaxTimerUI(float value)
+    {
+        timerSlider.maxValue = value;
+    }
+
     private IEnumerator FlashSlider()
     {
         while (true)

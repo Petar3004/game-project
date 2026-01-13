@@ -105,6 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bf0941e4518ddf4bbfe67e25ef46499, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Electricity
+  interval: 0.5
   type: 0
   greenOnTime: 3
   greenOffTime: 4

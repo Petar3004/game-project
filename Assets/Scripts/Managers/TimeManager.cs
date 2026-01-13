@@ -4,19 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TimeManager : MonoBehaviour
 {
     [Header("Timer settings")]
     public float maxTime = 60f;
+    public float maxTimePuzzle = 80f;
     public float timeLeft;
-    public Text timerText;
-    public Slider timerSlider;
 
     void Start()
     {
+        if (SceneManager.GetActiveScene().buildIndex % 3 == 0 && ManagersRoot.instance.gameManager.gameStarted)
+        {
+            maxTime = maxTimePuzzle;
+        }
         timeLeft = maxTime;
+        UIRoot.instance.UpdateMaxTimerUI(maxTime);
     }
 
     void Update()

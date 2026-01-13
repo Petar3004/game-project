@@ -2,7 +2,7 @@
 
 [RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlatformChapter3 : MonoBehaviour
+public class DigitalPlatform : MonoBehaviour
 {
     [Header("Movement Toggle")]
     public bool moving = false;

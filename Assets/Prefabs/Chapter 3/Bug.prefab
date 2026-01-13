@@ -53,6 +53,7 @@ MonoBehaviour:
   - {fileID: -3367932149377307684, guid: 99b0d30e73a37274e9546ad2827d2a4f, type: 3}
   - {fileID: -6250876770287544918, guid: 6ce60a08544572b41aaf19a51f433dfb, type: 3}
   enemyDamage: {fileID: 7831612075694471270}
+  col: {fileID: 1494170299227669709}
   speed: 2
   cables:
   - {fileID: 0}

@@ -91,7 +91,7 @@ public class Bug : MonoBehaviour
                 SwitchToNextSegment();
             }
 
-            if (ManagersRoot.instance.abilityManager.abilityIsActive)
+            if (ManagersRoot.instance.abilityManager.abilityIsActive && fadeRoutine != null)
             {
                 StopCoroutine(fadeRoutine);
                 enemyDamage.damage = 0;
@@ -140,11 +140,11 @@ public class Bug : MonoBehaviour
         }
         else
         {
-            StartCoroutine(TeleportRoutine());
+            StartCoroutine(WaitAndTeleport());
         }
     }
 
-    IEnumerator FadeSprite(float startAlpha, float endAlpha, float duration)
+    private IEnumerator FadeSprite(float startAlpha, float endAlpha, float duration)
     {
         float elapsed = 0f;
         Color color = sprite.color;
@@ -161,7 +161,7 @@ public class Bug : MonoBehaviour
         enemyDamage.damage = 1;
     }
 
-    private IEnumerator TeleportRoutine()
+    private IEnumerator WaitAndTeleport()
     {
         isWaiting = true;
         enemyDamage.damage = 0;

@@ -13,6 +13,7 @@ public class ChaptersMenu : MonoBehaviour
     public TMP_Text chapter;
     public TMP_Text level;
     public GameObject main;
+    public Button startButton;
     // public GameObject[] clocks;
     // private GameObject currentClock;
     // public Image[] clock1Overlays;
@@ -30,6 +31,19 @@ public class ChaptersMenu : MonoBehaviour
 
         // ChangeImage();
         // ChangeOverlays();
+    }
+
+    void Update()
+    {
+        int level = (currentChapter - 1) * 3 + currentLevel;
+        if (!ManagersRoot.instance.gameManager.unlockedLevels.Contains(level))
+        {
+            startButton.interactable = false;
+        }
+        else
+        {
+            startButton.interactable = true;
+        }
     }
 
     public void NextChapter()
@@ -85,11 +99,6 @@ public class ChaptersMenu : MonoBehaviour
     public void PlayLevel()
     {
         int level = (currentChapter - 1) * 3 + currentLevel;
-        if (!ManagersRoot.instance.gameManager.unlockedLevels.Contains(level))
-        {
-            Debug.Log("Level not unlocked.");
-            return;
-        }
         ManagersRoot.instance.sceneController.GoToLevel(level);
         ManagersRoot.instance.gameManager.gameStarted = true;
     }
