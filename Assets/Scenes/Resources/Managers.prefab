@@ -268,10 +268,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   musicSource: {fileID: 2913944176153298610}
-  SFXSource: {fileID: 5900452089870394907}
-  backgroundChapter1: {fileID: 8300000, guid: 70b5ed0c68218e54da302199d0ce5dd5, type: 3}
-  backgroundChapter2: {fileID: 8300000, guid: 06bf5a47ef9d4cd42a481c998bd4502e, type: 3}
-  backgroundChapter3: {fileID: 8300000, guid: e807a9e5365ef3142a87ef6c3592669a, type: 3}
+  sfxSource: {fileID: 5900452089870394907}
+  chapter1Music: {fileID: 8300000, guid: 10ee2ad793eee0041870c1e911654507, type: 3}
+  chapter2Music: {fileID: 8300000, guid: 06bf5a47ef9d4cd42a481c998bd4502e, type: 3}
+  chapter3Music: {fileID: 8300000, guid: e807a9e5365ef3142a87ef6c3592669a, type: 3}
   death: {fileID: 8300000, guid: d22dfbebd39ef314e8899ece4601e233, type: 3}
   levelComplete: {fileID: 8300000, guid: a82b16a944f59674e8acee31cd2d067d, type: 3}
   roomComplete: {fileID: 8300000, guid: f76ee110f9ae7e84699c2d19af5ee2ed, type: 3}

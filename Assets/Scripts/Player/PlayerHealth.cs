@@ -69,6 +69,8 @@ public class PlayerHealth : MonoBehaviour
         isDead = true;
         currentHealth = 0;
 
+        ManagersRoot.instance.audioManager.RestartMusic();
+
         if (playerMovement != null)
         {
             playerMovement.TriggerDeath();

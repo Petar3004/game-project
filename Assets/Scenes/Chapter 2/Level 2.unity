@@ -1785,11 +1785,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5076630171481679368, guid: 7a417ef6a7ab00e48bdf4c33c631fdb6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.43
+      value: -8.56
       objectReference: {fileID: 0}
     - target: {fileID: 5076630171481679368, guid: 7a417ef6a7ab00e48bdf4c33c631fdb6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.22
+      value: 7.23
       objectReference: {fileID: 0}
     - target: {fileID: 5076630171481679368, guid: 7a417ef6a7ab00e48bdf4c33c631fdb6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12065,6 +12065,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1357364680}
     m_Modifications:
+    - target: {fileID: 1922615325644952490, guid: 5f295270cc33d0c48b581e632a2ce618, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.07058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 1922615325644952490, guid: 5f295270cc33d0c48b581e632a2ce618, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.45882356
+      objectReference: {fileID: 0}
+    - target: {fileID: 1922615325644952490, guid: 5f295270cc33d0c48b581e632a2ce618, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.64705884
+      objectReference: {fileID: 0}
     - target: {fileID: 4562375249901586998, guid: 5f295270cc33d0c48b581e632a2ce618, type: 3}
       propertyPath: m_Name
       value: Particle System
@@ -13461,6 +13473,22 @@ PrefabInstance:
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: secondsForSmallHint
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Size.x
+      value: 2.0856562
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Size.y
+      value: 2.7680664
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.10856581
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.41875458
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19000,6 +19028,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 497269670}
     m_Modifications:
+    - target: {fileID: 1922615325644952490, guid: 5f295270cc33d0c48b581e632a2ce618, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.058823533
+      objectReference: {fileID: 0}
+    - target: {fileID: 1922615325644952490, guid: 5f295270cc33d0c48b581e632a2ce618, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.4156863
+      objectReference: {fileID: 0}
+    - target: {fileID: 1922615325644952490, guid: 5f295270cc33d0c48b581e632a2ce618, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.627451
+      objectReference: {fileID: 0}
     - target: {fileID: 4562375249901586998, guid: 5f295270cc33d0c48b581e632a2ce618, type: 3}
       propertyPath: m_Name
       value: Particle System
@@ -25331,6 +25371,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 611655878}
     m_Modifications:
+    - target: {fileID: 1922615325644952490, guid: 5f295270cc33d0c48b581e632a2ce618, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.07450981
+      objectReference: {fileID: 0}
+    - target: {fileID: 1922615325644952490, guid: 5f295270cc33d0c48b581e632a2ce618, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.4666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 1922615325644952490, guid: 5f295270cc33d0c48b581e632a2ce618, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.65882355
+      objectReference: {fileID: 0}
     - target: {fileID: 4562375249901586998, guid: 5f295270cc33d0c48b581e632a2ce618, type: 3}
       propertyPath: m_Name
       value: Particle System

@@ -12,6 +12,7 @@ public class Cutscene : MonoBehaviour
     void Start()
     {
         cutsceneRunning = true;
+        ManagersRoot.instance.audioManager.StopMusic();
         StartCoroutine(PlayCutscene(secondsCutsene));
     }
 

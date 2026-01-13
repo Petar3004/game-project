@@ -282,6 +282,14 @@ PrefabInstance:
       propertyPath: secondsForSmallHint
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Size.y
+      value: 6.8216825
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Offset.y
+      value: 2.9108407
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -794,9 +802,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 669423485
+  m_SortingLayer: -2
+  m_SortingOrder: 1
   m_Sprite: {fileID: -3233298923418379122, guid: f7424039d42fe4529bbdff99e6dfd153, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2003,6 +2011,14 @@ PrefabInstance:
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: secondsForSmallHint
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Size.y
+      value: 7.958536
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Offset.y
+      value: 3.479268
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3722,11 +3738,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: 'hints.Array.data[0]'
-      value: 'Those poison fangs are bad news '
+      value: 'Glass shards and sharp stones: bad news!'
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: secondsForSmallHint
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Size.y
+      value: 6.2390385
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Offset.y
+      value: 2.6195192
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4580,8 +4604,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 669423485
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: -3233298923418379122, guid: f7424039d42fe4529bbdff99e6dfd153, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4982,11 +5006,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: 'hints.Array.data[0]'
-      value: 'Oh, wow these platforms fall if I stand on them for too long '
+      value: Disappearing Platforms???
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: secondsForSmallHint
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Size.y
+      value: 3.5673378
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Offset.y
+      value: 1.2836689
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5414,6 +5446,22 @@ PrefabInstance:
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: secondsForSmallHint
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Size.x
+      value: 1.7882681
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Size.y
+      value: 2.957079
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.20386171
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.43490696
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

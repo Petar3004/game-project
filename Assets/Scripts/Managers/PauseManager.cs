@@ -13,6 +13,9 @@ public class PauseManager : MonoBehaviour
         }
         isPaused = true;
         Time.timeScale = 0f;
+
+        ManagersRoot.instance.audioManager.PauseMusic();
+
         if (showPauseScreen)
         {
             UIRoot.instance.ShowPauseUI();
@@ -25,6 +28,8 @@ public class PauseManager : MonoBehaviour
         Time.timeScale = 1f;
         UIRoot.instance.HidePauseUI();
 
+        ManagersRoot.instance.audioManager.ResumeMusic();
+
         ManagersRoot.instance.hintManager.bigHintIsShown = false;
         ManagersRoot.instance.hintManager.smallHintIsShown = false;
         UIRoot.instance.HideHintUI();
@@ -34,6 +39,7 @@ public class PauseManager : MonoBehaviour
     {
         isPaused = false;
         UIRoot.instance.HidePauseUI();
+        ManagersRoot.instance.audioManager.StopMusic();
         Time.timeScale = 1f;
         ManagersRoot.instance.gameManager.gameStarted = false;
         ManagersRoot.instance.sceneController.GoToMainMenu();
@@ -43,6 +49,7 @@ public class PauseManager : MonoBehaviour
     {
         isPaused = false;
         Time.timeScale = 1f;
+        ManagersRoot.instance.audioManager.StopMusic();
         Application.Quit();
     }
 }
