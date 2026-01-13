@@ -41,12 +41,9 @@ public class CameraController : MonoBehaviour
         { (5, 1), 2 },
         { (5, 2), 2 },
         { (6, 1), 4 },
-<<<<<<< HEAD
-        { (9, 1), 3 }
-=======
         { (7, 2), 2 },
-        { (7, 3), 2 }
->>>>>>> main
+        { (7, 3), 2 },
+        { (9, 1), 3 }
     };
 
     public void MoveCameraToNextRoom()

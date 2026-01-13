@@ -29,7 +29,7 @@ public class Cutscene : MonoBehaviour
                 {
                     StopAllCoroutines();
                     UIRoot.instance.HideSkipCutsceneText();
-                    ManagersRoot.instance.sceneController.GoToLevel(nextLevel);
+                    GoToNextLevel();
                 }
             }
         }
@@ -40,7 +40,7 @@ public class Cutscene : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Mouse0))
             {
                 UIRoot.instance.HideContinueText();
-                ManagersRoot.instance.sceneController.GoToLevel(nextLevel);
+                GoToNextLevel();
                 ManagersRoot.instance.pauseManager.Resume();
             }
         }
@@ -59,5 +59,21 @@ public class Cutscene : MonoBehaviour
         yield return new WaitForSecondsRealtime(3);
         UIRoot.instance.HideSkipCutsceneText();
         confirmRoutine = null;
+    }
+
+    private void GoToNextLevel()
+    {
+        if (nextLevel == 0)
+        {
+            ManagersRoot.instance.sceneController.GoToMainMenu();
+        }
+        else if (nextLevel == 10)
+        {
+            ManagersRoot.instance.sceneController.GoToCutscene(nextLevel);
+        }
+        else
+        {
+            ManagersRoot.instance.sceneController.GoToLevel(nextLevel);
+        }
     }
 }
