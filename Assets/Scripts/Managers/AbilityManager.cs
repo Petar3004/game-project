@@ -40,7 +40,7 @@ public class AbilityManager : MonoBehaviour
     {
         abilityToData.Add(AbilityType.TIME_SLOW, ("Time Magnet", icons[0]));
         abilityToData.Add(AbilityType.SAND_SPEED, ("Quick Boots", icons[1]));
-        abilityToData.Add(AbilityType.ELECTRICITY_DISABLE, ("EMP Grenade", icons[1]));
+        abilityToData.Add(AbilityType.ELECTRICITY_DISABLE, ("EMP Grenade", icons[2]));
     }
 
     void Update()

@@ -324,6 +324,7 @@ MonoBehaviour:
   spinSpeed: 5
   attractSpeed: 1
   chapterEnd: 0
+  gameOver: 0
 --- !u!70 &6194079290180080984
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

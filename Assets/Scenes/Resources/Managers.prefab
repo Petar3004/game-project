@@ -175,6 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   gameStarted: 0
   chapterComplete: 0
+  gameOver: 0
   savedLevel: -1
 --- !u!1 &2853783061131586025
 GameObject:
@@ -372,6 +373,7 @@ MonoBehaviour:
   icons:
   - {fileID: 4877825377717948546, guid: 2dfe72f422077b5499b24c897c7cf71b, type: 3}
   - {fileID: -8630435554779211992, guid: 2bc9c9a903af9db469a0ac27d40796dc, type: 3}
+  - {fileID: -1791783992758969951, guid: c48af90a8d76e5a47ae3210ebe443189, type: 3}
   abilityDuration: 5
   abilityTimePenalty: 10
   abilityIsActive: 0

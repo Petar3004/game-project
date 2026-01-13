@@ -12,6 +12,7 @@ public class Bug : MonoBehaviour
 {
     public BugType type;
     public SpriteRenderer sprite;
+    public Sprite[] sprites;
     public EnemyDamage enemyDamage;
 
     [Header("Enemy")]
@@ -198,11 +199,13 @@ public class Bug : MonoBehaviour
         if (type == BugType.ENEMY)
         {
             enemyDamage.damage = 1;
+            sprite.sprite = sprites[0];
             sprite.color = Color.skyBlue;
         }
         else
         {
             enemyDamage.damage = 0;
+            sprite.sprite = sprites[1];
             sprite.color = Color.yellow;
         }
     }
