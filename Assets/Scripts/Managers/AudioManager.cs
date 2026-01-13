@@ -38,8 +38,7 @@ public class AudioManager : MonoBehaviour
         }
 
         instance = this;
-        DontDestroyOnLoad(gameObject);
-
+        
         musicSource.loop = true;
         musicSource.playOnAwake = false;
     }
