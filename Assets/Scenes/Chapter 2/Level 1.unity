@@ -1981,24 +1981,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: hints.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: 'hints.Array.data[0]'
-      value: "Congratulations on surpassing the first chapter, the \u201CGrandfather
-        clock\u201D. Now you will be forced to challenge the second chapter the \u201CSand
-        clock\u201D. I will help you once more mortal"
+      value: "Chapter 2: \u201CSand clock\u201D"
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: 'hints.Array.data[1]'
-      value: To complete the level, reach the end of the rooms and traverse the doors
-        in each clock. To move use the arrow keys or W, A, S, D.
+      value: 'Ability: Quick Boots'
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: 'hints.Array.data[2]'
-      value: 'The ability for this clock shall change. When you press shift, you
-        will move faster while standing in the sand, this ability naturally comes
-        at a cost for such a thing as a mortal. '
+      value: 'Hint: Use your ability to avoid slow sand!!'
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: 'hints.Array.data[3]'

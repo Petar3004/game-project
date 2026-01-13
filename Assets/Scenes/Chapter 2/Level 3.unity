@@ -520,7 +520,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -316, y: 189}
+  m_AnchoredPosition: {x: 29.6, y: 177.3}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &292498645
@@ -543,7 +543,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0/5
+  m_text: 0/3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2355,23 +2355,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: 'hints.Array.data[0]'
-      value: 'Congratulations on reaching this point. This level will once again
-        challenge your intellect. '
+      value: 1. Adjust the small side-clock sequence!
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: 'hints.Array.data[1]'
-      value: 'Here you will have to adjust the three sand clocks to match the riddle
-        below each clock. '
+      value: 2. Catch all GOLDEN BOOKS
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: 'hints.Array.data[2]'
-      value: The central sand clock Is locked behind items which you will have to
-        catch. After catching the items, a riddle will appear for the final sand
-        clock. Good luck mortal
+      value: 3. Solve the central clock riddle
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: secondsForSmallHint
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Size.y
+      value: 6.34841
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552148814190102354, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
+      propertyPath: m_Offset.y
+      value: 1.8314259
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2502,7 +2506,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: 'hints.Array.data[0]'
-      value: 'I now understand R means move right, L means move left '
+      value: R means right, L means left
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: secondsForSmallHint

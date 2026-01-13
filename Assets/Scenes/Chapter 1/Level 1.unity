@@ -2572,21 +2572,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: 'hints.Array.data[0]'
-      value: 'Apologies for the abrupt shift. Let me give you some hints to help
-        you in this challenge. To move, jump and crouch, use the ARROW KEYS or W,
-        A, S, D. '
+      value: "Hint: To move, use \u2191, \u2190, \u2193, \u2192    or W, A, S, D "
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: 'hints.Array.data[1]'
-      value: To make it even easier for you mortal, I have decided to give you some
-        of my abilities. For this challenge when you press SHIFT you will slow down
-        all objects that can harm you.
+      value: Press SHIFT to slow down objects
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: 'hints.Array.data[2]'
-      value: 'But look out for the timer at the top of the room, such a powerful
-        ability naturally comes at a cost. Traverse the three levels of this challenge
-        without perishing and we shall meet again. Good luck. '
+      value: TIMER at the top of the screen
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: 'hints.Array.data[3]'
@@ -4441,7 +4435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: 'hints.Array.data[0]'
-      value: What the hell is this place... I'd better not touch these cogs.
+      value: Don't touch the gears!
       objectReference: {fileID: 0}
     - target: {fileID: 2914549539511308616, guid: fab03b86658968c42a6e9e2700e68d11, type: 3}
       propertyPath: 'hints.Array.data[1]'
