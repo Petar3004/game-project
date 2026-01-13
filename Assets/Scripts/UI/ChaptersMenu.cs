@@ -13,23 +13,23 @@ public class ChaptersMenu : MonoBehaviour
     public TMP_Text chapter;
     public TMP_Text level;
     public GameObject main;
-    public GameObject[] clocks;
-    private GameObject currentClock;
-    public Image[] clock1Overlays;
-    public Image[] clock2Overlays;
-    public Image[] clock3Overlays;
-    private Image[] currentOverlays;
+    // public GameObject[] clocks;
+    // private GameObject currentClock;
+    // public Image[] clock1Overlays;
+    // public Image[] clock2Overlays;
+    // public Image[] clock3Overlays;
+    // private Image[] currentOverlays;
 
     void Start()
     {
-        currentClock = clocks[0];
-        currentOverlays = clock1Overlays;
+        // currentClock = clocks[0];
+        // currentOverlays = clock1Overlays;
 
         chapter.text = "Chapter " + currentChapter;
         level.text = "Level " + currentLevel;
 
-        ChangeImage();
-        ChangeOverlays();
+        // ChangeImage();
+        // ChangeOverlays();
     }
 
     public void NextChapter()
@@ -42,8 +42,8 @@ public class ChaptersMenu : MonoBehaviour
         chapter.text = "Chapter " + currentChapter;
         currentLevel = 1;
         level.text = "Level " + currentLevel;
-        ChangeImage();
-        ChangeOverlays();
+        // ChangeImage();
+        // ChangeOverlays();
     }
 
     public void PrevChapter()
@@ -56,8 +56,8 @@ public class ChaptersMenu : MonoBehaviour
         chapter.text = "Chapter " + currentChapter;
         currentLevel = 1;
         level.text = "Level " + currentLevel;
-        ChangeImage();
-        ChangeOverlays();
+        // ChangeImage();
+        // ChangeOverlays();
     }
 
     public void NextLevel()
@@ -68,7 +68,7 @@ public class ChaptersMenu : MonoBehaviour
         }
         currentLevel++;
         level.text = "Level " + currentLevel;
-        ChangeOverlays();
+        // ChangeOverlays();
     }
 
     public void PrevLevel()
@@ -79,7 +79,7 @@ public class ChaptersMenu : MonoBehaviour
         }
         currentLevel--;
         level.text = "Level " + currentLevel;
-        ChangeOverlays();
+        // ChangeOverlays();
     }
 
     public void PlayLevel()
@@ -100,60 +100,60 @@ public class ChaptersMenu : MonoBehaviour
         main.SetActive(true);
     }
 
-    private void ChangeImage()
-    {
-        currentClock.SetActive(false);
-        currentClock = clocks[currentChapter - 1];
-        currentClock.SetActive(true);
+    // private void ChangeImage()
+    // {
+    //     // currentClock.SetActive(false);
+    //     // currentClock = clocks[currentChapter - 1];
+    //     // currentClock.SetActive(true);
 
-        foreach (Image overlay in currentOverlays)
-        {
-            overlay.gameObject.SetActive(false);
-        }
-        switch (currentChapter)
-        {
-            case 1:
-                currentOverlays = clock1Overlays;
-                break;
-            case 2:
-                currentOverlays = clock2Overlays;
-                break;
-            case 3:
-                currentOverlays = clock3Overlays;
-                break;
-        }
-        foreach (Image overlay in currentOverlays)
-        {
-            overlay.gameObject.SetActive(true);
-        }
-    }
+    //     foreach (Image overlay in currentOverlays)
+    //     {
+    //         overlay.gameObject.SetActive(false);
+    //     }
+    //     switch (currentChapter)
+    //     {
+    //         case 1:
+    //             currentOverlays = clock1Overlays;
+    //             break;
+    //         case 2:
+    //             currentOverlays = clock2Overlays;
+    //             break;
+    //         case 3:
+    //             currentOverlays = clock3Overlays;
+    //             break;
+    //     }
+    //     foreach (Image overlay in currentOverlays)
+    //     {
+    //         overlay.gameObject.SetActive(true);
+    //     }
+    // }
 
-    private void ChangeOverlays()
-    {
-        Color col = currentOverlays[0].color;
-        switch (currentLevel)
-        {
-            case 1:
-                col.a = 0f;
-                currentOverlays[0].color = col;
-                col.a = 0.5f;
-                currentOverlays[1].color = col;
-                currentOverlays[2].color = col;
-                break;
-            case 2:
-                col.a = 0f;
-                currentOverlays[1].color = col;
-                col.a = 0.5f;
-                currentOverlays[0].color = col;
-                currentOverlays[2].color = col;
-                break;
-            case 3:
-                col.a = 0f;
-                currentOverlays[2].color = col;
-                col.a = 0.5f;
-                currentOverlays[0].color = col;
-                currentOverlays[1].color = col;
-                break;
-        }
-    }
+    // private void ChangeOverlays()
+    // {
+    //     Color col = currentOverlays[0].color;
+    //     switch (currentLevel)
+    //     {
+    //         case 1:
+    //             col.a = 0f;
+    //             currentOverlays[0].color = col;
+    //             col.a = 0.5f;
+    //             currentOverlays[1].color = col;
+    //             currentOverlays[2].color = col;
+    //             break;
+    //         case 2:
+    //             col.a = 0f;
+    //             currentOverlays[1].color = col;
+    //             col.a = 0.5f;
+    //             currentOverlays[0].color = col;
+    //             currentOverlays[2].color = col;
+    //             break;
+    //         case 3:
+    //             col.a = 0f;
+    //             currentOverlays[2].color = col;
+    //             col.a = 0.5f;
+    //             currentOverlays[0].color = col;
+    //             currentOverlays[1].color = col;
+    //             break;
+    //     }
+    // }
 }

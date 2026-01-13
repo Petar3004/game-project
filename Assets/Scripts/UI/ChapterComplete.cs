@@ -10,10 +10,13 @@ public class ChapterComplete : MonoBehaviour
         switch (savedLevel)
         {
             case 3:
-                ManagersRoot.instance.sceneController.GoToCutscene(13);
+                ManagersRoot.instance.sceneController.GoToCutscene(14);
                 break;
             case 6:
-                ManagersRoot.instance.sceneController.GoToCutscene(14);
+                ManagersRoot.instance.sceneController.GoToCutscene(15);
+                break;
+            case 9:
+                ManagersRoot.instance.sceneController.GoToCutscene(16);
                 break;
             default:
                 Debug.Log("Saved level: " + savedLevel);

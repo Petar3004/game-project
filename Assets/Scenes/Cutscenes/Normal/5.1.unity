@@ -763,6 +763,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Cutscene
   secondsCutsene: 30
   nextLevel: 0
+  gameOver: 1
 --- !u!1 &245699869
 GameObject:
   m_ObjectHideFlags: 0

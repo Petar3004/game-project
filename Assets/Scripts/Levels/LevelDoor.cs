@@ -10,6 +10,7 @@ public class LevelDoor : MonoBehaviour
     public float attractSpeed = 0.3f;
     private Coroutine animationRoutine = null;
     public bool chapterEnd = false;
+    public bool gameOver = false;
 
     void Update()
     {
@@ -56,20 +57,24 @@ public class LevelDoor : MonoBehaviour
         ManagersRoot.instance.audioManager.PlaySFX(
             ManagersRoot.instance.audioManager.levelComplete
         );
-        if (!chapterEnd)
+        if (!chapterEnd && !gameOver)
         {
             ManagersRoot.instance.sceneController.GoToNextLevel();
         }
-        else
+        else if (chapterEnd)
         {
             ManagersRoot.instance.sceneController.GoToMainMenu();
             ManagersRoot.instance.gameManager.chapterComplete = true;
+        }
+        else if (gameOver)
+        {
+            ManagersRoot.instance.sceneController.GoToCutscene(16);
         }
     }
 
     void OnValidate()
     {
-        if (chapterEnd)
+        if (chapterEnd || gameOver)
         {
             front.color = Color.gold;
             back.color = Color.gold;

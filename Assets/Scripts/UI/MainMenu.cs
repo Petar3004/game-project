@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject chapters;
     public GameObject complete;
+    public GameObject over;
     public TMP_Text continueText;
 
     void Start()
@@ -19,12 +20,16 @@ public class MainMenu : MonoBehaviour
         {
             ChapterComplete();
         }
+        else if (ManagersRoot.instance.gameManager.gameOver)
+        {
+            GameOver();
+        }
     }
 
     public void NewGame()
     {
         ManagersRoot.instance.gameManager.ResetProgress();
-        ManagersRoot.instance.sceneController.GoToCutscene(12);
+        ManagersRoot.instance.sceneController.GoToCutscene(13);
     }
 
     public void Continue()
@@ -78,5 +83,11 @@ public class MainMenu : MonoBehaviour
     {
         gameObject.SetActive(false);
         complete.SetActive(true);
+    }
+
+    public void GameOver()
+    {
+        gameObject.SetActive(false);
+        over.SetActive(true);
     }
 }

@@ -8,6 +8,7 @@ public class Cutscene : MonoBehaviour
     public int nextLevel;
     private Coroutine confirmRoutine = null;
     private bool cutsceneRunning = false;
+    public bool gameOver = false;
 
     void Start()
     {
@@ -66,6 +67,10 @@ public class Cutscene : MonoBehaviour
     {
         if (nextLevel == 0)
         {
+            if (gameOver)
+            {
+                ManagersRoot.instance.gameManager.gameOver = true;
+            }
             ManagersRoot.instance.sceneController.GoToMainMenu();
         }
         else if (nextLevel == 10)

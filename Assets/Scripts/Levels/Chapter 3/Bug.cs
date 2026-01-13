@@ -12,6 +12,8 @@ public class Bug : MonoBehaviour
 {
     public BugType type;
     public SpriteRenderer sprite;
+    public EnemyDamage enemyDamage;
+
     [Header("Enemy")]
     public float speed = 2f;
     public GameObject[] cables;
@@ -28,6 +30,7 @@ public class Bug : MonoBehaviour
     private Vector2 currentTarget;
     private bool initialized;
     private bool isWaiting; // Prevents movement during timeout
+    private Coroutine fadeRoutine;
 
     public class CableSegment
     {
@@ -86,6 +89,20 @@ public class Bug : MonoBehaviour
             {
                 SwitchToNextSegment();
             }
+
+            if (ManagersRoot.instance.abilityManager.abilityIsActive)
+            {
+                StopCoroutine(fadeRoutine);
+                enemyDamage.damage = 0;
+                sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 0);
+                GetComponent<CircleCollider2D>().radius = 0;
+            }
+            else
+            {
+                enemyDamage.damage = 1;
+                sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 1);
+                GetComponent<CircleCollider2D>().radius = 0.5f;
+            }
         }
     }
 
@@ -140,19 +157,19 @@ public class Bug : MonoBehaviour
         }
 
         sprite.color = new Color(color.r, color.g, color.b, endAlpha);
-        GetComponent<EnemyDamage>().damage = 1;
+        enemyDamage.damage = 1;
     }
 
     private IEnumerator TeleportRoutine()
     {
         isWaiting = true;
-        GetComponent<EnemyDamage>().damage = 0;
+        enemyDamage.damage = 0;
 
         yield return new WaitForSeconds(teleportDelay);
 
         TeleportToRandomSegment();
 
-        yield return StartCoroutine(FadeSprite(0f, 1f, fadeDelay));
+        yield return fadeRoutine = StartCoroutine(FadeSprite(0f, 1f, fadeDelay));
 
         isWaiting = false;
     }
@@ -180,12 +197,12 @@ public class Bug : MonoBehaviour
     {
         if (type == BugType.ENEMY)
         {
-            GetComponent<EnemyDamage>().damage = 1;
+            enemyDamage.damage = 1;
             sprite.color = Color.skyBlue;
         }
         else
         {
-            GetComponent<EnemyDamage>().damage = 0;
+            enemyDamage.damage = 0;
             sprite.color = Color.yellow;
         }
     }

@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     private GameObject player;
     public bool gameStarted = false;
     public bool chapterComplete = false;
+    public bool gameOver = false;
     public int savedLevel = -1;
     public HashSet<int> unlockedLevels = new HashSet<int>();
     private string levelPath;
